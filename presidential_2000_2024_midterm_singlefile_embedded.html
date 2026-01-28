@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Election Forecast</title>
+<!-- D3 + TopoJSON -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    html{ color-scheme: light; }
+
+    :root{
+      /* Palette */
+      --bg-app: #f3f4f6;
+      --bg-gradient-1: #eef2ff;
+      --bg-gradient-2: #fff1f2;
+      
+      --ink: #111827;
+      --ink-dim: #374151;
+      --muted: #6b7280;
+      --muted-light: #9ca3af;
+
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-border: rgba(255, 255, 255, 0.6);
+      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+
+      --line: #e5e7eb;
+      --line-strong: #d1d5db;
+
+      /* Political Colors (Modern Standard) */
+      --blue: #2563eb;
+      --blue-dark: #1e40af;
+      --blue-soft: #dbeafe;
+      --blue-border: #93c5fd;
+
+      --red: #dc2626;
+      --red-dark: #991b1b;
+      --red-soft: #fee2e2;
+      --red-border: #fca5a5;
+
+      --neutral-bg: #f9fafb;
+      --neutral-border: #e5e7eb;
+
+      /* UI */
+      --focus-ring: 0 0 0 3px rgba(99, 102, 241, 0.3);
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --radius-pill: 9999px;
+
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+      /* Semantic */
+      --ok: #10b981;
+      --warn: #f59e0b;
+      --zero: #1f2937;
+    }
+
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+    
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      background-color: var(--bg-app);
+      background-image:
+        radial-gradient(circle at 10% 10%, var(--bg-gradient-1), transparent 40%),
+        radial-gradient(circle at 90% 20%, var(--bg-gradient-2), transparent 40%);
+      background-attachment: fixed;
+      overflow-x:hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap{
+      max-width:1280px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    /* App Bar */
+    .appbar{
+      position:sticky;
+      top:0;
+      z-index:60;
+      padding:16px 0 20px;
+      /* Gradient fade for scroll area */
+      background: linear-gradient(to bottom, var(--bg-app) 0%, rgba(243,244,246,0.8) 60%, transparent 100%);
+      pointer-events: none; /* Let clicks pass through the padding areas */
+    }
+    .appbarInner{
+      pointer-events: auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 16px;
+      border-radius:var(--radius-lg);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border:1px solid var(--card-border);
+      box-shadow: var(--card-shadow);
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:250px;
+    }
+    .brandMark{
+      width:40px;height:40px;
+      border-radius:12px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Simple stylized flag element inside brandMark */
+    .brandMark::after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 50%;
+      background: rgba(255,255,255,0.15);
+      transform: skewX(-15deg) translateX(5px);
+    }
+    
+    .brandTitle{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .brandTitle .t{
+      font-size:16px;
+      font-weight:800;
+      letter-spacing:-0.01em;
+      color: var(--ink);
+    }
+    .brandTitle .s{
+      font-size:13px;
+      color:var(--muted);
+      font-weight:500;
+    }
+
+    /* Segmented Control */
+    .seg{
+      position:relative;
+      display:flex;
+      background: var(--neutral-bg);
+      border:1px solid var(--line);
+      border-radius:var(--radius-pill);
+      padding:4px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+      min-width:280px;
+      justify-content:space-between;
+    }
+    .seg button{
+      position:relative;
+      appearance:none;
+      border:none;
+      background:transparent;
+      color:var(--muted);
+      font-weight:600;
+      font-size:13px;
+      padding:8px 16px;
+      border-radius:var(--radius-pill);
+      cursor:pointer;
+      flex:1;
+      text-align:center;
+      transition: color .2s ease;
+      z-index: 2;
+    }
+    .seg button:hover { color: var(--ink-dim); }
+    .seg button.active{ color: var(--blue-dark); text-shadow: 0 0 1px rgba(0,0,0,0.1); }
+    .segIndicator{
+      position:absolute;
+      top:4px; bottom:4px;
+      width:calc(33.333% - 4px);
+      border-radius:var(--radius-pill);
+      background: #ffffff;
+      border:1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      transform: translateX(0%);
+      transition: transform .25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: 1;
+      pointer-events:none;
+    }
+    .seg[data-mode="governor"] .segIndicator{ transform: translateX(100%); }
+    .seg[data-mode="house"] .segIndicator{ transform: translateX(200%); }
+
+    /* Layout */
+    .layout{
+      display:grid;
+      /* Force single column stack for safety, logic matches original code which had display:block but grid gap support */
+      grid-template-columns: 1fr; 
+      gap:24px;
+      margin-top:0px;
+    }
+    @media (min-width: 980px){
+        /* Original was column, let's keep it stacked but add spacing */
+    }
+
+    /* Cards */
+    .card{
+      border:1px solid var(--card-border);
+      border-radius:var(--radius-lg);
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: var(--card-shadow);
+      overflow:hidden;
+      transition: box-shadow 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: var(--card-shadow-hover);
+    }
+    
+    .cardTitleRow{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px 20px;
+      border-bottom:1px solid var(--line);
+      background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));
+    }
+
+    .cardTitle{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .cardTitle .h{
+      font-size:15px;
+      font-weight:700;
+      color: var(--ink);
+    }
+    .cardTitle .sub{
+      font-size:13px;
+      color:var(--muted);
+      font-weight:500;
+    }
+    .cardInner{ padding:20px; }
+
+    /* Projected Seats Card */
+    .seatHeader{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      padding:20px 20px 16px;
+      border-bottom:1px solid var(--line);
+    }
+    .seatHeadLeft .h{ margin:0; font-size:14px; font-weight:700; color:var(--muted); text-transform: uppercase; letter-spacing: 0.03em;}
+    .seatNumbers{
+      margin-top:6px;
+      font-size:26px;
+      font-weight:800;
+      letter-spacing:-0.03em;
+      color:var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .seatPill{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 16px;
+      border-radius:var(--radius-md);
+      border:1px solid var(--line);
+      background: #ffffff;
+      box-shadow: var(--card-shadow);
+      user-select:none;
+      min-width: 160px;
+    }
+    .seatDot{
+      width:10px; height:10px;
+      border-radius:50%;
+      background: var(--muted-light);
+      flex:0 0 auto;
+    }
+    .seatPill.blue{ border-color: var(--blue-border); background: var(--blue-soft); }
+    .seatPill.blue .seatDot{ background: var(--blue); box-shadow: 0 0 0 2px #fff; }
+    
+    .seatPill.red{ border-color: var(--red-border); background: var(--red-soft); }
+    .seatPill.red  .seatDot{ background: var(--red); box-shadow: 0 0 0 2px #fff; }
+    
+    .seatPill.neutral .seatDot{ background: var(--muted); }
+
+    .seatPillLabel{
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      color:var(--ink-dim);
+      opacity: 0.7;
+    }
+    .seatPillValue{
+      font-size:14px;
+      font-weight:700;
+      color:var(--ink);
+      font-variant-numeric: tabular-nums;
+      line-height:1.2;
+    }
+    .seatPillTextWrap{ display:flex; flex-direction:column; }
+
+    .seatLegendRow{
+      margin-top:16px;
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      align-items:center;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:500;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:4px 8px;
+      border-radius:6px;
+      font-size:12px;
+      font-weight:600;
+      font-family: var(--mono);
+    }
+    .chip.blue{ background: var(--blue-soft); color: var(--blue-dark); }
+    .chip.red{ background: var(--red-soft); color: var(--red-dark); }
+
+    /* Seat meter */
+    .seatAxis{
+      position:relative;
+      height:72px;
+      border-radius:var(--radius-md);
+      border:1px solid var(--line);
+      background: var(--neutral-bg);
+      overflow:hidden;
+    }
+    #seatTicks{ position:absolute; inset:0; pointer-events:none;}
+    .seatBar{
+      position:absolute;
+      left:16px; right:16px;
+      top:26px;
+      height:16px;
+      border-radius:8px;
+      background: rgba(0,0,0,0.05);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+      overflow:hidden;
+      display:flex;
+    }
+    .seatSeg{ height:100%; transition: width .4s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    
+    .seatD{ background: linear-gradient(180deg, var(--blue) 0%, var(--blue-dark) 100%); }
+    .seatR{ background: linear-gradient(180deg, var(--red) 0%, var(--red-dark) 100%); }
+    .seatO{ background: transparent; }
+
+    .seatMajorityLine{
+      position:absolute;
+      top:0; bottom:0;
+      width:2px;
+      background: var(--ink);
+      z-index: 5;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+    .seatMajorityLine::after {
+        content: '';
+        position: absolute;
+        top: 0; left: -2px; right: -2px; height: 6px;
+        background: var(--ink);
+    }
+    
+    .seatTickLabel{
+      position:absolute;
+      bottom:8px;
+      transform:translateX(-50%);
+      font-size:11px;
+      font-weight:600;
+      color: var(--muted);
+      font-family: var(--mono);
+      user-select:none;
+    }
+    .seatTickLine{
+      position:absolute;
+      top:0; bottom:0;
+      width:1px;
+      background: var(--line-strong);
+      opacity: 0.5;
+    }
+    .seatFooter{
+      padding:16px 20px;
+      border-top: 1px solid var(--line);
+      background: var(--neutral-bg);
+      color:var(--muted);
+      font-size:12px;
+      font-weight:500;
+      line-height:1.5;
+    }
+    .mono{ font-family:var(--mono); font-weight: 500;}
+
+    /* Map */
+    .mapStage{
+      position: relative;
+      background: white; 
+      border-radius: var(--radius-md);
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.03);
+    }
+    .mapSvg{
+      width:100%;
+      height:600px;
+      overflow: visible;
+      display:block;
+    }
+
+    .state{
+      stroke: white;
+      stroke-width: 1px;
+      vector-effect: non-scaling-stroke;
+      cursor:default;
+      transition: fill 0.2s ease, filter 0.2s ease;
+    }
+    .state.active{ cursor:pointer; }
+    .state.hovered{
+      stroke: var(--ink);
+      stroke-width:2px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+      z-index: 10;
+      position: relative; 
+    }
+    
+    .district{
+      stroke: rgba(255,255,255,0.4);
+      stroke-width:0.5px;
+      vector-effect: non-scaling-stroke;
+      cursor:default;
+      transition: opacity 0.2s ease;
+    }
+    .district.active{ cursor:pointer; }
+    .district.hovered{
+      stroke: var(--ink);
+      stroke-width:1.5px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    }
+
+    .legendOverlay{
+      position:absolute;
+      left:20px;
+      bottom:20px;
+      padding:12px;
+      border-radius:var(--radius-md);
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(8px);
+      border:1px solid var(--line);
+      box-shadow: var(--card-shadow);
+    }
+    .swatch{
+      width:180px;
+      height:14px;
+      border-radius:99px;
+      border:1px solid rgba(0,0,0,0.05);
+      background: linear-gradient(90deg,
+        var(--blue-dark) 0%,
+        var(--blue) 35%,
+        #fde047 50%,
+        var(--red) 65%,
+        var(--red-dark) 100%);
+    }
+
+    /* Tooltip */
+    #tip{
+      position:fixed;
+      left:0; top:0;
+      transform: translate(-9999px,-9999px);
+      pointer-events:none;
+      width: min(280px, calc(100vw - 28px));
+      z-index:100;
+      border-radius:var(--radius-lg);
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(16px);
+      border:1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 20px 40px -5px rgba(0,0,0,0.15), 0 10px 20px -5px rgba(0,0,0,0.1);
+      overflow:hidden;
+      font-family: var(--sans);
+    }
+    .tipTop{
+      padding:12px;
+      border-bottom:1px solid var(--line);
+      background: var(--neutral-bg);
+    }
+    .tipHeader{ display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
+    .tipTitle{ margin:0; font-size:15px; font-weight:800; line-height:1.2; color: var(--ink); }
+    .tipMeta{
+      text-align:right;
+      font-size:11px;
+      color:var(--muted);
+      font-weight:600;
+      font-family: var(--mono);
+    }
+    .tipSub{
+      margin-top:8px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:3px 8px;
+      border-radius:6px;
+      border:1px solid var(--line);
+      background: white;
+      font-variant-numeric: tabular-nums;
+      font-size:12px;
+      font-weight:600;
+      color: var(--ink-dim);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .dot{ width:8px;height:8px;border-radius:50%; background: var(--muted-light); }
+    .dot.blue{ background: var(--blue); }
+    .dot.red{ background: var(--red); }
+
+    .tipBody{
+      display:block;
+      padding:10px 12px 12px;
+    }
+
+    /* Compact tooltip sizing */
+    #tip.compact{
+      width: min(280px, calc(100vw - 28px));
+    }
+    #tip.compact .tipTop{ padding:10px 12px; }
+    #tip.compact .tipTitle{ font-size:14px; }
+    #tip.compact .badge{ font-size:11px; padding:2px 7px; }
+    #tip.compact .tipMeta{ font-size:10px; }
+    #tip.compact .tipBody{ padding:8px 12px 12px; }
+
+    /* Ultra-compact “model factors” rows inside tooltip (no scroll) */
+    .miniRow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:7px 0;
+    }
+    .miniLbl{
+      width:96px;
+      font-size:10px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+      color: var(--muted);
+    }
+    .miniVal{
+      width:58px;
+      text-align:right;
+      font-family: var(--mono);
+      font-size:11px;
+      font-weight:800;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .miniBar{
+      position:relative;
+      flex:1;
+      height:8px;
+      border-radius:9999px;
+      background: var(--neutral-bg);
+      border:1px solid var(--line);
+      overflow:hidden;
+    }
+    .miniZero{
+      position:absolute;
+      left:50%;
+      top:0;
+      bottom:0;
+      width:1px;
+      background: rgba(31,41,55,0.35);
+    }
+    .miniFill{
+      position:absolute;
+      top:0; bottom:0;
+      border-radius:9999px;
+      opacity:0.9;
+    }
+    .miniFill.blue{ background: var(--blue-soft); }
+    .miniFill.red{ background: var(--red-soft); }
+    .miniFill.neutral{ background: rgba(156,163,175,0.25); }
+
+    .miniDot{
+      position:absolute;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width:8px;
+      height:8px;
+      border-radius:9999px;
+      border:2px solid #fff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.12);
+    }
+    .miniDot.blue{ background: var(--blue); }
+    .miniDot.red{ background: var(--red); }
+    .miniDot.neutral{ background: var(--muted-light); }
+    .miniNote{
+      font-size:11px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+
+    .sliderBlock{ margin-top:16px; }
+    .sliderLabelRow{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-bottom:8px;
+    }
+    .sliderLabel{
+      font-size:12px;
+      font-weight:700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    .chev{ width:12px;height:12px; opacity:.5; }
+    .sliderValue{
+      font-size:13px;
+      font-weight:700;
+      color:var(--ink);
+      font-family: var(--mono);
+    }
+    .axis{
+      position:relative;
+      height:48px;
+      border-radius:8px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background: var(--neutral-bg);
+    }
+
+    .gridline{ position:absolute; top:0; bottom:0; width:1px; background: rgba(0,0,0,0.05); }
+    .zeroLine{ background: var(--ink) !important; width:1px !important; opacity:0.3 !important; }
+    .tickLabel{
+      position:absolute;
+      bottom:6px;
+      transform:translateX(-50%);
+      font-size:10px;
+      font-weight:600;
+      opacity:.7;
+      user-select:none;
+      font-family: var(--mono);
+    }
+    .tickBlue{ color: var(--blue-dark); }
+    .tickRed{  color: var(--red-dark); }
+    .tickZero{ color: var(--ink); opacity: 0.5;}
+
+    .band{
+      position:absolute;
+      top:16px;
+      height:10px;
+      border-radius:5px;
+      opacity: 0.8;
+    }
+    .marker{
+      position:absolute;
+      top:11px;
+      width:20px; height:20px;
+      border-radius:50%;
+      transform:translateX(-50%);
+      border:3px solid #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 5;
+    }
+    .hr{ height:1px; background: var(--line); margin:16px 0; }
+
+
+    /* Race Table */
+    .tableScroll{ overflow:auto; border-radius:12px; border:1px solid var(--line); box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);}
+    .bucketTable{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:8px;
+      min-width:1000px;
+      background: var(--neutral-bg);
+      padding: 8px;
+    }
+    .bucketTable th{
+      text-align:left;
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+      font-weight: 700;
+      padding:8px 12px;
+      background: transparent;
+      border-bottom: 2px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:2;
+    }
+    .bucketTable td{ vertical-align:top; padding:0; }
+    
+    .raceItem{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      border-radius:8px;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      background: #fff;
+      text-align:left;
+      cursor:pointer;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+      transition: all 0.15s ease;
+      margin-bottom: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+    .raceItem:hover{
+      transform:translateY(-2px);
+      box-shadow: 0 8px 16px -4px rgba(0,0,0,0.1);
+      border-color: var(--line-strong);
+    }
+    
+    .raceItem::before {
+        content: "";
+        position: absolute;
+        left: 0; top: 0; bottom: 0; width: 4px;
+    }
+    .raceItem.d::before{ background: var(--blue); }
+    .raceItem.r::before{ background: var(--red); }
+    .raceItem.t::before{ background: var(--muted-light); }
+
+    /* Race Item Internal Text */
+    .raceTop { 
+        font-size: 11px; 
+        font-weight: 700; 
+        color: var(--muted); 
+        text-transform: uppercase; 
+        letter-spacing: 0.05em; 
+    }
+    .raceName {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--ink);
+    }
+    .raceBottom {
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--ink-dim);
+        font-weight: 600;
+        margin-top: 2px;
+    }
+
+    .raceEmpty{
+      height:44px;
+      border-radius:8px;
+      border:1px dashed var(--line-strong);
+      background:rgba(0,0,0,0.01);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted-light);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* Error Handling */
+    .loadError{
+      margin: 10px 0 16px;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--red-border);
+      background: var(--red-soft);
+      color: var(--red-dark);
+      box-shadow: var(--card-shadow);
+      font-weight: 600;
+      line-height: 1.4;
+      font-size: 14px;
+    }
+    .loadError .mono{ font-family: var(--mono); background: rgba(255,255,255,0.5); padding: 2px 4px; border-radius: 4px; }
+
+    /* Map Interaction */
+    .state.focus, .district.focus{ 
+        stroke: var(--ink); 
+        stroke-width:2.5px; 
+        z-index: 20; 
+    }
+    
+    /* Utilities */
+    .tiny{ font-size:12px; color:var(--muted); }
+  
+    
+/* ---------- Panel header + simple seats (screenshot-style) ---------- */
+.topCard{ padding:18px 20px; }
+.panelHeaderRow{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+}
+.panelTitleWrap{ display:flex; flex-direction:column; }
+.panelTitle{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:-0.02em;
+  color: var(--ink);
+  line-height:1.05;
+}
+.panelSub{
+  font-size:14px;
+  font-weight:600;
+  color: var(--muted);
+  margin-top:6px;
+}
+.pillRow{ display:flex; align-items:center; gap:10px; }
+.metricPill{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.9);
+  border:1px solid rgba(229,231,235,0.9);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  font-weight:800;
+  font-size:14px;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  user-select:none;
+  min-width: 84px;
+  justify-content:center;
+}
+.metricPill .dot{
+  width:10px; height:10px;
+  border-radius:9999px;
+  flex:0 0 auto;
+}
+.metricPill.blue .dot{ background: var(--blue); }
+.metricPill.red  .dot{ background: var(--red); }
+
+.seatsCard{ padding:0; }
+.seatsSummary{
+  min-height: 120px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:22px 18px 18px;
+  background: rgba(255,255,255,0.65);
+}
+.seatsLine{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  font-weight:900;
+  font-size:20px;
+  letter-spacing:0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.seatsSide{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  font-family: var(--mono);
+}
+.seatsSide .lbl{ font-size:14px; font-weight:900; }
+.seatsSide .num{ font-size:20px; font-weight:900; }
+.seatsSide.d{ color: var(--blue); }
+.seatsSide.r{ color: var(--red); }
+.seatsDivider{ width:1px; height:34px; background: rgba(209,213,219,0.9); }
+
+/* tiny seat simulation histogram */
+.simMini{
+  width: min(360px, 100%);
+  margin-top: 14px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.simCanvas{
+  width: 100%;
+  height: 26px;
+  display:block;
+}
+
+.simTip{
+  position:fixed;
+  z-index:90;
+  pointer-events:none;
+  background: rgba(17,24,39,0.92);
+  color:#fff;
+  padding:6px 8px;
+  border-radius:10px;
+  font-size:11px;
+  font-weight:700;
+  font-family: var(--mono);
+  line-height:1.25;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  transform: translate(-9999px,-9999px);
+  white-space: nowrap;
+}
+.simTip .k{ font-weight:900; opacity:0.95; }
+
+.mapCard{ position:relative; }
+.mapHint{
+  padding: 0 20px 16px;
+  margin-top:-8px;
+  font-size:12px;
+  font-weight:600;
+  color: var(--muted);
+}
+
+    /* ---------- Three-panel (Senate/Gov/House) layout ---------- */
+    .triGrid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:24px;
+      margin-top: 0px;
+    }
+    @media (min-width: 980px){
+      .triGrid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    .modeCol{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+      min-width:0;
+    }
+    .modeHeader{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      padding: 0 4px;
+    }
+    .modeTitle{
+      font-size:16px;
+      font-weight:900;
+      letter-spacing:-0.02em;
+      color: var(--ink);
+      line-height:1.1;
+    }
+    .modeSub{
+      font-size:12px;
+      font-weight:600;
+      color: var(--muted);
+      margin-top:4px;
+    }
+    .modeTitleWrap{ display:flex; flex-direction:column; }
+    .mapGrid{ padding:20px; }
+    .mapSvg{ height:520px; }
+    @media (min-width: 980px){
+      .mapSvg{ height:400px; }
+      .triGrid .bucketTable{ min-width: 560px; }
+    }
+
+
+
+/* Presidential years: 7 columns need horizontal scroll on desktop to keep the original card sizing */
+.triGrid{
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(320px, 380px);
+  grid-template-columns: none !important;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+@media (max-width: 900px){
+  .triGrid{
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="loadError" hidden="" id="loadError"></div>
+<div aria-label="Three-panel forecast" class="triGrid" id="triGrid">
+<!-- SENATE -->
+
+<!-- GOVERNOR -->
+
+<!-- HOUSE -->
+
+<section class="modeCol" data-mode="2000">
+<section class="card topCard">
+<div class="panelHeaderRow">
+<div class="panelTitleWrap">
+<div class="panelTitle">Senate</div>
+<div class="panelSub">Class II - 2026</div>
+</div>
+<div aria-label="National baseline" class="pillRow">
+<div aria-label="Dem baseline" class="metricPill blue">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-d="">—</span>
+</div>
+<div aria-label="GOP baseline" class="metricPill red">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-r="">—</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Projected seats" class="card seatsCard">
+<div class="seatsSummary">
+<div class="seatsLine">
+<div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d="">—</span></div>
+<div aria-hidden="true" class="seatsDivider"></div>
+<div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r="">—</span></div>
+</div>
+<div aria-label="Seat simulation distribution" class="simMini">
+<canvas class="simCanvas" data-sim-canvas=""></canvas>
+</div>
+</div>
+</section>
+<section aria-label="Map" class="card mapCard">
+<div class="mapGrid">
+<div class="mapStage">
+<svg aria-label="US map" class="mapSvg"></svg>
+<div aria-hidden="true" class="legendOverlay">
+<div class="swatch"></div>
+</div>
+</div>
+</div>
+<div class="mapHint" data-map-help="">Hover a state for details.</div>
+</section>
+</section><section class="modeCol" data-mode="2004">
+<section class="card topCard">
+<div class="panelHeaderRow">
+<div class="panelTitleWrap">
+<div class="panelTitle">Senate</div>
+<div class="panelSub">Class II - 2026</div>
+</div>
+<div aria-label="National baseline" class="pillRow">
+<div aria-label="Dem baseline" class="metricPill blue">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-d="">—</span>
+</div>
+<div aria-label="GOP baseline" class="metricPill red">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-r="">—</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Projected seats" class="card seatsCard">
+<div class="seatsSummary">
+<div class="seatsLine">
+<div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d="">—</span></div>
+<div aria-hidden="true" class="seatsDivider"></div>
+<div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r="">—</span></div>
+</div>
+<div aria-label="Seat simulation distribution" class="simMini">
+<canvas class="simCanvas" data-sim-canvas=""></canvas>
+</div>
+</div>
+</section>
+<section aria-label="Map" class="card mapCard">
+<div class="mapGrid">
+<div class="mapStage">
+<svg aria-label="US map" class="mapSvg"></svg>
+<div aria-hidden="true" class="legendOverlay">
+<div class="swatch"></div>
+</div>
+</div>
+</div>
+<div class="mapHint" data-map-help="">Hover a state for details.</div>
+</section>
+</section><section class="modeCol" data-mode="2008">
+<section class="card topCard">
+<div class="panelHeaderRow">
+<div class="panelTitleWrap">
+<div class="panelTitle">Senate</div>
+<div class="panelSub">Class II - 2026</div>
+</div>
+<div aria-label="National baseline" class="pillRow">
+<div aria-label="Dem baseline" class="metricPill blue">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-d="">—</span>
+</div>
+<div aria-label="GOP baseline" class="metricPill red">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-r="">—</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Projected seats" class="card seatsCard">
+<div class="seatsSummary">
+<div class="seatsLine">
+<div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d="">—</span></div>
+<div aria-hidden="true" class="seatsDivider"></div>
+<div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r="">—</span></div>
+</div>
+<div aria-label="Seat simulation distribution" class="simMini">
+<canvas class="simCanvas" data-sim-canvas=""></canvas>
+</div>
+</div>
+</section>
+<section aria-label="Map" class="card mapCard">
+<div class="mapGrid">
+<div class="mapStage">
+<svg aria-label="US map" class="mapSvg"></svg>
+<div aria-hidden="true" class="legendOverlay">
+<div class="swatch"></div>
+</div>
+</div>
+</div>
+<div class="mapHint" data-map-help="">Hover a state for details.</div>
+</section>
+</section><section class="modeCol" data-mode="2012">
+<section class="card topCard">
+<div class="panelHeaderRow">
+<div class="panelTitleWrap">
+<div class="panelTitle">Senate</div>
+<div class="panelSub">Class II - 2026</div>
+</div>
+<div aria-label="National baseline" class="pillRow">
+<div aria-label="Dem baseline" class="metricPill blue">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-d="">—</span>
+</div>
+<div aria-label="GOP baseline" class="metricPill red">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-r="">—</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Projected seats" class="card seatsCard">
+<div class="seatsSummary">
+<div class="seatsLine">
+<div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d="">—</span></div>
+<div aria-hidden="true" class="seatsDivider"></div>
+<div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r="">—</span></div>
+</div>
+<div aria-label="Seat simulation distribution" class="simMini">
+<canvas class="simCanvas" data-sim-canvas=""></canvas>
+</div>
+</div>
+</section>
+<section aria-label="Map" class="card mapCard">
+<div class="mapGrid">
+<div class="mapStage">
+<svg aria-label="US map" class="mapSvg"></svg>
+<div aria-hidden="true" class="legendOverlay">
+<div class="swatch"></div>
+</div>
+</div>
+</div>
+<div class="mapHint" data-map-help="">Hover a state for details.</div>
+</section>
+</section><section class="modeCol" data-mode="2016">
+<section class="card topCard">
+<div class="panelHeaderRow">
+<div class="panelTitleWrap">
+<div class="panelTitle">Senate</div>
+<div class="panelSub">Class II - 2026</div>
+</div>
+<div aria-label="National baseline" class="pillRow">
+<div aria-label="Dem baseline" class="metricPill blue">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-d="">—</span>
+</div>
+<div aria-label="GOP baseline" class="metricPill red">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-r="">—</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Projected seats" class="card seatsCard">
+<div class="seatsSummary">
+<div class="seatsLine">
+<div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d="">—</span></div>
+<div aria-hidden="true" class="seatsDivider"></div>
+<div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r="">—</span></div>
+</div>
+<div aria-label="Seat simulation distribution" class="simMini">
+<canvas class="simCanvas" data-sim-canvas=""></canvas>
+</div>
+</div>
+</section>
+<section aria-label="Map" class="card mapCard">
+<div class="mapGrid">
+<div class="mapStage">
+<svg aria-label="US map" class="mapSvg"></svg>
+<div aria-hidden="true" class="legendOverlay">
+<div class="swatch"></div>
+</div>
+</div>
+</div>
+<div class="mapHint" data-map-help="">Hover a state for details.</div>
+</section>
+</section><section class="modeCol" data-mode="2020">
+<section class="card topCard">
+<div class="panelHeaderRow">
+<div class="panelTitleWrap">
+<div class="panelTitle">Senate</div>
+<div class="panelSub">Class II - 2026</div>
+</div>
+<div aria-label="National baseline" class="pillRow">
+<div aria-label="Dem baseline" class="metricPill blue">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-d="">—</span>
+</div>
+<div aria-label="GOP baseline" class="metricPill red">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-r="">—</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Projected seats" class="card seatsCard">
+<div class="seatsSummary">
+<div class="seatsLine">
+<div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d="">—</span></div>
+<div aria-hidden="true" class="seatsDivider"></div>
+<div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r="">—</span></div>
+</div>
+<div aria-label="Seat simulation distribution" class="simMini">
+<canvas class="simCanvas" data-sim-canvas=""></canvas>
+</div>
+</div>
+</section>
+<section aria-label="Map" class="card mapCard">
+<div class="mapGrid">
+<div class="mapStage">
+<svg aria-label="US map" class="mapSvg"></svg>
+<div aria-hidden="true" class="legendOverlay">
+<div class="swatch"></div>
+</div>
+</div>
+</div>
+<div class="mapHint" data-map-help="">Hover a state for details.</div>
+</section>
+</section><section class="modeCol" data-mode="2024">
+<section class="card topCard">
+<div class="panelHeaderRow">
+<div class="panelTitleWrap">
+<div class="panelTitle">Senate</div>
+<div class="panelSub">Class II - 2026</div>
+</div>
+<div aria-label="National baseline" class="pillRow">
+<div aria-label="Dem baseline" class="metricPill blue">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-d="">—</span>
+</div>
+<div aria-label="GOP baseline" class="metricPill red">
+<span aria-hidden="true" class="dot"></span>
+<span class="val" data-pill-r="">—</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Projected seats" class="card seatsCard">
+<div class="seatsSummary">
+<div class="seatsLine">
+<div class="seatsSide d"><span class="lbl">D</span><span class="num" data-seats-d="">—</span></div>
+<div aria-hidden="true" class="seatsDivider"></div>
+<div class="seatsSide r"><span class="lbl">R</span><span class="num" data-seats-r="">—</span></div>
+</div>
+<div aria-label="Seat simulation distribution" class="simMini">
+<canvas class="simCanvas" data-sim-canvas=""></canvas>
+</div>
+</div>
+</section>
+<section aria-label="Map" class="card mapCard">
+<div class="mapGrid">
+<div class="mapStage">
+<svg aria-label="US map" class="mapSvg"></svg>
+<div aria-hidden="true" class="legendOverlay">
+<div class="swatch"></div>
+</div>
+</div>
+</div>
+<div class="mapHint" data-map-help="">Hover a state for details.</div>
+</section>
+</section></div>
+</div>
+<div aria-label="State details tooltip" id="tip" role="dialog">
+<div class="tipTop">
+<div class="tipHeader">
+<div>
+<p class="tipTitle" id="tipState">State</p>
+<div class="tipSub">
+<span class="badge" id="tipResultBadge"><span class="dot"></span><span id="tipWinner">—</span></span>
+<span class="badge" id="tipProbBadge"><span class="dot"></span><span id="tipProb">—</span></span>
+</div>
+</div>
+<div class="tipMeta" id="tipMeta">—</div>
+</div>
+</div>
+<div class="tipBody" id="tipSliders"></div>
+</div>
+<div aria-hidden="true" class="simTip" id="simTip"></div>
+
+<script id="csv-national" type="text/plain">
+Year,Dem_Candidate,GOP_Candidate,Dem_Poll_Avg,GOP_Poll_Avg,Poll_Margin,Dem_Actual,GOP_Actual,Actual_Margin,Poll_Error,Poll_Source,Winner
+2000,Al Gore,George W. Bush,46.0,48.0,-2.0,48.4,47.9,0.5,2.5,Gallup,R
+2004,John Kerry,George W. Bush,49.0,49.0,0.0,48.3,50.7,-2.4,-2.4,Gallup/RCP,R
+2008,Barack Obama,John McCain,52.0,45.0,7.0,52.9,45.7,7.2,0.2,RCP,D
+2012,Barack Obama,Mitt Romney,49.0,48.0,1.0,51.1,47.2,3.9,2.9,RCP,D
+2016,Hillary Clinton,Donald Trump,46.8,43.6,3.2,48.2,46.1,2.1,-1.1,RCP,R
+2020,Joe Biden,Donald Trump,51.4,46.9,4.5,51.3,46.9,4.4,-0.1,RCP,D
+2024,Kamala Harris,Donald Trump,48.7,48.6,0.1,48.4,49.9,-1.5,-1.6,RCP,R
+</script>
+<script id="csv-battleground" type="text/plain">
+State,2000_Poll_Margin,2000_Actual_Margin,2000_Error,2004_Poll_Margin,2004_Actual_Margin,2004_Error,2008_Poll_Margin,2008_Actual_Margin,2008_Error,2012_Poll_Margin,2012_Actual_Margin,2012_Error,2016_Poll_Margin,2016_Actual_Margin,2016_Error,2020_Poll_Margin,2020_Actual_Margin,2020_Error,2024_Poll_Margin,2024_Actual_Margin,2024_Error
+Pennsylvania,2.0,4.2,2.2,1.0,2.5,1.5,10.5,10.3,-0.2,3.7,5.4,1.7,2.1,-0.7,-2.8,4.2,1.2,-3.0,0.0,-1.9,-1.9
+Michigan,4.0,5.2,1.2,2.0,3.4,1.4,16.0,16.4,0.4,2.6,9.5,6.9,3.6,-0.2,-3.8,6.5,2.8,-3.7,1.1,-1.4,-2.5
+Wisconsin,1.0,0.2,-0.8,1.0,0.4,-0.6,11.0,13.9,2.9,1.5,6.9,5.4,6.5,-0.7,-7.2,6.0,0.6,-5.4,1.4,-0.6,-2.0
+Florida,-2.0,0.0,2.0,-3.0,-5.0,-2.0,2.0,2.8,0.8,-0.6,0.9,1.5,-0.2,-1.2,-1.0,0.5,-3.3,-3.8,-5.0,-13.1,-8.1
+Ohio,-3.0,-3.6,-0.6,-2.0,-2.1,-0.1,6.0,4.6,-1.4,2.8,3.0,0.2,-2.2,-8.1,-5.9,-1.0,-8.1,-7.1,-8.0,-11.4,-3.4
+North Carolina,,,,,,,0.0,0.3,0.3,-2.8,-2.0,0.8,-0.8,-3.6,-2.8,0.3,-1.5,-1.8,-0.7,-3.4,-2.7
+Arizona,,,,,,,,,,,,,-3.0,-3.6,-0.6,0.9,0.3,-0.6,-1.0,-5.5,-4.5
+Nevada,-4.0,-3.5,0.5,-3.0,-2.6,0.4,7.0,12.5,5.5,3.7,6.7,3.0,0.8,2.4,1.6,2.4,2.4,0.0,0.6,-3.6,-4.2
+Georgia,,,,,,,,,,,,,-4.8,-5.1,-0.3,-1.0,0.2,1.2,0.1,-2.7,-2.8
+Iowa,0.0,0.3,0.3,-1.0,-0.7,0.3,9.5,9.5,0.0,2.5,5.7,3.2,-3.0,-9.4,-6.4,-2.9,-8.2,-5.3,-4.0,-12.8,-8.8
+Virginia,,,,,,,7.0,6.3,-0.7,2.0,3.9,1.9,5.3,5.3,0.0,11.0,10.1,-0.9,7.0,5.6,-1.4
+Colorado,,,,-4.0,-4.7,-0.7,7.5,9.3,1.8,0.2,5.4,5.2,3.9,4.9,1.0,11.0,13.5,2.5,9.0,10.8,1.8
+New Hampshire,-2.0,-1.3,0.7,0.0,1.3,1.3,9.0,9.6,0.6,2.0,5.6,3.6,1.0,0.4,-0.6,9.0,7.3,-1.7,5.0,6.1,1.1
+Minnesota,5.0,2.4,-2.6,2.0,3.5,1.5,,,,,,,3.7,1.5,-2.2,6.7,7.1,0.4,5.0,5.4,0.4
+</script>
+<script>
+/* ---------- Config ---------- */
+const PROB_ERROR_SD_PTS = 7; // hidden, used for win probabilities (state + senate majority)
+const TOOLTIP_COMPACT = true;
+const HOUSE_MC_SWING_RANGE_PTS = 7; // +/- points (House uses wider national swing)
+const HOUSE_MC_SIMS = 10000;
+const SENATE_MC_SWING_RANGE_PTS = 7; // +/- points
+const SENATE_MC_SIMS = 10000;
+const WEIGHTS = { gb:35, polls:50, ind:15 };
+const VIS = { show:12.5, likely:7.5, lean:2.5 }; // UI buckets + map filter
+
+function bucketKeyFromMargin(m){
+  if (!isFinite(m)) return null;
+  const a = Math.abs(m);
+  const side = (m < 0) ? "D" : "R";
+
+  // Safe: |margin| >= 12.5 — excluded from the table (still shown on the map)
+  if (a >= VIS.show) return null;
+
+  // Tossup: |margin| <= 2.5
+  if (a <= VIS.lean) return "Tossup";
+
+  // Lean: 2.5 < |margin| <= 7.5
+  if (a <= VIS.likely) return `Lean ${side}`;
+
+  // Likely: 7.5 < |margin| < 12.5
+  return `Likely ${side}`;
+}
+function formatMarginDR(m){
+  if (!isFinite(m)) return "—";
+  const mm = clamp(m, -25, 25); // display clamp
+  const a = Math.abs(mm);
+  if (a < 0.05) return "Tied";
+  return (mm < 0) ? `D+${a.toFixed(1)}` : `R+${a.toFixed(1)}`;
+}
+function pseudoEvtFromEl(el){
+  const r = el.getBoundingClientRect();
+  return { clientX: r.left + r.width/2, clientY: r.top + r.height/2 };
+}
+
+
+const SEAT_RULES = {};
+MODES.forEach(y=>{
+  SEAT_RULES[y] = { total: 538, majorityLine: 270, baseD: 0, baseR: 0, weights: PRES_EV[y] };
+});
+const SENATE_CONTROL_RULE = { demAtLeast: 51, repAtLeast: 50 };
+
+/* ---------- FIPS lookup for US-atlas ---------- */
+const FIPS_TO_USPS = {
+  1:"AL",2:"AK",4:"AZ",5:"AR",6:"CA",8:"CO",9:"CT",10:"DE",11:"DC",12:"FL",13:"GA",15:"HI",16:"ID",17:"IL",18:"IN",19:"IA",20:"KS",21:"KY",22:"LA",23:"ME",24:"MD",25:"MA",26:"MI",27:"MN",28:"MS",29:"MO",30:"MT",31:"NE",32:"NV",33:"NH",34:"NJ",35:"NM",36:"NY",37:"NC",38:"ND",39:"OH",40:"OK",41:"OR",42:"PA",44:"RI",45:"SC",46:"SD",47:"TN",48:"TX",49:"UT",50:"VT",51:"VA",53:"WA",54:"WV",55:"WI",56:"WY"
+};
+
+// ---------- Presidential multi-year data (generated) ----------
+const PRES_YEARS = ["2000", "2004", "2008", "2012", "2016", "2020", "2024"];
+const PRES_RATIOS = {"2000":{"AK":{"D":0.7221,"R":1.337},"AL":{"D":0.8442,"R":1.1889},"AR":{"D":1.083,"R":0.8994},"AZ":{"D":0.9347,"R":1.0792},"CA":{"D":1.044,"R":0.9466},"CO":{"D":0.8985,"R":1.1231},"CT":{"D":1.1014,"R":0.877},"DC":{"D":1.6445,"R":0.2185},"DE":{"D":1.0697,"R":0.9155},"FL":{"D":0.9699,"R":1.0365},"GA":{"D":0.9008,"R":1.1203},"HI":{"D":1.1728,"R":0.7904},"IA":{"D":1.017,"R":0.9794},"ID":{"D":0.7153,"R":1.3452},"IL":{"D":1.0876,"R":0.8938},"IN":{"D":0.8549,"R":1.176},"KS":{"D":0.7286,"R":1.3292},"KY":{"D":0.922,"R":1.0946},"LA":{"D":1.0321,"R":0.9611},"MA":{"D":1.2524,"R":0.6939},"MD":{"D":1.07,"R":0.9152},"ME":{"D":1.1434,"R":0.8261},"MI":{"D":1.046,"R":0.9442},"MN":{"D":1.0835,"R":0.8987},"MO":{"D":0.9771,"R":1.0278},"MS":{"D":0.8622,"R":1.1671},"MT":{"D":0.8816,"R":1.1436},"NC":{"D":0.8662,"R":1.1623},"ND":{"D":0.841,"R":1.1928},"NE":{"D":0.7197,"R":1.3398},"NH":{"D":1.0147,"R":0.9821},"NJ":{"D":1.0942,"R":0.8858},"NM":{"D":0.9858,"R":1.0173},"NV":{"D":0.923,"R":1.0933},"NY":{"D":1.2359,"R":0.714},"OH":{"D":0.978,"R":1.0267},"OK":{"D":0.832,"R":1.2037},"OR":{"D":0.998,"R":1.0025},"PA":{"D":1.0065,"R":0.9921},"RI":{"D":1.2591,"R":0.6858},"SC":{"D":0.8556,"R":1.1751},"SD":{"D":0.8771,"R":1.1491},"TN":{"D":0.9358,"R":1.0778},"TX":{"D":0.8638,"R":1.1652},"UT":{"D":0.693,"R":1.3722},"VA":{"D":0.893,"R":1.1298},"VT":{"D":1.1529,"R":0.8146},"WA":{"D":1.0436,"R":0.9471},"WI":{"D":1.0203,"R":0.9753},"WV":{"D":1.0648,"R":0.9214},"WY":{"D":0.7757,"R":1.272}},"2004":{"AK":{"D":0.638,"R":1.3657},"AL":{"D":0.8435,"R":1.1581},"AR":{"D":0.9392,"R":1.0615},"AZ":{"D":0.9296,"R":1.0712},"CA":{"D":1.1183,"R":0.8805},"CO":{"D":0.9056,"R":1.0953},"CT":{"D":1.1791,"R":0.8191},"DC":{"D":1.8005,"R":0.1912},"DE":{"D":1.129,"R":0.8697},"FL":{"D":0.9948,"R":1.0053},"GA":{"D":0.8758,"R":1.1255},"HI":{"D":1.1904,"R":0.8076},"IA":{"D":0.9981,"R":1.0019},"ID":{"D":0.5801,"R":1.4243},"IL":{"D":1.1179,"R":0.8809},"IN":{"D":0.8356,"R":1.1661},"KS":{"D":0.7777,"R":1.2246},"KY":{"D":0.8411,"R":1.1605},"LA":{"D":0.9165,"R":1.0844},"MA":{"D":1.2892,"R":0.7078},"MD":{"D":1.1627,"R":0.8356},"ME":{"D":1.0496,"R":0.9499},"MI":{"D":1.0473,"R":0.9522},"MN":{"D":1.0205,"R":0.9793},"MO":{"D":0.9608,"R":1.0396},"MS":{"D":0.8237,"R":1.1782},"MT":{"D":0.7232,"R":1.2797},"NC":{"D":0.8663,"R":1.1351},"ND":{"D":0.7018,"R":1.3012},"NE":{"D":0.6929,"R":1.3103},"NH":{"D":0.9816,"R":1.0186},"NJ":{"D":1.1583,"R":0.8401},"NM":{"D":0.9955,"R":1.0045},"NV":{"D":0.9579,"R":1.0425},"NY":{"D":1.265,"R":0.7322},"OH":{"D":0.9583,"R":1.0421},"OK":{"D":0.7744,"R":1.2279},"OR":{"D":0.9996,"R":1.0004},"PA":{"D":1.0376,"R":0.962},"RI":{"D":1.3063,"R":0.6906},"SC":{"D":0.8325,"R":1.1692},"SD":{"D":0.7638,"R":1.2387},"TN":{"D":0.9558,"R":1.0446},"TX":{"D":0.7769,"R":1.2254},"UT":{"D":0.5626,"R":1.4419},"VA":{"D":0.9124,"R":1.0885},"VT":{"D":1.1031,"R":0.8958},"WA":{"D":1.0535,"R":0.946},"WI":{"D":0.9972,"R":1.0028},"WV":{"D":0.9304,"R":1.0703},"WY":{"D":0.5774,"R":1.427}},"2008":{"AK":{"D":0.7541,"R":1.2341},"AL":{"D":0.7608,"R":1.2277},"AR":{"D":0.9241,"R":1.0723},"AZ":{"D":0.9171,"R":1.0789},"CA":{"D":1.1287,"R":0.8775},"CO":{"D":0.9768,"R":1.0221},"CT":{"D":1.1335,"R":0.873},"DC":{"D":1.8562,"R":0.185},"DE":{"D":1.1039,"R":0.9011},"FL":{"D":0.9735,"R":1.0252},"GA":{"D":0.854,"R":1.139},"HI":{"D":1.1156,"R":0.89},"IA":{"D":1.0184,"R":0.9825},"ID":{"D":0.6291,"R":1.3531},"IL":{"D":1.1321,"R":0.8743},"IN":{"D":0.8115,"R":1.1794},"KS":{"D":0.7614,"R":1.2271},"KY":{"D":0.8201,"R":1.1713},"LA":{"D":0.875,"R":1.119},"MA":{"D":1.2866,"R":0.7272},"MD":{"D":1.1599,"R":0.8478},"ME":{"D":1.1193,"R":0.8865},"MI":{"D":1.0607,"R":0.9422},"MN":{"D":1.0614,"R":0.9416},"MO":{"D":0.9511,"R":1.0466},"MS":{"D":0.8304,"R":1.1615},"MT":{"D":0.81,"R":1.1809},"NC":{"D":0.8973,"R":1.0978},"ND":{"D":0.7401,"R":1.2474},"NE":{"D":0.6798,"R":1.3048},"NH":{"D":1.0394,"R":0.9625},"NJ":{"D":1.0944,"R":0.9101},"NM":{"D":1.0171,"R":0.9837},"NV":{"D":0.9983,"R":1.0017},"NY":{"D":1.2269,"R":0.7841},"OH":{"D":1.0036,"R":0.9966},"OK":{"D":0.706,"R":1.2798},"OR":{"D":1.0685,"R":0.9348},"PA":{"D":1.0511,"R":0.9514},"RI":{"D":1.2422,"R":0.7695},"SC":{"D":0.8482,"R":1.1445},"SD":{"D":0.8015,"R":1.1889},"TN":{"D":0.8779,"R":1.1162},"TX":{"D":0.7893,"R":1.2006},"UT":{"D":0.5465,"R":1.4316},"VA":{"D":0.9405,"R":1.0566},"VT":{"D":1.2365,"R":0.7749},"WA":{"D":1.1001,"R":0.9048},"WI":{"D":1.0292,"R":0.9722},"WV":{"D":0.8924,"R":1.1024},"WY":{"D":0.6088,"R":1.3724}},"2012":{"AK":{"D":0.7241,"R":1.3209},"AL":{"D":0.7273,"R":1.3172},"AR":{"D":0.7407,"R":1.3016},"AZ":{"D":0.8496,"R":1.1749},"CA":{"D":1.1582,"R":0.816},"CO":{"D":1.0145,"R":0.9831},"CT":{"D":1.1404,"R":0.8367},"DC":{"D":1.737,"R":0.1428},"DE":{"D":1.1649,"R":0.8082},"FL":{"D":0.9563,"R":1.0509},"GA":{"D":0.881,"R":1.1384},"HI":{"D":1.3575,"R":0.5842},"IA":{"D":1.02,"R":0.9767},"ID":{"D":0.6876,"R":1.3633},"IL":{"D":1.1667,"R":0.8061},"IN":{"D":0.9396,"R":1.0703},"KS":{"D":0.7883,"R":1.2462},"KY":{"D":0.7768,"R":1.2597},"LA":{"D":0.754,"R":1.2861},"MA":{"D":1.1753,"R":0.7961},"MD":{"D":1.1703,"R":0.8019},"ME":{"D":1.0941,"R":0.8906},"MI":{"D":1.0856,"R":0.9005},"MN":{"D":1.0271,"R":0.9684},"MO":{"D":0.9286,"R":1.083},"MS":{"D":0.8064,"R":1.2252},"MT":{"D":0.9081,"R":1.1069},"NC":{"D":0.933,"R":1.078},"ND":{"D":0.8479,"R":1.1769},"NE":{"D":0.7884,"R":1.2462},"NH":{"D":1.0204,"R":0.9763},"NJ":{"D":1.0761,"R":0.9114},"NM":{"D":1.0724,"R":0.9158},"NV":{"D":1.0487,"R":0.9434},"NY":{"D":1.223,"R":0.7406},"OH":{"D":0.9733,"R":1.0311},"OK":{"D":0.6389,"R":1.42},"OR":{"D":1.0863,"R":0.8996},"PA":{"D":1.0271,"R":0.9684},"RI":{"D":1.1939,"R":0.7744},"SC":{"D":0.8454,"R":1.1799},"SD":{"D":0.85,"R":1.1745},"TN":{"D":0.7879,"R":1.2466},"TX":{"D":0.8195,"R":1.21},"UT":{"D":0.6597,"R":1.3958},"VA":{"D":0.9891,"R":1.0127},"VT":{"D":1.2814,"R":0.6728},"WA":{"D":1.0926,"R":0.8922},"WI":{"D":1.0611,"R":0.9289},"WV":{"D":0.8058,"R":1.2259},"WY":{"D":0.6219,"R":1.4398}},"2016":{"AK":{"D":0.8207,"R":1.1943},"AL":{"D":0.7457,"R":1.2756},"AR":{"D":0.7277,"R":1.2952},"AZ":{"D":0.8727,"R":1.138},"CA":{"D":1.1896,"R":0.7945},"CO":{"D":1.0142,"R":0.9846},"CT":{"D":1.13,"R":0.8591},"DC":{"D":1.7802,"R":0.1545},"DE":{"D":1.143,"R":0.845},"FL":{"D":0.9699,"R":1.0327},"GA":{"D":0.8853,"R":1.1243},"HI":{"D":1.3787,"R":0.5896},"IA":{"D":1.0183,"R":0.9802},"ID":{"D":0.6456,"R":1.3841},"IL":{"D":1.1263,"R":0.8631},"IN":{"D":0.8614,"R":1.1502},"KS":{"D":0.7477,"R":1.2735},"KY":{"D":0.7394,"R":1.2824},"LA":{"D":0.7932,"R":1.2241},"MA":{"D":1.188,"R":0.7963},"MD":{"D":1.2175,"R":0.7643},"ME":{"D":1.1125,"R":0.8781},"MI":{"D":1.0537,"R":0.9418},"MN":{"D":1.0371,"R":0.9598},"MO":{"D":0.8695,"R":1.1415},"MS":{"D":0.8498,"R":1.1628},"MT":{"D":0.8261,"R":1.1885},"NC":{"D":0.9415,"R":1.0634},"ND":{"D":0.7669,"R":1.2526},"NE":{"D":0.7474,"R":1.2738},"NH":{"D":1.0158,"R":0.9828},"NJ":{"D":1.1335,"R":0.8553},"NM":{"D":1.0632,"R":0.9315},"NV":{"D":1.0269,"R":0.9709},"NY":{"D":1.2698,"R":0.7076},"OH":{"D":0.9905,"R":1.0103},"OK":{"D":0.6389,"R":1.3914},"OR":{"D":1.0819,"R":0.9112},"PA":{"D":1.0139,"R":0.985},"RI":{"D":1.2309,"R":0.7498},"SC":{"D":0.8593,"R":1.1525},"SD":{"D":0.7841,"R":1.234},"TN":{"D":0.7623,"R":1.2576},"TX":{"D":0.8074,"R":1.2087},"UT":{"D":0.4879,"R":1.555},"VA":{"D":0.9992,"R":1.0009},"VT":{"D":1.3122,"R":0.6617},"WA":{"D":1.108,"R":0.8829},"WI":{"D":1.0279,"R":0.9697},"WV":{"D":0.6984,"R":1.3268},"WY":{"D":0.5545,"R":1.4828}},"2020":{"AK":{"D":0.8134,"R":1.1955},"AL":{"D":0.6963,"R":1.3181},"AR":{"D":0.6981,"R":1.3163},"AZ":{"D":0.9404,"R":1.0625},"CA":{"D":1.2925,"R":0.6936},"CO":{"D":1.0297,"R":0.9689},"CT":{"D":1.1169,"R":0.8776},"DC":{"D":1.8704,"R":0.0881},"DE":{"D":1.0945,"R":0.901},"FL":{"D":0.9652,"R":1.0365},"GA":{"D":0.9253,"R":1.0783},"HI":{"D":1.3182,"R":0.6667},"IA":{"D":0.8783,"R":1.1275},"ID":{"D":0.6194,"R":1.3987},"IL":{"D":1.1536,"R":0.8391},"IN":{"D":0.7795,"R":1.231},"KS":{"D":0.7601,"R":1.2513},"KY":{"D":0.671,"R":1.3447},"LA":{"D":0.7785,"R":1.2321},"MA":{"D":1.2636,"R":0.7238},"MD":{"D":1.2511,"R":0.7369},"ME":{"D":1.0085,"R":0.9911},"MI":{"D":0.975,"R":1.0262},"MN":{"D":0.9935,"R":1.0068},"MO":{"D":0.7854,"R":1.2248},"MS":{"D":0.7996,"R":1.2099},"MT":{"D":0.7601,"R":1.2513},"NC":{"D":0.9401,"R":1.0628},"ND":{"D":0.5901,"R":1.4294},"NE":{"D":0.7125,"R":1.3012},"NH":{"D":0.9811,"R":1.0198},"NJ":{"D":1.1197,"R":0.8747},"NM":{"D":1.0682,"R":0.9286},"NV":{"D":1.0026,"R":0.9973},"NY":{"D":1.2394,"R":0.7492},"OH":{"D":0.8939,"R":1.1112},"OK":{"D":0.6,"R":1.4191},"OR":{"D":1.0976,"R":0.8978},"PA":{"D":0.9699,"R":1.0315},"RI":{"D":1.1397,"R":0.8536},"SC":{"D":0.8315,"R":1.1766},"SD":{"D":0.6651,"R":1.3508},"TN":{"D":0.711,"R":1.3028},"TX":{"D":0.8852,"R":1.1203},"UT":{"D":0.7352,"R":1.2774},"VA":{"D":1.0325,"R":0.9659},"VT":{"D":1.2741,"R":0.7128},"WA":{"D":1.149,"R":0.8439},"WI":{"D":0.9693,"R":1.0322},"WV":{"D":0.5441,"R":1.4776},"WY":{"D":0.4749,"R":1.5501}},"2024":{"AK":{"D":0.8559,"R":1.1578},"AL":{"D":0.7096,"R":1.318},"AR":{"D":0.6847,"R":1.3453},"AZ":{"D":0.9596,"R":1.0442},"CA":{"D":1.2418,"R":0.7352},"CO":{"D":1.0894,"R":0.9022},"CT":{"D":1.1517,"R":0.8339},"DC":{"D":1.8074,"R":0.1159},"DE":{"D":1.1408,"R":0.8458},"FL":{"D":0.9242,"R":1.083},"GA":{"D":0.9589,"R":1.045},"HI":{"D":1.2442,"R":0.7326},"IA":{"D":0.8766,"R":1.1352},"ID":{"D":0.6528,"R":1.3801},"IL":{"D":1.1223,"R":0.8661},"IN":{"D":0.7998,"R":1.2192},"KS":{"D":0.8132,"R":1.2045},"KY":{"D":0.7041,"R":1.3241},"LA":{"D":0.7755,"R":1.2458},"MA":{"D":1.2841,"R":0.6889},"MD":{"D":1.2824,"R":0.6908},"ME":{"D":1.046,"R":0.9497},"MI":{"D":0.9837,"R":1.0179},"MN":{"D":1.0262,"R":0.9713},"MO":{"D":0.8067,"R":1.2117},"MS":{"D":0.7962,"R":1.2232},"MT":{"D":0.796,"R":1.2234},"NC":{"D":0.9435,"R":1.0618},"ND":{"D":0.6272,"R":1.4082},"NE":{"D":0.7694,"R":1.2525},"NH":{"D":1.0283,"R":0.969},"NJ":{"D":1.111,"R":0.8784},"NM":{"D":1.0622,"R":0.9319},"NV":{"D":0.98,"R":1.0219},"NY":{"D":1.1808,"R":0.802},"OH":{"D":0.8786,"R":1.1329},"OK":{"D":0.6325,"R":1.4024},"OR":{"D":1.1155,"R":0.8735},"PA":{"D":0.9679,"R":1.0352},"RI":{"D":1.1594,"R":0.8255},"SC":{"D":0.8432,"R":1.1717},"SD":{"D":0.6996,"R":1.329},"TN":{"D":0.7303,"R":1.2953},"TX":{"D":0.9025,"R":1.1068},"UT":{"D":0.752,"R":1.2715},"VA":{"D":1.0552,"R":0.9395},"VT":{"D":1.3067,"R":0.6641},"WA":{"D":1.1465,"R":0.8396},"WI":{"D":0.9627,"R":1.0408},"WV":{"D":0.5778,"R":1.4623},"WY":{"D":0.5265,"R":1.5185}}};
+const PRES_EV = {"2000":{"AL":9,"AK":3,"AZ":8,"AR":6,"CA":54,"CO":8,"CT":8,"DE":3,"DC":3,"FL":25,"GA":13,"HI":4,"ID":4,"IL":22,"IN":12,"IA":7,"KS":6,"KY":8,"LA":9,"ME":4,"MD":10,"MA":12,"MI":18,"MN":10,"MS":7,"MO":11,"MT":3,"NE":5,"NV":4,"NH":4,"NJ":15,"NM":5,"NY":33,"NC":14,"ND":3,"OH":21,"OK":8,"OR":7,"PA":23,"RI":4,"SC":8,"SD":3,"TN":11,"TX":32,"UT":5,"VT":3,"VA":13,"WA":11,"WV":5,"WI":11,"WY":3},"2004":{"AL":9,"AK":3,"AZ":10,"AR":6,"CA":55,"CO":9,"CT":7,"DE":3,"DC":3,"FL":27,"GA":15,"HI":4,"ID":4,"IL":21,"IN":11,"IA":7,"KS":6,"KY":8,"LA":9,"ME":4,"MD":10,"MA":12,"MI":17,"MN":10,"MS":6,"MO":11,"MT":3,"NE":5,"NV":5,"NH":4,"NJ":15,"NM":5,"NY":31,"NC":15,"ND":3,"OH":20,"OK":7,"OR":7,"PA":21,"RI":4,"SC":8,"SD":3,"TN":11,"TX":34,"UT":5,"VT":3,"VA":13,"WA":11,"WV":5,"WI":10,"WY":3},"2008":{"AL":9,"AK":3,"AZ":10,"AR":6,"CA":55,"CO":9,"CT":7,"DE":3,"DC":3,"FL":27,"GA":15,"HI":4,"ID":4,"IL":21,"IN":11,"IA":7,"KS":6,"KY":8,"LA":9,"ME":4,"MD":10,"MA":12,"MI":17,"MN":10,"MS":6,"MO":11,"MT":3,"NE":5,"NV":5,"NH":4,"NJ":15,"NM":5,"NY":31,"NC":15,"ND":3,"OH":20,"OK":7,"OR":7,"PA":21,"RI":4,"SC":8,"SD":3,"TN":11,"TX":34,"UT":5,"VT":3,"VA":13,"WA":11,"WV":5,"WI":10,"WY":3},"2012":{"AL":9,"AK":3,"AZ":11,"AR":6,"CA":55,"CO":9,"CT":7,"DE":3,"DC":3,"FL":29,"GA":16,"HI":4,"ID":4,"IL":20,"IN":11,"IA":6,"KS":6,"KY":8,"LA":8,"ME":4,"MD":10,"MA":11,"MI":16,"MN":10,"MS":6,"MO":10,"MT":3,"NE":5,"NV":6,"NH":4,"NJ":14,"NM":5,"NY":29,"NC":15,"ND":3,"OH":18,"OK":7,"OR":7,"PA":20,"RI":4,"SC":9,"SD":3,"TN":11,"TX":38,"UT":6,"VT":3,"VA":13,"WA":12,"WV":5,"WI":10,"WY":3},"2016":{"AL":9,"AK":3,"AZ":11,"AR":6,"CA":55,"CO":9,"CT":7,"DE":3,"DC":3,"FL":29,"GA":16,"HI":4,"ID":4,"IL":20,"IN":11,"IA":6,"KS":6,"KY":8,"LA":8,"ME":4,"MD":10,"MA":11,"MI":16,"MN":10,"MS":6,"MO":10,"MT":3,"NE":5,"NV":6,"NH":4,"NJ":14,"NM":5,"NY":29,"NC":15,"ND":3,"OH":18,"OK":7,"OR":7,"PA":20,"RI":4,"SC":9,"SD":3,"TN":11,"TX":38,"UT":6,"VT":3,"VA":13,"WA":12,"WV":5,"WI":10,"WY":3},"2020":{"AL":9,"AK":3,"AZ":11,"AR":6,"CA":55,"CO":9,"CT":7,"DE":3,"DC":3,"FL":29,"GA":16,"HI":4,"ID":4,"IL":20,"IN":11,"IA":6,"KS":6,"KY":8,"LA":8,"ME":4,"MD":10,"MA":11,"MI":16,"MN":10,"MS":6,"MO":10,"MT":3,"NE":5,"NV":6,"NH":4,"NJ":14,"NM":5,"NY":29,"NC":15,"ND":3,"OH":18,"OK":7,"OR":7,"PA":20,"RI":4,"SC":9,"SD":3,"TN":11,"TX":38,"UT":6,"VT":3,"VA":13,"WA":12,"WV":5,"WI":10,"WY":3},"2024":{"AL":9,"AK":3,"AZ":11,"AR":6,"CA":54,"CO":10,"CT":7,"DE":3,"DC":3,"FL":30,"GA":16,"HI":4,"ID":4,"IL":19,"IN":11,"IA":6,"KS":6,"KY":8,"LA":8,"ME":4,"MD":10,"MA":11,"MI":15,"MN":10,"MS":6,"MO":10,"MT":4,"NE":5,"NV":6,"NH":4,"NJ":14,"NM":5,"NY":28,"NC":16,"ND":3,"OH":17,"OK":7,"OR":8,"PA":19,"RI":4,"SC":9,"SD":3,"TN":11,"TX":40,"UT":6,"VT":3,"VA":13,"WA":12,"WV":4,"WI":10,"WY":3}};
+
+
+const USPS_TO_NAME = {
+  AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",DC:"District of Columbia",
+  FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",
+  MD:"Maryland",MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",
+  NJ:"New Jersey",NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",
+  SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming"
+};
+function fipsToUsps(id){ const n = parseInt(id, 10); return FIPS_TO_USPS[n] || ""; }
+/* ---------- House district helpers ---------- */
+const NAME_TO_USPS = Object.fromEntries(
+  Object.entries(USPS_TO_NAME).map(([usps, name]) => [String(name).trim().toLowerCase(), usps])
+);
+
+function houseDistrictCode(usps, cd){
+  if (!usps) return "";
+  if (cd === 0) return `${usps}-AL`;
+  return `${usps}-${String(cd).padStart(2,"0")}`;
+}
+function houseDistrictName(stateName, cd){
+  if (!stateName) return "House district";
+  return (cd === 0) ? `${stateName} At-Large` : `${stateName} District ${cd}`;
+}
+
+
+/* ---------- Math helpers ---------- */
+const clamp = (x,a,b)=> Math.max(a, Math.min(b, x));
+function normalizePair(D, R){
+  const d = Number(D), r = Number(R);
+  const s = d + r;
+  if (!isFinite(s) || s <= 0) return {D:50, R:50};
+  return {D: 100*d/s, R: 100*r/s};
+}
+function marginRD(pair){ return pair.R - pair.D; } // negative = Dem lead
+function fmtLead(m){
+  if (!isFinite(m)) return "—";
+  if (Math.abs(m) < 1e-9) return "D+0.0";
+  const pts = Math.abs(m).toFixed(1);
+  return (m < 0) ? `D+${pts}` : `R+${pts}`;
+}
+function erf(x){
+  const sign = x < 0 ? -1 : 1;
+  x = Math.abs(x);
+  const a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
+  const t = 1/(1+p*x);
+  const y = 1 - (((((a5*t + a4)*t) + a3)*t + a2)*t + a1)*t*Math.exp(-x*x);
+  return sign*y;
+}
+function normalCDF(x){ return 0.5*(1 + erf(x/Math.SQRT2)); }
+function winProbFromMargin(m){
+  const z = m / PROB_ERROR_SD_PTS;
+  const pR = clamp(normalCDF(z), 0, 1);
+  return { pD: 1 - pR, pR };
+}
+
+/* ---------- Fast win-prob lookup (avoids millions of erf/exp calls in House MC) ---------- */
+const WINP_MIN = -40, WINP_MAX = 40, WINP_STEP = 0.1;
+const WINP_N = Math.round((WINP_MAX - WINP_MIN) / WINP_STEP) + 1;
+const WINP_PD_TABLE = new Float32Array(WINP_N);
+for (let i=0;i<WINP_N;i++){
+  const m = WINP_MIN + i*WINP_STEP;
+  WINP_PD_TABLE[i] = winProbFromMargin(m).pD;
+}
+function winProbD_fast(m){
+  if (!isFinite(m)) return 0.5;
+  const mm = clamp(m, WINP_MIN, WINP_MAX);
+  const idx = Math.round((mm - WINP_MIN) / WINP_STEP);
+  return WINP_PD_TABLE[idx] ?? 0.5;
+}
+
+/* ---------- Color ---------- */
+function interpColor(m){
+  if (!isFinite(m)) return "#e5e7eb";
+
+  const max = 25;
+  const a = Math.abs(m);
+
+  // Under 2 pts: highlight as "ultra-close" (yellow)
+  if (a < 2.0) return "rgb(253,224,71)"; // ~#fde047
+
+  const t = clamp(a/max, 0, 1);
+
+  if (m < 0){
+    // Blue ramp
+    const r = Math.round(248*(1-t) + 37*t);
+    const g = Math.round(250*(1-t) + 99*t);
+    const b = Math.round(252*(1-t) + 235*t);
+    return `rgb(${r},${g},${b})`;
+  } else {
+    // Red ramp
+    const r = Math.round(252*(1-t) + 220*t);
+    const g = Math.round(250*(1-t) + 38*t);
+    const b = Math.round(250*(1-t) + 38*t);
+    return `rgb(${r},${g},${b})`;
+  }
+}
+
+
+
+/* ---------- Data model loaded from CSV ---------- */
+const DATA = {};
+MODES.forEach(y=>{
+  DATA[y] = { ratios: PRES_RATIOS[y], gb: null, polls: {}, ev: PRES_EV[y] };
+});
+function toNum(v){
+  if (v === null || v === undefined) return NaN;
+  const s = String(v).trim();
+  if (!s) return NaN;
+  const n = Number(s);
+  return isFinite(n) ? n : NaN;
+}
+
+
+async function loadCSV(){
+  try{
+    const natCsv = (document.getElementById("csv-national")?.textContent || "").trim();
+    const bgCsv  = (document.getElementById("csv-battleground")?.textContent || "").trim();
+    if (!natCsv || !bgCsv){
+      throw new Error("Embedded CSV blocks not found or empty");
+    }
+
+    const natRows = d3.csvParse(natCsv);
+    const natByYear = {};
+    for (const r of natRows){
+      const y = String(r.Year).trim();
+      if (!MODES.includes(y)) continue;
+      const margin = +r.Poll_Margin; // Dem - GOP
+      if (!Number.isFinite(margin)) continue;
+      natByYear[y] = margin;
+    }
+
+    const bgRows = d3.csvParse(bgCsv);
+
+    MODES.forEach(y=>{
+      const m = (y in natByYear) ? natByYear[y] : 0;
+      DATA[y].gb = { D: 50 + m/2, R: 50 - m/2 };
+      DATA[y].polls = {};
+    });
+
+    for (const row of bgRows){
+      const stateName = String(row.State||"").trim();
+      const usps = NAME_TO_USPS[stateName] || null;
+      if (!usps) continue;
+
+      for (const y of MODES){
+        const col = `${y}_Poll_Margin`;
+        const m = +row[col]; // Dem - GOP
+        if (!Number.isFinite(m)) continue;
+        DATA[y].polls[usps] = { D: 50 + m/2, R: 50 - m/2 };
+      }
+    }
+
+    return true;
+  }catch(err){
+    console.error(err);
+    showLoadError("Failed to load embedded polling data. (csv-national / csv-battleground blocks missing.)");
+    return false;
+  }
+}
+
+
+
+async function loadHouseRatios(){
+  const errBox = document.getElementById("loadError");
+  try{
+    const csvText = await fetch("house_district_ratios_filled.csv", {cache:"no-store"}).then(r=>{
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.text();
+    });
+
+    const rows = d3.csvParse(csvText);
+    if (!rows || rows.length === 0) throw new Error("House ratios CSV empty");
+
+    for (const row of rows){
+      const rawId = String(row.path_id ?? "").trim();
+      if (!rawId) continue;
+      const did = rawId.padStart(4,"0");
+      const dRatio = toNum(row.d_ratio);
+      const rRatio = toNum(row.r_ratio);
+
+      if (isFinite(dRatio) && isFinite(rRatio)){
+        DATA.house.ratios[did] = { D: dRatio, R: rRatio };
+      }
+
+      const stateName = String(row.state_name ?? "").trim();
+      const cd = parseInt(String(row.congressional_district_number ?? "").trim(), 10);
+      const usps = NAME_TO_USPS[String(stateName).toLowerCase()] || "";
+      const code = houseDistrictCode(usps, isFinite(cd) ? cd : 0) || did;
+      const name = houseDistrictName(stateName || (USPS_TO_NAME[usps] || usps), isFinite(cd) ? cd : 0);
+
+      DATA.house.meta[did] = { code, name, state: stateName, cd: (isFinite(cd) ? cd : 0), usps };
+    }
+
+    // House generic ballot comes from the Senate CSV
+    if (!DATA.house.gb){
+      DATA.house.gb = DATA.senate.gb || DATA.governor.gb || {D:50,R:50};
+    }
+
+    if (errBox) errBox.hidden = true;
+    return true;
+  }catch(err){
+    if (errBox){
+      errBox.hidden = false;
+      errBox.innerHTML = `
+        Could not load <span class="mono">house_district_ratios_filled.csv</span> (must be in the same folder as this HTML).<br/>
+        Error: <span class="mono">${String(err.message || err)}</span><br/>
+        If you opened this as <span class="mono">file://</span>, serve it locally (e.g. <span class="mono">python3 -m http.server 8000</span>).
+      `;
+    }
+    return false;
+  }
+}
+
+/* ---------- Model computation ---------- */
+function computeGenericBallotState(gb, ratio){
+  return normalizePair(gb.D * ratio.D, gb.R * ratio.R);
+}
+function computePollState(poll){
+  if (!poll) return null;
+  const D = Number(poll.D), R = Number(poll.R);
+  if (!isFinite(D) || !isFinite(R) || (D+R)<=0) return null;
+  return normalizePair(D, R);
+}
+function median(arr){
+  const a = arr.filter(x=>isFinite(x)).slice().sort((x,y)=>x-y);
+  const n = a.length;
+  if (n===0) return NaN;
+  const mid = Math.floor(n/2);
+  return (n%2===1) ? a[mid] : (a[mid-1]+a[mid])/2;
+}
+function computeIndicatorNationalFromPolls(modeKey){
+  const ratios = DATA[modeKey].ratios;
+  const polls = DATA[modeKey].polls;
+
+  const implied = [];
+  for (const st of Object.keys(ratios)){
+    const p = computePollState(polls[st]);
+    if (!p) continue;
+    const r = ratios[st];
+    implied.push({ D: p.D / r.D, R: p.R / r.R });
+  }
+  if (implied.length === 0) return null;
+
+  const Ds = implied.map(x=>x.D);
+  const Rs = implied.map(x=>x.R);
+  const medD = median(Ds);
+  const medR = median(Rs);
+  return normalizePair(medD, medR);
+}
+function computeIndicatorState(indNat, ratio){
+  return normalizePair(indNat.D * ratio.D, indNat.R * ratio.R);
+}
+function weightedCombine(components){
+  let W=0, D=0, R=0, sig2=0;
+  for (const c of components){
+    if (!c || !c.pair || !isFinite(c.w) || c.w<=0) continue;
+    W += c.w;
+    D += c.w * c.pair.D;
+    R += c.w * c.pair.R;
+    sig2 += c.w * (c.sigma*c.sigma);
+  }
+  if (W<=0) return {pair:{D:50,R:50}, sigma:6};
+  return { pair: normalizePair(D/W, R/W), sigma: Math.sqrt(sig2/W) };
+}
+
+function getStateModel(modeKey, st, cachedIndNat){
+  const gb = DATA[modeKey].gb || {D:50,R:50};
+  const ratios = DATA[modeKey].ratios;
+  const ratio = ratios[st];
+  if (!ratio) return null;
+
+  const gbPair = computeGenericBallotState(gb, ratio);
+
+  const pollRaw = DATA[modeKey].polls[st];
+  const pollPair = computePollState(pollRaw);
+  const pollSigma = pollRaw && isFinite(Number(pollRaw.S)) ? Number(pollRaw.S) : 3;
+
+  const indNat = cachedIndNat; // computed once per mode
+  const indPair = (indNat) ? computeIndicatorState(indNat, ratio) : null;
+
+  const comps = [
+    { pair: gbPair,   w: WEIGHTS.gb,              sigma: 5 },
+    { pair: pollPair, w: pollPair ? WEIGHTS.polls : 0, sigma: pollSigma },
+    { pair: indPair,  w: indPair ? WEIGHTS.ind : 0,     sigma: 5 },
+  ];
+  const combined = weightedCombine(comps);
+
+  const mFinal = marginRD(combined.pair);
+  const winProb = winProbFromMargin(mFinal);
+
+  return { gbPair, pollPair, indPair, combinedPair: combined.pair, combinedSigma: combined.sigma, winProb };
+}
+
+
+function getHouseModel(did){
+  const gb = DATA.house.gb || DATA.senate.gb || DATA.governor.gb || {D:50,R:50};
+  const ratio = DATA.house.ratios[did];
+  if (!ratio) return null;
+
+  const gbPair = computeGenericBallotState(gb, ratio);
+  const combinedPair = gbPair;
+  const combinedSigma = 5;
+
+  const mFinal = marginRD(combinedPair);
+  const winProb = winProbFromMargin(mFinal);
+
+  return { gbPair, combinedPair, combinedSigma, winProb };
+}
+
+/* ---------- Majority probability (exact Poisson-binomial) ---------- */
+function chamberMajorityProbExact(modeKey, cachedIndNat){
+  const rules = SEAT_RULES[modeKey];
+  const ratios = DATA[modeKey].ratios;
+
+  const upSeats = rules.total - rules.baseD - rules.baseR;
+  const keys = Object.keys(ratios);
+  const modeled = keys.length;
+  const missing = Math.max(0, upSeats - modeled);
+
+  const pDem = [];
+  for (const key of keys){
+    const m = (modeKey === "house")
+      ? getHouseModel(key)
+      : getStateModel(modeKey, key, cachedIndNat);
+    pDem.push(m ? m.winProb.pD : 0.5);
+  }
+  for (let i=0;i<missing;i++) pDem.push(0.5);
+
+  let dist = new Array(pDem.length+1).fill(0);
+  dist[0] = 1;
+  for (let i=0;i<pDem.length;i++){
+    const p = clamp(pDem[i], 0, 1);
+    const nxt = new Array(pDem.length+1).fill(0);
+    for (let k=0;k<=i;k++){
+      nxt[k]   += dist[k] * (1-p);
+      nxt[k+1] += dist[k] * p;
+    }
+    dist = nxt;
+  }
+
+  const needWinsForDemMajority = Math.max(0, rules.majorityLine - rules.baseD);
+  let pDemMaj = 0;
+  for (let k=needWinsForDemMajority; k<dist.length; k++) pDemMaj += dist[k];
+
+  const pRepMaj = clamp(1 - pDemMaj, 0, 1);
+  return { pDemMaj, pRepMaj, upSeats, modeled, missing };
+}
+function senateMajorityProbExact(cachedIndNat){ return chamberMajorityProbExact("senate", cachedIndNat); }
+function houseMajorityProbExact(){ return chamberMajorityProbExact("house", null); }
+
+
+/* ---------- UI: sliders ---------- */
+function chevronSVG(){
+  return `
+    <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M8 10l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 14l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  `;
+}
+
+
+function sliderHTML(title, m, sigma){
+  const min=-25, max=25;
+  const mm = clamp(m, min, max);
+  const left = clamp(mm - sigma, min, max);
+  const right= clamp(mm + sigma, min, max);
+  const toPct = v => ((v-min)/(max-min))*100;
+
+  const markerLeft = toPct(mm);
+  const bandLeft = toPct(left);
+  const bandWidth = Math.max(0, toPct(right) - toPct(left));
+
+  const crosses0 = (left < 0 && right > 0);
+  let bandBg = "";
+  if (crosses0){
+    const pivot = ((0-left)/(right-left))*100;
+    bandBg = `linear-gradient(to right, var(--blue-soft) 0%, var(--blue-soft) ${pivot}%, var(--red-soft) ${pivot}%, var(--red-soft) 100%)`;
+  } else if (right <= 0) bandBg = `var(--blue-soft)`;
+  else bandBg = `var(--red-soft)`;
+
+  const markerBg = (mm < 0) ? "var(--blue)" : (mm > 0 ? "var(--red)" : "var(--zero)");
+
+  const ticks = [-25,-15,-5,0,5,15,25].map(t=>{
+    const p = toPct(t);
+    const cls = (t===0) ? "tickLabel tickZero" : (t<0 ? "tickLabel tickBlue" : "tickLabel tickRed");
+    const glCls = (t===0) ? "gridline zeroLine" : "gridline";
+    return `
+      <div class="${glCls}" style="left:${p}%"></div>
+      <div class="${cls}" style="left:${p}%">${t}</div>
+    `;
+  }).join("");
+
+  return `
+    <div class="sliderBlock">
+      <div class="sliderLabelRow">
+        <div class="sliderLabel">${title} ${chevronSVG()}</div>
+        <div class="sliderValue">${fmtLead(mm)}</div>
+      </div>
+      <div class="axis">
+        ${ticks}
+        <div class="band" style="left:${bandLeft}%; width:${bandWidth}%; background:${bandBg};"></div>
+        <div class="marker" style="left:${markerLeft}%; background:${markerBg};"></div>
+      </div>
+    </div>
+  `;
+}
+
+function sliderEmptyHTML(title, note="No data"){
+  const min=-25, max=25;
+  const toPct = v => ((v-min)/(max-min))*100;
+  const ticks = [-25,-15,-5,0,5,15,25].map(t=>{
+    const p = toPct(t);
+    const cls = (t===0) ? "tickLabel tickZero" : (t<0 ? "tickLabel tickBlue" : "tickLabel tickRed");
+    const glCls = (t===0) ? "gridline zeroLine" : "gridline";
+    return `
+      <div class="${glCls}" style="left:${p}%"></div>
+      <div class="${cls}" style="left:${p}%">${t}</div>
+    `;
+  }).join("");
+  return `
+    <div class="sliderBlock">
+      <div class="sliderLabelRow">
+        <div class="sliderLabel">${title} ${chevronSVG()}</div>
+        <div class="sliderValue">${note}</div>
+      </div>
+      <div class="axis">${ticks}</div>
+    </div>
+  `;
+}
+
+
+function miniMeterHTML(label, m, note=null){
+  const min = -25, max = 25;
+  const safeLabel = label;
+
+  if (!isFinite(m)){
+    const val = (note !== null) ? note : "—";
+    return `
+      <div class="miniRow">
+        <div class="miniLbl">${safeLabel}</div>
+        <div class="miniVal">${val}</div>
+        <div class="miniBar"><div class="miniZero"></div></div>
+      </div>
+    `;
+  }
+
+  const overflow = Math.abs(m) > max;
+
+  // Visual scale stays at +/-25 for readability,
+  // but the numeric readout should show the true value.
+  const mm = clamp(m, min, max);
+  const p = ((mm - min) / (max - min)) * 100;
+
+  const cls = (m < 0) ? "blue" : (m > 0 ? "red" : "neutral");
+
+  // Normal: fill from 0-line. Overflow: fill the whole bar (so it doesn't look like "exactly 25").
+  const left = overflow ? 0 : Math.min(50, p);
+  const width = overflow ? 100 : Math.abs(p - 50);
+
+  return `
+    <div class="miniRow">
+      <div class="miniLbl">${safeLabel}</div>
+      <div class="miniVal">${fmtLead(m)}</div>
+      <div class="miniBar">
+        <div class="miniZero"></div>
+        <div class="miniFill ${cls}" style="left:${left}%; width:${width}%;"></div>
+        <div class="miniDot ${cls}" style="left:${p}%"></div>
+      </div>
+    </div>
+  `;
+}
+
+
+function buildDetailHTML(modeKey, key){
+  const name = (modeKey === "house") ? key : (USPS_TO_NAME[key] || key);
+
+  const cachedIndNat = IND_CACHE[modeKey];
+  const model = getStateModel(modeKey, key, cachedIndNat);
+  if (!model) return `<div class="tipTitle">${escapeHTML(name)}</div><div class="tipMeta">No data</div>`;
+
+  const mGB = model.mGB;
+  const mPoll = model.mPoll;
+  const mInd = model.mInd;
+  const mFinal = model.mFinal;
+
+  const ratio = model.ratio;
+  const hasPoll = model.hasPoll;
+
+  const ev = (SEAT_RULES[modeKey] && SEAT_RULES[modeKey].weights) ? (SEAT_RULES[modeKey].weights[key]||0) : 0;
+
+  const parts = [];
+  parts.push(`<div class="row"><span class="k">Baseline</span><span class="v">${fmtMargin(mGB)}</span></div>`);
+  parts.push(`<div class="row"><span class="k">Polls</span><span class="v">${hasPoll ? fmtMargin(mPoll) : "—"}</span></div>`);
+  parts.push(`<div class="row"><span class="k">Indicator</span><span class="v">${fmtMargin(mInd)}</span></div>`);
+  parts.push(`<div class="hr"></div>`);
+  parts.push(`<div class="row"><span class="k">Combined</span><span class="v"><b>${fmtMargin(mFinal)}</b></span></div>`);
+
+  const metaBits = [];
+  if (ev) metaBits.push(`EV ${ev}`);
+  metaBits.push(`Ratio D ${ratio.D.toFixed(3)} • R ${ratio.R.toFixed(3)}`);
+
+  return `
+    <div class="tipTitle">${escapeHTML(name)}${(modeKey !== "house") ? ` <span class="muted">(${escapeHTML(key)})</span>` : ""}</div>
+    <div class="tipMeta">${metaBits.join(" • ")}</div>
+    <div class="tipGrid">
+      ${parts.join("")}
+    </div>
+  `;
+}
+
+
+/* ---------- Tooltip ---------- */
+const tip = document.getElementById("tip");
+const tipState = document.getElementById("tipState");
+const tipWinner = document.getElementById("tipWinner");
+const tipProb = document.getElementById("tipProb");
+const tipMeta = document.getElementById("tipMeta");
+const tipSliders = document.getElementById("tipSliders");
+const tipResultBadge = document.getElementById("tipResultBadge");
+const tipProbBadge = document.getElementById("tipProbBadge");
+
+
+function showTooltip(evt, modeKey, key, cachedIndNat){
+  const detail = buildDetailHTML(modeKey, key, cachedIndNat);
+  if (!detail.header) return;
+
+  const { resultText, probText, metaText, mFinal } = detail.header;
+
+  if (modeKey === "house"){
+    const meta = DATA.house.meta[key] || {};
+    const code = meta.code || key;
+    tipState.textContent = code;
+    tipMeta.textContent = (meta.name ? `${meta.name} · ${metaText}` : metaText);
+  } else {
+    const name = USPS_TO_NAME[key] || key;
+    tipState.textContent = `${name} (${key})`;
+    tipMeta.textContent = metaText;
+  }
+
+  const resDot = tipResultBadge.querySelector(".dot");
+  resDot.classList.toggle("blue", mFinal <= 0);
+  resDot.classList.toggle("red",  mFinal > 0);
+
+  tipWinner.textContent = resultText;
+  tipProb.textContent = probText;
+
+  const probDot = tipProbBadge.querySelector(".dot");
+  const pd = parseInt(probText.match(/D\s(\d+)%/)?.[1] || "50", 10);
+  const pr = parseInt(probText.match(/R\s(\d+)%/)?.[1] || "50", 10);
+  if (pd > pr){ probDot.classList.add("blue"); probDot.classList.remove("red"); }
+  else if (pr > pd){ probDot.classList.add("red"); probDot.classList.remove("blue"); }
+  else { probDot.classList.remove("blue"); probDot.classList.remove("red"); }
+
+  tip.classList.toggle("compact", TOOLTIP_COMPACT);
+  tipSliders.innerHTML = detail.body;
+
+  tip.style.transform = "translate(0,0)";
+  positionTooltip(evt);
+}
+
+function positionTooltip(evt){
+  const pad = 14;
+  const w = tip.offsetWidth;
+  const h = tip.offsetHeight;
+
+  let x = evt.clientX + pad;
+  let y = evt.clientY + pad;
+
+  if (x + w + pad > window.innerWidth) x = evt.clientX - w - pad;
+  if (y + h + pad > window.innerHeight) y = evt.clientY - h - pad;
+
+  tip.style.left = x + "px";
+  tip.style.top  = y + "px";
+}
+function hideTooltip(){ tip.style.transform = "translate(-9999px,-9999px)"; }
+
+/* ---------- Mini histogram hover ---------- */
+const simTip = document.getElementById("simTip");
+function showSimTip(evt, html){
+  if (!simTip) return;
+  simTip.innerHTML = html;
+  const pad = 12;
+
+  // Ensure size is measured
+  simTip.style.transform = "translate(0,0)";
+  simTip.style.left = "0px";
+  simTip.style.top  = "0px";
+
+  const w = simTip.offsetWidth;
+  const h = simTip.offsetHeight;
+
+  let x = evt.clientX + pad;
+  let y = evt.clientY + pad;
+
+  if (x + w + pad > window.innerWidth) x = evt.clientX - w - pad;
+  if (y + h + pad > window.innerHeight) y = evt.clientY - h - pad;
+
+  simTip.style.left = x + "px";
+  simTip.style.top  = y + "px";
+}
+function hideSimTip(){
+  if (!simTip) return;
+  simTip.style.transform = "translate(-9999px,-9999px)";
+}
+
+function binSeatRange(hist, idx){
+  const span = (hist.max - hist.min) || 1;
+  const loF = hist.min + (idx / hist.bins) * span;
+  const hiF = hist.min + ((idx + 1) / hist.bins) * span;
+
+  let lo = Math.floor(loF + 1e-9);
+  let hi = Math.floor(hiF - 1e-9);
+  if (hi < lo) hi = lo;
+
+  return { lo, hi };
+}
+
+function ensureSimHover(canvas){
+  if (!canvas || canvas._simHoverAttached) return;
+  canvas._simHoverAttached = true;
+
+  canvas.addEventListener("mousemove", (ev)=>{
+    const meta = canvas._simMeta;
+    if (!meta || !meta.hist || !meta.hist.counts) return hideSimTip();
+
+    const rect = canvas.getBoundingClientRect();
+    const x = ev.clientX - rect.left;
+
+    const counts = meta.hist.counts;
+    const n = counts.length || 1;
+    let idx = Math.floor((x / rect.width) * n);
+    if (idx < 0) idx = 0;
+    if (idx >= n) idx = n - 1;
+
+    const total = meta.total || counts.reduce((a,b)=>a+b,0) || 1;
+    const pct = (counts[idx] / total) * 100;
+
+    const bs = (meta.hist.binSize && isFinite(meta.hist.binSize)) ? meta.hist.binSize : 1;
+    const startSeat = (meta.hist.min ?? 0) + idx*bs;
+    const endSeat = startSeat + (bs - 1);
+
+    const seatLabel = (bs > 1) ? `${startSeat}–${endSeat}` : `${startSeat}`;
+
+    showSimTip(ev,
+      `<div><span class="k">D seats:</span> ${seatLabel}</div>` +
+      `<div><span class="k">Freq:</span> ${pct.toFixed(1)}%</div>`
+    );
+  });
+
+  canvas.addEventListener("mouseleave", hideSimTip);
+}
+
+
+/* ---------- Multi-panel (Senate / Governor / House) ---------- */
+
+const MODES = ["2000", "2004", "2008", "2012", "2016", "2020", "2024"];
+const IND_CACHE = Object.fromEntries(MODES.map(m=>[m,null]));
+
+const UI = {};   // per-mode element handles
+const MAP = {};  // per-mode map handles
+
+
+function initUI(mode){
+  const root = document.querySelector(`.modeCol[data-mode='${mode}']`);
+  if (!root) return null;
+
+  UI[mode] = {
+    root,
+    // top pills
+    pillD: root.querySelector("[data-pill-d]"),
+    pillR: root.querySelector("[data-pill-r]"),
+
+    // seats summary
+    seatsD: root.querySelector("[data-seats-d]"),
+    seatsR: root.querySelector("[data-seats-r]"),
+    simCanvas: root.querySelector("[data-sim-canvas]"),
+    flips:  root.querySelector("[data-manual-flips]"),
+
+    // map
+    mapHelp: root.querySelector("[data-map-help]"),
+    svgEl: root.querySelector("svg.mapSvg"),
+
+    // (legacy / optional)
+    bucketBody: root.querySelector("tbody.bucketBody"),
+  };
+  return UI[mode];
+}
+
+/* ---------- Seat meter (per mode) ---------- */
+function renderSeatTicks(ui, total, majorityLine){
+  if (!ui?.seatTicks || !ui?.seatMajorityLine) return;
+
+  let ticks = [];
+  if (total >= 400){
+    ticks = [0,100,200,300,400,total];
+  } else if (total >= 100){
+    ticks = [0,25,50,75,100];
+    if (total !== 100) ticks[ticks.length-1] = total;
+  } else if (total === 50){
+    ticks = [0,10,20,30,40,50];
+  } else {
+    const step = Math.max(1, Math.round(total/5));
+    ticks = [0, step, step*2, step*3, total];
+  }
+
+  ticks = Array.from(new Set(ticks)).sort((a,b)=>a-b);
+
+  ui.seatTicks.innerHTML = ticks.map(t=>{
+    const p = (t/total)*100;
+    return `
+      <div class="seatTickLine" style="left:${p}%"></div>
+      <div class="seatTickLabel" style="left:${p}%">${t}</div>
+    `;
+  }).join("");
+
+  ui.seatMajorityLine.style.left = `${(majorityLine/total)*100}%`;
+}
+
+function computeSeatTally(modeKey, cachedIndNat){
+  const rules = SEAT_RULES[modeKey] || { total: 0, baseD: 0, baseR: 0, weights: null };
+
+  const ratioKeys = Object.keys(DATA[modeKey].ratios || {});
+  let winsD = 0, winsR = 0, ties = 0;
+
+  for (const key of ratioKeys){
+    const model = getStateModel(modeKey, key, cachedIndNat);
+    if (!model) continue;
+
+    const m = marginRD(model.combinedPair); // R - D
+    const w = rules.weights ? (+rules.weights[key] || 0) : 1;
+
+    if (Math.abs(m) < 1e-9){
+      winsD += w; ties += w;
+    }else if (m < 0){
+      winsD += w;
+    }else{
+      winsR += w;
+    }
+  }
+
+  const totalD = (rules.baseD || 0) + winsD;
+  const totalR = (rules.baseR || 0) + winsR;
+  const other = Math.max(0, (rules.total || 0) - totalD - totalR);
+
+  return { d: totalD, r: totalR, other, ties };
+}
+
+
+function poissonBinomialDist(ps){
+  const n = ps.length;
+  const dist = new Array(n+1).fill(0);
+  dist[0] = 1;
+
+  for (const pRaw of ps){
+    const p = clamp(pRaw, 0, 1);
+    for (let k = n; k >= 1; k--){
+      dist[k] = dist[k] * (1 - p) + dist[k-1] * p;
+    }
+    dist[0] = dist[0] * (1 - p);
+  }
+  return dist;
+}
+
+
+function histogramFromSamples(samples){
+  // Discrete distribution: one bar per integer seat total (no bin ranges).
+  let min = Infinity, max = -Infinity;
+  for (let i=0;i<samples.length;i++){
+    const v = samples[i];
+    if (v < min) min = v;
+    if (v > max) max = v;
+  }
+  if (!isFinite(min) || !isFinite(max)){
+    min = 0; max = 0;
+  }
+  // Ensure integer bounds
+  min = Math.floor(min);
+  max = Math.floor(max);
+  if (max < min) max = min;
+
+  const n = (max - min + 1) || 1;
+  const counts = new Array(n).fill(0);
+
+  for (let i=0;i<samples.length;i++){
+    const v = Math.floor(samples[i]);
+    const idx = v - min;
+    if (idx >= 0 && idx < n) counts[idx] += 1;
+  }
+  return { counts, min, max, isProb:false };
+}
+
+
+function histogramFromSamplesRange(samples, showMin, showMax){
+  // Discrete distribution but only for a display window. Percentages remain relative to ALL sims.
+  showMin = Math.floor(showMin);
+  showMax = Math.floor(showMax);
+  if (showMax < showMin) showMax = showMin;
+
+  const counts = new Array(showMax - showMin + 1).fill(0);
+  const total = samples.length || 1;
+
+  for (let i=0;i<samples.length;i++){
+    const v = Math.floor(samples[i]);
+    if (v < showMin || v > showMax) continue;
+    counts[v - showMin] += 1;
+  }
+  return { counts, min: showMin, max: showMax, isProb:false, total, binSize:1 };
+}
+
+function histogramFromProbDistRange(dist, base, showMin, showMax){
+  // Poisson-binomial distribution, but only for a display window. Percentages remain absolute (sum may < 1).
+  showMin = Math.floor(showMin);
+  showMax = Math.floor(showMax);
+  if (showMax < showMin) showMax = showMin;
+
+  const baseI = Math.floor(base);
+  const counts = new Array(showMax - showMin + 1).fill(0);
+  for (let seats=showMin; seats<=showMax; seats++){
+    const k = seats - baseI;
+    if (k >= 0 && k < dist.length) counts[seats - showMin] = dist[k];
+  }
+  return { counts, min: showMin, max: showMax, isProb:true, total:1, binSize:1 };
+}
+
+function histogramFromSamplesBinned(samples, binSize, binOffset){
+  // Binned distribution. Each bar represents a seat RANGE of width binSize.
+  binSize = Math.max(1, Math.floor(binSize || 1));
+  binOffset = Math.floor(binOffset || 0);
+
+  let min = Infinity, max = -Infinity;
+  for (let i=0;i<samples.length;i++){
+    const v = Math.floor(samples[i]);
+    if (v < min) min = v;
+    if (v > max) max = v;
+  }
+  if (!isFinite(min) || !isFinite(max)){
+    min = 0; max = 0;
+  }
+
+  const toBinStart = (v)=> Math.floor((v - binOffset) / binSize) * binSize + binOffset;
+
+  const minB = toBinStart(min);
+  const maxB = toBinStart(max);
+  const n = Math.max(1, Math.floor((maxB - minB) / binSize) + 1);
+  const counts = new Array(n).fill(0);
+  const total = samples.length || 1;
+
+  for (let i=0;i<samples.length;i++){
+    const v = Math.floor(samples[i]);
+    const b = toBinStart(v);
+    const idx = Math.floor((b - minB) / binSize);
+    if (idx >= 0 && idx < n) counts[idx] += 1;
+  }
+
+  return { counts, min: minB, max: (minB + (n-1)*binSize + (binSize-1)), isProb:false, total, binSize, binOffset };
+}
+
+function histogramFromProbDist(dist, base){
+  // Discrete distribution from Poisson-binomial: one bar per integer seat total.
+  const min = Math.floor(base);
+  const max = Math.floor(base + dist.length - 1);
+  const counts = dist.slice(); // probabilities
+  return { counts, min, max, isProb:true };
+}
+
+
+function drawSeatSimMini(canvas, hist, controlThreshold){
+  if (!canvas || !hist || !hist.counts) return;
+
+  const cssW = canvas.clientWidth || 0;
+  const cssH = canvas.clientHeight || 0;
+  if (cssW <= 2 || cssH <= 2) return;
+
+  const dpr = window.devicePixelRatio || 1;
+  const w = Math.floor(cssW * dpr);
+  const h = Math.floor(cssH * dpr);
+
+  if (canvas.width !== w) canvas.width = w;
+  if (canvas.height !== h) canvas.height = h;
+
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0,0,w,h);
+
+  const counts = hist.counts;
+  const n = counts.length || 1;
+  const maxCount = Math.max(...counts) || 1;
+
+  const padTop = Math.floor(2*dpr);
+  const padBot = Math.floor(3*dpr);
+  const availH = Math.max(1, h - padTop - padBot);
+
+  const barW = w / n;
+
+  const cs = getComputedStyle(document.documentElement);
+  const blue = cs.getPropertyValue("--blue").trim() || "#2563eb";
+  const red  = cs.getPropertyValue("--red").trim()  || "#dc2626";
+  const lineCol = "rgba(31,41,55,0.35)";
+  const neutral = "rgba(156,163,175,0.9)";
+
+  ctx.globalAlpha = 0.9;
+
+  for (let i=0;i<n;i++){
+    const frac = counts[i] / maxCount;
+    const bh = Math.max(1, Math.round(frac * availH));
+    const x = Math.floor(i * barW);
+    const y = h - padBot - bh;
+    const bw = Math.max(1, Math.ceil(barW - 1*dpr));
+
+    const bs = (hist.binSize && isFinite(hist.binSize)) ? hist.binSize : 1;
+    const seatVal = (hist.min ?? 0) + i*bs;
+
+    if (!isFinite(controlThreshold)){
+      ctx.fillStyle = neutral;
+    } else {
+      ctx.fillStyle = (seatVal >= controlThreshold) ? blue : red;
+    }
+    ctx.fillRect(x, y, bw, bh);
+  }
+
+  ctx.globalAlpha = 1;
+
+  // Control threshold line at the boundary before the threshold seat value
+  if (isFinite(controlThreshold)){
+    const min = hist.min ?? 0;
+    const bs = (hist.binSize && isFinite(hist.binSize)) ? hist.binSize : 1;
+    const boundary = (controlThreshold - min) / (bs * n); // left edge of threshold bar
+    const x = Math.round(clamp(boundary, 0, 1) * w);
+
+    ctx.strokeStyle = lineCol;
+    ctx.lineWidth = Math.max(1, Math.round(1*dpr));
+    ctx.beginPath();
+    ctx.moveTo(x, padTop);
+    ctx.lineTo(x, h - padBot);
+    ctx.stroke();
+  }
+}
+
+
+
+function houseControlProbsMC(){
+  const rules = SEAT_RULES.house;
+  const ratioKeys = Object.keys(DATA.house.ratios || {});
+  const upSeats = rules.total - rules.baseD - rules.baseR;
+
+  // Precompute baseline margins for all modeled districts
+  const margins = new Float32Array(upSeats);
+  let n = 0;
+  for (let i=0;i<ratioKeys.length && n<upSeats;i++){
+    const key = ratioKeys[i];
+    const model = getHouseModel(key);
+    if (!model) continue;
+    const mm = marginRD(model.combinedPair);
+    margins[n++] = isFinite(mm) ? mm : 0;
+  }
+  // Fill any missing seats as pure tossups
+  for (; n<upSeats; n++) margins[n] = 0;
+
+  const sims = HOUSE_MC_SIMS;
+  let demControl = 0;
+  const seatSamples = new Int16Array(sims);
+
+  for (let s=0; s<sims; s++){
+    const swing = (Math.random()*2 - 1) * HOUSE_MC_SWING_RANGE_PTS; // + favors R
+    let dSeats = rules.baseD;
+
+    for (let i=0;i<upSeats;i++){
+      const pD = winProbD_fast(margins[i] + swing);
+      if (Math.random() < pD) dSeats++;
+    }
+
+    seatSamples[s] = dSeats;
+    if (dSeats >= rules.majorityLine) demControl++;
+  }
+
+  const pD = demControl / sims;
+  const pR = 1 - pD;
+
+  const hist = histogramFromSamplesBinned(seatSamples, 12, 2);
+  return { pD: clamp(pD,0,1), pR: clamp(pR,0,1), hist };
+}
+
+
+function senateControlProbsMC(cachedIndNat){
+  const rules = SEAT_RULES.senate;
+  const ratioKeys = Object.keys(DATA.senate.ratios || {});
+  const upSeats = rules.total - rules.baseD - rules.baseR;
+
+  // Precompute baseline margins for all modeled states
+  const margins = new Float32Array(upSeats);
+  let n = 0;
+  for (let i=0;i<ratioKeys.length && n<upSeats;i++){
+    const st = ratioKeys[i];
+    const model = getStateModel("senate", st, cachedIndNat);
+    if (!model) continue;
+    const mm = marginRD(model.combinedPair);
+    margins[n++] = isFinite(mm) ? mm : 0;
+  }
+  // Fill any missing contests as pure tossups
+  for (; n<upSeats; n++) margins[n] = 0;
+
+  const sims = SENATE_MC_SIMS;
+  let demControl = 0;
+  const seatSamples = new Int16Array(sims);
+
+  for (let s=0; s<sims; s++){
+    const swing = (Math.random()*2 - 1) * SENATE_MC_SWING_RANGE_PTS; // + favors R
+    let dSeats = rules.baseD;
+
+    for (let i=0;i<upSeats;i++){
+      const pD = winProbD_fast(margins[i] + swing);
+      if (Math.random() < pD) dSeats++;
+    }
+
+    seatSamples[s] = dSeats;
+    // Rule: Dem control at 51+, otherwise GOP (incl. 50-50)
+    if (dSeats >= SENATE_CONTROL_RULE.demAtLeast) demControl++;
+  }
+
+  const pD = demControl / sims;
+  const pR = 1 - pD;
+
+  const hist = histogramFromSamplesRange(seatSamples, 44, 57);
+  return { pD: clamp(pD,0,1), pR: clamp(pR,0,1), hist };
+}
+
+
+function presidentialControlProbsMC(modeKey, cachedIndNat){
+  const rules = SEAT_RULES[modeKey];
+  const weights = rules.weights || {};
+  const keys = Object.keys(DATA[modeKey].ratios || {});
+  const sims = 7000;
+  const swingSD = 3.2; // pts, correlated national error (+ favors GOP)
+  const need = rules.majorityLine || 270;
+
+  let demWins = 0, repWins = 0;
+  const samples = new Array(sims);
+
+  for (let s=0; s<sims; s++){
+    const swing = randn() * swingSD;
+    let evD = 0;
+
+    for (let i=0; i<keys.length; i++){
+      const st = keys[i];
+      const w = +weights[st] || 0;
+      if (!w) continue;
+
+      const model = getStateModel(modeKey, st, cachedIndNat);
+      if (!model) continue;
+
+      const m = marginRD(model.combinedPair) + swing; // R - D
+      const pD = winProbD_fast(m);
+      if (Math.random() < pD) evD += w;
+    }
+
+    samples[s] = evD;
+    if (evD >= need) demWins++; else repWins++;
+  }
+
+  const pD = demWins / sims;
+  const pR = repWins / sims;
+  return { pD, pR, hist: histogramFromSamples(samples) };
+}
+
+function chamberControlProbs(modeKey, cachedIndNat){
+  const rules = SEAT_RULES[modeKey];
+  if (rules && rules.weights){
+    return presidentialControlProbsMC(modeKey, cachedIndNat);
+  }
+
+  const t = computeSeatTally(modeKey, cachedIndNat);
+  const needed = rules.controlRule.demAtLeast;
+
+  if (t.d >= needed) return { pD: 1, pR: 0 };
+  if (t.d + t.other < needed) return { pD: 0, pR: 1 };
+
+  const ratioKeys = Object.keys(DATA[modeKey].ratios || {});
+  const ps = [];
+  for (const key of ratioKeys){
+    const model = getStateModel(modeKey, key, cachedIndNat);
+    if (!model) continue;
+    const m = marginRD(model.combinedPair);
+    ps.push(winProbD_fast(m));
+  }
+
+  const dist = poissonBinomial(ps);
+  const needWins = Math.max(0, needed - (rules.baseD || 0));
+  let pD = 0;
+  for (let k = needWins; k < dist.length; k++) pD += dist[k];
+  const pR = 1 - pD;
+
+  const hist = (dist ? histogramFromProbDist(dist, rules.baseD, rules.total) : null);
+  return { pD, pR, hist };
+}
+
+function updateSeatMeterFor(modeKey){
+  const ui = UI[modeKey];
+  if (!ui) return;
+
+  const rules = SEAT_RULES[modeKey];
+  if (!rules) return;
+
+  const cachedIndNat = IND_CACHE[modeKey];
+
+  const t = computeSeatTally(modeKey, cachedIndNat);
+  if (ui.seatsD) ui.seatsD.textContent = `${Math.round(t.d)}`;
+  if (ui.seatsR) ui.seatsR.textContent = `${Math.round(t.r)}`;
+  if (ui.seatsOther) ui.seatsOther.textContent = ``;
+
+  const probs = chamberControlProbs(modeKey, cachedIndNat);
+  if (ui.pillD) ui.pillD.textContent = `${Math.round((probs.pD||0)*100)}%`;
+  if (ui.pillR) ui.pillR.textContent = `${Math.round((probs.pR||0)*100)}%`;
+
+  if (ui.simCanvas){
+    const hist = probs.hist || histogramFromSamples([t.d]);
+    ui._lastHist = hist;
+    ui._lastThreshold = rules.majorityLine;
+    drawSeatSimMini(ui.simCanvas, hist, rules.majorityLine);
+  }
+}
+
+
+
+/* ---------- Map (per mode) ---------- */
+let STATE_GEO = null;
+let HOUSE_SVG_TEXT = null;
+
+async function loadStateGeo(){
+  if (STATE_GEO) return STATE_GEO;
+  const topo = await fetch("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json").then(r=>r.json());
+  const geo = topojson.feature(topo, topo.objects.states);
+  STATE_GEO = geo;
+  return STATE_GEO;
+}
+
+async function initMapForMode(modeKey){
+  const ui = UI[modeKey];
+  if (!ui?.svgEl) return;
+
+  if (modeKey === "house") return initHouseMapForMode(ui);
+  return initStateMapForMode(modeKey, ui);
+}
+
+async function initStateMapForMode(modeKey, ui){
+  const geo = await loadStateGeo();
+  const features = geo.features;
+
+  const width = 960, height = 600;
+  const svg = d3.select(ui.svgEl);
+  svg.attr("viewBox", `0 0 ${width} ${height}`);
+
+  const projection = d3.geoAlbersUsa();
+  projection.fitExtent([[18, 18], [width - 18, height - 18]], geo);
+  const pathGen = d3.geoPath(projection);
+
+  svg.selectAll("*").remove();
+  const gRoot = svg.append("g");
+
+  gRoot.selectAll("path")
+    .data(features)
+    .join("path")
+    .attr("class", d => {
+      const st = fipsToUsps(d.id);
+      const active = st && DATA[modeKey].ratios[st];
+      return active ? "state active" : "state";
+    })
+    .attr("data-st", d => fipsToUsps(d.id))
+    .attr("d", d => pathGen(d))
+    .attr("fill", "#e5e7eb")
+    .on("mouseenter", (event, d)=>{
+      const st = fipsToUsps(d.id);
+      if (!st) return;
+      if (!DATA[modeKey].ratios[st]) return;
+      d3.select(event.currentTarget).classed("hovered", true);
+      showTooltip(event, modeKey, st, IND_CACHE[modeKey]);
+    })
+    .on("mousemove", (event, d)=>{
+      const st = fipsToUsps(d.id);
+      if (!st) return;
+      if (!DATA[modeKey].ratios[st]) return;
+      positionTooltip(event);
+    })
+    .on("mouseleave", (event)=>{
+      d3.select(event.currentTarget).classed("hovered", false);
+      hideTooltip();
+    });
+
+  MAP[modeKey] = { kind:"states", svg, gRoot };
+}
+
+async function initHouseMapForMode(ui){
+  const width = 960, height = 600;
+  const svg = d3.select(ui.svgEl);
+
+  svg.selectAll("*").remove();
+  svg.attr("viewBox", `0 0 ${width} ${height}`);
+  const gRoot = svg.append("g");
+
+  if (!HOUSE_SVG_TEXT){
+    HOUSE_SVG_TEXT = await fetch("house.svg", {cache:"no-store"}).then(r=>{
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.text();
+    });
+  }
+
+  const doc = new DOMParser().parseFromString(HOUSE_SVG_TEXT, "image/svg+xml");
+  const shapes = doc.getElementById("district-shapes");
+  if (!shapes) throw new Error("house.svg missing #district-shapes");
+
+  const imported = document.importNode(shapes, true);
+  gRoot.node().appendChild(imported);
+
+  // Fit imported House SVG group to our viewBox (centers / fixes right-shift)
+  requestAnimationFrame(() => {
+    try {
+      const bbox = imported.getBBox();
+      const pad = 18;
+      const scale = Math.min((width - pad*2) / bbox.width, (height - pad*2) / bbox.height);
+      const tx = (width - bbox.width * scale) / 2 - bbox.x * scale;
+      const ty = (height - bbox.height * scale) / 2 - bbox.y * scale;
+      gRoot.attr("transform", `translate(${tx},${ty}) scale(${scale})`);
+    } catch (e) { /* ignore */ }
+  });
+
+  // Tag district geometry for selection/styling
+  gRoot.selectAll("#district-shapes *").each(function(){
+    const rawId = String(this.id || "").trim();
+    if (!rawId) return;
+
+    let did = rawId;
+    if (!DATA.house.ratios[did]){
+      const digits = rawId.replace(/\D/g, "");
+      if (digits) did = digits.padStart(4,"0").slice(-4);
+    }
+    if (!DATA.house.ratios[did]) return;
+
+    this.classList.add("district","active");
+    this.setAttribute("data-did", did);
+
+    try{ this.style.fill = ""; }catch(e){}
+  });
+
+  // Hover tooltips
+  gRoot.selectAll(".district.active")
+    .on("mouseenter", (event)=>{
+      let did = event.currentTarget.getAttribute("data-did") || event.currentTarget.id || "";
+      if (did && !DATA.house.ratios[did]){
+        const digits = String(did).replace(/\D/g, "");
+        if (digits) did = digits.padStart(4,"0").slice(-4);
+      }
+      if (!did) return;
+      if (!DATA.house.ratios[did]) return;
+
+      d3.select(event.currentTarget).classed("hovered", true);
+      showTooltip(event, "house", did, null);
+    })
+    .on("mousemove", (event)=>{
+      let did = event.currentTarget.getAttribute("data-did") || event.currentTarget.id || "";
+      if (did && !DATA.house.ratios[did]){
+        const digits = String(did).replace(/\D/g, "");
+        if (digits) did = digits.padStart(4,"0").slice(-4);
+      }
+      if (!did) return;
+      if (!DATA.house.ratios[did]) return;
+      positionTooltip(event);
+    })
+    .on("mouseleave", (event)=>{
+      d3.select(event.currentTarget).classed("hovered", false);
+      hideTooltip();
+    });
+
+  MAP.house = { kind:"house", svg, gRoot };
+}
+
+function recolorMapForMode(modeKey){
+  const m = MAP[modeKey];
+  if (!m?.gRoot) return;
+
+  if (m.kind === "house"){
+    m.gRoot.selectAll(".district").each(function(){
+      const did = this.getAttribute("data-did");
+      const ratio = DATA.house.ratios[did];
+
+      if (!ratio){
+        this.removeAttribute("display");
+        this.style.fill = "#e5e7eb";
+        this.classList.remove("filtered");
+        return;
+      }
+
+      const model = getHouseModel(did);
+      if (!model){
+        this.removeAttribute("display");
+        this.style.fill = "#e5e7eb";
+        this.classList.add("filtered");
+        return;
+      }
+
+      const mm = marginRD(model.combinedPair);
+      this.removeAttribute("display");
+      this.classList.remove("filtered");
+      this.style.fill = interpColor(mm);
+    });
+    return;
+  }
+
+  m.gRoot.selectAll("path.state").each(function(){
+    const st = this.getAttribute("data-st");
+    const ratio = DATA[modeKey].ratios[st];
+
+    if (!ratio){
+      this.removeAttribute("display");
+      this.style.fill = "#e5e7eb";
+      this.setAttribute("fill", "#e5e7eb");
+      this.classList.remove("active","filtered");
+      return;
+    }
+
+    this.classList.add("active");
+
+    const model = getStateModel(modeKey, st, IND_CACHE[modeKey]);
+    if (!model){
+      this.removeAttribute("display");
+      this.style.fill = "#e5e7eb";
+      this.setAttribute("fill", "#e5e7eb");
+      this.classList.add("filtered");
+      return;
+    }
+
+    const mm = marginRD(model.combinedPair);
+    this.removeAttribute("display");
+    this.classList.remove("filtered");
+    this.style.fill = interpColor(mm);
+  });
+}
+
+/* ---------- Bucket table (per mode) ---------- */
+const BUCKET_ORDER = ["Likely D","Lean D","Tossup","Lean R","Likely R"];
+
+function renderBucketTableForMode(modeKey){
+  const ui = UI[modeKey];
+  const gRoot = MAP[modeKey]?.gRoot;
+  if (!ui?.bucketBody) return;
+
+  const ratios = DATA[modeKey].ratios || {};
+  const buckets = {};
+  for (const k of BUCKET_ORDER) buckets[k] = [];
+
+  for (const key of Object.keys(ratios)){
+    const model = (modeKey === "house")
+      ? getHouseModel(key)
+      : getStateModel(modeKey, key, IND_CACHE[modeKey]);
+    if (!model) continue;
+
+    const mm = marginRD(model.combinedPair);
+    const bKey = bucketKeyFromMargin(mm);
+    if (!bKey) continue;
+
+    const absM = Math.abs(mm);
+
+    let label = key;
+    let name = key;
+
+    if (modeKey === "house"){
+      const meta = DATA.house.meta[key] || {};
+      label = meta.code || key;
+      name = meta.name || label;
+    } else {
+      label = key;
+      name = USPS_TO_NAME[key] || key;
+    }
+
+    let cls = "t";
+    if (bKey === "Likely D" || bKey === "Lean D") cls = "d";
+    if (bKey === "Lean R"   || bKey === "Likely R") cls = "r";
+
+    buckets[bKey].push({ key, label, name, m: mm, absM, cls });
+  }
+
+  for (const k of BUCKET_ORDER){
+    buckets[k].sort((a,b)=>a.absM - b.absM);
+  }
+
+  const maxLen = Math.max(...BUCKET_ORDER.map(k => buckets[k].length), 0);
+
+  if (maxLen === 0){
+    ui.bucketBody.innerHTML = `<tr><td colspan="5"><div class="raceEmpty" style="height:72px;justify-content:center;">No competitive races</div></td></tr>`;
+    return;
+  }
+
+  ui.bucketBody.innerHTML = "";
+  for (let i=0; i<maxLen; i++){
+    const tr = document.createElement("tr");
+
+    for (const k of BUCKET_ORDER){
+      const td = document.createElement("td");
+      const item = buckets[k][i];
+
+      if (!item){
+        const ph = document.createElement("div");
+        ph.className = "raceEmpty";
+        ph.innerHTML = "—";
+        td.appendChild(ph);
+      } else {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `raceItem ${item.cls}`;
+        btn.setAttribute("data-key", item.key);
+        btn.title = item.name;
+
+        const top = document.createElement("div");
+        top.className = "raceTop";
+        top.textContent = item.label;
+
+        const mid = document.createElement("div");
+        mid.className = "raceName";
+        mid.textContent = item.name;
+
+        const bot = document.createElement("div");
+        bot.className = "raceBottom";
+        bot.textContent = fmtLead(item.m);
+
+        btn.appendChild(top);
+        btn.appendChild(mid);
+        btn.appendChild(bot);
+
+        const allSel = (modeKey === "house") ? ".district" : "path.state";
+        const oneSel = (modeKey === "house")
+          ? `.district[data-did='${item.key}']`
+          : `path.state[data-st='${item.key}']`;
+
+        btn.addEventListener("mouseenter", ()=>{
+          const evt = pseudoEvtFromEl(btn);
+          showTooltip(evt, modeKey, item.key, IND_CACHE[modeKey]);
+          gRoot?.selectAll(allSel).classed("focus", false);
+          gRoot?.selectAll(oneSel).classed("focus", true);
+        });
+        btn.addEventListener("mouseleave", ()=>{
+          hideTooltip();
+          gRoot?.selectAll(allSel).classed("focus", false);
+        });
+        btn.addEventListener("click", ()=>{
+          const evt = pseudoEvtFromEl(btn);
+          showTooltip(evt, modeKey, item.key, IND_CACHE[modeKey]);
+        });
+
+        td.appendChild(btn);
+      }
+
+      tr.appendChild(td);
+    }
+
+    ui.bucketBody.appendChild(tr);
+  }
+}
+
+/* ---------- Boot ---------- */
+(async function(){
+  const ok = await loadCSV();
+  if (!ok) return;
+
+  MODES.forEach(m=>{
+    IND_CACHE[m] = computeIndicatorNationalFromPolls(m);
+  });
+
+  MODES.forEach(initUI);
+
+  for (const m of MODES){
+    await initMapForMode(m);
+  }
+
+  MODES.forEach((m)=>{
+    recolorMapForMode(m);
+    updateSeatMeterFor(m);
+    renderBucketTableForMode(m);
+  });
+})();</script>
+</body>
+</html>
