@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Presidential Forecast 2004</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --blue: #2563eb;
+      --red: #dc2626;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg); color: var(--text);
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 18px; }
+    .top {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    h1 { font-size: 18px; margin: 0; letter-spacing: -0.01em; }
+    .sub { color: var(--muted); font-size: 12px; }
+    .grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow);
+      padding: 12px 12px;
+    }
+    .k { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+    .v { font-size: 18px; font-weight: 700; }
+    .row { display:flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+    .pill {
+      display:inline-flex; align-items:center; gap:6px; padding: 3px 8px; border-radius: 999px;
+      border: 1px solid var(--border); color: var(--muted); font-size: 12px;
+    }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .mapCard { padding: 10px; }
+    .mapHead { display:flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+    .mapTitle { font-weight: 700; font-size: 13px; }
+    svg { width: 100%; height: auto; }
+    .state { stroke: #ffffff; stroke-width: 0.8; }
+    .legend { display:flex; gap:10px; align-items:center; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+    .swatch { width: 14px; height: 10px; border-radius: 3px; border: 1px solid var(--border); }
+    .tableCard { padding: 0; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em;
+      padding: 10px 12px; border-bottom: 1px solid var(--border);
+    }
+    tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 13px; }
+    tbody tr:last-child td { border-bottom: none; }
+    .right { text-align: right; }
+    #tooltip {
+      position: fixed; z-index: 50; pointer-events: none;
+      background: rgba(15,23,42,.95); color: white;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px; padding: 10px 10px;
+      font-size: 12px; width: 240px;
+      transform: translate(10px, 10px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      display:none;
+    }
+    #loadError {
+      background: #fff1f2; border: 1px solid #fecdd3; color: #9f1239;
+      border-radius: 12px; padding: 10px 12px; margin-bottom: 12px; font-size: 13px;
+    }
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Presidential Election Forecast — 2004</h1>
+        <div class="sub">Ratios from previous presidential election: <span class="mono">2000</span> • Data: <span class="mono">national_polling_averages_2000_2024.csv</span>, <span class="mono">battleground_polling_summary_2000_2024.csv</span></div>
+      </div>
+      <div class="row">
+        <span class="pill"><span class="mono">WEIGHTS</span> GB 35 • Polls 50 • Ind 15</span>
+        <span class="pill"><span class="mono">TOSSUP</span> |margin| ≤ 2.0 → yellow</span>
+      </div>
+    </div>
+
+    <div id="loadError" hidden></div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="k">National polling (two-party normalized)</div>
+        <div class="v" id="natPoll">—</div>
+        <div class="sub" id="natPollMeta"></div>
+      </div>
+      <div class="card">
+        <div class="k">Implied national (from battleground polls ÷ ratios)</div>
+        <div class="v" id="indNat">—</div>
+        <div class="sub">Median across available battleground polls.</div>
+      </div>
+      <div class="card">
+        <div class="k">Projected electoral votes (winner-take-all)</div>
+        <div class="v" id="evTotal">—</div>
+        <div class="sub" id="evMeta"></div>
+      </div>
+    </div>
+
+    <div class="card mapCard">
+      <div class="mapHead">
+        <div class="mapTitle">State forecast margin (R − D)</div>
+        <div class="legend">
+          <span class="swatch" style="background: rgb(248,250,252)"></span> <span>near tie</span>
+          <span class="swatch" style="background: rgb(253,224,71)"></span> <span>ultra-close</span>
+          <span class="swatch" style="background: rgb(37,99,235)"></span> <span>D lead</span>
+          <span class="swatch" style="background: rgb(220,38,38)"></span> <span>R lead</span>
+        </div>
+      </div>
+      <svg id="map" aria-label="US states map"></svg>
+    </div>
+
+    <div class="card tableCard" style="margin-top: 12px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Closest states</th>
+            <th class="right">EV</th>
+            <th class="right">Forecast</th>
+            <th class="right">GB</th>
+            <th class="right">Poll</th>
+            <th class="right">Ind</th>
+          </tr>
+        </thead>
+        <tbody id="closestBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="tooltip"></div>
+
+<script>
+const YEAR = 2004;
+const PREV_YEAR = 2000;
+const RATIOS = {"AK":{"D":0.6378665279835585,"R":1.3660083862337176},"AL":{"D":0.8433730277042831,"R":1.1583029181241378},"AR":{"D":0.9389892401553499,"R":1.0616635894751518},"AZ":{"D":0.929402066578184,"R":1.0713533480881356},"CA":{"D":1.1181096148711485,"R":0.8806265841791278},"CO":{"D":0.9054630460812738,"R":1.0955485217938465},"CT":{"D":1.178839791282197,"R":0.8192465804470018},"DC":{"D":1.800173998301478,"R":0.19126394974279423},"DE":{"D":1.1287942507309778,"R":0.8698276201762268},"FL":{"D":0.9946148224683322,"R":1.0054428002111284},"GA":{"D":0.8756649474624516,"R":1.1256654671498756},"HI":{"D":1.1902120368328752,"R":0.8077526491661389},"IA":{"D":0.9979448730245261,"R":1.0020771173225447},"ID":{"D":0.5799439337654276,"R":1.4245507659761953},"IL":{"D":1.1176524540551662,"R":0.8810886367244922},"IN":{"D":0.8354583346846924,"R":1.166302300240089},"KS":{"D":0.7775241414140026,"R":1.224856403147745},"KY":{"D":0.8409723364497153,"R":1.1607292973456915},"LA":{"D":0.91633864949343,"R":1.0845565468404224},"MA":{"D":1.288927656716362,"R":0.7079807486885834},"MD":{"D":1.1624597778100845,"R":0.8358018639562332},"ME":{"D":1.0493724407129654,"R":0.9500992624372709},"MI":{"D":1.0471197276721063,"R":0.9523760800430597},"MN":{"D":1.0202985702957175,"R":0.9794842301778448},"MO":{"D":0.9606487927274054,"R":1.0397722745428428},"MS":{"D":0.8235078846326972,"R":1.1783806229478524},"MT":{"D":0.7230250759206432,"R":1.279938621594441},"NC":{"D":0.8661109234374312,"R":1.1353217215026274},"ND":{"D":0.7017177740291455,"R":1.3014739166801923},"NE":{"D":0.6927239501590674,"R":1.3105639766032036},"NH":{"D":0.9814212184330658,"R":1.0187775789452391},"NJ":{"D":1.1580653727695183,"R":0.8402432901751327},"NM":{"D":0.9953416632249729,"R":1.0047081820856467},"NV":{"D":0.9577663352910543,"R":1.0426855749588242},"NY":{"D":1.2550786188325265,"R":0.7421919793225307},"OH":{"D":0.9581267429089235,"R":1.0423213108937874},"OK":{"D":0.7742662038371786,"R":1.2281492014309412},"OR":{"D":0.9993993885659438,"R":1.0006070381191454},"PA":{"D":1.0374486384999093,"R":0.9621506521678852},"RI":{"D":1.3060320791507192,"R":0.6906933048690443},"SC":{"D":0.8323285197547694,"R":1.169465604933612},"SD":{"D":0.7636419155480912,"R":1.2388871721297503},"TN":{"D":0.9556569947475144,"R":1.044817485947498},"TX":{"D":0.7767410550229522,"R":1.2256478687492924},"UT":{"D":0.562496483432299,"R":1.4421849081745488},"VA":{"D":0.9122008625468019,"R":1.0887386090907896},"VT":{"D":1.102937573081724,"R":0.8959609704215727},"WA":{"D":1.0532901812473876,"R":0.946139601148018},"WI":{"D":0.9969957064670492,"R":1.003036440187771},"WV":{"D":0.9302082792228192,"R":1.0705385087765937},"WY":{"D":0.5772817970269847,"R":1.4272413882104382}};
+const EV = {"AK":3,"AL":9,"AR":6,"AZ":10,"CA":55,"CO":9,"CT":7,"DC":3,"DE":3,"FL":27,"GA":15,"HI":4,"IA":7,"ID":4,"IL":21,"IN":11,"KS":6,"KY":8,"LA":9,"MA":12,"MD":10,"ME":4,"MI":17,"MN":10,"MO":11,"MS":6,"MT":3,"NC":15,"ND":3,"NE":5,"NH":4,"NJ":15,"NM":5,"NV":5,"NY":31,"OH":20,"OK":7,"OR":7,"PA":21,"RI":4,"SC":8,"SD":3,"TN":11,"TX":34,"UT":5,"VA":13,"VT":3,"WA":11,"WI":10,"WV":5,"WY":3};
+
+const FIPS_TO_USPS = {
+  1:"AL",2:"AK",4:"AZ",5:"AR",6:"CA",8:"CO",9:"CT",10:"DE",11:"DC",12:"FL",13:"GA",15:"HI",16:"ID",17:"IL",18:"IN",19:"IA",20:"KS",21:"KY",22:"LA",23:"ME",24:"MD",25:"MA",26:"MI",27:"MN",28:"MS",29:"MO",30:"MT",31:"NE",32:"NV",33:"NH",34:"NJ",35:"NM",36:"NY",37:"NC",38:"ND",39:"OH",40:"OK",41:"OR",42:"PA",44:"RI",45:"SC",46:"SD",47:"TN",48:"TX",49:"UT",50:"VT",51:"VA",53:"WA",54:"WV",55:"WI",56:"WY"
+};
+const USPS_TO_NAME = {
+  AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",DC:"District of Columbia",
+  FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",
+  MD:"Maryland",MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",
+  NJ:"New Jersey",NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",
+  SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming"
+};
+const NAME_TO_USPS = Object.fromEntries(Object.entries(USPS_TO_NAME).map(([k,v])=>[String(v).toLowerCase(),k]));
+
+function clamp(x,a,b){ return Math.max(a, Math.min(b, x)); }
+function toNum(v){ const n = Number(v); return isFinite(n) ? n : NaN; }
+function normalizePair(D, R){
+  const d = Number(D), r = Number(R);
+  const s = d + r;
+  if (!isFinite(s) || s <= 0) return {D:50, R:50};
+  return {D: 100*d/s, R: 100*r/s};
+}
+function marginRD(pair){ return pair.R - pair.D; } // negative = Dem lead
+function fmtLead(m){
+  if (!isFinite(m)) return "—";
+  if (Math.abs(m) < 0.05) return "Tied";
+  const pts = Math.abs(m).toFixed(1);
+  return (m < 0) ? `D+${pts}` : `R+${pts}`;
+}
+function median(arr){
+  const a = arr.filter(x=>isFinite(x)).slice().sort((x,y)=>x-y);
+  const n = a.length;
+  if (!n) return NaN;
+  const mid = Math.floor(n/2);
+  return (n%2===1) ? a[mid] : 0.5*(a[mid-1] + a[mid]);
+}
+function interpColor(m){
+  if (!isFinite(m)) return "#e5e7eb";
+  const max = 25;
+  const a = Math.abs(m);
+  if (a < 2.0) return "rgb(253,224,71)";
+  const t = clamp(a/max, 0, 1);
+  if (m < 0){
+    const r = Math.round(248*(1-t) + 37*t);
+    const g = Math.round(250*(1-t) + 99*t);
+    const b = Math.round(252*(1-t) + 235*t);
+    return `rgb(${r},${g},${b})`;
+  } else {
+    const r = Math.round(252*(1-t) + 220*t);
+    const g = Math.round(250*(1-t) + 38*t);
+    const b = Math.round(250*(1-t) + 38*t);
+    return `rgb(${r},${g},${b})`;
+  }
+}
+
+const WEIGHTS = { gb:35, polls:50, ind:15 };
+function computeGenericBallotState(gb, ratio){ return normalizePair(gb.D * ratio.D, gb.R * ratio.R); }
+function computePollState(poll){ if (!poll) return null; return normalizePair(poll.D, poll.R); }
+function computeIndicatorNat(gb, polls, ratios){
+  const implied = [];
+  for (const st of Object.keys(polls)){
+    const p = computePollState(polls[st]);
+    if (!p) continue;
+    const r = ratios[st];
+    if (!r) continue;
+    implied.push({ D: p.D / r.D, R: p.R / r.R });
+  }
+  if (!implied.length) return null;
+  const medD = median(implied.map(x=>x.D));
+  const medR = median(implied.map(x=>x.R));
+  return normalizePair(medD, medR);
+}
+function computeIndicatorState(indNat, ratio){ return normalizePair(indNat.D * ratio.D, indNat.R * ratio.R); }
+function weightedCombine(components){
+  let W=0, D=0, R=0;
+  for (const c of components){
+    if (!c || !c.pair || !isFinite(c.w) || c.w<=0) continue;
+    W += c.w;
+    D += c.w * c.pair.D;
+    R += c.w * c.pair.R;
+  }
+  if (W<=0) return normalizePair(50,50);
+  return normalizePair(D/W, R/W);
+}
+
+async function fetchText(path){
+  const r = await fetch(path, {cache:"no-store"});
+  if (!r.ok) throw new Error(`HTTP ${r.status} for ${path}`);
+  return r.text();
+}
+async function loadInputs(){
+  const errBox = document.getElementById("loadError");
+  try {
+    const natText = await fetchText("national_polling_averages_2000_2024.csv");
+    const bgText  = await fetchText("battleground_polling_summary_2000_2024.csv");
+
+    const natRows = d3.csvParse(natText);
+    const rowNat = natRows.find(r => Number(r.Year) === YEAR);
+    if (!rowNat) throw new Error(`No national polling row for year=${YEAR}`);
+    const gb = normalizePair(toNum(rowNat.Dem_Poll_Avg), toNum(rowNat.GOP_Poll_Avg));
+
+    document.getElementById("natPoll").textContent =
+      `D ${gb.D.toFixed(1)}%  •  R ${gb.R.toFixed(1)}%  (${fmtLead(marginRD(gb))})`;
+    document.getElementById("natPollMeta").textContent =
+      `Source: ${rowNat.Poll_Source || "—"} • Candidates: ${rowNat.Dem_Candidate || "D"} vs ${rowNat.GOP_Candidate || "R"}`;
+
+    const polls = {};
+    const bgRows = d3.csvParse(bgText);
+    const col = `${YEAR}_Poll_Margin`;
+    for (const r of bgRows){
+      const nm = String(r.State || "").trim().toLowerCase();
+      const st = NAME_TO_USPS[nm];
+      if (!st) continue;
+      const m = toNum(r[col]);
+      if (!isFinite(m)) continue;
+      const d = 50 + m/2;
+      const rr = 50 - m/2;
+      polls[st] = { D: d, R: rr };
+    }
+
+    errBox.hidden = true;
+    return { gb, polls };
+  } catch (e) {
+    errBox.hidden = false;
+    errBox.innerHTML = `
+      <b>Could not load required CSV files.</b><br/>
+      Put these in the same folder as this HTML:<br/>
+      <span class="mono">national_polling_averages_2000_2024.csv</span><br/>
+      <span class="mono">battleground_polling_summary_2000_2024.csv</span><br/>
+      Error: <span class="mono">${String(e.message || e)}</span><br/>
+      If you opened this as <span class="mono">file://</span>, run a local server (e.g. <span class="mono">python3 -m http.server 8000</span>).
+    `;
+    throw e;
+  }
+}
+
+let STATE_GEO = null;
+async function loadStateGeo(){
+  if (STATE_GEO) return STATE_GEO;
+  const topo = await fetch("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json").then(r=>r.json());
+  STATE_GEO = topojson.feature(topo, topo.objects.states);
+  return STATE_GEO;
+}
+
+const tooltip = document.getElementById("tooltip");
+function showTip(html, x, y){
+  tooltip.innerHTML = html;
+  tooltip.style.left = `${x}px`;
+  tooltip.style.top = `${y}px`;
+  tooltip.style.display = "block";
+}
+function hideTip(){ tooltip.style.display = "none"; }
+function tipHTML(st, model, gbPair, pollPair, indPair){
+  const name = USPS_TO_NAME[st] || st;
+  const ev = EV[st] ?? 0;
+  const m = model ? model.m : NaN;
+  const fmtComp = (pair) => pair ? fmtLead(marginRD(pair)) : "—";
+  return `
+    <div style="font-weight:700; font-size:13px; margin-bottom:6px;">${name} <span style="opacity:.8">(${st})</span></div>
+    <div style="display:flex; justify-content:space-between; gap:10px;">
+      <div><span style="opacity:.75">EV</span> <b>${ev}</b></div>
+      <div><span style="opacity:.75">Forecast</span> <b>${fmtLead(m)}</b></div>
+    </div>
+    <div style="margin-top:8px; opacity:.85;">
+      <div style="display:flex; justify-content:space-between;"><span>GB</span><span class="mono">${fmtComp(gbPair)}</span></div>
+      <div style="display:flex; justify-content:space-between;"><span>Poll</span><span class="mono">${fmtComp(pollPair)}</span></div>
+      <div style="display:flex; justify-content:space-between;"><span>Ind</span><span class="mono">${fmtComp(indPair)}</span></div>
+    </div>
+  `;
+}
+
+async function renderAll(){
+  const { gb, polls } = await loadInputs();
+  const indNat = computeIndicatorNat(gb, polls, RATIOS);
+  document.getElementById("indNat").textContent = indNat
+    ? `D ${indNat.D.toFixed(1)}%  •  R ${indNat.R.toFixed(1)}%  (${fmtLead(marginRD(indNat))})`
+    : "—";
+
+  const models = {};
+  const gbPairs = {};
+  const pollPairs = {};
+  const indPairs = {};
+
+  for (const st of Object.keys(RATIOS)){
+    const ratio = RATIOS[st];
+    const gbPair = computeGenericBallotState(gb, ratio);
+    const pollPair = computePollState(polls[st] || null);
+    const indPair = indNat ? computeIndicatorState(indNat, ratio) : null;
+    const combined = weightedCombine([
+      { pair: gbPair,   w: WEIGHTS.gb },
+      { pair: pollPair, w: pollPair ? WEIGHTS.polls : 0 },
+      { pair: indPair,  w: indPair ? WEIGHTS.ind : 0 },
+    ]);
+    models[st] = { combined, m: marginRD(combined) };
+    gbPairs[st] = gbPair;
+    pollPairs[st] = pollPair;
+    indPairs[st] = indPair;
+  }
+
+  let evD = 0, evR = 0, evToss = 0;
+  for (const st of Object.keys(EV)){
+    const ev = EV[st] || 0;
+    const m = models[st]?.m;
+    if (!isFinite(m)) continue;
+    if (Math.abs(m) <= 2.0) evToss += ev;
+    if (m < 0 || Math.abs(m) < 1e-9) evD += ev; else evR += ev;
+  }
+  document.getElementById("evTotal").textContent = `D ${evD}  •  R ${evR}`;
+  document.getElementById("evMeta").textContent = `Tossup EV (|margin| ≤ 2): ${evToss} • Majority: 270`;
+
+  const rows = Object.keys(EV).map(st => {
+    const name = USPS_TO_NAME[st] || st;
+    const ev = EV[st] || 0;
+    const m = models[st]?.m;
+    return {
+      st, name, ev, m,
+      gb: marginRD(gbPairs[st]),
+      poll: pollPairs[st] ? marginRD(pollPairs[st]) : NaN,
+      ind: indPairs[st] ? marginRD(indPairs[st]) : NaN
+    };
+  }).filter(r => isFinite(r.m)).sort((a,b)=>Math.abs(a.m)-Math.abs(b.m));
+
+  const body = document.getElementById("closestBody");
+  body.innerHTML = rows.slice(0, 15).map(r => `
+    <tr>
+      <td>${r.name} <span class="mono" style="opacity:.6;">${r.st}</span></td>
+      <td class="right mono">${r.ev}</td>
+      <td class="right mono">${fmtLead(r.m)}</td>
+      <td class="right mono">${fmtLead(r.gb)}</td>
+      <td class="right mono">${isFinite(r.poll) ? fmtLead(r.poll) : "—"}</td>
+      <td class="right mono">${isFinite(r.ind) ? fmtLead(r.ind) : "—"}</td>
+    </tr>
+  `).join("");
+
+  const geo = await loadStateGeo();
+  const width = 960, height = 600;
+  const svg = d3.select("#map");
+  svg.attr("viewBox", `0 0 ${width} ${height}`);
+  const projection = d3.geoAlbersUsa();
+  projection.fitExtent([[18,18],[width-18,height-18]], geo);
+  const pathGen = d3.geoPath(projection);
+
+  svg.selectAll("*").remove();
+  svg.append("g")
+    .selectAll("path")
+    .data(geo.features)
+    .join("path")
+    .attr("class","state")
+    .attr("d", pathGen)
+    .attr("data-st", d => FIPS_TO_USPS[Number(d.id)] || "")
+    .attr("fill", d => {
+      const st = FIPS_TO_USPS[Number(d.id)];
+      return interpColor(models[st]?.m);
+    })
+    .on("mousemove", function(event, d){
+      const st = FIPS_TO_USPS[Number(d.id)];
+      if (!st) return;
+      showTip(tipHTML(st, models[st], gbPairs[st], pollPairs[st], indPairs[st]), event.clientX, event.clientY);
+    })
+    .on("mouseleave", hideTip);
+
+  window.addEventListener("scroll", hideTip, {passive:true});
+}
+
+renderAll().catch(()=>{});
+</script>
+</body>
+</html>
