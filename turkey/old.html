@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turkey District Custom Districting Tool</title>
+    <title>Kocaeli Custom Districting Tool</title>
     
     <!-- React & ReactDOM -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -107,8 +107,35 @@
 
 
         // --- Configuration: Default Files to Load ---
-        const DEFAULT_GEOJSON_FILE = 'turkey-admin-level-6.geojson';
-        const DEFAULT_ELECTION_CSV_FILE = 'turkey_districts_second_round_full.csv';
+        const DEFAULT_MAP_FILES = [
+            'kocaeli-districts/basiskele.geojson',
+            'kocaeli-districts/cayirova.geojson',
+            'kocaeli-districts/darica.geojson',
+            'kocaeli-districts/derince.geojson',
+            'kocaeli-districts/diloavasi.geojson',
+            'kocaeli-districts/gebze.geojson',
+            'kocaeli-districts/golcuk.geojson',
+            'kocaeli-districts/izmit.geojson',
+            'kocaeli-districts/kandira.geojson',
+            'kocaeli-districts/karamursel.geojson',
+            'kocaeli-districts/kartepe.geojson',
+            'kocaeli-districts/korfez.geojson'
+        ];
+
+        const DEFAULT_DATA_FILES = [
+            'kocaeli-districts/basiskele.json',
+            'kocaeli-districts/cayirova.json',
+            'kocaeli-districts/darica.json',
+            'kocaeli-districts/derince.json',
+            'kocaeli-districts/dilovasi.json',
+            'kocaeli-districts/gebze.json',
+            'kocaeli-districts/golcuk.json',
+            'kocaeli-districts/izmit.json',
+            'kocaeli-districts/kandira.json',
+            'kocaeli-districts/karamursel.json',
+            'kocaeli-districts/kartepe.json',
+            'kocaeli-districts/korfez.json'
+        ];
 
         // --- Improved Normalization Functions ---
 
@@ -342,7 +369,7 @@
                             <button onClick={onClose} className="text-slate-400 hover:text-white">&times;</button>
                         </div>
                         <div className="p-4 bg-slate-800/50 border-b border-slate-700 flex justify-between items-center">
-                            <div className="text-sm text-slate-300">Found <span className="font-bold text-red-400">{unmatchedItems.length}</span> map areas with missing/ambiguous election data.</div>
+                            <div className="text-sm text-slate-300">Found <span className="font-bold text-red-400">{unmatchedItems.length}</span> map areas with no data.</div>
                             <button onClick={autoFix} className="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded text-sm font-semibold transition-colors">Auto-Fix High Confidence</button>
                         </div>
                         <div className="flex-1 overflow-y-auto p-4 space-y-2">
@@ -393,9 +420,7 @@
             // Data State
             const [geoJsonData, setGeoJsonData] = useState(null);
             const [electionData, setElectionData] = useState({}); 
-            
-            const [electionIndex, setElectionIndex] = useState({ byAsciiFull: {}, byDistrict: {}, byDistrictAscii: {} });
-const [loading, setLoading] = useState(false);
+            const [loading, setLoading] = useState(false);
             const [dataStatus, setDataStatus] = useState({ map: false, election: false });
             const [matchStats, setMatchStats] = useState({ matched: 0, total: 0 });
             const [loadReport, setLoadReport] = useState({ baseDir: '', maps: [], data: [] });
@@ -407,9 +432,7 @@ const [loading, setLoading] = useState(false);
             // App State
             const [viewMode, setViewMode] = useState('districts'); 
             const [activeTool, setActiveTool] = useState('pointer'); 
-            
-            const [mapReady, setMapReady] = useState(false);
-const [searchQuery, setSearchQuery] = useState("");
+            const [searchQuery, setSearchQuery] = useState("");
             const [searchResults, setSearchResults] = useState([]);
             
             // Districting State
@@ -436,9 +459,7 @@ const [searchQuery, setSearchQuery] = useState("");
             const settingsRef = useRef(settings);
             const viewModeRef = useRef(viewMode);
             const electionDataRef = useRef(electionData);
-            
-            const electionIndexRef = useRef(electionIndex);
-const manualMappingsRef = useRef(manualMappings);
+            const manualMappingsRef = useRef(manualMappings);
             const loadedGeoJsonRef = useRef(null);
 
             // Sync refs
@@ -450,9 +471,7 @@ const manualMappingsRef = useRef(manualMappings);
             useEffect(() => { settingsRef.current = settings; }, [settings]);
             useEffect(() => { viewModeRef.current = viewMode; }, [viewMode]);
             useEffect(() => { electionDataRef.current = electionData; }, [electionData]);
-                        useEffect(() => { electionIndexRef.current = electionIndex; }, [electionIndex]);
-
-useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings]);
+            useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings]);
 
             const mapRef = useRef(null);
             const geoJsonLayerRef = useRef(null);
@@ -462,45 +481,8 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
 
             // --- AUTO LOAD DEFAULT DATA ---
             useEffect(() => {
-                // Minimal CSV parser (handles quotes)
-                const parseCsv = (csvText) => {
-                    const lines = csvText.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n').filter(l => l.trim().length > 0);
-                    if (lines.length === 0) return [];
-                    const parseLine = (line) => {
-                        const out = [];
-                        let cur = '';
-                        let inQuotes = false;
-                        for (let i = 0; i < line.length; i++) {
-                            const ch = line[i];
-                            if (ch === '"') {
-                                // Escaped quote
-                                if (inQuotes && line[i + 1] === '"') { cur += '"'; i++; }
-                                else { inQuotes = !inQuotes; }
-                            } else if (ch === ',' && !inQuotes) {
-                                out.push(cur);
-                                cur = '';
-                            } else {
-                                cur += ch;
-                            }
-                        }
-                        out.push(cur);
-                        return out.map(s => s.trim());
-                    };
-
-                    const header = parseLine(lines[0]);
-                    const rows = [];
-                    for (let i = 1; i < lines.length; i++) {
-                        const cols = parseLine(lines[i]);
-                        const row = {};
-                        for (let j = 0; j < header.length; j++) row[header[j]] = cols[j] ?? '';
-                        rows.push(row);
-                    }
-                    return rows;
-                };
-
                 const loadData = async () => {
                     setLoading(true);
-
                     // Resolve a stable base directory for assets (GitHub Pages + trailing-slash safe)
                     const __rawUrl = window.location.href.split('#')[0].split('?')[0];
                     const __baseDir = (__rawUrl.endsWith('/'))
@@ -508,95 +490,108 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
                         : (__rawUrl.toLowerCase().endsWith('.html'))
                             ? __rawUrl.slice(0, __rawUrl.lastIndexOf('/') + 1)
                             : (__rawUrl + '/');
-
                     const fetchAsset = (p) => fetch(new URL(p, __baseDir).toString(), { cache: 'no-store' });
-
                     const __mapReport = [];
                     const __dataReport = [];
                     setLoadReport({ baseDir: __baseDir, maps: [], data: [] });
 
                     try {
-                        // 1) Map (single GeoJSON)
-                        const mapResp = await fetchAsset(DEFAULT_GEOJSON_FILE);
-                        if (!mapResp.ok) throw new Error(`Failed to load ${DEFAULT_GEOJSON_FILE} (${mapResp.status})`);
-                        const gj = await mapResp.json();
+                        // 1. Fetch Maps
+                        let allFeatures = [];
+                        for (let i = 0; i < DEFAULT_MAP_FILES.length; i++) {
+                            try {
+                                const response = await fetchAsset(DEFAULT_MAP_FILES[i]);
+                                if (response.ok) {
+                                    const json = await response.json();
+                                    __mapReport.push({ file: DEFAULT_MAP_FILES[i], ok: true, features: (json.features || []).length });
 
-                        const feats = (gj.features || [])
-                            .filter(f => f && f.geometry && (f.geometry.type === 'Polygon' || f.geometry.type === 'MultiPolygon'))
-                            .map((f, index) => {
-                                f.properties = f.properties || {};
-                                const rid = f.properties['@id'] || f.properties.id || f.id || `idx_${index}`;
-                                const uid = String(rid).replace(/[^a-zA-Z0-9_]+/g, '_');
-                                f.properties._customId = uid;
-
-                                const rawName = f.properties.name || f.properties.Name || f.properties.NAME || 'Unknown';
-                                f.properties.name = rawName;
-                                featureNameMap.current[uid] = rawName;
-                                return f;
-                            });
-
-                        __mapReport.push({ file: DEFAULT_GEOJSON_FILE, ok: true, features: feats.length });
-
-                        if (feats.length > 0) {
-                            setGeoJsonData({ type: 'FeatureCollection', features: feats });
-                            setDataStatus(prev => ({ ...prev, map: true }));
-                        } else {
-                            __mapReport.push({ file: DEFAULT_GEOJSON_FILE, ok: false, error: 'No polygon features found' });
+                                    if (json.features) {
+                                        const validFeatures = json.features
+                                            .filter(f => f.geometry.type === 'Polygon' || f.geometry.type === 'MultiPolygon')
+                                            .map((f, index) => {
+                                                const uid = `default_f${i}_i${index}_${Date.now()}`;
+                                                f.properties._customId = uid;
+                                                const rawName = f.properties.name || f.properties.Name || "Unknown";
+                                                if (!f.properties.name) f.properties.name = rawName;
+                                                featureNameMap.current[uid] = rawName;
+                                                return f;
+                                            });
+                                        allFeatures = allFeatures.concat(validFeatures);
+                                    }
+                                } else {
+                                    __mapReport.push({ file: DEFAULT_MAP_FILES[i], ok: false, status: response.status });
+                                }
+                            } catch (e) {
+                                __mapReport.push({ file: DEFAULT_MAP_FILES[i], ok: false, error: (e && e.message) ? e.message : String(e) });
+                                console.warn(`Could not load map: ${DEFAULT_MAP_FILES[i]}`, e);
+                            }
                         }
 
-                        // 2) Election data (single CSV)
-                        const dataResp = await fetchAsset(DEFAULT_ELECTION_CSV_FILE);
-                        if (!dataResp.ok) throw new Error(`Failed to load ${DEFAULT_ELECTION_CSV_FILE} (${dataResp.status})`);
-                        const csvText = await dataResp.text();
-                        const rows = parseCsv(csvText);
-                        __dataReport.push({ file: DEFAULT_ELECTION_CSV_FILE, ok: true, rows: rows.length });
+                        if (allFeatures.length > 0) {
+                            setGeoJsonData({ type: "FeatureCollection", features: allFeatures });
+                            setDataStatus(prev => ({ ...prev, map: true }));
+                        }
 
-                        const newElectionData = {};
-                        rows.forEach(r => {
-                            const districtRaw = (r.district ?? r.District ?? '').toString().trim();
-                            if (!districtRaw) return;
+// 2. Fetch Election Data
+                        let newElectionData = {};
+                        
+                        // Helper
+                        const findKey = (obj, partial) => Object.keys(obj).find(k => k.toUpperCase().includes(partial.toUpperCase()));
 
-                            const fullKey = normalizeName(districtRaw);
-                            const rte = parseInt(r.erdogan ?? r.Erdogan ?? 0) || 0;
-                            const kk = parseInt(r.kilicdaroglu ?? r.Kilicdaroglu ?? 0) || 0;
+                        for (const file of DEFAULT_DATA_FILES) {
+                            try {
+                                const response = await fetchAsset(file);
+                                if (response.ok) {
+                                    const json = await response.json();
+                                    __dataReport.push({ file, ok: true, rows: Array.isArray(json) ? json.length : null });
 
-                            if (!newElectionData[fullKey]) {
-                                newElectionData[fullKey] = { rte: 0, kk: 0, total: 0, rawName: districtRaw };
+                                    if (Array.isArray(json)) {
+                                        json.forEach(record => {
+                                            if (!record || typeof record !== 'object') return;
+                                            const keys = Object.keys(record);
+
+                                            // Robust Key Finding
+                                            let nameKey = keys.find(k => ["Muhtarlık Adı", "Mahalle Adı", "Adı"].includes(k));
+                                            if (!nameKey) nameKey = keys.find(k => k.toUpperCase().includes("ADI"));
+                                            if (!nameKey) nameKey = keys.find(k => k.toUpperCase().includes("MUHTARLIK") && !k.toUpperCase().includes("ID") && !k.toUpperCase().includes("NO"));
+
+                                            const rteKey = keys.find(k => k.toUpperCase().includes("RECEP")) || "RECEP TAYYİP ERDOĞAN";
+                                            const kkKey = keys.find(k => k.toUpperCase().includes("KEMAL")) || "KEMAL KILIÇDAROĞLU";
+
+                                            if (nameKey && record[nameKey] !== undefined && record[nameKey] !== null) {
+                                                const nameStr = String(record[nameKey]);
+                                                const name = normalizeName(nameStr);
+
+                                                const rte = parseInt(record[rteKey]) || 0;
+                                                const kk = parseInt(record[kkKey]) || 0;
+
+                                                if (!newElectionData[name]) {
+                                                    newElectionData[name] = { rte: 0, kk: 0, total: 0, rawName: nameStr };
+                                                }
+                                                newElectionData[name].rte += rte;
+                                                newElectionData[name].kk += kk;
+                                                newElectionData[name].total += (rte + kk);
+                                            }
+                                        });
+                                    }
+                                } else {
+                                    __dataReport.push({ file, ok: false, status: response.status });
+                                }
+                            } catch (e) {
+                                __dataReport.push({ file, ok: false, error: (e && e.message) ? e.message : String(e) });
+                                console.warn(`Could not load data: ${file}`, e);
                             }
-                            newElectionData[fullKey].rte += rte;
-                            newElectionData[fullKey].kk += kk;
-                            newElectionData[fullKey].total += (rte + kk);
-                        });
-
-                        // Build indexes for fast / safe matching
-                        const byAsciiFull = {};
-                        const byDistrict = {};
-                        const byDistrictAscii = {};
-
-                        Object.keys(newElectionData).forEach(fullKey => {
-                            const asciiFull = toAscii(fullKey);
-                            if (!byAsciiFull[asciiFull]) byAsciiFull[asciiFull] = fullKey;
-
-                            const districtPart = fullKey.replace(/^[^ ]+\s+/, ''); // remove province token
-                            const asciiDistrict = toAscii(districtPart);
-
-                            if (!byDistrict[districtPart]) byDistrict[districtPart] = [];
-                            if (!byDistrict[districtPart].includes(fullKey)) byDistrict[districtPart].push(fullKey);
-
-                            if (!byDistrictAscii[asciiDistrict]) byDistrictAscii[asciiDistrict] = [];
-                            if (!byDistrictAscii[asciiDistrict].includes(fullKey)) byDistrictAscii[asciiDistrict].push(fullKey);
-                        });
-
-                        setElectionData(newElectionData);
-                        setElectionIndex({ byAsciiFull, byDistrict, byDistrictAscii });
-                        setDataStatus(prev => ({ ...prev, election: true }));
+                        }
 
                         setLoadReport({ baseDir: __baseDir, maps: __mapReport, data: __dataReport });
+
+                        if (Object.keys(newElectionData).length > 0) {
+                            setElectionData(newElectionData);
+                            setDataStatus(prev => ({ ...prev, election: true }));
+                        }
 
                     } catch (err) {
-                        console.error('Default load error', err);
-                        __showFatal(`Load error: ${err?.message || String(err)}`);
-                        setLoadReport({ baseDir: __baseDir, maps: __mapReport, data: __dataReport });
+                        console.error("Default load error", err);
                     } finally {
                         setLoading(false);
                     }
@@ -608,72 +603,76 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
             // --- Data Retrieval with Swing Logic ---
 
             const getDataForFeature = useCallback((uid, name) => {
-                const elData = electionData;
-                const idx = electionIndex;
-
                 let raw = null;
-
-                // 1) Manual mapping always wins
-                const mappedKey = manualMappings[uid];
-                if (mappedKey && elData[mappedKey]) {
-                    raw = elData[mappedKey];
+                if (manualMappings[uid]) {
+                    raw = electionData[manualMappings[uid]];
                 } else {
                     const normalized = normalizeName(name);
-                    const asciiTarget = toAscii(normalized);
-
-                    // 2) Direct / ASCII direct match (covers "Nevsehir merkez" vs "NEVŞEHİR MERKEZ")
-                    if (elData[normalized]) raw = elData[normalized];
-                    else if (idx?.byAsciiFull?.[asciiTarget] && elData[idx.byAsciiFull[asciiTarget]]) raw = elData[idx.byAsciiFull[asciiTarget]];
+                    if (electionData[normalized]) raw = electionData[normalized];
                     else {
-                        // 3) Suffix match via district index (safe: only auto-match if exactly 1 candidate)
-                        const candidates = idx?.byDistrict?.[normalized] || idx?.byDistrictAscii?.[asciiTarget];
-                        if (candidates && candidates.length === 1) raw = elData[candidates[0]];
-                        else raw = null; // 0 = no data; >1 = ambiguous (same district name exists in multiple provinces)
+                        const asciiTarget = toAscii(normalized);
+                        const asciiMatch = Object.keys(electionData).find(k => toAscii(k) === asciiTarget);
+                        if (asciiMatch) raw = electionData[asciiMatch];
+                        else {
+                            const potentialMatch = Object.keys(electionData).find(k => k.includes(normalized) || normalized.includes(k));
+                            if (potentialMatch) raw = electionData[potentialMatch];
+                            else {
+                                const asciiPotential = Object.keys(electionData).find(k => {
+                                    const ak = toAscii(k);
+                                    return ak.includes(asciiTarget) || asciiTarget.includes(ak);
+                                });
+                                if (asciiPotential) raw = electionData[asciiPotential];
+                            }
+                        }
                     }
                 }
 
                 if (!raw) return null;
 
-                // Apply swing (purely visual simulation)
                 if (settings.voteSwing === 0) return raw;
 
                 const total = raw.total;
                 if (total === 0) return raw;
 
-                const shift = settings.voteSwing / 100;
+                const currentRTEShare = raw.rte / total;
+                const currentKKShare = raw.kk / total;
 
-                let newRTEShare = Math.max(0, Math.min(1, (raw.rte / total) + shift));
-                let newKKShare = Math.max(0, Math.min(1, (raw.kk / total) - shift));
+                const shift = settings.voteSwing / 100;
+                
+                let newRTEShare = currentRTEShare + shift;
+                let newKKShare = currentKKShare - shift;
+
+                newRTEShare = Math.max(0, Math.min(1, newRTEShare));
+                newKKShare = Math.max(0, Math.min(1, newKKShare));
 
                 return {
                     ...raw,
                     rte: Math.round(total * newRTEShare),
                     kk: Math.round(total * newKKShare),
                 };
-            }, [electionData, electionIndex, manualMappings, settings.voteSwing]);
+
+            }, [electionData, manualMappings, settings.voteSwing]);
 
             // --- Helper for ref-based data retrieval (for style function) ---
             const getDataRef = (uid, name) => {
                 const elData = electionDataRef.current;
-                const idx = electionIndexRef.current;
                 const mMappings = manualMappingsRef.current;
                 const currSettings = settingsRef.current;
 
                 let raw = null;
-
-                const mappedKey = mMappings[uid];
-                if (mappedKey && elData[mappedKey]) {
-                    raw = elData[mappedKey];
+                if (mMappings[uid]) {
+                    raw = elData[mMappings[uid]];
                 } else {
                     const normalized = normalizeName(name);
-                    const asciiTarget = toAscii(normalized);
-
                     if (elData[normalized]) raw = elData[normalized];
-                    else if (idx?.byAsciiFull?.[asciiTarget] && elData[idx.byAsciiFull[asciiTarget]]) raw = elData[idx.byAsciiFull[asciiTarget]];
                     else {
-                        const candidates = idx?.byDistrict?.[normalized] || idx?.byDistrictAscii?.[asciiTarget];
-                        if (candidates && candidates.length === 1) raw = elData[candidates[0]];
-                        else raw = null;
+                        const asciiTarget = toAscii(normalized);
+                        const asciiMatch = Object.keys(elData).find(k => toAscii(k) === asciiTarget);
+                        if (asciiMatch) raw = elData[asciiMatch];
+                        else {
+                            const potentialMatch = Object.keys(elData).find(k => k.includes(normalized) || normalized.includes(k));
+                            if (potentialMatch) raw = elData[potentialMatch];
+                        }
                     }
                 }
 
@@ -682,7 +681,6 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
 
                 const total = raw.total;
                 if (total === 0) return raw;
-
                 const shift = currSettings.voteSwing / 100;
                 let newRTEShare = Math.max(0, Math.min(1, (raw.rte / total) + shift));
                 let newKKShare = Math.max(0, Math.min(1, (raw.kk / total) - shift));
@@ -694,8 +692,8 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
                 };
             };
 
-
-// --- Precompute district vote totals for 'election_district' view ---
+            
+            // --- Precompute district vote totals for 'election_district' view ---
             const districtVoteStats = useMemo(() => {
                 const stats = {};
                 districts.forEach(d => { stats[d.id] = { rte: 0, kk: 0, total: 0 }; });
@@ -852,30 +850,31 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
 
             // Calculate Match Stats
             useEffect(() => {
-                let totalFeatures = 0;
-                let matched = 0;
-                let unmatched = 0;
-
-                if (geoJsonData && geoJsonData.features) {
-                    totalFeatures = geoJsonData.features.length;
+                if (geoJsonData && Object.keys(electionData).length > 0) {
+                    let totalFeatures = 0;
+                    let matchedFeatures = 0;
                     geoJsonData.features.forEach(f => {
+                        totalFeatures++;
                         const uid = f.properties._customId;
-                        const name = f.properties.name;
-                        const d = getDataForFeature(uid, name);
-                        if (d) matched++;
-                        else unmatched++;
+                        const name = f.properties.name || f.properties.Name;
+                        const normalized = normalizeName(name);
+                        if (electionData[normalized] || manualMappings[uid]) matchedFeatures++;
+                        else {
+                            const asciiTarget = toAscii(normalized);
+                            if(Object.keys(electionData).find(k => toAscii(k) === asciiTarget)) matchedFeatures++;
+                            else if(Object.keys(electionData).find(k => k.includes(normalized) || normalized.includes(k))) matchedFeatures++;
+                        }
                     });
+                    setMatchStats({ matched: matchedFeatures, total: totalFeatures });
                 }
-
-                setMatchStats({ total: totalFeatures, matched, unmatched });
-            }, [geoJsonData, getDataForFeature]);
+            }, [geoJsonData, electionData, manualMappings]);
 
             const handleExport = () => {
                 const exportObj = { assignments, manualMappings, settings };
                 const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
                 const downloadAnchorNode = document.createElement('a');
                 downloadAnchorNode.setAttribute("href", dataStr);
-                downloadAnchorNode.setAttribute("download", "turkey_districting_save.json");
+                downloadAnchorNode.setAttribute("download", "kocaeli_districting_save.json");
                 document.body.appendChild(downloadAnchorNode);
                 downloadAnchorNode.click();
                 downloadAnchorNode.remove();
@@ -1007,13 +1006,11 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
 
             useEffect(() => {
                 if (!mapRef.current) {
-                    const map = L.map('map-container', { zoomControl: false, attributionControl: false, doubleClickZoom: false }).setView([39.0, 35.0], 6);
+                    const map = L.map('map-container', { zoomControl: false, attributionControl: false, doubleClickZoom: false }).setView([40.765, 29.94], 10);
                     L.control.zoom({ position: 'topright' }).addTo(map);
                     tileLayerRef.current = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains: 'abcd', maxZoom: 20 }).addTo(map);
                     window.addEventListener('mouseup', finishPaint);
                     mapRef.current = map;
-                    setMapReady(true);
-                    setTimeout(() => { try { map.invalidateSize(); } catch(e) {} }, 0);
                 }
                 return () => { window.removeEventListener('mouseup', finishPaint); }
             }, []);
@@ -1034,29 +1031,9 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
                 }
             }, [activeTool]);
 
-            // Ensure Leaflet measures correctly after layout/tab changes
-            useEffect(() => {
-                if (!mapRef.current) return;
-                setTimeout(() => { try { mapRef.current.invalidateSize(); } catch(e) {} }, 0);
-            }, [viewMode, mapReady]);
-
-
             // Optimized Layer Management
             useEffect(() => {
-                if (!mapReady || !mapRef.current || !geoJsonData) return;
-
-                // Defensive: re-add layers if something removed them
-                try {
-                    if (tileLayerRef.current && !mapRef.current.hasLayer(tileLayerRef.current)) {
-                        tileLayerRef.current.addTo(mapRef.current);
-                    }
-                } catch(e) {}
-                try {
-                    if (geoJsonLayerRef.current && !mapRef.current.hasLayer(geoJsonLayerRef.current)) {
-                        geoJsonLayerRef.current.addTo(mapRef.current);
-                    }
-                } catch(e) {}
-
+                if (!mapRef.current || !geoJsonData) return;
                 
                 const isNewData = loadedGeoJsonRef.current !== geoJsonData;
 
@@ -1183,7 +1160,7 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
                                     <span className="p-1 bg-blue-600 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
                                     </span>
-                                    Turkey
+                                    Kocaeli
                                 </h1>
                                 <div className="flex gap-2">
                                     <button onClick={() => setSettings(s => ({...s, mapStyle: s.mapStyle === 'dark' ? 'light' : 'dark'}))} className="text-slate-400 hover:text-white p-1 hover:bg-slate-700 rounded transition-colors" title="Toggle Map Theme">{settings.mapStyle === 'dark' ? <IconSun /> : <IconMoon />}</button>
