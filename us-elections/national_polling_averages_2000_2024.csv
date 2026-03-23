@@ -1,8 +1,0 @@
-Year,Dem_Candidate,GOP_Candidate,Dem_Poll_Avg,GOP_Poll_Avg,Poll_Margin,Dem_Actual,GOP_Actual,Actual_Margin,Poll_Error,Poll_Source,Winner
-2000,Al Gore,George W. Bush,46.0,48.0,-2.0,48.4,47.9,0.5,2.5,Gallup,R
-2004,John Kerry,George W. Bush,49.0,49.0,0.0,48.3,50.7,-2.4,-2.4,Gallup/RCP,R
-2008,Barack Obama,John McCain,52.0,45.0,7.0,52.9,45.7,7.2,0.2,RCP,D
-2012,Barack Obama,Mitt Romney,49.0,48.0,1.0,51.1,47.2,3.9,2.9,RCP,D
-2016,Hillary Clinton,Donald Trump,46.8,43.6,3.2,48.2,46.1,2.1,-1.1,RCP,R
-2020,Joe Biden,Donald Trump,51.4,46.9,4.5,51.3,46.9,4.4,-0.1,RCP,D
-2024,Kamala Harris,Donald Trump,48.7,48.6,0.1,48.4,49.9,-1.5,-1.6,RCP,R
