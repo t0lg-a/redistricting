@@ -107,8 +107,8 @@
 
 
         // --- Configuration: Default Files to Load ---
-        const DEFAULT_GEOJSON_FILE = 'turkey-admin-level-6.geojson';
-        const DEFAULT_ELECTION_CSV_FILE = 'turkey_districts_second_round_full.csv';
+        const DEFAULT_GEOJSON_FILE = 'data/turkey-admin-level-6.geojson';
+        const DEFAULT_ELECTION_CSV_FILE = 'data/turkey_districts_second_round_full.csv';
 
         // --- Improved Normalization Functions ---
 
@@ -407,7 +407,9 @@ const [loading, setLoading] = useState(false);
             // App State
             const [viewMode, setViewMode] = useState('districts'); 
             const [activeTool, setActiveTool] = useState('pointer'); 
-            const [searchQuery, setSearchQuery] = useState("");
+            
+            const [mapReady, setMapReady] = useState(false);
+const [searchQuery, setSearchQuery] = useState("");
             const [searchResults, setSearchResults] = useState([]);
             
             // Districting State
@@ -551,22 +553,29 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
 
                         const newElectionData = {};
                         rows.forEach(r => {
-                            const districtRaw = (r.district ?? r.District ?? '').toString().trim();
-                            if (!districtRaw) return;
+                            // Prefer stable IDs if present (GeoJSON relation ids)
+                            const ukRaw = (r.uk ?? r.UK ?? r.Uk ?? r.relation ?? r.relation_id ?? r['@id'] ?? r.id ?? '').toString().trim();
+                            const uk = ukRaw ? ukRaw.replace(/^relation\//, 'relation_') : '';
 
-                            const fullKey = normalizeName(districtRaw);
+                            // Fallback to any available name field (kept for legacy CSVs)
+                            const districtRaw = (r.district ?? r.District ?? r.geo_name ?? r.geoName ?? r.name ?? '').toString().trim();
+
+                            // Skip only if we have neither an ID nor a name
+                            if (!uk && !districtRaw) return;
+
+                            const key = uk || normalizeName(districtRaw);
                             const rte = parseInt(r.erdogan ?? r.Erdogan ?? 0) || 0;
                             const kk = parseInt(r.kilicdaroglu ?? r.Kilicdaroglu ?? 0) || 0;
 
-                            if (!newElectionData[fullKey]) {
-                                newElectionData[fullKey] = { rte: 0, kk: 0, total: 0, rawName: districtRaw };
+                            if (!newElectionData[key]) {
+                                newElectionData[key] = { rte: 0, kk: 0, total: 0, rawName: districtRaw || key };
                             }
-                            newElectionData[fullKey].rte += rte;
-                            newElectionData[fullKey].kk += kk;
-                            newElectionData[fullKey].total += (rte + kk);
+                            newElectionData[key].rte += rte;
+                            newElectionData[key].kk += kk;
+                            newElectionData[key].total += (rte + kk);
                         });
 
-                        // Build indexes for fast / safe matching
+                        // Build indexes for fast / safe matching for fast / safe matching
                         const byAsciiFull = {};
                         const byDistrict = {};
                         const byDistrictAscii = {};
@@ -620,7 +629,8 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
                     const asciiTarget = toAscii(normalized);
 
                     // 2) Direct / ASCII direct match (covers "Nevsehir merkez" vs "NEVŞEHİR MERKEZ")
-                    if (elData[normalized]) raw = elData[normalized];
+                    if (elData[uid]) raw = elData[uid];
+                    else if (elData[normalized]) raw = elData[normalized];
                     else if (idx?.byAsciiFull?.[asciiTarget] && elData[idx.byAsciiFull[asciiTarget]]) raw = elData[idx.byAsciiFull[asciiTarget]];
                     else {
                         // 3) Suffix match via district index (safe: only auto-match if exactly 1 candidate)
@@ -666,7 +676,8 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
                     const normalized = normalizeName(name);
                     const asciiTarget = toAscii(normalized);
 
-                    if (elData[normalized]) raw = elData[normalized];
+                    if (elData[uid]) raw = elData[uid];
+                    else if (elData[normalized]) raw = elData[normalized];
                     else if (idx?.byAsciiFull?.[asciiTarget] && elData[idx.byAsciiFull[asciiTarget]]) raw = elData[idx.byAsciiFull[asciiTarget]];
                     else {
                         const candidates = idx?.byDistrict?.[normalized] || idx?.byDistrictAscii?.[asciiTarget];
@@ -1010,6 +1021,8 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
                     tileLayerRef.current = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains: 'abcd', maxZoom: 20 }).addTo(map);
                     window.addEventListener('mouseup', finishPaint);
                     mapRef.current = map;
+                    setMapReady(true);
+                    setTimeout(() => { try { map.invalidateSize(); } catch(e) {} }, 0);
                 }
                 return () => { window.removeEventListener('mouseup', finishPaint); }
             }, []);
@@ -1030,9 +1043,29 @@ useEffect(() => { manualMappingsRef.current = manualMappings; }, [manualMappings
                 }
             }, [activeTool]);
 
+            // Ensure Leaflet measures correctly after layout/tab changes
+            useEffect(() => {
+                if (!mapRef.current) return;
+                setTimeout(() => { try { mapRef.current.invalidateSize(); } catch(e) {} }, 0);
+            }, [viewMode, mapReady]);
+
+
             // Optimized Layer Management
             useEffect(() => {
-                if (!mapRef.current || !geoJsonData) return;
+                if (!mapReady || !mapRef.current || !geoJsonData) return;
+
+                // Defensive: re-add layers if something removed them
+                try {
+                    if (tileLayerRef.current && !mapRef.current.hasLayer(tileLayerRef.current)) {
+                        tileLayerRef.current.addTo(mapRef.current);
+                    }
+                } catch(e) {}
+                try {
+                    if (geoJsonLayerRef.current && !mapRef.current.hasLayer(geoJsonLayerRef.current)) {
+                        geoJsonLayerRef.current.addTo(mapRef.current);
+                    }
+                } catch(e) {}
+
                 
                 const isNewData = loadedGeoJsonRef.current !== geoJsonData;
 
