@@ -4155,3 +4155,1883 @@ relation_14246086,Solaklar Mahallesi,,İzmir,,297,214
 relation_14246087,Sarıkaya Mahallesi,,İzmir,,78,54
 relation_14246088,Tekbıçaklar Mahallesi,,İzmir,,70,255
 relation_17255181,Şakran Hasbi Efendi Mahallesi,,İzmir,,1639,2403
+relation_1797148,Karpuzsekisi Mahallesi,,Kayseri,,516,36
+relation_1797150,Sakarçiftliği Mahallesi,,Kayseri,,191,41
+relation_1798196,Akın Mahallesi,,Kayseri,,164,155
+relation_1798201,Ebiç,,Kayseri,,508,94
+relation_1798204,Gesi,,Kayseri,,738,416
+relation_1798206,Gürpınar,,Kayseri,,652,102
+relation_1798214,Mimarsinan,,Kayseri,,7966,4726
+relation_1798218,Yeşilyurt Mahallesi,,Kayseri,,103,8
+relation_1798238,Akçatepe Mahallesi,,Kayseri,,243,16
+relation_1798239,Elagöz Mahallesi,,Kayseri,,428,121
+relation_1798240,Boğazköprü Mahallesi,,Kayseri,,50,18
+relation_1798242,Gömeç Mahallesi,,Kayseri,,279,61
+relation_1798243,Hasan Arpa Mahallesi,,Kayseri,,120,49
+relation_1798246,Molu Mahallesi,,Kayseri,,179,29
+relation_1798248,Salur Mahallesi,,Kayseri,,129,16
+relation_1798250,Yazır Mahallesi,,Kayseri,,275,57
+relation_1798253,Kemer Mahallesi,,Kayseri,,127,52
+relation_1798255,Vatan Mahallesi,,Kayseri,,136,11
+relation_3114219,Hürmetci Mahallesi,,Kayseri,,126,4
+relation_3449019,Yazyurdu Mahallesi,,Kayseri,,322,15
+relation_3449245,Kepez Mahallesi,,Kayseri,,1454,51
+relation_3449756,Cebir Mahallesi,,Kayseri,,196,11
+relation_3449757,Mengücek Mahallesi,,Kayseri,,150,24
+relation_3453544,Zincidere Mahallesi,,Kayseri,,253,90
+relation_3453900,Han Mahallesi,,Kayseri,,25,33
+relation_3453952,Kiçiköy Mahallesi,,Kayseri,,1761,1433
+relation_3453953,Yukarı Mahallesi,,Kayseri,,132,95
+relation_3453963,Endürlük Mahallesi,,Kayseri,,168,57
+relation_3453964,Harman Mahallesi,,Kayseri,,2012,721
+relation_3453965,Kuruköprü Mahallesi,,Kayseri,,879,119
+relation_3453966,Mevlana Mahallesi,,Kayseri,,4230,2568
+relation_3453967,Reşadiye Mahallesi,,Kayseri,,1029,358
+relation_3453968,Tablakaya Mahallesi,,Kayseri,,849,741
+relation_3453969,Yenidoğan Mahallesi,,Kayseri,,4719,2429
+relation_3453970,Çatakdere Mahallesi,,Kayseri,,364,43
+relation_3456291,Subaşı Mahallesi,,Kayseri,,233,55
+relation_3456399,Turan Mahallesi,,Kayseri,,404,296
+relation_3456502,Vekse Mahallesi,,Kayseri,,80,24
+relation_3456995,Gesi Fatih Mahallesi,,Kayseri,,11982,7169
+relation_3457225,Tavlusun Mahallesi,,Kayseri,,2003,646
+relation_3458076,Gökkent Mahallesi,,Kayseri,,2713,1518
+relation_3458125,Germir Mahallesi,,Kayseri,,4082,2753
+relation_3458144,Yıldırım Beyazit Mahallesi,,Kayseri,,9170,7486
+relation_3458145,Yeni Mahallesi,,Kayseri,,300,179
+relation_3458151,Melikgazi Mahallesi,,Kayseri,,12,17
+relation_3458156,Alpaslan Mahallesi,,Kayseri,,895,201
+relation_3458193,Kılıçaslan Mahallesi,,Kayseri,,3543,2211
+relation_3458222,Gültepe Mahallesi,,Kayseri,,4097,2662
+relation_3458226,Hunat Mahallesi,,Kayseri,,1386,744
+relation_3458323,Erenköy Mahallesi,,Kayseri,,2895,3074
+relation_3458324,Köşk Mahallesi,,Kayseri,,7373,6245
+relation_3458437,Becen Mahallesi,,Kayseri,,611,393
+relation_3466843,Esenyurt Mahallesi,,Kayseri,,9280,4231
+relation_3466897,Danişmentgazi Mahallesi,,Kayseri,,5232,1378
+relation_3466906,Osmanlı Mahallesi,,Kayseri,,7425,2343
+relation_3466988,Battalgazi Mahallesi,,Kayseri,,8917,4567
+relation_3466989,Selçuklu Mahallesi,,Kayseri,,9397,2797
+relation_3467430,Gülük Mahallesi,,Kayseri,,4019,1398
+relation_3468549,Aydınlıkevler Mahallesi,,Kayseri,,4979,1965
+relation_3468550,Hürriyet Mahallesi,,Kayseri,,6912,2645
+relation_3468573,Osman Kavuncu Mahallesi,,Kayseri,,4549,1692
+relation_3468705,Cumhuriyet Mahallesi,,Kayseri,,615,282
+relation_3468742,Eğribucak Mahallesi,,Kayseri,,876,408
+relation_3468743,Yeniköy Mahallesi,,Kayseri,,215,48
+relation_3468825,Uğurevler Mahallesi,,Kayseri,,2933,1887
+relation_3468826,Yıldızevler Mahallesi,,Kayseri,,2100,1243
+relation_3471329,Ahi Evran Mahallesi,,Kayseri,,1904,861
+relation_3471330,Alsancak Mahallesi,,Kayseri,,1557,879
+relation_3471331,Beyazşehir Mahallesi,,Kayseri,,7647,3832
+relation_3471333,Camiikebir Mahallesi,,Kayseri,,193,102
+relation_3471340,Kayabaşı Mahallesi,,Kayseri,,3170,769
+relation_3471341,Kocasinan Mahallesi,,Kayseri,,1247,714
+relation_3471342,Mehmet Akif Ersoy Mahallesi,,Kayseri,,1049,373
+relation_3471344,Talatpaşa Mahallesi,,Kayseri,,768,234
+relation_3471347,Yavuz Selim Mahallesi,,Kayseri,,261,121
+relation_3471580,Cırgalan Mahallesi,,Kayseri,,1765,473
+relation_3473267,Anafartalar Mahallesi,,Kayseri,,3395,1292
+relation_3473268,Keykubat Mahallesi,,Kayseri,,8119,2870
+relation_3473270,Selimiye Mahallesi,,Kayseri,,4075,1759
+relation_3473395,19 Mayıs Mahallesi,,Kayseri,,4988,2027
+relation_3473396,Altınoluk Mahallesi,,Kayseri,,6142,1683
+relation_3473397,Anbar Mahallesi,,Kayseri,,2000,548
+relation_3473398,Esentepe Mahallesi,,Kayseri,,7943,3157
+relation_3473402,Kocatepe Mahallesi,,Kayseri,,4804,1783
+relation_3473403,Sakarya Mahallesi,,Kayseri,,4210,1742
+relation_3473404,Tınaztepe Mahallesi,,Kayseri,,5382,1751
+relation_3795808,Akçakaya Mahallesi,,Kayseri,,251,83
+relation_3795809,Bahçelievler Mahallesi,,Kayseri,,1363,462
+relation_5411298,30 Ağustos Mahallesi,,Kayseri,,3463,1290
+relation_7725251,Fevzi Çakmak Mahallesi,,Kayseri,,6975,4243
+relation_7725252,Mimarsinan Mahallesi,,Kayseri,,7966,4726
+relation_7725253,Erciyesevler Mahallesi,,Kayseri,,5189,4571
+relation_7725394,Sahabiye Mahallesi,,Kayseri,,6062,3784
+relation_7725434,Gevher Nesibe Mahallesi,,Kayseri,,1191,808
+relation_7725500,Sanayi Mahallesi,,Kayseri,,362,281
+relation_7726068,Mevlana Mahallesi,,Kayseri,,4230,2568
+relation_7726284,Sümer Mahallesi,,Kayseri,,695,356
+relation_7726291,Yeni Mahallesi,,Kayseri,,300,179
+relation_7726347,Barbaros Mahallesi,,Kayseri,,6227,4637
+relation_7727115,Turgut Reis Mahallesi,,Kayseri,,6357,2871
+relation_7727124,Yenişehir Mahallesi,,Kayseri,,4810,2321
+relation_7727474,Şeker Mahallesi,,Kayseri,,1786,762
+relation_7727512,Yenidoğan Mahallesi,,Kayseri,,4719,2429
+relation_7727565,Mithatpaşa Mahallesi,,Kayseri,,6628,2464
+relation_7727773,Oruçreis Mahallesi,,Kayseri,,1636,555
+relation_7728112,Oymaağaç Mahallesi,,Kayseri,,356,67
+relation_7733993,Seyrani Mahallesi,,Kayseri,,1788,1016
+relation_7734074,Yeşil Mahallesi,,Kayseri,,121,92
+relation_7734306,Saray Bosna Mahallesi,,Kayseri,,1218,602
+relation_7734535,Yakut Mahallesi,,Kayseri,,4239,3405
+relation_7734560,Zümrüt Mahallesi,,Kayseri,,3458,1556
+relation_7734563,Hoca Ahmet Yesevi Mahallesi,,Kayseri,,4200,2097
+relation_7734665,Sancaktepe Mahallesi,,Kayseri,,3341,1252
+relation_7735353,Fevzioğlu Mahallesi,,Kayseri,,1052,282
+relation_7735407,Boztepe Mahallesi,,Kayseri,,1286,465
+relation_7738461,Buğdaylı Mahallesi,,Kayseri,,1165,417
+relation_7754899,Dokuzpınar Mahallesi,,Kayseri,,97,12
+relation_7755051,Erciyes Mahallesi,,Kayseri,,884,285
+relation_7755201,Yeni Mahallesi,,Kayseri,,300,179
+relation_7755247,Akyazı Mahallesi,,Kayseri,,849,244
+relation_7755319,Orta Mahallesi,,Kayseri,,140,13
+relation_7756510,Akdam Mahallesi,,Kayseri,,524,118
+relation_7758305,Beğendik Mahallesi,,Kayseri,,896,186
+relation_7761768,Yediağaç Mahallesi,,Kayseri,,339,61
+relation_7761775,Yukarı Mahallesi,,Kayseri,,132,95
+relation_7761782,Aşağı Mahallesi,,Kayseri,,882,228
+relation_7773104,Sarımsaklı Mahallesi,,Kayseri,,164,55
+relation_7773105,Ağırnas Mahallesi,,Kayseri,,1252,416
+relation_7779325,Başakpınar,,Kayseri,,1939,237
+relation_7779476,Hisarcık,,Kayseri,,2537,665
+relation_7779478,Kıranardı,,Kayseri,,1724,355
+relation_7781466,Erkilet,,Kayseri,,249,88
+relation_7787029,Ardıç Mahallesi,,Kayseri,,53,19
+relation_7790954,Çömlekçi Mahallesi,,Kayseri,,466,27
+relation_7792688,Örencik Mahallesi,,Kayseri,,257,3
+relation_7793229,Yamaçlı Mahallesi,,Kayseri,,204,12
+relation_7795229,Süleymanlı Mahallesi,,Kayseri,,302,63
+relation_7797131,Sakaltutan Mahallesi,,Kayseri,,218,67
+relation_7797134,Alaybeyli Mahallesi,,Kayseri,,328,62
+relation_7797139,Koçcağız Mahallesi,,Kayseri,,284,37
+relation_7797144,Kamber Mahallesi,,Kayseri,,211,101
+relation_7797148,Çevlik Mahallesi,,Kayseri,,141,28
+relation_7843537,Beydeğirmeni Mahallesi,,Kayseri,,62,21
+relation_7846952,Bayramhacı Mahallesi,,Kayseri,,153,52
+relation_7849924,Yuvalı Mahallesi,,Kayseri,,216,113
+relation_7853794,Kaşköy Mahallesi,,Kayseri,,252,58
+relation_7868282,Kalkancık Mahallesi,,Kayseri,,118,37
+relation_7868901,Himmetdede Mahallesi,,Kayseri,,264,164
+relation_7869223,Yukarıhasinli Mahallesi,,Kayseri,,78,15
+relation_7869224,Karakimse Mahallesi,,Kayseri,,199,56
+relation_7869225,Elmalı Mahallesi,,Kayseri,,111,22
+relation_7869226,Düver Mahallesi,,Kayseri,,315,75
+relation_7869230,Yemliha Mahallesi,,Kayseri,,2497,343
+relation_7880503,Mahzemin,,Kayseri,,1015,141
+relation_7880522,Dadağı Mahallesi,,Kayseri,,145,25
+relation_7880535,Eskiömerler Mahallesi,,Kayseri,,193,9
+relation_7889190,Hırkaköy Mahallesi,,Kayseri,,109,103
+relation_7890362,Boyacı Mahallesi,,Kayseri,,176,48
+relation_7890495,Kuşçu Mahallesi,,Kayseri,,249,72
+relation_7890497,Mollahacı Mahallesi,,Kayseri,,184,33
+relation_7890499,Hasancı Mahallesi,,Kayseri,,115,32
+relation_7890507,Kızık Mahallesi,,Kayseri,,272,14
+relation_7890520,Karahöyük Mahallesi,,Kayseri,,23,8
+relation_7890528,Barsama Mahallesi,,Kayseri,,163,53
+relation_7890530,Doruklu Mahallesi,,Kayseri,,152,33
+relation_7890539,Saraycık Mahallesi,,Kayseri,,104,22
+relation_7890546,Yüreğil Mahallesi,,Kayseri,,214,22
+relation_7890577,Eyim Mahallesi,,Kayseri,,173,26
+relation_7890584,Amarat Mahallesi,,Kayseri,,157,52
+relation_7890588,Kuşcağız Mahallesi,,Kayseri,,83,17
+relation_7890591,Obruk Mahallesi,,Kayseri,,141,17
+relation_7890592,Höbek Mahallesi,,Kayseri,,111,21
+relation_7890597,Güneşli,,Kayseri,,451,106
+relation_7924204,Değirmentaş Mahallesi,,Kayseri,,42,6
+relation_7928933,Cumhuriyet Mahallesi,,Kayseri,,615,282
+relation_7933418,Arslantaş Mahallesi,,Kayseri,,130,23
+relation_7933481,Işıklar Mahallesi,,Kayseri,,167,20
+relation_7933514,Güzelce Mahallesi,,Kayseri,,29,9
+relation_7933515,Üçkonak Mahallesi,,Kayseri,,155,31
+relation_7933522,Dadaloğlu Mahallesi,,Kayseri,,531,226
+relation_7933523,İcadiye Mahallesi,,Kayseri,,32,12
+relation_7933524,Karamuklu Mahallesi,,Kayseri,,28,12
+relation_7933525,Çanakpınar Mahallesi,,Kayseri,,112,72
+relation_7933527,Göktepe Mahallesi,,Kayseri,,30,7
+relation_7933530,Emiruşağı Mahallesi,,Kayseri,,329,104
+relation_7933533,Toklar Mahallesi,,Kayseri,,82,45
+relation_7941124,Melikören Mahallesi,,Kayseri,,39,19
+relation_7941125,Avşarsöğütlü Mahallesi,,Kayseri,,129,38
+relation_7941250,Akmezar Mahallesi,,Kayseri,,50,3
+relation_7941251,Tatar Mahallesi,,Kayseri,,96,26
+relation_7941252,Güzelsu Mahallesi,,Kayseri,,68,11
+relation_7941254,Kızılören Mahallesi,,Kayseri,,61,35
+relation_7941259,Kapukaya Mahallesi,,Kayseri,,213,21
+relation_7941262,İmamkullu Mahallesi,,Kayseri,,336,66
+relation_7941265,Kesir Mahallesi,,Kayseri,,105,25
+relation_7941266,Tahtakemer Mahallesi,,Kayseri,,109,20
+relation_7941446,Çulha Mahallesi,,Kayseri,,121,96
+relation_7941450,Dağyurdu Mahallesi,,Kayseri,,3,107
+relation_7941461,Çayinli Mahallesi,,Kayseri,,7,130
+relation_7945495,Şiraz Mahallesi,,Kayseri,,153,8
+relation_7945496,Gülveren Mahallesi,,Kayseri,,91,59
+relation_7945531,Ekinli Mahallesi,,Kayseri,,67,16
+relation_7945532,Turanlı Mahallesi,,Kayseri,,104,16
+relation_7945544,Kuşcağız Mahallesi,,Kayseri,,83,17
+relation_7945549,Akdere Mahallesi,,Kayseri,,598,63
+relation_7945556,Yeşilbağ Mahallesi,,Kayseri,,84,14
+relation_7945560,Kömür Mahallesi,,Kayseri,,94,9
+relation_7945562,Cücün Mahallesi,,Kayseri,,299,30
+relation_7945563,Pusatlı Mahallesi,,Kayseri,,303,14
+relation_7948214,Karaören Mahallesi,,Kayseri,,78,0
+relation_7948227,Kevenağıl Mahallesi,,Kayseri,,10,10
+relation_7948229,Bostanlık Mahallesi,,Kayseri,,80,18
+relation_7948734,Köprübaşı Mahallesi,,Kayseri,,335,79
+relation_7950936,Süvegenler Mahallesi,,Kayseri,,89,17
+relation_7952224,Çukurağaç Mahallesi,,Kayseri,,35,4
+relation_7952228,Sarımehmetli Mahallesi,,Kayseri,,412,85
+relation_7952306,Yeni Mahallesi,,Kayseri,,300,179
+relation_7952317,Kurtuluş Mahallesi,,Kayseri,,994,480
+relation_7952337,Cumhuriyet Mahallesi,,Kayseri,,615,282
+relation_7952340,Yavuzselim Mahallesi,,Kayseri,,940,347
+relation_7952342,Şıhbarak Mahallesi,,Kayseri,,379,42
+relation_7952345,Kale Mahallesi,,Kayseri,,117,115
+relation_7952346,Bektaş Mahallesi,,Kayseri,,33,0
+relation_7952352,Hacıpaşa Mahallesi,,Kayseri,,75,10
+relation_7952354,Söğütlü Mahallesi,,Kayseri,,23,14
+relation_7952395,Böke Mahallesi,,Kayseri,,84,13
+relation_7952403,İncili Mahallesi,,Kayseri,,327,31
+relation_8017932,Küllü Mahallesi,,Kayseri,,241,67
+relation_8017934,Karahüyük Mahallesi,,Kayseri,,114,16
+relation_8017937,Süksün Zafer Mahallesi,,Kayseri,,792,249
+relation_8017938,Tahirinli Mahallesi,,Kayseri,,383,54
+relation_8017951,Süksün Hürriyet Mahallesi,,Kayseri,,150,25
+relation_8017952,Süksün Cumhuriyet Mahallesi,,Kayseri,,299,68
+relation_8017953,Hamurcu Mahallesi,,Kayseri,,437,87
+relation_8017954,Saraycık Mahallesi,,Kayseri,,104,22
+relation_8017960,Örenşehir Mahallesi,,Kayseri,,864,340
+relation_8017961,Garipçe Mahallesi,,Kayseri,,290,103
+relation_8017963,Üçkuyu Mahallesi,,Kayseri,,252,29
+relation_8017968,Bahçesaray Mahallesi,,Kayseri,,976,325
+relation_8017972,Gönenkent Mahallesi,,Kayseri,,569,326
+relation_8017973,Karamustafapaşa Mahallesi,,Kayseri,,941,496
+relation_8017975,Yeni Camii Mahallesi,,Kayseri,,100,37
+relation_8017976,Bulgurcu Mahallesi,,Kayseri,,121,85
+relation_8017979,Yarim Mahallesi,,Kayseri,,111,53
+relation_8017994,Vali İhsan Aras Mahallesi,,Kayseri,,952,654
+relation_8017995,Bahçelievler Mahallesi,,Kayseri,,1363,462
+relation_8017997,Fırınönü Mahallesi,,Kayseri,,807,273
+relation_8018130,Karakoyunlu Mahallesi,,Kayseri,,769,238
+relation_8018136,Semerkent Mahallesi,,Kayseri,,185,117
+relation_8018138,Subaşı Mahallesi,,Kayseri,,233,55
+relation_8018144,Şeyhşaban Mahallesi,,Kayseri,,182,28
+relation_8018147,Kızılören Aşağı Mahallesi,,Kayseri,,558,99
+relation_8018167,Kızılören Ötebatan Mahallesi,,Kayseri,,300,47
+relation_8018170,Kızılören Tabaklı Mahallesi,,Kayseri,,589,87
+relation_8018176,Çardaklı Mahallesi,,Kayseri,,227,24
+relation_8018177,Sarıkürklü Mahallesi,,Kayseri,,112,23
+relation_8066246,Derbentbaşı Mahallesi,,Kayseri,,198,31
+relation_8066248,Başköy Mahallesi,,Kayseri,,126,81
+relation_8066264,Soğanlı Mahallesi,,Kayseri,,97,130
+relation_8066265,Güzelöz Mahallesi,,Kayseri,,155,105
+relation_8066272,Akköy Mahallesi,,Kayseri,,32,14
+relation_8066273,Keşlik Mahallesi,,Kayseri,,59,19
+relation_8066275,Kavak Mahallesi,,Kayseri,,166,28
+relation_8066276,Gülbayır Mahallesi,,Kayseri,,250,26
+relation_8066277,Erdemli Mahallesi,,Kayseri,,135,21
+relation_8066287,Karacabey Mahallesi,,Kayseri,,677,481
+relation_8066290,Cumhuriyet Mahallesi,,Kayseri,,615,282
+relation_8066297,Musahacılı Mahallesi,,Kayseri,,412,217
+relation_8066359,Çadırkaya Mahallesi,,Kayseri,,207,42
+relation_8066360,Yeşilova Mahallesi,,Kayseri,,165,55
+relation_8066365,Kovalı Mahallesi,,Kayseri,,200,344
+relation_8066367,Doğanlı Mahallesi,,Kayseri,,137,72
+relation_8066392,Büğet Mahallesi,,Kayseri,,14,77
+relation_8066396,Araplı Mahallesi,,Kayseri,,74,14
+relation_8066420,Kuşçu Mahallesi,,Kayseri,,249,72
+relation_8066421,Kayadibi Mahallesi,,Kayseri,,445,86
+relation_8066424,İçmece Mahallesi,,Kayseri,,41,19
+relation_8066426,Ovaçiftlik Mahallesi,,Kayseri,,152,122
+relation_8066430,Kale Mahallesi,,Kayseri,,117,115
+relation_8066433,Yenişehir Mahallesi,,Kayseri,,4810,2321
+relation_8066437,Yavuz Selim Mahallesi,,Kayseri,,261,121
+relation_8066442,Keler Mahallesi,,Kayseri,,196,65
+relation_8066444,Kuzey Mahallesi,,Kayseri,,120,70
+relation_8066460,Mahmudiye Mahallesi,,Kayseri,,253,92
+relation_8066461,Fatih Mahallesi,,Kayseri,,1070,585
+relation_8066471,Fevzioğlu Mahallesi,,Kayseri,,1052,282
+relation_8066472,Camikebir Mahallesi,,Kayseri,,2705,1055
+relation_8066473,İdris Mahallesi,,Kayseri,,183,72
+relation_8066478,Beyleryukarı Mahallesi,,Kayseri,,156,53
+relation_8066490,Güney Mahallesi,,Kayseri,,72,21
+relation_8066491,Köşk Mahallesi,,Kayseri,,7373,6245
+relation_8104034,Kulpak Mahallesi,,Kayseri,,234,11
+relation_8104035,Çayırözü Mahallesi,,Kayseri,,393,20
+relation_8104036,Karacaören Mahallesi,,Kayseri,,114,20
+relation_8104038,Yenihayat Mahallesi,,Kayseri,,63,16
+relation_8104045,Aşık Seyrani Mahallesi,,Kayseri,,1744,705
+relation_8104046,Kızık Mahallesi,,Kayseri,,272,14
+relation_8104047,Soysallı Mahallesi,,Kayseri,,589,154
+relation_8104069,Mustafa Asım Köksal Mahallesi,,Kayseri,,1558,453
+relation_8104070,Çomaklı Mahallesi,,Kayseri,,402,110
+relation_8104085,İncesu Mahallesi,,Kayseri,,507,38
+relation_8104088,Kabaklı Mahallesi,,Kayseri,,276,11
+relation_8104506,Çöten Mahallesi,,Kayseri,,337,42
+relation_8104507,Millidere Mahallesi,,Kayseri,,112,8
+relation_8104508,Çaylıca Mahallesi,,Kayseri,,431,21
+relation_8104532,Çadıryeri Mahallesi,,Kayseri,,9,57
+relation_8104533,Köseler Mahallesi,,Kayseri,,284,54
+relation_8104544,Dereşimli Mahallesi,,Kayseri,,62,17
+relation_8104545,Saraycık Mahallesi,,Kayseri,,104,22
+relation_8104568,Derebaşı Mahallesi,,Kayseri,,4,100
+relation_8104597,Eşelik Mahallesi,,Kayseri,,98,22
+relation_8104598,Çataloluk Mahallesi,,Kayseri,,166,44
+relation_8104599,Sarıkaya Mahallesi,,Kayseri,,256,38
+relation_8104613,Büyükkünye Mahallesi,,Kayseri,,167,5
+relation_8104614,Küçükkünye Mahallesi,,Kayseri,,242,41
+relation_8104622,Yeniköy Mahallesi,,Kayseri,,215,48
+relation_8104623,Kaleköy Mahallesi,,Kayseri,,86,35
+relation_8104624,Yaylacık Mahallesi,,Kayseri,,195,23
+relation_8104633,Havadan Mahallesi,,Kayseri,,92,33
+relation_8104634,Şıhlı Mahallesi,,Kayseri,,253,110
+relation_8104655,Satı Mahallesi,,Kayseri,,79,14
+relation_8104666,Taşçı Bucak Merkezi Mahallesi,,Kayseri,,111,49
+relation_8104667,Kılıçkaya Mahallesi,,Kayseri,,155,50
+relation_8104693,Yenice Mahallesi,,Kayseri,,58,43
+relation_8104694,Çukuryurt Mahallesi,,Kayseri,,37,16
+relation_8104695,Hoşça Mahallesi,,Kayseri,,75,14
+relation_8104696,Ayşepınar Mahallesi,,Kayseri,,319,62
+relation_8104705,Hüseyinli Mahallesi,,Kayseri,,137,18
+relation_8104706,Şahmelik Mahallesi,,Kayseri,,446,67
+relation_8104714,Yeşilyurt Mahallesi,,Kayseri,,103,8
+relation_8104737,Öksüt Mahallesi,,Kayseri,,366,16
+relation_8104738,Kozluca Mahallesi,,Kayseri,,17,2
+relation_8104739,Gümüşören Mahallesi,,Kayseri,,316,39
+relation_8104750,Sarıca Mahallesi,,Kayseri,,256,26
+relation_8104751,Gazi Mahallesi,,Kayseri,,703,75
+relation_8104860,Ayvazhacı Mahallesi,,Kayseri,,342,60
+relation_8104861,Yazıbaşı Mahallesi,,Kayseri,,146,39
+relation_8104862,Gömedi Mahallesi,,Kayseri,,67,12
+relation_8104863,Epçe Mahallesi,,Kayseri,,436,47
+relation_8104879,Yedek Mahallesi,,Kayseri,,61,17
+relation_8104880,Tombak Mahallesi,,Kayseri,,157,22
+relation_8104881,Zile Mahallesi,,Kayseri,,225,48
+relation_8104952,Bahçelievler Mahallesi,,Kayseri,,1363,462
+relation_8104953,Reşadiye Mahallesi,,Kayseri,,1029,358
+relation_8104986,Güneyaşağı Mahallesi,,Kayseri,,396,151
+relation_8105010,Harman Mahallesi,,Kayseri,,2012,721
+relation_8105011,Alpaslan Mahallesi,,Kayseri,,895,201
+relation_8105012,Mehmet Akif Ersoy Mahallesi,,Kayseri,,1049,373
+relation_8105024,Yeni Mahallesi,,Kayseri,,300,179
+relation_8105057,Develi Camikebir Mahallesi,,Kayseri,,66,14
+relation_8105058,Güneyyukarı Mahallesi,,Kayseri,,146,30
+relation_8105059,Kopçullu Mahallesi,,Kayseri,,58,20
+relation_8105078,Cumhuriyet Mahallesi,,Kayseri,,615,282
+relation_8105098,Yüzevler Mahallesi,,Kayseri,,108,24
+relation_8105117,Feneseyukarı Mahallesi,,Kayseri,,707,228
+relation_8105118,Fatih Mahallesi,,Kayseri,,1070,585
+relation_8105132,Bahçebaşı Mahallesi,,Kayseri,,644,121
+relation_8105143,Aşağıeverek Mahallesi,,Kayseri,,673,342
+relation_8105159,İbrahimağa Mahallesi,,Kayseri,,1365,687
+relation_8105160,Camiicedit Mahallesi,,Kayseri,,135,80
+relation_8105187,İzmirli Mahallesi,,Kayseri,,77,40
+relation_8105188,Abdulbaki Mahallesi,,Kayseri,,52,39
+relation_8105540,Feneseaşağı Mahallesi,,Kayseri,,186,76
+relation_8151839,Güney,,Kayseri,,72,21
+relation_8155983,Kopçu Mahallesi,,Kayseri,,307,61
+relation_8156017,Kapuzbaşı Mahallesi,,Kayseri,,271,49
+relation_8156018,Ulupınar Mahallesi,,Kayseri,,338,50
+relation_8156019,Ağcaşar Mahallesi,,Kayseri,,71,60
+relation_8156020,Kocahacılı Mahallesi,,Kayseri,,403,47
+relation_8156037,Büyükçakır Mahallesi,,Kayseri,,622,93
+relation_8156045,Burhaniye Mahallesi,,Kayseri,,154,23
+relation_8156046,Çubukharmanı Mahallesi,,Kayseri,,157,4
+relation_8156055,Çamlıca Mahallesi,,Kayseri,,282,9
+relation_8156056,Çavdaruşağı Mahallesi,,Kayseri,,222,1
+relation_8156057,Yeşilköy Mahallesi,,Kayseri,,291,10
+relation_8156058,Balcıçakırı Mahallesi,,Kayseri,,459,12
+relation_8156063,Delialiuşağı Mahallesi,,Kayseri,,406,41
+relation_8156077,Avlağa Mahallesi,,Kayseri,,220,8
+relation_8156078,Yenice Mahallesi,,Kayseri,,58,43
+relation_8156082,Karaköy Mahallesi,,Kayseri,,582,67
+relation_8156083,Dikme Mahallesi,,Kayseri,,183,8
+relation_8156097,Kuzoluk Mahallesi,,Kayseri,,47,5
+relation_8156098,Sazak Mahallesi,,Kayseri,,43,45
+relation_8156115,Denizovası Mahallesi,,Kayseri,,26,7
+relation_8156116,Süleymanfakılı Mahallesi,,Kayseri,,65,5
+relation_8156117,Taşhan Mahallesi,,Kayseri,,164,35
+relation_8156124,Fevziçakmak Mahallesi,,Kayseri,,138,27
+relation_8156127,İsmet Mahallesi,,Kayseri,,481,186
+relation_8156148,Kirazlı Mahallesi,,Kayseri,,534,62
+relation_8156149,Derebağ Mahallesi,,Kayseri,,937,84
+relation_8156154,Gazibeyli Mahallesi,,Kayseri,,1691,428
+relation_8156158,Madazı Mahallesi,,Kayseri,,147,57
+relation_8156230,Kavacık Mahallesi,,Kayseri,,478,95
+relation_8156231,Seydili Mahallesi,,Kayseri,,2487,698
+relation_8156232,Camikebir Mahallesi,,Kayseri,,2705,1055
+relation_8156275,Çiğilli Mahallesi,,Kayseri,,1229,268
+relation_8156371,İlyaslı Mahallesi,,Kayseri,,353,45
+relation_8156372,Yerköy Mahallesi,,Kayseri,,289,84
+relation_8156373,Yuları Mahallesi,,Kayseri,,107,13
+relation_8156374,Mustafabeyli Mahallesi,,Kayseri,,284,84
+relation_8156375,Fetullah Mahallesi,,Kayseri,,370,164
+relation_8156392,Senirköy Mahallesi,,Kayseri,,293,53
+relation_8156393,Çubuklu Mahallesi,,Kayseri,,622,59
+relation_8241617,Alparslan Mahallesi,,Kayseri,,50,46
+relation_8241618,Menteşe Mahallesi,,Kayseri,,29,19
+relation_8241619,Acırlı Mahallesi,,Kayseri,,3,156
+relation_8241623,Cumhuriyet Mahallesi,,Kayseri,,615,282
+relation_8241631,Darılı Mahallesi,,Kayseri,,59,20
+relation_8241632,Kuruhüyük Mahallesi,,Kayseri,,124,79
+relation_8241633,Kepiç Mahallesi,,Kayseri,,96,59
+relation_8241635,İsabey Mahallesi,,Kayseri,,128,79
+relation_8241636,Karaşeyh Mahallesi,,Kayseri,,83,35
+relation_8241653,Yeni Mahallesi,,Kayseri,,300,179
+relation_8241654,Silahtar Mahallesi,,Kayseri,,119,21
+relation_8241660,Kale Mahallesi,,Kayseri,,117,115
+relation_8241661,Beyler Mahallesi,,Kayseri,,80,62
+relation_8246768,Kermelik Mahallesi,,Kayseri,,235,13
+relation_8246798,Güney Mahallesi,,Kayseri,,72,21
+relation_8246799,Taşlık Mahallesi,,Kayseri,,83,28
+relation_8246800,Kavaklı Mahallesi,,Kayseri,,68,41
+relation_8246801,Küpeli Mahallesi,,Kayseri,,173,185
+relation_8246802,Yukarı Boğaziçi Mahallesi,,Kayseri,,177,39
+relation_8246803,Aşağı Boğaziçi Mahallesi,,Kayseri,,235,74
+relation_8246812,Kale Mahallesi,,Kayseri,,117,115
+relation_8246813,Cumhuriyet Mahallesi,,Kayseri,,615,282
+relation_8246823,Alparslan Mahallesi,,Kayseri,,50,46
+relation_8246824,Yeni Mahallesi,,Kayseri,,300,179
+relation_8246829,Tuğlaşah Mahallesi,,Kayseri,,20,9
+relation_8246835,Bahçeli Evler Mahallesi,,Kayseri,,107,24
+relation_8248772,Muratbeyli Mahallesi,,Kayseri,,121,12
+relation_8248773,Keklikoğlu Mahallesi,,Kayseri,,84,9
+relation_8248774,Sofumahmut Mahallesi,,Kayseri,,126,16
+relation_8248775,Ilıca Mahallesi,,Kayseri,,351,53
+relation_8248776,Palas Mahallesi,,Kayseri,,1478,394
+relation_8248777,Ömerhacılı Mahallesi,,Kayseri,,127,18
+relation_8248778,Ömürlü Mahallesi,,Kayseri,,45,10
+relation_8248792,Tatılı Mahallesi,,Kayseri,,243,108
+relation_8248793,Yıldırım Mahallesi,,Kayseri,,133,19
+relation_8248794,Çiftlik Mahallesi,,Kayseri,,576,244
+relation_8248795,Düzencik Mahallesi,,Kayseri,,43,23
+relation_8248798,Şenyurt Mahallesi,,Kayseri,,230,96
+relation_8248799,Bakarcak Mahallesi,,Kayseri,,510,156
+relation_8248815,Güzelyazı Mahallesi,,Kayseri,,435,224
+relation_8248846,Yahyalı Mahallesi,,Kayseri,,43,46
+relation_8248847,Burunören Mahallesi,,Kayseri,,6,53
+relation_8248848,Üzerlik Mahallesi,,Kayseri,,222,70
+relation_8248856,Karpınar Mahallesi,,Kayseri,,3,69
+relation_8248857,Kızılpınar Mahallesi,,Kayseri,,37,19
+relation_8248858,Kaleköy Mahallesi,,Kayseri,,86,35
+relation_8248860,Gaziler Mahallesi,,Kayseri,,133,37
+relation_8248866,Alamettin Mahallesi,,Kayseri,,290,48
+relation_8248868,Ebülhayır Mahallesi,,Kayseri,,145,86
+relation_8248881,İğdeli Mahallesi,,Kayseri,,3,82
+relation_8248882,Yerlikuyu Mahallesi,,Kayseri,,2,93
+relation_8248883,Karaözü Mahallesi,,Kayseri,,23,515
+relation_8248884,Kadılı Mahallesi,,Kayseri,,29,24
+relation_8248964,Ganişeyh Mahallesi,,Kayseri,,157,173
+relation_8248965,Yeşil Mahallesi,,Kayseri,,121,92
+relation_8248966,Kululu Mahallesi,,Kayseri,,221,167
+relation_8248967,Girinci Mahallesi,,Kayseri,,121,44
+relation_8248973,Ortaköy Mahallesi,,Kayseri,,319,154
+relation_8248978,Gömürgen Yeni Mahallesi,,Kayseri,,149,203
+relation_8248979,Gömürgen Mahallesi,,Kayseri,,165,168
+relation_8248981,Uğurlu Mahallesi,,Kayseri,,61,24
+relation_8248984,Yukarı Mahallesi,,Kayseri,,132,95
+relation_8248990,Yeni Mahallesi,,Kayseri,,300,179
+relation_8248991,Şen Mahallesi,,Kayseri,,119,80
+relation_8248992,Gümüşsu Mahallesi,,Kayseri,,66,17
+relation_8248998,Alevkışla Mahallesi,,Kayseri,,49,53
+relation_8249008,Akın Mahallesi,,Kayseri,,164,155
+relation_8329552,Mollahüseyinler Mahallesi,,Kayseri,,134,27
+relation_8329553,İmirzaağa Mahallesi,,Kayseri,,42,5
+relation_8329572,Ördekli Mahallesi,,Kayseri,,5,49
+relation_8329573,Dayoluk Mahallesi,,Kayseri,,70,12
+relation_8329574,Yeşilkent Mahallesi,,Kayseri,,215,128
+relation_8329593,Karayurt Mahallesi,,Kayseri,,96,27
+relation_8329594,Kemer Mahallesi,,Kayseri,,127,52
+relation_8329595,Kurudere Mahallesi,,Kayseri,,38,17
+relation_8329596,Oğlakkaya Mahallesi,,Kayseri,,49,20
+relation_8329621,Fettahdere Mahallesi,,Kayseri,,109,8
+relation_8331415,Altısöğüt Mahallesi,,Kayseri,,35,50
+relation_8331416,Gümüşali Mahallesi,,Kayseri,,8,72
+relation_8331417,Küçük Kabaktepe Mahallesi,,Kayseri,,6,26
+relation_8331419,İncemağara Mahallesi,,Kayseri,,39,26
+relation_8331420,Çörekdere Mahallesi,,Kayseri,,163,98
+relation_8331422,Kırkısrak Mahallesi,,Kayseri,,4,246
+relation_8331423,Çağşak Mahallesi,,Kayseri,,10,131
+relation_8331424,Tavla Mahallesi,,Kayseri,,5,191
+relation_8331425,Dallıkavak Mahallesi,,Kayseri,,3,128
+relation_8331444,Akoluk Mahallesi,,Kayseri,,14,11
+relation_8331447,Küçük Örtülü Mahallesi,,Kayseri,,4,19
+relation_8331453,Büyük Örtülü Mahallesi,,Kayseri,,6,60
+relation_8331458,Büyük Söbeçimen Mahallesi,,Kayseri,,136,32
+relation_8331464,Küçük Söbeçimen Mahallesi,,Kayseri,,7,34
+relation_8331477,Damızlık Mahallesi,,Kayseri,,390,19
+relation_8331478,Avşarobası Mahallesi,,Kayseri,,131,12
+relation_8331479,Çavdar Mahallesi,,Kayseri,,119,16
+relation_8331538,Tekneli Mahallesi,,Kayseri,,102,27
+relation_8331539,Karapınar Mahallesi,,Kayseri,,66,6
+relation_8331549,Kıskaçlı Mahallesi,,Kayseri,,49,29
+relation_8331550,Yedioluk Mahallesi,,Kayseri,,52,45
+relation_8331554,Yaylacı Mahallesi,,Kayseri,,171,97
+relation_8331562,Kurdini Mahallesi,,Kayseri,,20,24
+relation_8331563,İncedere Mahallesi,,Kayseri,,136,66
+relation_8331566,Çatalpınar Mahallesi,,Kayseri,,131,65
+relation_8331573,Darıdere Mahallesi,,Kayseri,,6,63
+relation_8331574,Ayranlık Mahallesi,,Kayseri,,101,36
+relation_8331575,Sancakağıl Mahallesi,,Kayseri,,4,70
+relation_8331578,Kızılpınar Mahallesi,,Kayseri,,37,19
+relation_8331585,Yeni Mahallesi,,Kayseri,,300,179
+relation_8331586,Kuşçu Mahallesi,,Kayseri,,249,72
+relation_8331587,Günesen Mahallesi,,Kayseri,,138,161
+relation_8331591,Bahçeli Mahallesi,,Kayseri,,247,189
+relation_8334609,Güllüce Mahallesi,,Kayseri,,966,110
+relation_8334610,Dağardı Mahallesi,,Kayseri,,45,13
+relation_8334612,Yünören Mahallesi,,Kayseri,,265,13
+relation_8334623,Samağır Mahallesi,,Kayseri,,122,31
+relation_8334624,Yeni Süksün Mahallesi,,Kayseri,,266,320
+relation_8334625,Karatay Mahallesi,,Kayseri,,303,67
+relation_8334626,Akmescit Mahallesi,,Kayseri,,722,146
+relation_8334639,Yağmurbey Mahallesi,,Kayseri,,38,8
+relation_8334640,Karakaya Mahallesi,,Kayseri,,552,33
+relation_8334656,Karahıdır Mahallesi,,Kayseri,,149,13
+relation_8334657,Kardeşler Mahallesi,,Kayseri,,87,15
+relation_8334658,Burhaniye Mahallesi,,Kayseri,,154,23
+relation_8334689,Gergeme Mahallesi,,Kayseri,,478,167
+relation_8334690,Fatih Mahallesi,,Kayseri,,1070,585
+relation_8334708,Sağlık Mahallesi,,Kayseri,,545,288
+relation_8334747,Camiicedit Mahallesi,,Kayseri,,135,80
+relation_8334748,Camiikebir Mahallesi,,Kayseri,,193,102
+relation_8334749,Sümer Mahallesi,,Kayseri,,695,356
+relation_8334750,Yavuz Selim Mahallesi,,Kayseri,,261,121
+relation_8334756,İbrahimbey Mahallesi,,Kayseri,,44,53
+relation_8334757,Doğanlar Mahallesi,,Kayseri,,49,6
+relation_8334770,Dervişağa Mahallesi,,Kayseri,,164,76
+relation_8334771,Cumhuriyet Mahallesi,,Kayseri,,615,282
+relation_8334772,Yenice Mahallesi,,Kayseri,,58,43
+relation_8334777,Bayramlı Mahallesi,,Kayseri,,173,95
+relation_8334795,Köprübaşı Mahallesi,,Kayseri,,335,79
+relation_8334796,Elbaşı Mahallesi,,Kayseri,,362,103
+relation_8334805,Ağcalı Mahallesi,,Kayseri,,171,36
+relation_8334806,Ekinciler Mahallesi,,Kayseri,,179,96
+relation_8334807,Girveli Mahallesi,,Kayseri,,42,32
+relation_8334813,Hazarşah Mahallesi,,Kayseri,,119,29
+relation_8334842,Akçatı Mahallesi,,Kayseri,,117,29
+relation_8334843,Sıvgın Mahallesi,,Kayseri,,83,48
+relation_8334865,Taçın Mahallesi,,Kayseri,,176,23
+relation_8334866,Emirören Mahallesi,,Kayseri,,77,12
+relation_8334867,Asmakaya Mahallesi,,Kayseri,,20,3
+relation_8334904,Sultanhanı Mahallesi,,Kayseri,,132,41
+relation_8334905,Musaşeyh Mahallesi,,Kayseri,,21,10
+relation_8334906,Kösehacılı Mahallesi,,Kayseri,,31,8
+relation_8334907,Kahveci Mahallesi,,Kayseri,,160,40
+relation_8334908,Pirahmet Mahallesi,,Kayseri,,197,32
+relation_8334909,Koyunabdal Mahallesi,,Kayseri,,283,138
+relation_8334918,Karacaören Mahallesi,,Kayseri,,114,20
+relation_8334925,İğdecik Mahallesi,,Kayseri,,148,28
+relation_8334948,Kızılören Mahallesi,,Kayseri,,61,35
+relation_8334955,Serinyurt Mahallesi,,Kayseri,,46,28
+relation_8334975,Gültepe Mahallesi,,Kayseri,,4097,2662
+relation_8334988,Kaman Mahallesi,,Kayseri,,113,27
+relation_8334989,Hasırcı Mahallesi,,Kayseri,,28,28
+relation_8335001,Çaybaşı Mahallesi,,Kayseri,,40,8
+relation_8335002,Cabe Mahallesi,,Kayseri,,86,7
+relation_8335208,Dilciler Mahallesi,,Kayseri,,64,29
+relation_8335209,Çördüklü Mahallesi,,Kayseri,,89,51
+relation_8335210,Kayabaşı Mahallesi,,Kayseri,,3170,769
+relation_8335215,Kurttepe Mahallesi,,Kayseri,,65,21
+relation_8335216,Kavlaklar Mahallesi,,Kayseri,,25,58
+relation_8335227,Artmak Mahallesi,,Kayseri,,37,20
+relation_8335228,Cinahmet Mahallesi,,Kayseri,,26,8
+relation_8335229,Arslanbeyli Mahallesi,,Kayseri,,115,108
+relation_8335230,Alagazili Mahallesi,,Kayseri,,59,37
+relation_8335231,Şabanlı Mahallesi,,Kayseri,,134,147
+relation_8335232,Han Mahallesi,,Kayseri,,25,33
+relation_8335240,Toybuk Mahallesi,,Kayseri,,110,41
+relation_8335241,Pazarören Mahallesi,,Kayseri,,210,239
+relation_8335244,Saçlı Mahallesi,,Kayseri,,35,17
+relation_8335249,Çakılkaya Mahallesi,,Kayseri,,122,104
+relation_8335250,Paşalı Mahallesi,,Kayseri,,60,56
+relation_8335269,Elmalı Mahallesi,,Kayseri,,111,22
+relation_8335270,Pulpınar Mahallesi,,Kayseri,,10,14
+relation_8335272,Kadılı Mahallesi,,Kayseri,,29,24
+relation_8336787,Oruçoğlu Mahallesi,,Kayseri,,6,25
+relation_8336800,Yarımtepe Mahallesi,,Kayseri,,25,88
+relation_8336801,Yeregeçen Mahallesi,,Kayseri,,11,27
+relation_8336810,Tözgün Mahallesi,,Kayseri,,126,26
+relation_8336811,Hassa Mahallesi,,Kayseri,,36,53
+relation_8336820,Devederesi Mahallesi,,Kayseri,,11,12
+relation_8336821,Kuşçular Mahallesi,,Kayseri,,26,26
+relation_8336822,Akören Mahallesi,,Kayseri,,23,33
+relation_8336823,Panlı Mahallesi,,Kayseri,,44,57
+relation_8336833,Aygörmez Mahallesi,,Kayseri,,20,11
+relation_8336838,Demirciören Mahallesi,,Kayseri,,35,15
+relation_8336846,Cinliören Mahallesi,,Kayseri,,11,19
+relation_8336850,Söğütlü Mahallesi,,Kayseri,,23,14
+relation_8336854,İnliören Mahallesi,,Kayseri,,37,20
+relation_8336859,Tersakan Mahallesi,,Kayseri,,25,21
+relation_8336860,Eskitekke Mahallesi,,Kayseri,,33,37
+relation_8336865,Kılıçkışla Mahallesi,,Kayseri,,55,23
+relation_8336866,Melikgazi Mahallesi,,Kayseri,,12,17
+relation_8336922,Fakıekinciliği Mahallesi,,Kayseri,,14,12
+relation_8336946,Akpınar Mahallesi,,Kayseri,,17,1
+relation_8336958,Kızılhan Mahallesi,,Kayseri,,85,11
+relation_8336959,Yusuflar Mahallesi,,Kayseri,,5,17
+relation_8336981,Kızıldere Mahallesi,,Kayseri,,53,17
+relation_8337026,Karahacılı Mahallesi,,Kayseri,,52,37
+relation_8337027,Bahçecik Mahallesi,,Kayseri,,71,26
+relation_8337028,İğdelipayaslı Mahallesi,,Kayseri,,29,36
+relation_8337041,Emeğil Mahallesi,,Kayseri,,58,9
+relation_8337215,Gölcük Mahallesi,,Kayseri,,68,19
+relation_8337236,Eğrisöğüt Mahallesi,,Kayseri,,16,13
+relation_8337332,Taşlıoğlu Mahallesi,,Kayseri,,14,25
+relation_8337366,Solaklar Mahallesi,,Kayseri,,66,56
+relation_8337367,Köşkerli Mahallesi,,Kayseri,,16,3
+relation_8337399,Gebelek Mahallesi,,Kayseri,,39,31
+relation_8337420,Kırkgeçit Mahallesi,,Kayseri,,65,4
+relation_8337533,Hürriyet Mahallesi,,Kayseri,,6912,2645
+relation_8337534,İnönü Mahallesi,,Kayseri,,77,165
+relation_8337535,Kayaönü Mahallesi,,Kayseri,,186,152
+relation_8337545,Yenicami Mahallesi,,Kayseri,,376,275
+relation_8337546,Yeniocak Mahallesi,,Kayseri,,291,206
+relation_8337549,Güney Mahallesi,,Kayseri,,72,21
+relation_8337558,Uzunyol Mahallesi,,Kayseri,,51,40
+relation_8337579,Gümüşgün,,Kayseri,,413,189
+relation_8337743,Avşarpotuklu Mahallesi,,Kayseri,,14,26
+relation_8337752,Kılıçmehmet Mahallesi,,Kayseri,,42,21
+relation_8337753,Yağlıpınar Mahallesi,,Kayseri,,34,14
+relation_8337755,Karaboğaz Mahallesi,,Kayseri,,48,10
+relation_8339687,Kaynar Mahallesi,,Kayseri,,77,82
+relation_8339699,Halitbeyören Mahallesi,,Kayseri,,44,18
+relation_8339702,Altıkesek Mahallesi,,Kayseri,,21,18
+relation_8339740,Eskiyassıpınar Mahallesi,,Kayseri,,2,87
+relation_8339751,Kayaaltı Mahallesi,,Kayseri,,108,18
+relation_8339753,Olukkaya Mahallesi,,Kayseri,,66,27
+relation_8339763,Karahalka Mahallesi,,Kayseri,,13,8
+relation_8339764,Karakuyu Mahallesi,,Kayseri,,31,45
+relation_8339770,Uzunpınar Mahallesi,,Kayseri,,61,38
+relation_8339771,Dikilitaş Mahallesi,,Kayseri,,33,29
+relation_8339773,Kırkpınar Mahallesi,,Kayseri,,8,16
+relation_8339784,Şerefiye Mahallesi,,Kayseri,,28,14
+relation_8339799,Alamescit Mahallesi,,Kayseri,,9,16
+relation_8339803,Taşoluk Mahallesi,,Kayseri,,20,11
+relation_8339811,Hilmiye Mahallesi,,Kayseri,,42,22
+relation_8339812,Üçpınar Mahallesi,,Kayseri,,25,20
+relation_8339824,Örenşehir Mahallesi,,Kayseri,,864,340
+relation_8339836,Kurbağalık Mahallesi,,Kayseri,,37,20
+relation_8339846,Methiye Mahallesi,,Kayseri,,71,13
+relation_8339847,Kaftangiyen Mahallesi,,Kayseri,,37,9
+relation_8339848,Saçayağı Mahallesi,,Kayseri,,19,16
+relation_8339850,Pazarsu Mahallesi,,Kayseri,,28,15
+relation_8339866,Hayriye Mahallesi,,Kayseri,,19,11
+relation_8339868,Kazancık Mahallesi,,Kayseri,,6,66
+relation_8339871,Yahyabey Mahallesi,,Kayseri,,39,28
+relation_8339877,Taşlıgeçit Mahallesi,,Kayseri,,14,6
+relation_8339884,Malakköy Mahallesi,,Kayseri,,76,49
+relation_8339885,Tahtaköprü Mahallesi,,Kayseri,,24,15
+relation_8339893,Beserek Mahallesi,,Kayseri,,58,29
+relation_8339907,Kavakköy Mahallesi,,Kayseri,,53,25
+relation_8339910,Çukuryurt Mahallesi,,Kayseri,,37,16
+relation_8343840,Kerimoğlu Mahallesi,,Kayseri,,179,103
+relation_8343864,Büyükkaramanlı Mahallesi,,Kayseri,,61,59
+relation_12223928,Argıncık Mahallesi,,Kayseri,,4955,1428
+relation_12991721,Büyüktoraman İstiklal Mahallesi,,Kayseri,,288,120
+relation_12991722,Büyüktoraman Hürriyet Mahallesi,,Kayseri,,170,72
+relation_12991724,Kayapınar Fatih Sultan Mehmet Mahallesi,,Kayseri,,347,52
+relation_12991725,Kayapınar Cumhuriyet Mahallesi,,Kayseri,,215,19
+relation_12991727,Manavuz Mahallesi,,Kayseri,,101,38
+relation_13165227,Yakutiye Mahallesi,,Kayseri,,733,640
+relation_17254587,Hürriyet Mahallesi,,Kayseri,,6912,2645
+relation_3313158,Bayramlı Mahallesi,,Gaziantep,,451,83
+relation_3313159,Osmanlı Mahallesi,,Gaziantep,,1142,274
+relation_3313160,Yeşilkent Mahallesi,,Gaziantep,,839,146
+relation_4827015,Karataş Mahallesi,,Gaziantep,,62,23
+relation_4827727,Akkent Mahallesi,,Gaziantep,,10572,6651
+relation_4827734,Güneş Mahallesi,,Gaziantep,,14220,3264
+relation_4828143,Bülbülzade Mahallesi,,Gaziantep,,11363,7416
+relation_4830813,Şahintepe Mahallesi,,Gaziantep,,13408,11283
+relation_4833516,Yeditepe Mahallesi,,Gaziantep,,11490,11440
+relation_4834886,Çağdaş Mahallesi,,Gaziantep,,5481,2043
+relation_4834981,Yeşilevler Mahallesi,,Gaziantep,,254,163
+relation_4834982,Deniz Mahallesi,,Gaziantep,,3253,1842
+relation_4835129,Güneykent Mahallesi,,Gaziantep,,8681,9959
+relation_4839796,Mimar Sinan Mahallesi,,Gaziantep,,4304,2701
+relation_4839797,Onur Mahallesi,,Gaziantep,,6310,1732
+relation_4839932,Ulaş Mahallesi,,Gaziantep,,3774,2132
+relation_4839978,Kahvelipınar Mahallesi,,Gaziantep,,1596,1005
+relation_4839979,Kıbrıs Mahallesi,,Gaziantep,,1664,852
+relation_4839994,Kurbanbaba Mahallesi,,Gaziantep,,2169,868
+relation_4844074,İstiklal Mahallesi,,Gaziantep,,1238,401
+relation_4844243,Konak Mahallesi,,Gaziantep,,6579,3532
+relation_4844244,23 Nisan Mahallesi,,Gaziantep,,2609,2423
+relation_4844250,Binevler Mahallesi,,Gaziantep,,4070,3834
+relation_4844384,Fidanlık Mahallesi,,Gaziantep,,1490,931
+relation_4844584,Beyazlar Mahallesi,,Gaziantep,,3351,1777
+relation_4844615,Öğretmenevleri Mahallesi,,Gaziantep,,1966,2243
+relation_4844739,Kavaklık Mahallesi,,Gaziantep,,1466,1675
+relation_4844792,Kolejtepe Mahallesi,,Gaziantep,,1819,2638
+relation_4844793,Alleben Mahallesi,,Gaziantep,,1059,1238
+relation_4844794,Akyol Mahallesi,,Gaziantep,,639,587
+relation_4844869,Bahçelievler Mahallesi,,Gaziantep,,399,298
+relation_4847017,Bey Mahallesi,,Gaziantep,,329,275
+relation_4847107,Şahveli Mahallesi,,Gaziantep,,261,211
+relation_4847213,Alaybey Mahallesi,,Gaziantep,,212,130
+relation_4847714,Karagöz Mahallesi,,Gaziantep,,239,149
+relation_4849608,Cabi Mahallesi,,Gaziantep,,390,170
+relation_4849831,Yazıcık Mahallesi,,Gaziantep,,978,362
+relation_4849832,Bekirbey Mahallesi,,Gaziantep,,950,371
+relation_4849833,25 Aralık Mahallesi,,Gaziantep,,2193,688
+relation_4850128,Perilikaya Mahallesi,,Gaziantep,,5031,1482
+relation_4850129,Serinevler Mahallesi,,Gaziantep,,411,220
+relation_4850227,Narlıtepe Mahallesi,,Gaziantep,,2490,3060
+relation_4850591,Mavikent Mahallesi,,Gaziantep,,9079,3649
+relation_4850592,Akbulut Mahallesi,,Gaziantep,,158,50
+relation_4850636,Güzelvadi Mahallesi,,Gaziantep,,2921,2534
+relation_4850695,Dumlupınar Mahallesi,,Gaziantep,,225,180
+relation_4868614,Vatan Mahallesi,,Gaziantep,,1447,4286
+relation_4868615,Fırat Mahallesi,,Gaziantep,,3273,1512
+relation_4868852,Ocaklar Mahallesi,,Gaziantep,,3371,2502
+relation_4868858,Bozoklar Mahallesi,,Gaziantep,,1254,387
+relation_4868883,Ünaldı Mahallesi,,Gaziantep,,834,280
+relation_4868957,Üçoklar Mahallesi,,Gaziantep,,2488,827
+relation_4868958,Barak Mahallesi,,Gaziantep,,8636,3163
+relation_4868960,Beydilli Mahallesi,,Gaziantep,,4254,2887
+relation_4869252,Türkmenler Mahallesi,,Gaziantep,,1663,1044
+relation_4869253,Alibaba Mahallesi,,Gaziantep,,709,199
+relation_4869254,Kılınçoğlu Mahallesi,,Gaziantep,,399,136
+relation_4869434,Tekstilkent Mahallesi,,Gaziantep,,222,70
+relation_4869466,Kepenek Mahallesi,,Gaziantep,,653,225
+relation_4869496,Suyabatmaz Mahallesi,,Gaziantep,,322,149
+relation_4869497,Kozluca Mahallesi,,Gaziantep,,962,306
+relation_4869572,Boyacı Mahallesi,,Gaziantep,,912,288
+relation_4871985,Türktepe Mahallesi,,Gaziantep,,227,119
+relation_4872262,Cumhuriyet Mahallesi,,Gaziantep,,323,338
+relation_4872263,Gümüştekin Mahallesi,,Gaziantep,,2415,1348
+relation_4872264,Hoşgör Mahallesi,,Gaziantep,,1095,713
+relation_4961321,Savcılı Mahallesi,,Gaziantep,,214,106
+relation_4961323,Çamlıca Mahallesi,,Gaziantep,,480,506
+relation_4971445,Nuripazarbaşı Mahallesi,,Gaziantep,,1723,949
+relation_4971446,Düztepe Mahallesi,,Gaziantep,,1375,1900
+relation_4977802,İnönü Mahallesi,,Gaziantep,,431,107
+relation_4977813,Saçaklı Mahallesi,,Gaziantep,,1006,499
+relation_4998451,Aydınbaba Mahallesi,,Gaziantep,,476,190
+relation_5011343,Şenyurt Mahallesi,,Gaziantep,,769,396
+relation_5011344,Sultan Selim Mahallesi,,Gaziantep,,746,349
+relation_5011345,Yavuzlar Mahallesi,,Gaziantep,,763,236
+relation_5011346,Karayılan Mahallesi,,Gaziantep,,1500,817
+relation_5011347,Cengiz Topel Mahallesi,,Gaziantep,,2903,2259
+relation_5011348,Yukarıbayır Mahallesi,,Gaziantep,,2016,968
+relation_5288420,Güvenevler Mahallesi,,Gaziantep,,8324,9524
+relation_5288545,Mücahitler Mahallesi,,Gaziantep,,4215,4206
+relation_5288546,Yaprak Mahallesi,,Gaziantep,,487,290
+relation_5292248,Değirmiçem Mahallesi,,Gaziantep,,3639,4644
+relation_5292562,Sarıgüllük Mahallesi,,Gaziantep,,2695,3677
+relation_5292646,Pancarlı Mahallesi,,Gaziantep,,4,29
+relation_5292946,Osmangazi Mahallesi,,Gaziantep,,3586,4693
+relation_5293081,Batıkent Mahallesi,,Gaziantep,,7384,8858
+relation_5293230,İbrahimli Mahallesi,,Gaziantep,,1087,846
+relation_5293231,Atatürk Mahallesi,,Gaziantep,,1322,969
+relation_5295557,Burak Mahallesi,,Gaziantep,,4934,3889
+relation_5295558,Belkız Mahallesi,,Gaziantep,,7822,6640
+relation_5295646,Gazikent Mahallesi,,Gaziantep,,3973,2991
+relation_5295690,Sanayi Mahallesi,,Gaziantep,,140,67
+relation_5295691,Seyrantepe Mahallesi,,Gaziantep,,13185,4978
+relation_5295997,Şirinevler Mahallesi,,Gaziantep,,5670,1787
+relation_5296048,Selahattin Eyyubi Mahallesi,,Gaziantep,,4771,1157
+relation_5307568,29 Ekim Mahallesi,,Gaziantep,,4476,1196
+relation_5307569,Umut Mahallesi,,Gaziantep,,3082,1040
+relation_5307622,Çıksorut Mahallesi,,Gaziantep,,1389,449
+relation_5307662,Göllüce Mahallesi,,Gaziantep,,3779,2485
+relation_5307690,Eydibaba Mahallesi,,Gaziantep,,430,207
+relation_5308081,Kayaönü Mahallesi,,Gaziantep,,4522,1705
+relation_5308134,Hacıbaba Mahallesi,,Gaziantep,,1891,963
+relation_5308135,Eyüpsultan Mahallesi,,Gaziantep,,4391,2301
+relation_5308174,Merveşehir Mahallesi,,Gaziantep,,4996,2537
+relation_5308227,Selimiye Mahallesi,,Gaziantep,,6053,2799
+relation_5308228,Mevlana Mahallesi,,Gaziantep,,1751,983
+relation_5308238,Karacaoğlan Mahallesi,,Gaziantep,,3338,3085
+relation_5308262,Karşıyaka Mahallesi,,Gaziantep,,372,181
+relation_5310676,8 Şubat Mahallesi,,Gaziantep,,5672,2801
+relation_5310693,Pirsultan Mahallesi,,Gaziantep,,3271,1281
+relation_5310745,Boyno Mahallesi,,Gaziantep,,4970,1791
+relation_5310803,Beylerbeyi Mahallesi,,Gaziantep,,859,502
+relation_5310922,Taşlıca Mahallesi,,Gaziantep,,679,154
+relation_11681402,Cebeler Mahallesi,,Gaziantep,,245,156
+relation_12877045,İbn-i Sina Mahallesi,,Gaziantep,,4997,3734
+relation_12877046,Ertuğrulgazi Mahallesi,,Gaziantep,,7662,4740
+relation_12877047,Geylani Mahallesi,,Gaziantep,,1564,558
+relation_12877050,15 Temmuz Mahallesi,,Gaziantep,,1416,2023
+relation_12877052,Sacır Mahallesi,,Gaziantep,,36,12
+relation_12877053,Karacaahmet Mahallesi,,Gaziantep,,6659,4820
+relation_12877054,Alpaslan Mahallesi,,Gaziantep,,1191,815
+relation_12877055,Fıstıklık Mahallesi,,Gaziantep,,6671,5122
+relation_12877056,Göktürk Mahallesi,,Gaziantep,,979,537
+relation_12883921,Malazgirt Mahallesi,,Gaziantep,,2155,1519
+relation_13972293,Yeşilova Mahallesi,,Gaziantep,,773,555
+relation_13972294,Mehmet Gökçek Mahallesi,,Gaziantep,,343,158
+relation_13972295,Fevzi Çakmak Mahallesi,,Gaziantep,,295,126
+relation_14301269,Kale Mahallesi,,Gaziantep,,184,174
+relation_14534143,Güllüce Mahallesi,,Gaziantep,,111,70
+relation_14534144,Şerif Peri Mahallesi,,Gaziantep,,446,194
+relation_16144227,Muratlı Mahallesi,,Gaziantep,,188,33
+relation_16144228,Köklüce Mahallesi,,Gaziantep,,496,117
+relation_16144229,Turgut Özal Mahallesi,,Gaziantep,,1341,898
+relation_16150356,Gelinbuğday Mahallesi,,Gaziantep,,107,33
+relation_17232875,Abdülhamid Han Mahallesi,,Gaziantep,,3080,1963
+relation_17232876,Selçuklu Mahallesi,,Gaziantep,,22,11
+relation_17232877,Bağlarbaşı Mahallesi,,Gaziantep,,396,50
+relation_17499615,Kazıklı Mahallesi,,Gaziantep,,282,83
+relation_17499677,Karşıyaka Mahallesi,,Gaziantep,,372,181
+relation_17499678,Çarşı Mahallesi,,Gaziantep,,204,78
+relation_17499679,Lojmanlar Mahallesi,,Gaziantep,,40,41
+relation_17499680,Karanfil Mahallesi,,Gaziantep,,46,48
+relation_17499681,Kıvırcık Mahallesi,,Gaziantep,,104,37
+relation_17499682,Soylu Mahallesi,,Gaziantep,,107,60
+relation_17499683,Türkyurdu Mahallesi,,Gaziantep,,8,27
+relation_17499684,Öncüler Mahallesi,,Gaziantep,,41,66
+relation_17499685,Beşkılıç Mahallesi,,Gaziantep,,20,14
+relation_17499686,Keçili Mahallesi,,Gaziantep,,29,41
+relation_17499687,Devehüyüğü Mahallesi,,Gaziantep,,29,19
+relation_17499688,Kersentaş Mahallesi,,Gaziantep,,48,22
+relation_17499689,Ermiş Mahallesi,,Gaziantep,,35,30
+relation_17499690,Dero Küçükkaracaviran Mahallesi,,Gaziantep,,33,18
+relation_17499691,Üçkubbe Mahallesi,,Gaziantep,,53,27
+relation_17499692,Yolveren Mahallesi,,Gaziantep,,142,20
+relation_17499693,Dağdancık Mahallesi,,Gaziantep,,381,72
+relation_17499799,Beykent Mahallesi,,Gaziantep,,6783,3645
+relation_17499800,Yalnızbağ Mahallesi,,Gaziantep,,159,17
+relation_17499801,Küçükkızılhisar Mahallesi,,Gaziantep,,880,259
+relation_17499802,Çamtepe Mahallesi,,Gaziantep,,37,42
+relation_17500023,Yeşilyurt Mahallesi,,Gaziantep,,1486,409
+relation_17500024,Mimar Sinan Mahallesi,,Gaziantep,,4304,2701
+relation_17500025,Subaşı Mahallesi,,Gaziantep,,581,389
+relation_17500026,Kurtuluş Mahallesi,,Gaziantep,,295,149
+relation_17500027,Bulduk Mahallesi,,Gaziantep,,327,189
+relation_17500028,Sarısalkım Mahallesi,,Gaziantep,,1644,243
+relation_17500029,Gazitepe Mahallesi,,Gaziantep,,143,148
+relation_17500030,Sancaktepe Mahallesi,,Gaziantep,,33,7
+relation_17500334,Hacar Mahallesi,,Gaziantep,,66,31
+relation_17500335,Gürsu Mahallesi,,Gaziantep,,521,223
+relation_17500336,İnönü Mahallesi,,Gaziantep,,431,107
+relation_17500337,Körkün Mahallesi,,Gaziantep,,344,106
+relation_17500338,Şahinbey Mahallesi,,Gaziantep,,1088,424
+relation_17500339,Sam Mahallesi,,Gaziantep,,2040,1026
+relation_17500340,Dülük Mahallesi,,Gaziantep,,1151,349
+relation_17500341,Öğümsöğüt Mahallesi,,Gaziantep,,776,200
+relation_17500342,Sarıbaşak Mahallesi,,Gaziantep,,460,64
+relation_17834189,Çınarlı Mahallesi,,Gaziantep,,59,5
+relation_17834190,Burunsuzlar Mahallesi,,Gaziantep,,176,32
+relation_17834191,Ortaklı Mahallesi,,Gaziantep,,272,75
+relation_17834192,Güngören Mahallesi,,Gaziantep,,184,3
+relation_17834193,Kale Mahallesi,,Gaziantep,,184,174
+relation_17834194,Yesemek Mahallesi,,Gaziantep,,251,13
+relation_17836286,Damlacık Mahallesi,,Gaziantep,,272,38
+relation_17836287,Terken Mahallesi,,Gaziantep,,340,5
+relation_17836288,Kırıkçalı Mahallesi,,Gaziantep,,147,61
+relation_17836289,Tandır Mahallesi,,Gaziantep,,117,90
+relation_17836290,Köklü Mahallesi,,Gaziantep,,100,22
+relation_17836291,Karacaören Mahallesi,,Gaziantep,,58,26
+relation_17836292,Küllü Mahallesi,,Gaziantep,,403,85
+relation_17836293,Karataş Mahallesi,,Gaziantep,,62,23
+relation_17836294,Etiler Mahallesi,,Gaziantep,,506,262
+relation_17836295,Ayyıldız Mahallesi,,Gaziantep,,65,29
+relation_17836296,Oğuzlar Mahallesi,,Gaziantep,,415,246
+relation_17836297,Çaybaşı Mahallesi,,Gaziantep,,237,79
+relation_17836299,Yeşildere Mahallesi,,Gaziantep,,286,106
+relation_17836300,Gerciğin Mahallesi,,Gaziantep,,224,56
+relation_17836301,Erikli Mahallesi,,Gaziantep,,466,165
+relation_17836302,Namık Kemal Mahallesi,,Gaziantep,,1587,799
+relation_17836303,Zülfikar Mahallesi,,Gaziantep,,166,26
+relation_17836304,Göksüncük Mahallesi,,Gaziantep,,1122,225
+relation_17836307,Aktoprak Mahallesi,,Gaziantep,,2775,1366
+relation_17836308,Sinan Mahallesi,,Gaziantep,,462,62
+relation_17836309,Beştepe Mahallesi,,Gaziantep,,3083,3688
+relation_17836310,Yamaçtepe Mahallesi,,Gaziantep,,96,36
+relation_17836312,Esenler Mahallesi,,Gaziantep,,156,37
+relation_17836313,Pınarbaşı Mahallesi,,Gaziantep,,421,402
+relation_17836314,Kayabaşı Mahallesi,,Gaziantep,,400,120
+relation_17836315,Yağızlar Mahallesi,,Gaziantep,,142,121
+relation_17836316,Hasanlök Mahallesi,,Gaziantep,,244,85
+relation_17836317,Karakaya Mahallesi,,Gaziantep,,70,59
+relation_17836318,Tahtani Mahallesi,,Gaziantep,,555,241
+relation_17836319,Keçikuyusu Mahallesi,,Gaziantep,,77,6
+relation_17836350,Yeniceli Mahallesi,,Gaziantep,,252,42
+relation_17836351,Külecik Mahallesi,,Gaziantep,,18,40
+relation_17836352,Çatalçam Mahallesi,,Gaziantep,,44,34
+relation_17836353,Kabacaağaç Mahallesi,,Gaziantep,,21,14
+relation_17836354,Altındağ Mahallesi,,Gaziantep,,178,44
+relation_17836355,Günbulur Mahallesi,,Gaziantep,,117,41
+relation_17836356,Kocatepe Mahallesi,,Gaziantep,,445,251
+relation_17836357,Sekili Mahallesi,,Gaziantep,,509,234
+relation_17836358,Türkyurdu Mahallesi,,Gaziantep,,8,27
+relation_17836359,Sarıkaya Mahallesi,,Gaziantep,,236,30
+relation_17836360,Ortaklar Mahallesi,,Gaziantep,,46,3
+relation_17836361,Beşkuyu Mahallesi,,Gaziantep,,185,38
+relation_17836362,Sofalıcı Mahallesi,,Gaziantep,,201,14
+relation_17836509,Battal Mahallesi,,Gaziantep,,230,109
+relation_17836510,İbrahimşehir Mahallesi,,Gaziantep,,130,62
+relation_17836511,Durnalık Mahallesi,,Gaziantep,,104,8
+relation_17836512,Nesimi Mahallesi,,Gaziantep,,52,31
+relation_17836513,Büyükpınar Mahallesi,,Gaziantep,,957,330
+relation_17836514,İskenderli Mahallesi,,Gaziantep,,49,1
+relation_17836515,Gaziler Mahallesi,,Gaziantep,,126,20
+relation_17836516,Çamlıtepe Mahallesi,,Gaziantep,,4453,1866
+relation_17836517,Beyreli Mahallesi,,Gaziantep,,144,6
+relation_17836518,Bozobası Mahallesi,,Gaziantep,,58,3
+relation_17836519,Kabasakız Mahallesi,,Gaziantep,,91,6
+relation_17836520,Karayusuflu Mahallesi,,Gaziantep,,42,41
+relation_17836521,Karahüyük Mahallesi,,Gaziantep,,537,237
+relation_17836522,Işıklı Mahallesi,,Gaziantep,,1246,213
+relation_17836523,Acaroba Mahallesi,,Gaziantep,,133,14
+relation_17836524,Yamaçoba Mahallesi,,Gaziantep,,486,59
+relation_17836525,Sarılar Mahallesi,,Gaziantep,,191,25
+relation_17836526,Dımışkılı Mahallesi,,Gaziantep,,154,20
+relation_17836527,Tuğlu Mahallesi,,Gaziantep,,213,20
+relation_17836528,Karadede Mahallesi,,Gaziantep,,354,17
+relation_17836529,Sefaşehir Mahallesi,,Gaziantep,,156,104
+relation_17836530,Kozluyazı Mahallesi,,Gaziantep,,337,90
+relation_17836531,Bayatlı Mahallesi,,Gaziantep,,321,67
+relation_17836532,Atalar Mahallesi,,Gaziantep,,970,103
+relation_17836708,Karakesek Mahallesi,,Gaziantep,,612,27
+relation_17836709,Sülüklü Mahallesi,,Gaziantep,,135,87
+relation_17836710,Köksalan Mahallesi,,Gaziantep,,417,80
+relation_17836711,Bağbaşı Mahallesi,,Gaziantep,,926,292
+relation_17836712,Akçagöze Mahallesi,,Gaziantep,,600,94
+relation_17836713,Seymenli Mahallesi,,Gaziantep,,134,57
+relation_17836714,Yığınlı Mahallesi,,Gaziantep,,488,350
+relation_17836715,Karpuzkaya Mahallesi,,Gaziantep,,181,61
+relation_17836716,Ülkerli Mahallesi,,Gaziantep,,167,62
+relation_17836717,Akçaburç Mahallesi,,Gaziantep,,457,84
+relation_17836718,Kızıkhamurkesen Mahallesi,,Gaziantep,,447,100
+relation_17836719,Tekirsin Mahallesi,,Gaziantep,,323,116
+relation_17836720,Karacaburç Mahallesi,,Gaziantep,,559,115
+relation_17836721,Dündarlı Mahallesi,,Gaziantep,,368,115
+relation_17836722,Karacaören Mahallesi,,Gaziantep,,58,26
+relation_17836723,Koçlu Mahallesi,,Gaziantep,,113,162
+relation_17836724,Yayıktaş Mahallesi,,Gaziantep,,186,81
+relation_17836725,Medegöz Mahallesi,,Gaziantep,,92,24
+relation_17836726,Yalankoz Mahallesi,,Gaziantep,,593,113
+relation_17836727,Çağkuyu Mahallesi,,Gaziantep,,293,80
+relation_17836728,Kızık Karasakal Mahallesi,,Gaziantep,,221,49
+relation_17836729,İncesu Mahallesi,,Gaziantep,,457,144
+relation_17836730,Uğruca Mahallesi,,Gaziantep,,246,76
+relation_17836731,Övündük Mahallesi,,Gaziantep,,197,78
+relation_17836732,Atabek Mahallesi,,Gaziantep,,751,194
+relation_17836733,Bedirköy Mahallesi,,Gaziantep,,217,92
+relation_17836735,Bilek Mahallesi,,Gaziantep,,1145,280
+relation_17836736,Tokdemir Mahallesi,,Gaziantep,,226,58
+relation_17836737,Güngürge Mahallesi,,Gaziantep,,976,491
+relation_17836740,Serintepe Mahallesi,,Gaziantep,,250,64
+relation_17836741,Üçgöze Mahallesi,,Gaziantep,,141,72
+relation_17836742,Yeşilce Mahallesi,,Gaziantep,,245,52
+relation_17836743,Ağaçlıboyno Mahallesi,,Gaziantep,,83,81
+relation_17836744,Cerityeniyapan Mahallesi,,Gaziantep,,315,25
+relation_17836768,Tiyekli Mahallesi,,Gaziantep,,85,9
+relation_17836769,Hacıarslan Mahallesi,,Gaziantep,,27,6
+relation_17836770,Akbayır Mahallesi,,Gaziantep,,175,33
+relation_17836771,Yağdöver Mahallesi,,Gaziantep,,132,40
+relation_17836780,Narlıca Mahallesi,,Gaziantep,,68,10
+relation_17836781,Bekişli Mahallesi,,Gaziantep,,135,19
+relation_17836782,Çubukdiken Mahallesi,,Gaziantep,,193,22
+relation_17836870,Burç Karakuyu Mahallesi,,Gaziantep,,59,27
+relation_17836871,Serince Mahallesi,,Gaziantep,,639,105
+relation_17836872,Durantaş Mahallesi,,Gaziantep,,369,120
+relation_17836873,Karaçomak Mahallesi,,Gaziantep,,131,27
+relation_17836874,Kaleboynu Mahallesi,,Gaziantep,,119,31
+relation_17836875,Yaylacık Mahallesi,,Gaziantep,,161,90
+relation_17836910,Çimenli Mahallesi,,Gaziantep,,153,82
+relation_17836911,Çevreli Mahallesi,,Gaziantep,,75,5
+relation_17836912,Yeşilköy Mahallesi,,Gaziantep,,90,12
+relation_17836913,Muhacirosman Mahallesi,,Gaziantep,,254,73
+relation_17836914,Şahinbey Mülk Mahallesi,,Gaziantep,,171,107
+relation_17836940,Güllüce Mahallesi,,Gaziantep,,111,70
+relation_17836941,Uğurtepe Mahallesi,,Gaziantep,,59,20
+relation_17836942,Dokur Mahallesi,,Gaziantep,,94,17
+relation_17836943,Yaycı Mahallesi,,Gaziantep,,141,32
+relation_17836944,Morcalı Mahallesi,,Gaziantep,,60,11
+relation_17837468,Kayakent Mahallesi,,Gaziantep,,17,5
+relation_17837469,Doğanca Mahallesi,,Gaziantep,,125,13
+relation_17837470,Ufacık Mahallesi,,Gaziantep,,71,20
+relation_17837471,Kale Mahallesi,,Gaziantep,,184,174
+relation_17837472,Gülpınar Mahallesi,,Gaziantep,,242,30
+relation_17837473,Kavşak Mahallesi,,Gaziantep,,118,12
+relation_17837474,Yeşilpınar Mahallesi,,Gaziantep,,120,60
+relation_17837475,Kürüm Mahallesi,,Gaziantep,,126,30
+relation_17837476,Çöreklik Mahallesi,,Gaziantep,,37,17
+relation_17837477,Ozanlı Mahallesi,,Gaziantep,,64,19
+relation_17837478,Kuşçu Mahallesi,,Gaziantep,,64,14
+relation_17837479,Kerer Mahallesi,,Gaziantep,,57,24
+relation_17837480,Burç Esentepe Mahallesi,,Gaziantep,,908,441
+relation_17837481,Akpınar Mahallesi,,Gaziantep,,154,44
+relation_17837482,Kabarcık Mahallesi,,Gaziantep,,79,38
+relation_17837483,Sırasöğüt Mahallesi,,Gaziantep,,322,69
+relation_17837484,Geneyik Mahallesi,,Gaziantep,,232,89
+relation_17837485,Hacıköy Mahallesi,,Gaziantep,,49,17
+relation_17837486,Yazıbağı Mahallesi,,Gaziantep,,85,18
+relation_17837487,Cevizli Mahallesi,,Gaziantep,,370,129
+relation_17837765,Yoğuntaş Mahallesi,,Gaziantep,,64,20
+relation_17837766,Yığmatepe Mahallesi,,Gaziantep,,124,82
+relation_17837767,Kumruhamurkesen Mahallesi,,Gaziantep,,30,34
+relation_17837768,Pancarlı Mahallesi,,Gaziantep,,4,29
+relation_17837769,Kapçağız Mahallesi,,Gaziantep,,355,72
+relation_17837770,Kazıklı Mahallesi,,Gaziantep,,282,83
+relation_17837771,Ekinli Mahallesi,,Gaziantep,,69,10
+relation_17837772,Akyazı Mahallesi,,Gaziantep,,76,23
+relation_17837773,Hacıköprü Mahallesi,,Gaziantep,,49,30
+relation_17837774,Türközü Mahallesi,,Gaziantep,,26,11
+relation_17837775,Yeniköy Mahallesi,,Gaziantep,,53,45
+relation_17837776,Killik Mahallesi,,Gaziantep,,29,55
+relation_17837777,Almalı Mahallesi,,Gaziantep,,139,44
+relation_17837778,Bozca Mahallesi,,Gaziantep,,55,25
+relation_17837779,Töreli Mahallesi,,Gaziantep,,5,41
+relation_17837780,Bostancık Mahallesi,,Gaziantep,,55,93
+relation_17837781,Deredüzü Mahallesi,,Gaziantep,,174,70
+relation_17837782,Çapalı Mahallesi,,Gaziantep,,15,120
+relation_17837783,Zeytinli Mahallesi,,Gaziantep,,159,200
+relation_17837784,Sarıt Mahallesi,,Gaziantep,,434,105
+relation_17841469,Kavunluk Mahallesi,,Gaziantep,,47,30
+relation_17841470,Sazgın Mahallesi,,Gaziantep,,132,40
+relation_17841471,Güllük Mahallesi,,Gaziantep,,236,169
+relation_17841472,Fatih Mahallesi,,Gaziantep,,841,217
+relation_17841473,Kaşyolu Mahallesi,,Gaziantep,,111,16
+relation_17841474,İnkılap Mahallesi,,Gaziantep,,38,16
+relation_17846433,Hürriyet Mahallesi,,Gaziantep,,750,372
+relation_17846434,Cumhuriyet Mahallesi,,Gaziantep,,323,338
+relation_17846435,Arslanlı Mahallesi,,Gaziantep,,137,14
+relation_17846436,Tüzel Mahallesi,,Gaziantep,,59,3
+relation_17846437,Demirkonak Mahallesi,,Gaziantep,,64,13
+relation_17846438,Kuruçay Mahallesi,,Gaziantep,,13,28
+relation_17846439,Asmacık Mahallesi,,Gaziantep,,112,25
+relation_17846440,Ulaşlı Mahallesi,,Gaziantep,,80,8
+relation_17846441,Aşağı Güneyse Mahallesi,,Gaziantep,,10,15
+relation_17846442,Kovanlı Mahallesi,,Gaziantep,,8,76
+relation_17846443,Düzbayır Mahallesi,,Gaziantep,,70,18
+relation_17846444,Taşçanak Mahallesi,,Gaziantep,,8,14
+relation_17846445,Belören Mahallesi,,Gaziantep,,50,61
+relation_17846446,Taşlı Mahallesi,,Gaziantep,,17,23
+relation_17846447,Kayalıpınar Mahallesi,,Gaziantep,,162,51
+relation_17846448,Gebe Mahallesi,,Gaziantep,,79,20
+relation_17846449,İnceyol Mahallesi,,Gaziantep,,56,4
+relation_17846716,Dibecik Mahallesi,,Gaziantep,,92,28
+relation_17846717,Doğanpınar Mahallesi,,Gaziantep,,161,106
+relation_17846718,Karaman Mahallesi,,Gaziantep,,103,55
+relation_17846719,Ekinveren Mahallesi,,Gaziantep,,66,73
+relation_17846720,Uğurova Mahallesi,,Gaziantep,,110,68
+relation_17846721,Kılavuz Mahallesi,,Gaziantep,,80,40
+relation_17846722,Karadibek Mahallesi,,Gaziantep,,7,53
+relation_17846723,Yeşiltepe Mahallesi,,Gaziantep,,25,5
+relation_17846724,Çaybeyi Mahallesi,,Gaziantep,,121,23
+relation_17846725,Üçdamlar Mahallesi,,Gaziantep,,40,25
+relation_17846727,Hötoğlu Mahallesi,,Gaziantep,,86,19
+relation_17846728,Yeni Cumhuriyet Mahallesi,,Gaziantep,,76,2
+relation_17846729,Akçamezra Mahallesi,,Gaziantep,,109,27
+relation_17846730,Sevindi Mahallesi,,Gaziantep,,45,16
+relation_17846731,Ambarcık Mahallesi,,Gaziantep,,41,20
+relation_17846733,Aydınkaya Mahallesi,,Gaziantep,,32,18
+relation_17846734,Duruköy Mahallesi,,Gaziantep,,12,22
+relation_17846735,Çavuşbaşı Mahallesi,,Gaziantep,,15,7
+relation_17846736,Gündoğan Mahallesi,,Gaziantep,,209,35
+relation_17846737,Koçaklar Mahallesi,,Gaziantep,,6,41
+relation_17846738,İkizkuyu Mahallesi,,Gaziantep,,54,4
+relation_17846739,Beşdeli Mahallesi,,Gaziantep,,17,5
+relation_17846740,Taşyazı Mahallesi,,Gaziantep,,103,36
+relation_17846741,Yazılı Mahallesi,,Gaziantep,,364,40
+relation_17846742,Şıh Küçükkaracaviran Mahallesi,,Gaziantep,,48,9
+relation_17846743,Gedik Mahallesi,,Gaziantep,,69,26
+relation_17846744,Karaburun Mahallesi,,Gaziantep,,38,14
+relation_17846745,Kayacık Mahallesi,,Gaziantep,,87,18
+relation_17846746,Yakacık Mahallesi,,Gaziantep,,237,116
+relation_17846747,Dikmetaş Mahallesi,,Gaziantep,,7,22
+relation_17846748,Sergili Mahallesi,,Gaziantep,,60,5
+relation_17846749,Acer Mahallesi,,Gaziantep,,38,11
+relation_17846750,Dokuzyol Mahallesi,,Gaziantep,,126,150
+relation_17846751,Hatunlu Mahallesi,,Gaziantep,,49,22
+relation_17846752,Aşağı Yeniyapan Mahallesi,,Gaziantep,,139,38
+relation_17846753,Güveçli Mahallesi,,Gaziantep,,17,42
+relation_17846754,Tınazdere Mahallesi,,Gaziantep,,159,33
+relation_17846755,Direkli Mahallesi,,Gaziantep,,124,24
+relation_17846756,Çatalsu Mahallesi,,Gaziantep,,155,91
+relation_17846757,Altınyurt Mahallesi,,Gaziantep,,446,49
+relation_17846758,Güzelce Mahallesi,,Gaziantep,,27,24
+relation_17846759,Sütlüce Mahallesi,,Gaziantep,,15,7
+relation_17846760,Dutluca Mahallesi,,Gaziantep,,75,61
+relation_17846761,Yeniköy Mahallesi,,Gaziantep,,53,45
+relation_17846770,Saray Mahallesi,,Gaziantep,,214,65
+relation_17846977,Günaltı Mahallesi,,Gaziantep,,156,99
+relation_17846978,Erenköy Mahallesi,,Gaziantep,,91,10
+relation_17846981,Toydemir Mahallesi,,Gaziantep,,48,13
+relation_17846982,Kumla Mahallesi,,Gaziantep,,230,115
+relation_17846985,Suboyu Mahallesi,,Gaziantep,,536,142
+relation_17846986,Keklik Mahallesi,,Gaziantep,,105,39
+relation_17846988,Samandöken Mahallesi,,Gaziantep,,120,23
+relation_17846989,Kamışlı Mahallesi,,Gaziantep,,59,134
+relation_17846990,Gümüşgün Mahallesi,,Gaziantep,,41,4
+relation_17846998,Tuluktaş Mahallesi,,Gaziantep,,53,50
+relation_17846999,Yeniyazı Mahallesi,,Gaziantep,,829,82
+relation_17847000,Mihrap Mahallesi,,Gaziantep,,78,69
+relation_17847001,Dazhüyük Mahallesi,,Gaziantep,,100,40
+relation_17847002,Kıraçgülü Mahallesi,,Gaziantep,,11,35
+relation_17847003,Ekinci Mahallesi,,Gaziantep,,32,14
+relation_17878883,Yeniyurt Mahallesi,,Gaziantep,,75,23
+relation_17972104,Aydınlık Mahallesi,,Gaziantep,,333,396
+relation_17972105,Kuzoluk Mahallesi,,Gaziantep,,169,15
+relation_17972106,Demirler Mahallesi,,Gaziantep,,83,4
+relation_17972107,Alaca Mahallesi,,Gaziantep,,94,32
+relation_17972108,Kartal Mahallesi,,Gaziantep,,952,42
+relation_17972109,Kozdere Mahallesi,,Gaziantep,,348,237
+relation_17972110,Elbistanhüyüğü Mahallesi,,Gaziantep,,73,45
+relation_17972111,İncegedik Mahallesi,,Gaziantep,,53,64
+relation_17973207,Cumhuriyet Mahallesi,,Gaziantep,,323,338
+relation_17973208,Fevzi Çakmak Mahallesi,,Gaziantep,,295,126
+relation_17973209,Cevdetpaşa Mahallesi,,Gaziantep,,617,287
+relation_17973210,Yeniköy Mahallesi,,Gaziantep,,53,45
+relation_17973211,Serinevler Mahallesi,,Gaziantep,,411,220
+relation_17973212,Kırkpınar Mahallesi,,Gaziantep,,202,14
+relation_17973213,Türkbahçe Mahallesi,,Gaziantep,,172,134
+relation_17973214,Torunlar Mahallesi,,Gaziantep,,86,33
+relation_17973215,Burhaniye Mahallesi,,Gaziantep,,62,159
+relation_17973216,Hacı Ali Öztürk Mahallesi,,Gaziantep,,397,299
+relation_17973217,Bahçelievler Mahallesi,,Gaziantep,,399,298
+relation_17973218,Dervişpaşa Mahallesi,,Gaziantep,,560,383
+relation_17973219,Kuşçumustafa Mahallesi,,Gaziantep,,15,26
+relation_17973220,Fevzipaşa Mahallesi,,Gaziantep,,314,265
+relation_17973221,Zincirli Mahallesi,,Gaziantep,,97,21
+relation_18046661,Kasaba Mahallesi,,Gaziantep,,115,81
+relation_18046662,Beğendik Mahallesi,,Gaziantep,,234,30
+relation_18046663,Kuzuyatağı Mahallesi,,Gaziantep,,17,443
+relation_18046664,Sarılar Mahallesi,,Gaziantep,,191,25
+relation_18046665,Süleymanobası Mahallesi,,Gaziantep,,807,118
+relation_18046667,Örenli Mahallesi,,Gaziantep,,123,31
+relation_18046668,Sarıbuğday Mahallesi,,Gaziantep,,117,72
+relation_18046669,Ballık Mahallesi,,Gaziantep,,207,107
+relation_18046670,Değirmitaş Mahallesi,,Gaziantep,,150,42
+relation_18046671,Bakırca Mahallesi,,Gaziantep,,443,89
+relation_18046672,Ilıcak Mahallesi,,Gaziantep,,55,9
+relation_18046781,Çimenli Mahallesi,,Gaziantep,,153,82
+relation_18046782,Karabey Mahallesi,,Gaziantep,,109,45
+relation_18046783,Göçmez Mahallesi,,Gaziantep,,11,275
+relation_18046785,Tokaçlı Mahallesi,,Gaziantep,,256,85
+relation_18046786,Hacımallı Mahallesi,,Gaziantep,,205,35
+relation_18046787,Üçgöl Mahallesi,,Gaziantep,,293,7
+relation_18046788,Saraymağara Mahallesi,,Gaziantep,,238,24
+relation_18046789,Bülbül Mahallesi,,Gaziantep,,6,81
+relation_18046790,Düzce Mahallesi,,Gaziantep,,89,37
+relation_18046792,Çiltoprak Mahallesi,,Gaziantep,,188,29
+relation_18046869,Fevzi Çakmak Mahallesi,,Gaziantep,,295,126
+relation_18046870,Hürriyet Mahallesi,,Gaziantep,,750,372
+relation_18046871,Sultan Selim Mahallesi,,Gaziantep,,746,349
+relation_18046872,Cingife Mahallesi,,Gaziantep,,53,18
+relation_18046873,Cumhuriyet Mahallesi,,Gaziantep,,323,338
+relation_18046874,Yöreli Mahallesi,,Gaziantep,,157,123
+relation_18046875,Keşrobası Mahallesi,,Gaziantep,,55,55
+relation_18046876,Karahüseyinli Mahallesi,,Gaziantep,,70,20
+relation_18046877,Bağtepe Mahallesi,,Gaziantep,,113,6
+relation_18046878,Yarımca Mahallesi,,Gaziantep,,22,13
+relation_18046879,Karahan Mahallesi,,Gaziantep,,44,22
+relation_18046880,Havuz Mahallesi,,Gaziantep,,78,33
+relation_18046881,Şenlikçe Mahallesi,,Gaziantep,,163,28
+relation_18046882,Gülpınar Mahallesi,,Gaziantep,,242,30
+relation_18046883,Akbayır Mahallesi,,Gaziantep,,175,33
+relation_18046911,Yeni Altıntaş Mahallesi,,Gaziantep,,336,209
+relation_18046914,Bağlıca Mahallesi,,Gaziantep,,37,19
+relation_18046915,Ziyaret Mahallesi,,Gaziantep,,58,20
+relation_18046916,Karacaören Mahallesi,,Gaziantep,,58,26
+relation_18046917,Beydili Mahallesi,,Gaziantep,,319,105
+relation_18046918,Dumlupınar Mahallesi,,Gaziantep,,225,180
+relation_18046920,Fıstıklıdağ Mahallesi,,Gaziantep,,143,121
+relation_18047423,Esentepe Mahallesi,,Gaziantep,,83,223
+relation_18047424,Fakılı Mahallesi,,Gaziantep,,252,282
+relation_18047425,Doğan Mahallesi,,Gaziantep,,78,22
+relation_18047426,Taşdeğirmen Mahallesi,,Gaziantep,,345,58
+relation_18047427,Küçüklü Mahallesi,,Gaziantep,,185,34
+relation_18047428,Güzey Mahallesi,,Gaziantep,,148,17
+relation_18047429,Sarıtepe Mahallesi,,Gaziantep,,262,60
+relation_18047430,Hasanoğlu Mahallesi,,Gaziantep,,6,130
+relation_18047431,Elif Mahallesi,,Gaziantep,,1738,346
+relation_18047432,Altınpınar Mahallesi,,Gaziantep,,7,60
+relation_18047433,Gümüşpınar Mahallesi,,Gaziantep,,25,41
+relation_18047434,Karababa Mahallesi,,Gaziantep,,6,68
+relation_18047435,Başpınar Mahallesi,,Gaziantep,,10,149
+relation_18047438,Akkoç Mahallesi,,Gaziantep,,59,18
+relation_18047439,Gökçepayam Mahallesi,,Gaziantep,,167,64
+relation_18047440,Yaylacık Mahallesi,,Gaziantep,,161,90
+relation_18047441,Sarıkaya Mahallesi,,Gaziantep,,236,30
+relation_18047442,Emirhaydar Mahallesi,,Gaziantep,,175,21
+relation_18047444,Hisar Mahallesi,,Gaziantep,,416,81
+relation_18047445,Akbudak Mahallesi,,Gaziantep,,122,290
+relation_18047446,Tarlabaşı Mahallesi,,Gaziantep,,14,46
+relation_18047447,Çiftekoz Mahallesi,,Gaziantep,,30,77
+relation_18047448,Erenbağ Mahallesi,,Gaziantep,,40,11
+relation_18047449,Nurettin Mahallesi,,Gaziantep,,47,24
+relation_18049705,Güllühüyük Mahallesi,,Gaziantep,,79,73
+relation_18049706,Değirmencik Mahallesi,,Gaziantep,,741,293
+relation_18049707,Telli Mahallesi,,Gaziantep,,29,69
+relation_18049708,Beyler Mahallesi,,Gaziantep,,1506,893
+relation_18049709,Erenler Mahallesi,,Gaziantep,,91,218
+relation_18049710,Göltepe Mahallesi,,Gaziantep,,975,519
+relation_18049711,Hanağzı Mahallesi,,Gaziantep,,46,72
+relation_18049712,Arpalı Mahallesi,,Gaziantep,,102,83
+relation_18049713,Çerçili Mahallesi,,Gaziantep,,81,97
+relation_18049715,Hürriyet Mahallesi,,Gaziantep,,750,372
+relation_18049716,Çamlıca Mahallesi,,Gaziantep,,480,506
+relation_18049717,Atatürk Mahallesi,,Gaziantep,,1322,969
+relation_18049718,Kabaklar Mahallesi,,Gaziantep,,8,147
+relation_18049719,Koçcağız Mahallesi,,Gaziantep,,85,24
+relation_18049720,Şerikanlı Mahallesi,,Gaziantep,,264,71
+relation_18049721,Yeşilyurt Mahallesi,,Gaziantep,,1486,409
+relation_18049722,Ağalarobası Mahallesi,,Gaziantep,,50,20
+relation_18049892,Boğaziçi Mahallesi,,Gaziantep,,987,757
+relation_18049893,Karapınar Mahallesi,,Gaziantep,,29,43
+relation_18049894,Kalaycık Mahallesi,,Gaziantep,,114,49
+relation_18049895,Çolaklar Mahallesi,,Gaziantep,,73,23
+relation_18049896,Şahmaran Mahallesi,,Gaziantep,,158,84
+relation_18049897,Karapolat Mahallesi,,Gaziantep,,90,28
+relation_18049898,Akınyolu Mahallesi,,Gaziantep,,176,64
+relation_18049899,Yeşilova Mahallesi,,Gaziantep,,773,555
+relation_18049900,Çubuk Mahallesi,,Gaziantep,,95,29
+relation_18049901,Örtülü Mahallesi,,Gaziantep,,110,45
+relation_18049902,Yelliburun Mahallesi,,Gaziantep,,58,24
+relation_18049903,Bayraktepe Mahallesi,,Gaziantep,,94,101
+relation_18049904,İdilli Mahallesi,,Gaziantep,,135,56
+relation_18049905,Ağabey Mahallesi,,Gaziantep,,112,101
+relation_18049906,Altınüzüm Mahallesi,,Gaziantep,,728,605
+relation_18049908,Sulumağara Mahallesi,,Gaziantep,,767,538
+relation_18050046,Yavuzselim Mahallesi,,Gaziantep,,1431,578
+relation_18050047,Başpınar Mahallesi,,Gaziantep,,10,149
+relation_18050048,Kurudere Mahallesi,,Gaziantep,,494,228
+relation_18050049,Fatih Mahallesi,,Gaziantep,,841,217
+relation_18050050,Atatürk Mahallesi,,Gaziantep,,1322,969
+relation_18050051,Alpaslan Türkeş Mahallesi,,Gaziantep,,570,78
+relation_18050052,Esenyurt Mahallesi,,Gaziantep,,717,135
+relation_18050053,Bahçelievler Mahallesi,,Gaziantep,,399,298
+relation_18050054,Bademli Mahallesi,,Gaziantep,,283,47
+relation_18050055,Sakçagözü Mahallesi,,Gaziantep,,1360,356
+relation_18050056,Balıkalan Mahallesi,,Gaziantep,,8,92
+relation_18050057,Emirler Mahallesi,,Gaziantep,,6,84
+relation_18050058,Şatırhüyük Mahallesi,,Gaziantep,,923,128
+relation_18050060,Olucak Mahallesi,,Gaziantep,,289,121
+relation_18050061,Gökçedere Mahallesi,,Gaziantep,,326,36
+relation_18050062,Naimler Mahallesi,,Gaziantep,,111,7
+relation_18050253,İncirli Mahallesi,,Gaziantep,,270,50
+relation_18050254,Yaylacık Mahallesi,,Gaziantep,,161,90
+relation_18050255,Kırışkal Mahallesi,,Gaziantep,,137,40
+relation_18050256,Nogaylar Mahallesi,,Gaziantep,,220,34
+relation_18050257,Gedikli Mahallesi,,Gaziantep,,41,177
+relation_18050258,Mesthüyük Mahallesi,,Gaziantep,,84,20
+relation_18050259,Çakmak Mahallesi,,Gaziantep,,130,14
+relation_18050260,Kömürler Mahallesi,,Gaziantep,,192,37
+relation_18050261,Gözlühüyük Mahallesi,,Gaziantep,,139,62
+relation_18050262,Mehmet Akif Ersoy Mahallesi,,Gaziantep,,220,71
+relation_18050263,Aslanlı Mahallesi,,Gaziantep,,590,206
+relation_18050264,İçerisu Mahallesi,,Gaziantep,,122,187
+relation_18050265,Tüllüce Mahallesi,,Gaziantep,,129,46
+relation_18050266,Hisar Mahallesi,,Gaziantep,,416,81
+relation_18050267,Atmalı Mahallesi,,Gaziantep,,127,43
+relation_18050268,Ataköy Mahallesi,,Gaziantep,,10,37
+relation_18050269,Tandırlı Mahallesi,,Gaziantep,,58,11
+relation_18050270,Durmuşlar Mahallesi,,Gaziantep,,170,5
+relation_18050271,Hamidiye Mahallesi,,Gaziantep,,272,8
+relation_18050272,Belpınar Mahallesi,,Gaziantep,,85,32
+relation_18050273,Karaburçlu Mahallesi,,Gaziantep,,67,20
+relation_18050274,İkizkuyu Mahallesi,,Gaziantep,,54,4
+relation_18050275,Altınova Mahallesi,,Gaziantep,,159,43
+relation_18050276,Sayburun Mahallesi,,Gaziantep,,120,28
+relation_18052239,Doğrular Mahallesi,,Gaziantep,,89,41
+relation_18052240,Mağaracık Mahallesi,,Gaziantep,,34,18
+relation_18052678,Turnalı Mahallesi,,Gaziantep,,11,8
+relation_18052679,Uluyatır Mahallesi,,Gaziantep,,671,463
+relation_18052680,Bahçeli Mahallesi,,Gaziantep,,86,71
+relation_18052681,Söğütlü Mahallesi,,Gaziantep,,36,24
+relation_18052682,Akçakent Mahallesi,,Gaziantep,,497,78
+relation_18052683,Karşıyaka Mahallesi,,Gaziantep,,372,181
+relation_18052684,Yeşilevler Mahallesi,,Gaziantep,,254,163
+relation_18052685,Menderes Mahallesi,,Gaziantep,,2390,957
+relation_18052686,Fırat Mahallesi,,Gaziantep,,3273,1512
+relation_18052687,Mevlana Mahallesi,,Gaziantep,,1751,983
+relation_18052688,Fevkani Mahallesi,,Gaziantep,,840,341
+relation_18052690,İstiklal Mahallesi,,Gaziantep,,1238,401
+relation_18052691,Zeytinlik Mahallesi,,Gaziantep,,518,157
+relation_18052692,Belkıs Mahallesi,,Gaziantep,,2334,1007
+relation_18052693,Şahinbey Mahallesi,,Gaziantep,,1088,424
+relation_18052694,Şıhlar Mahallesi,,Gaziantep,,219,82
+relation_18052695,Atatürk Mahallesi,,Gaziantep,,1322,969
+relation_18052696,Eyüp Sultan Mahallesi,,Gaziantep,,2100,1581
+relation_18052697,Hazımoğlu Mahallesi,,Gaziantep,,30,28
+relation_18052698,Sultan Abdülhamit Mahallesi,,Gaziantep,,3052,2079
+relation_18052699,Fatih Sultan Mahallesi,,Gaziantep,,4287,2841
+relation_18052700,Cumhuriyet Mahallesi,,Gaziantep,,323,338
+relation_18052701,Mimar Sinan Mahallesi,,Gaziantep,,4304,2701
+relation_18052702,Fevzi Paşa Mahallesi,,Gaziantep,,1221,603
+relation_18052703,Saha Mahallesi,,Gaziantep,,347,162
+relation_18052704,Samanlı Mahallesi,,Gaziantep,,24,7
+relation_18052705,Yunus Emre Mahallesi,,Gaziantep,,560,262
+relation_18052706,İstasyon Mahallesi,,Gaziantep,,678,329
+relation_18052707,Kıbrıs Mahallesi,,Gaziantep,,1664,852
+relation_18052855,Çanakçı Mahallesi,,Gaziantep,,201,65
+relation_18052856,Kıratlı Mahallesi,,Gaziantep,,137,22
+relation_18052857,Özyurt Mahallesi,,Gaziantep,,63,7
+relation_18052858,Turlu Mahallesi,,Gaziantep,,202,22
+relation_18052859,Kızılcakent Mahallesi,,Gaziantep,,178,5
+relation_18052860,Tanır Mahallesi,,Gaziantep,,35,17
+relation_18052861,Tatlıcak Mahallesi,,Gaziantep,,584,56
+relation_18052862,Kızılin Mahallesi,,Gaziantep,,128,47
+relation_18052863,Salkım Mahallesi,,Gaziantep,,428,142
+relation_18053121,Alahacı Mahallesi,,Gaziantep,,642,79
+relation_18053122,Kayalar Mahallesi,,Gaziantep,,133,8
+relation_18053123,Gürbaşak Mahallesi,,Gaziantep,,231,74
+relation_18053124,Duraklı Mahallesi,,Gaziantep,,277,72
+relation_18053125,Köseler Mahallesi,,Gaziantep,,11,274
+relation_18053126,Karaburç Mahallesi,,Gaziantep,,87,10
+relation_18053127,Ballı Mahallesi,,Gaziantep,,109,7
+relation_18053128,Korucak Mahallesi,,Gaziantep,,96,9
+relation_18053129,Dernek Mahallesi,,Gaziantep,,106,22
+relation_18053130,Gaziler Mahallesi,,Gaziantep,,126,20
+relation_18053131,Mehmetobası Mahallesi,,Gaziantep,,115,16
+relation_18053132,Güder Mahallesi,,Gaziantep,,141,42
+relation_18053133,Tosunlu Mahallesi,,Gaziantep,,79,27
+relation_18053134,Boyluca Mahallesi,,Gaziantep,,176,6
+relation_18053135,Adaklı Mahallesi,,Gaziantep,,261,121
+relation_18053136,Dayıdağı Mahallesi,,Gaziantep,,249,32
+relation_18053237,Yağmuralan Mahallesi,,Gaziantep,,165,38
+relation_18053239,Yeniyapan Mahallesi,,Gaziantep,,39,7
+relation_18053240,Sarıkoç Mahallesi,,Gaziantep,,72,52
+relation_18053241,Yarımtepe Mahallesi,,Gaziantep,,123,20
+relation_18053242,Mercanlı Mahallesi,,Gaziantep,,24,13
+relation_18053243,Çakmaktepe Mahallesi,,Gaziantep,,50,46
+relation_18053244,Akkuyu Mahallesi,,Gaziantep,,53,25
+relation_18053245,Çatalca Mahallesi,,Gaziantep,,52,50
+relation_18053246,Yağcılar Mahallesi,,Gaziantep,,44,30
+relation_18053247,Gökçeli Mahallesi,,Gaziantep,,138,123
+relation_18053248,Kale Mahallesi,,Gaziantep,,184,174
+relation_18053249,Kesiktaş Mahallesi,,Gaziantep,,91,62
+relation_18053250,Kurucahüyük Mahallesi,,Gaziantep,,41,34
+relation_18053251,İkizce Mahallesi,,Gaziantep,,299,83
+relation_18053252,Gevence Mahallesi,,Gaziantep,,317,68
+relation_18053253,Yolçatı Mahallesi,,Gaziantep,,53,9
+relation_18053254,Bağlıca Mahallesi,,Gaziantep,,37,19
+relation_18053255,Dutlu Mahallesi,,Gaziantep,,144,46
+relation_18053256,Güzelköy Mahallesi,,Gaziantep,,11,44
+relation_18053257,Bozalioğlu Mahallesi,,Gaziantep,,8,10
+relation_18053258,Hancağız Mahallesi,,Gaziantep,,78,26
+relation_18053259,İntepe Mahallesi,,Gaziantep,,130,52
+relation_18053260,Gülkaya Mahallesi,,Gaziantep,,68,12
+relation_18053261,Nahırtepe Mahallesi,,Gaziantep,,8,15
+relation_18053533,Akçaköy Mahallesi,,Gaziantep,,130,116
+relation_18053534,Subağı Mahallesi,,Gaziantep,,72,16
+relation_18053535,Karacurun Mahallesi,,Gaziantep,,60,62
+relation_18053536,Yolağzı Mahallesi,,Gaziantep,,128,86
+relation_18053537,Zührecik Mahallesi,,Gaziantep,,81,18
+relation_18053538,Yazır Mahallesi,,Gaziantep,,50,78
+relation_18053539,Örmetaş Mahallesi,,Gaziantep,,17,31
+relation_18053540,Yeşerti Mahallesi,,Gaziantep,,121,131
+relation_18053541,Şenlik Mahallesi,,Gaziantep,,20,0
+relation_18053542,Çiftlik Mahallesi,,Gaziantep,,202,166
+relation_18053543,Yaşar Mahallesi,,Gaziantep,,94,78
+relation_18053544,Korkmazlar Mahallesi,,Gaziantep,,44,16
+relation_18053545,Kuruyazı Mahallesi,,Gaziantep,,46,31
+relation_18053546,Arıkdere Mahallesi,,Gaziantep,,114,78
+relation_18053547,Alagöz Mahallesi,,Gaziantep,,23,103
+relation_18053548,Balaban Mahallesi,,Gaziantep,,14,25
+relation_18053549,Eceler Mahallesi,,Gaziantep,,131,36
+relation_18053550,Kepirler Mahallesi,,Gaziantep,,23,13
+relation_18053551,Tosunlu Mahallesi,,Gaziantep,,79,27
+relation_18053552,Savaş Mahallesi,,Gaziantep,,17,2
+relation_18053553,Alaçalı Mahallesi,,Gaziantep,,75,106
+relation_18053554,Kelekli Mahallesi,,Gaziantep,,261,176
+relation_18053555,Gürçay Mahallesi,,Gaziantep,,42,48
+relation_18053556,Elifoğlu Mahallesi,,Gaziantep,,222,102
+relation_18053557,Teketaşı Mahallesi,,Gaziantep,,38,36
+relation_18053558,Erenyolu Mahallesi,,Gaziantep,,30,37
+relation_18053559,Yurtbağı Mahallesi,,Gaziantep,,65,51
+relation_18053560,Yarımca Mahallesi,,Gaziantep,,22,13
+relation_18698111,Karşıyaka Mahallesi,,Gaziantep,,372,181
+relation_12988983,Çarşı Mahallesi,,Rize,,495,106
+relation_12988984,Piriçelebi Mahallesi,,Rize,,1958,556
+relation_12988985,Eminettin Mahallesi,,Rize,,854,374
+relation_12988986,Reşadiye Mahallesi,,Rize,,1431,671
+relation_15589204,Müftü Mahallesi,,Rize,,388,388
+relation_15589205,Paşakuyu Mahallesi,,Rize,,1099,247
+relation_15589206,Çamlıbel Mahallesi,,Rize,,1265,285
+relation_15589207,Ekrem Orhon Mahallesi,,Rize,,1703,536
+relation_15589208,Tophane Mahallesi,,Rize,,3978,1028
+relation_15589209,Kale Mahallesi,,Rize,,32,18
+relation_15589210,Alipaşa Mahallesi,,Rize,,394,210
+relation_15589211,Çiftekavak Mahallesi,,Rize,,133,108
+relation_15589212,Boğaz Mahallesi,,Rize,,1086,565
+relation_15589213,Atmeydanı Mahallesi,,Rize,,2516,610
+relation_15589214,Yeniköy Mahallesi,,Rize,,101,27
+relation_15589215,Fener Mahallesi,,Rize,,2114,1200
+relation_15589216,Camiönü Mahallesi,,Rize,,1260,485
+relation_15589217,Mermerdelen Mahallesi,,Rize,,785,457
+relation_15589272,İslampaşa Mahallesi,,Rize,,2646,1461
+relation_15589273,Portakallık Mahallesi,,Rize,,1475,549
+relation_15589274,Bağdatlı Mahallesi,,Rize,,1306,470
+relation_15589275,Gülbahar Mahallesi,,Rize,,5232,2227
+relation_15589930,Uzunkaya,,Rize,,114,48
+relation_15590972,Bürücek,,Rize,,109,30
+relation_15594460,Eriklimanı Mahallesi,,Rize,,545,147
+relation_15599836,Merkez Mahallesi,,Rize,,757,429
+relation_15600498,Tersane Mahallesi,,Rize,,403,55
+relation_15607328,Yanıktaş Mahallesi,,Rize,,230,28
+relation_15610834,Sandıktaş Köyü,,Rize,,145,27
+relation_15625038,Çalışkanlar Mahallesi,,Rize,,89,24
+relation_16496988,Balsu Mahallesi,,Rize,,202,25
+relation_16569686,Pehlivan Mahallesi,,Rize,,378,80
+relation_16606355,Pilavdağı Mahallesi,,Rize,,222,52
+relation_16606356,Yağlıtaş Mahallesi,,Rize,,379,53
+relation_16606357,Halatçılar Mahallesi,,Rize,,136,43
+relation_16606358,Değirmendere Mahallesi,,Rize,,276,94
+relation_16606359,Hayrat Mahallesi,,Rize,,279,81
+relation_16606360,Kanbursırt Mahallesi,,Rize,,176,49
+relation_16606361,Kavaklı Mahallesi,,Rize,,235,51
+relation_16606362,Canpolat Mahallesi,,Rize,,149,37
+relation_16606363,Pehlivantaşı Mahallesi,,Rize,,278,85
+relation_16606364,Kaplıca Mahallesi,,Rize,,125,87
+relation_16606365,Ekmekçiler Mahallesi,,Rize,,194,82
+relation_16606366,Dağsu Mahallesi,,Rize,,362,89
+relation_16606367,Dereüstü Mahallesi,,Rize,,184,40
+relation_16606368,Fatih Mahallesi,,Rize,,551,257
+relation_16606369,Çorapçılar Mahallesi,,Rize,,371,56
+relation_16606370,Hamzabey Mahallesi,,Rize,,303,98
+relation_16606371,Engindere Mahallesi,,Rize,,1062,263
+relation_16606372,Taşlıdere Mahallesi,,Rize,,2050,801
+relation_16607250,Akarsu,,Rize,,206,18
+relation_16607251,Hamidiye Mahallesi,,Rize,,587,384
+relation_16607252,Dağınıksu Mahallesi,,Rize,,624,158
+relation_16607253,Mezra Mahallesi,,Rize,,69,13
+relation_16607254,Bozkale Mahallesi,,Rize,,104,105
+relation_17189064,Taşlık,,Rize,,280,76
+relation_17189244,Boğaz,,Rize,,1086,565
+relation_17189245,Pınarbaşı,,Rize,,176,26
+relation_17189246,Veliköy,,Rize,,520,126
+relation_17189247,Aktaş,,Rize,,110,96
+relation_17189248,Kurtuluş,,Rize,,68,22
+relation_17189328,Akpınar,,Rize,,525,71
+relation_17189329,Söğütlü,,Rize,,167,52
+relation_17189330,Balıkçılar,,Rize,,168,134
+relation_17189331,Yenikale,,Rize,,91,30
+relation_17189332,Yenidoğan,,Rize,,83,14
+relation_17189333,Ketenli,,Rize,,218,34
+relation_17190010,Örnek,,Rize,,115,80
+relation_17190011,Zincirliköprü,,Rize,,299,51
+relation_17190012,Pekmezli,,Rize,,539,45
+relation_17190013,Taşpınar,,Rize,,229,33
+relation_17190217,Gölgeli,,Rize,,132,23
+relation_17190218,Topkaya,,Rize,,188,28
+relation_17190219,Uzunköy,,Rize,,141,26
+relation_17190396,Melek,,Rize,,184,18
+relation_17190399,Güzelköy,,Rize,,195,12
+relation_17190400,Derebaşı,,Rize,,207,70
+relation_17190401,Yenigüzel,,Rize,,207,11
+relation_17190402,Camidağı,,Rize,,285,50
+relation_17190403,Sütlüce,,Rize,,297,41
+relation_17190404,Yolveren,,Rize,,118,9
+relation_17190405,Dörtyol,,Rize,,296,39
+relation_17190406,Pazarköy,,Rize,,539,71
+relation_17191400,Azaklıhoca,,Rize,,304,53
+relation_17191401,Soğukçeşme,,Rize,,86,12
+relation_17191402,Köprülü,,Rize,,220,25
+relation_17191403,Çaycılar,,Rize,,197,25
+relation_17191404,Düzköy,,Rize,,53,18
+relation_17191405,Tuğlalı,,Rize,,125,29
+relation_17191406,Küçükköy,,Rize,,71,37
+relation_17191504,Kırklartepesi,,Rize,,177,20
+relation_17191505,Selimiye,,Rize,,159,17
+relation_17191506,Ayane,,Rize,,108,24
+relation_17191512,Kocatepe,,Rize,,105,13
+relation_17191513,Ortapazar,,Rize,,311,48
+relation_17191514,Yolüstü,,Rize,,138,41
+relation_17191515,Üçkaya,,Rize,,160,49
+relation_17192209,Sirt,,Rize,,16,18
+relation_17192211,Düz,,Rize,,698,380
+relation_17192212,Beştepe,,Rize,,120,16
+relation_17192418,Köprübaşi,,Rize,,151,47
+relation_17192420,Yeşildere,,Rize,,384,37
+relation_17192423,Taşköprü,,Rize,,333,22
+relation_17192424,Tekke,,Rize,,202,49
+relation_17192425,Elmalı,,Rize,,450,18
+relation_17192426,Erenköy,,Rize,,145,10
+relation_17192427,Yemişlik,,Rize,,323,31
+relation_17192455,Küçükçayir,,Rize,,613,55
+relation_17192456,Güzelyurt,,Rize,,146,14
+relation_17192457,Karasu,,Rize,,669,27
+relation_17192458,Ambarlık,,Rize,,920,81
+relation_17192459,Yeşildere,,Rize,,384,37
+relation_17192460,Çimenli,,Rize,,62,5
+relation_17192461,Çaybaşı,,Rize,,203,10
+relation_17192462,Karayemiş,,Rize,,259,19
+relation_17192463,Soğuksu,,Rize,,164,95
+relation_17195463,Ulucamii,,Rize,,664,133
+relation_17195464,Birlik,,Rize,,284,64
+relation_17195465,Selamet,,Rize,,322,58
+relation_17195466,Merkez Mahallesi,,Rize,,757,429
+relation_17195467,Eskicami,,Rize,,234,36
+relation_17195468,Yarımada,,Rize,,74,12
+relation_17195469,Aşağı Kiremit,,Rize,,121,9
+relation_17195470,Tepebaşı,,Rize,,184,23
+relation_17195471,Dumankaya,,Rize,,199,11
+relation_17195472,Yeşilyurt,,Rize,,104,19
+relation_17195473,Yeşilköy,,Rize,,97,1
+relation_17195474,Kiremit Mahallesi,,Rize,,220,14
+relation_17195475,Ortaköy,,Rize,,233,32
+relation_17195476,Yeniköy,,Rize,,101,27
+relation_17195477,Güneli Mahallesi,,Rize,,391,16
+relation_17195478,İslahiye,,Rize,,266,55
+relation_17195479,Kıbledağı,,Rize,,850,56
+relation_17195480,Gürgen,,Rize,,464,20
+relation_17195481,Asmalıırmak,,Rize,,189,11
+relation_17195482,Ballıdere,,Rize,,286,17
+relation_17195483,Çamlıca,,Rize,,295,27
+relation_17195484,Yüksekköy,,Rize,,187,10
+relation_17195485,Başköy,,Rize,,71,7
+relation_17195486,Bulutlu,,Rize,,147,15
+relation_17195487,Selamet Mahallesi,,Rize,,322,58
+relation_17195488,Başaran,,Rize,,209,26
+relation_17195489,Yenicami Mahallesi,,Rize,,109,23
+relation_17195490,Adacami,,Rize,,702,290
+relation_17205652,Demirhisar,,Rize,,263,41
+relation_17205653,Limanköy,,Rize,,434,138
+relation_17207737,Kemerköy,,Rize,,268,51
+relation_17207738,Kesmetaş,,Rize,,411,107
+relation_17207740,Taşhane,,Rize,,385,69
+relation_17207742,Yalı,,Rize,,785,258
+relation_17207744,Yenipazar,,Rize,,3413,1056
+relation_17207745,Eskipazar,,Rize,,1882,455
+relation_17207746,Yenicami,,Rize,,109,23
+relation_17207747,Yaka,,Rize,,879,246
+relation_17210200,Hassadıklar,,Rize,,167,16
+relation_17210201,Şairler,,Rize,,881,190
+relation_17210202,Gemiciler,,Rize,,69,11
+relation_17210203,Musadağı,,Rize,,68,60
+relation_17211218,Yeşiltepe,,Rize,,113,16
+relation_17211219,Kaptanpaşa,,Rize,,277,38
+relation_17211220,Gürpınar,,Rize,,81,40
+relation_17211221,Çukurluhoca,,Rize,,122,31
+relation_17211222,Ormancık,,Rize,,79,12
+relation_17211223,Başköy,,Rize,,71,7
+relation_17211224,Yenice,,Rize,,81,14
+relation_17211225,Uzundere,,Rize,,50,14
+relation_17211226,İncesu,,Rize,,35,2
+relation_17211227,Çataldere,,Rize,,119,39
+relation_17211229,Merkez,,Rize,,757,429
+relation_17211235,Çaycilar,,Rize,,197,25
+relation_17211236,Soğuksu,,Rize,,164,95
+relation_17211237,Derecik,,Rize,,95,13
+relation_17211238,Armutlu,,Rize,,194,32
+relation_17211239,Yeşilköy,,Rize,,97,1
+relation_17211240,Karaağaç,,Rize,,246,13
+relation_17211241,Yıldızeli,,Rize,,115,11
+relation_17211242,Buzlupınar,,Rize,,313,18
+relation_17211243,Beşikçiler,,Rize,,117,23
+relation_17211244,Yenihisar,,Rize,,177,34
+relation_17211245,Ortaköy,,Rize,,233,32
+relation_17211246,Şirinköy,,Rize,,105,33
+relation_17211247,Adalar,,Rize,,94,18
+relation_17211248,Sabuncular,,Rize,,522,98
+relation_17211249,Zafer,,Rize,,60,17
+relation_17211250,Erenler,,Rize,,207,27
+relation_17211251,Çınartepe,,Rize,,43,9
+relation_17211252,Kaçkar,,Rize,,93,6
+relation_17211253,Kestanelik,,Rize,,84,27
+relation_17211254,Sefalı,,Rize,,195,62
+relation_17211255,Çilingir,,Rize,,283,28
+relation_17211256,Çataklıhoca,,Rize,,135,20
+relation_17211257,Yavuzlar,,Rize,,74,17
+relation_17211258,Esendağ,,Rize,,180,31
+relation_17211259,Selimiye,,Rize,,159,17
+relation_17211260,Abdullahhoca,,Rize,,116,15
+relation_17211261,Aşıklar,,Rize,,389,56
+relation_17211262,Düzgeçit,,Rize,,90,3
+relation_17211263,Yanıkdağ,,Rize,,204,23
+relation_17211264,İncesırt Mahallesi,,Rize,,184,27
+relation_17211265,Beyazsu,,Rize,,229,51
+relation_17211266,Maltepe,,Rize,,173,15
+relation_17211267,Yeşilırmak,,Rize,,63,9
+relation_17211268,Erdemli,,Rize,,66,13
+relation_17211269,Yamaçköy Köyü,,Rize,,248,35
+relation_17211270,Latifli,,Rize,,146,46
+relation_17211271,Sırtköy,,Rize,,258,22
+relation_17211272,Köprübaşı,,Rize,,151,47
+relation_17211274,Sarısu,,Rize,,207,33
+relation_17211276,Yeni,,Rize,,598,518
+relation_17211277,Merkez,,Rize,,757,429
+relation_17211279,Topkaya,,Rize,,188,28
+relation_17211280,Seslidere Mahallesi,,Rize,,156,21
+relation_17211281,Yenitepe,,Rize,,170,28
+relation_17211284,Gürgenli,,Rize,,233,17
+relation_17211285,Çeşmeli,,Rize,,195,11
+relation_17211286,Haremtepe,,Rize,,454,41
+relation_17211287,Çamlıca,,Rize,,295,27
+relation_17211289,Güzeltepe,,Rize,,273,45
+relation_17212555,Tütüncüler,,Rize,,270,41
+relation_17212556,Yavuzköy Köyü,,Rize,,104,16
+relation_17212557,Alçılı,,Rize,,228,64
+relation_17212558,Subaşı,,Rize,,195,30
+relation_17212559,Güneyköy Köyü,,Rize,,224,39
+relation_17212560,Kuzayca,,Rize,,211,19
+relation_17212561,Balıkçı,,Rize,,196,24
+relation_17212562,Merdivenli,,Rize,,119,47
+relation_17212563,Örnek,,Rize,,115,80
+relation_17212564,Şendere,,Rize,,74,4
+relation_17212565,Tektaş,,Rize,,134,32
+relation_17212566,Hasköy,,Rize,,38,16
+relation_17212567,Dağdibi,,Rize,,259,53
+relation_17212568,Elmalık,,Rize,,293,175
+relation_17212569,Yücehisar,,Rize,,100,71
+relation_17212570,Şentepe,,Rize,,134,120
+relation_17212571,Papatya,,Rize,,136,56
+relation_17212572,Sivritepe,,Rize,,70,27
+relation_17212573,Ortaırmak,,Rize,,109,33
+relation_17212574,Irmakköy Köyü,,Rize,,336,72
+relation_17212575,Şehitlik,,Rize,,201,21
+relation_17212576,Kayağantaş,,Rize,,20,14
+relation_17212577,Handağı,,Rize,,141,40
+relation_17212578,Ortayol,,Rize,,49,63
+relation_17212579,Suçatı,,Rize,,191,91
+relation_17212580,Derinsu,,Rize,,75,69
+relation_17212581,Başköy,,Rize,,71,7
+relation_17212582,Bucak,,Rize,,91,37
+relation_17212583,Akbucak,,Rize,,80,62
+relation_17212584,Uğrak,,Rize,,50,48
+relation_17213180,Hamidiye,,Rize,,587,384
+relation_17213181,Dernek,,Rize,,242,150
+relation_17213182,Derebaşı,,Rize,,207,70
+relation_17213183,Sahilköy,,Rize,,181,127
+relation_17213184,Ocak,,Rize,,443,276
+relation_17213185,Güzelyalı Mahallesi,,Rize,,537,370
+relation_17213186,Beyaztaş,,Rize,,62,34
+relation_17213187,Zafer,,Rize,,60,17
+relation_17213188,Kirazlık,,Rize,,50,20
+relation_17213189,Pazar,,Rize,,2017,1174
+relation_17213190,Soğuksu,,Rize,,164,95
+relation_17213191,Yukari Soğuksu,,Rize,,113,62
+relation_17213192,Cumhuriyet,,Rize,,1096,449
+relation_17213193,Gazi,,Rize,,88,24
+relation_17213194,İkiztepe,,Rize,,202,91
+relation_17213195,Sessizdere,,Rize,,211,134
+relation_17213196,Yemişli,,Rize,,191,82
+relation_17213197,Boğazlı,,Rize,,286,54
+relation_17213198,Topluca,,Rize,,696,47
+relation_17213199,Kocaköprü,,Rize,,354,236
+relation_17213200,Kesikköprü,,Rize,,190,115
+relation_17213201,Sulak,,Rize,,132,89
+relation_17213202,Akmescit,,Rize,,107,81
+relation_17213203,Darılı,,Rize,,71,46
+relation_17213204,Aktaş,,Rize,,110,96
+relation_17213205,Aktepe,,Rize,,78,47
+relation_17213206,Yeşilköy,,Rize,,97,1
+relation_17213207,Sivrikale,,Rize,,82,33
+relation_17213208,Hisarlı,,Rize,,111,45
+relation_17213287,Yaltkaya,,Rize,,78,60
+relation_17213288,Leventköy,,Rize,,85,24
+relation_17213289,Yeniköy,,Rize,,101,27
+relation_17213290,Akyamaç,,Rize,,110,43
+relation_17213291,Mutlu,,Rize,,171,71
+relation_17213292,Ortaköy,,Rize,,233,32
+relation_17213293,Nurluca,,Rize,,63,29
+relation_17213294,Bahar,,Rize,,112,27
+relation_17213295,Çamlıtepe,,Rize,,40,37
+relation_17213296,Hilal,,Rize,,8,44
+relation_17213297,Bilenköy,,Rize,,21,35
+relation_17213298,Kantarlı,,Rize,,68,46
+relation_17213482,Çataltepe,,Rize,,71,8
+relation_17213483,Eskice,,Rize,,60,5
+relation_17213484,Ballıköy,,Rize,,230,29
+relation_17213600,Irmakyeniköy Köyü,,Rize,,94,19
+relation_17213678,Cevizlik,,Rize,,90,3
+relation_17213679,Gürdere,,Rize,,198,22
+relation_17213680,Zafer,,Rize,,60,17
+relation_17213681,Çağrankaya,,Rize,,49,28
+relation_17213682,Çarşı Mahallesi,,Rize,,495,106
+relation_17213683,Ihlamur,,Rize,,18,7
+relation_17213684,Güney,,Rize,,42,24
+relation_17213685,Ayvalık,,Rize,,57,10
+relation_17213686,Güneyce,,Rize,,555,41
+relation_17213687,Şimşirli,,Rize,,185,37
+relation_17213688,Yeşilyurt,,Rize,,104,19
+relation_17213689,Kirazlı,,Rize,,68,16
+relation_17213690,Gündoğdu,,Rize,,59,2
+relation_17213691,Demirkapı,,Rize,,125,9
+relation_17213692,Rüzgarlı,,Rize,,87,8
+relation_17213693,Bayırköy,,Rize,,70,7
+relation_17213694,Ilıcaköy,,Rize,,216,23
+relation_17213695,Başköy,,Rize,,71,7
+relation_17213696,Güvenköy,,Rize,,19,2
+relation_17213697,Ortaköy,,Rize,,233,32
+relation_17213698,Yağcılar,,Rize,,129,9
+relation_17213699,Tulumpınar,,Rize,,34,5
+relation_17213700,Dereköy,,Rize,,48,5
+relation_17213701,Yerelma,,Rize,,70,3
+relation_17213702,Çamlıkköy,,Rize,,77,32
+relation_17213703,Sivrikaya,,Rize,,45,3
+relation_17213704,Gölyayla,,Rize,,102,3
+relation_17213705,Meşeköy,,Rize,,159,9
+relation_17213706,Tozköy,,Rize,,145,5
+relation_17213707,Çifteköprü,,Rize,,44,5
+relation_17213708,Çiçekli,,Rize,,86,15
+relation_17213709,Kama,,Rize,,58,2
+relation_17213710,Diktaş,,Rize,,67,7
+relation_17216713,Sarıyer,,Rize,,170,27
+relation_17216714,Bahattinpaşa,,Rize,,164,18
+relation_17216715,Çakmakçılar,,Rize,,156,18
+relation_17216716,Çeşmeköy Köyü,,Rize,,149,36
+relation_17216717,Subaşı,,Rize,,195,30
+relation_17216718,Fıçıcılar,,Rize,,319,39
+relation_17216719,Çukurlu,,Rize,,160,16
+relation_17216720,Maltepe,,Rize,,173,15
+relation_17216721,Esentepe,,Rize,,214,24
+relation_17216722,Kirazdağı,,Rize,,406,33
+relation_17216828,Sarayköy,,Rize,,103,23
+relation_17216829,Hazar,,Rize,,952,126
+relation_17216830,Yalıköy,,Rize,,170,30
+relation_17216831,Fethiye,,Rize,,331,46
+relation_17216832,Merkez,,Rize,,757,429
+relation_17216833,Fıçıtaşı,,Rize,,459,85
+relation_17216834,Üstüpiler,,Rize,,43,14
+relation_17216835,Çanakçeşme,,Rize,,109,12
+relation_17216836,Yapraklar,,Rize,,397,52
+relation_17216837,Taşhane,,Rize,,385,69
+relation_17216839,Çiftlikköy Köyü,,Rize,,414,81
+relation_17216840,Köşklü,,Rize,,255,61
+relation_17216841,Yaylacılar,,Rize,,79,59
+relation_17216842,Denizgören,,Rize,,298,26
+relation_17216843,Kalecik,,Rize,,319,93
+relation_17216987,Soğuksu,,Rize,,164,95
+relation_17216988,Medrese,,Rize,,340,114
+relation_17216989,Taşçılar,,Rize,,131,22
+relation_17216990,Fındıklı,,Rize,,229,53
+relation_17216991,Soğuksu,,Rize,,164,95
+relation_17216992,Esendere,,Rize,,76,6
+relation_17216993,Hurmalık,,Rize,,167,5
+relation_17216994,Esentepe,,Rize,,214,24
+relation_17216995,Kayabaşı,,Rize,,134,10
+relation_17216996,Çayırlı,,Rize,,311,18
+relation_17216997,Yokuşlu,,Rize,,126,56
+relation_17216998,Dülgerli,,Rize,,259,29
+relation_17216999,Aksu,,Rize,,532,1035
+relation_17217000,Yukarı Tatlısu,,Rize,,188,78
+relation_17217001,Hüseyinhoca,,Rize,,227,30
+relation_17217002,Yeniköy,,Rize,,101,27
+relation_17217003,Dağdibi,,Rize,,259,53
+relation_17217004,Adalar,,Rize,,94,18
+relation_17217005,Çağlayan,,Rize,,191,123
+relation_17217006,Seyrantepe,,Rize,,94,15
+relation_17217007,Yeşilköy,,Rize,,97,1
+relation_17217008,Ünalan,,Rize,,171,7
+relation_17217009,Yolbaşı,,Rize,,568,71
+relation_17217010,Pınarköy,,Rize,,212,18
+relation_17217011,Geçitli,,Rize,,79,6
+relation_17217012,Ormanlı,,Rize,,643,48
+relation_17217013,Aşağı Tatlısu,,Rize,,308,64
+relation_17217014,Kuruköy,,Rize,,368,84
+relation_17217015,Kızıltoprak,,Rize,,453,122
+relation_17217016,Cevizlik,,Rize,,90,3
+relation_17217017,Yeni,,Rize,,598,518
+relation_17217018,Yumurtatepe,,Rize,,98,23
+relation_17217019,İnciköy Köyü,,Rize,,212,40
+relation_17217020,Yenigeçitli,,Rize,,80,8
+relation_17217306,Behice,,Rize,,254,82
+relation_17217307,Dikkaya,,Rize,,632,99
+relation_17217308,Köprübaşı,,Rize,,151,47
+relation_17217309,Çayırdüzü,,Rize,,232,48
+relation_17217310,Yağmurlu,,Rize,,73,13
+relation_17217311,Topluca,,Rize,,696,47
+relation_17217312,Kadıköy,,Rize,,82,16
+relation_17217313,Komilo,,Rize,,149,38
+relation_17217314,Merkez,,Rize,,757,429
+relation_17217316,Sirt,,Rize,,16,18
+relation_17217317,Kavak,,Rize,,29,39
+relation_17217319,Boğaziçi,,Rize,,27,19
+relation_17217320,Ortaklar,,Rize,,35,10
+relation_17217321,Ortayayla,,Rize,,54,9
+relation_17217322,Sıraköy,,Rize,,38,16
+relation_17217323,Kale,,Rize,,32,18
+relation_17217324,Yazlık,,Rize,,7,9
+relation_17217325,Yaylaköy,,Rize,,26,26
+relation_17217326,Konaklar Mah.,,Rize,,59,90
+relation_17217328,Güroluk,,Rize,,71,20
+relation_17217329,Kaplıca,,Rize,,125,87
+relation_17217332,Yolkıyı,,Rize,,17,24
+relation_17217333,Şenköy,,Rize,,9,11
+relation_17217336,Zilkale,,Rize,,18,12
+relation_17217337,Mollaveyis,,Rize,,22,23
+relation_17217338,Şenyuva,,Rize,,18,65
+relation_17217751,Yeniyol,,Rize,,50,254
+relation_17217752,Şenyurt,,Rize,,81,104
+relation_17217753,Konaktepe,,Rize,,187,276
+relation_17217754,Işıklı,,Rize,,234,157
+relation_17217755,Taşbaşı,,Rize,,64,63
+relation_17217756,Yayla Mahallesi,,Rize,,105,138
+relation_17217757,Bahar Mahallesi,,Rize,,112,27
+relation_17217758,Barış Mahallesi,,Rize,,188,191
+relation_17217759,Müftü Mahallesi,,Rize,,388,388
+relation_17217760,Çiftekavak Mahallesi,,Rize,,133,108
+relation_17217761,Kavaklıdere Mahallesi,,Rize,,91,94
+relation_17217762,Yeni Mahallesi,,Rize,,598,518
+relation_17217763,Merkez Mahallesi,,Rize,,757,429
+relation_17217764,Fatih Mahallesi,,Rize,,551,257
+relation_17217765,Deniz Mahallesi,,Rize,,2010,939
+relation_17217767,Yurtsever,,Rize,,64,69
+relation_17217768,Küçükköy,,Rize,,71,37
+relation_17217769,Ortaalan,,Rize,,85,138
+relation_17217773,Düz,,Rize,,698,380
+relation_17217774,Duygulu,,Rize,,148,50
+relation_17217775,Şenyuva,,Rize,,18,65
+relation_17217776,Esentepe,,Rize,,214,24
+relation_17217777,Merkez,,Rize,,757,429
+relation_17217778,Güney,,Rize,,42,24
+relation_17217779,Şendere,,Rize,,74,4
+relation_17217781,Arıcılar,,Rize,,26,9
+relation_17217782,Deremezra,,Rize,,72,13
+relation_17217784,Kaçkar,,Rize,,93,6
+relation_17217785,Önder,,Rize,,62,3
+relation_17217786,Sinanköy Köyü,,Rize,,48,6
+relation_17217787,Özgür,,Rize,,112,10
+relation_17217789,Kirazlık,,Rize,,50,20
+relation_17217790,Bayırcık,,Rize,,101,31
+relation_17217791,Doğanay,,Rize,,74,40
+relation_17217792,Akkaya,,Rize,,191,57
+relation_17217793,Yeniköy,,Rize,,101,27
+relation_17217794,Köprüköy,,Rize,,186,13
+relation_17217795,Hoşdere,,Rize,,170,6
+relation_17217796,Şehitlik,,Rize,,201,21
+relation_17217797,Pınarlı,,Rize,,147,20
+relation_17217798,Manganez,,Rize,,108,18
+relation_17217799,Elmalık Mahallesi,,Rize,,293,175
+relation_17217800,Fırtına Mahallesi,,Rize,,2626,845
+relation_17217801,Cumhuriyet Mahallesi,,Rize,,1096,449
+relation_17217802,Yavuz Selim Mahallesi,,Rize,,2310,886
+relation_17217803,Düz Mahallesi,,Rize,,698,380
+relation_17217804,Şentepe Mahallesi,,Rize,,134,120
+relation_17217805,Kahveciler Mahallesi,,Rize,,210,76
+relation_17217806,Cami Mahallesi,,Rize,,126,99
+relation_17217807,Baş Mahallesi,,Rize,,90,38
+relation_17217808,Pirinçlik,,Rize,,231,66
+relation_17217809,Zeytinlik,,Rize,,58,66
+relation_17217810,Beyazkaya,,Rize,,138,30
+relation_17217811,Yamaçdere,,Rize,,147,107
+relation_17217812,Çıraklar,,Rize,,82,23
+relation_17217813,Yavuz,,Rize,,185,13
+relation_17217814,Şenyamaç,,Rize,,125,19
+relation_17217815,Kurtuluş,,Rize,,68,22
+relation_17217816,Armağan,,Rize,,307,81
+relation_17217817,Kuzey,,Rize,,91,24
+relation_17217818,Gündoğan,,Rize,,133,52
+relation_17217819,Serindere,,Rize,,72,6
+relation_17217820,Yeşiltepe,,Rize,,113,16
+relation_17217821,Akdere,,Rize,,79,48
+relation_17217822,Seslikaya,,Rize,,253,55
+relation_17218870,Tepecik,,Rize,,46,32
+relation_17218871,Yaylacılar,,Rize,,79,59
+relation_17218872,Düzköy,,Rize,,53,18
+relation_17218873,Gürsu,,Rize,,21,76
+relation_17218874,Derbent,,Rize,,175,80
+relation_17218875,Saatköy,,Rize,,94,27
+relation_17218876,Aslandere,,Rize,,119,81
+relation_17218877,Çağlayan,,Rize,,191,123
+relation_17218878,Beydere,,Rize,,234,51
+relation_17218879,Yenişehitlik,,Rize,,50,6
+relation_17218880,Ihlamurlu,,Rize,,241,44
+relation_17218881,Sulak,,Rize,,132,89
+relation_17218882,Cennet,,Rize,,62,11
+relation_17218883,Çınarlı,,Rize,,59,93
+relation_17218884,Arılı,,Rize,,80,154
+relation_17218885,Karaali,,Rize,,22,14
+relation_17218886,Haraköy Köyü,,Rize,,66,68
+relation_17218887,Ilıca,,Rize,,85,75
+relation_17218888,Avcılar,,Rize,,103,62
+relation_17218889,Kıyıcık,,Rize,,54,103
+relation_17218890,Sümer,,Rize,,358,184
+relation_17218891,Liman Mahallesi,,Rize,,175,202
+relation_17218892,Aksu Mahallesi,,Rize,,532,1035
+relation_17218893,Tatlısu Mahallesi,,Rize,,126,109
+relation_17218894,Merkez Mahallesi,,Rize,,757,429
+relation_17218895,Hürriyet Mahallesi,,Rize,,102,79
+relation_17218896,Yeni Mahallesi,,Rize,,598,518
+relation_17218897,Sahil Mahallesi,,Rize,,550,729
+relation_17218898,Yeniköy,,Rize,,101,27
+relation_17218961,Meyvalı,,Rize,,90,115
+relation_17219320,Doğanay,,Rize,,74,40
