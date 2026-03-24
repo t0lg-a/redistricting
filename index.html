@@ -471,7 +471,7 @@
         function App() {
             const [theme, setTheme] = useState('light');
             const [settings, setSettings] = useState({
-                borderWidth: 0.4, borderColor: 'rgba(255,255,255,0.5)', marginMultiplier: 1,
+                borderWidth: 0.3, borderColor: 'rgba(0,0,0,0.06)', marginMultiplier: 1,
                 voteSwing: 0, labelMode: 'none', labelSize: 10, opacity: 0.7, mapStyle: 'light'
             });
             const [showSettings, setShowSettings] = useState(false);
@@ -796,14 +796,19 @@
 
                 if (!isUnmatched) {
                     if (activeId && districtId === activeId) {
-                        weight = Math.max(3, currSettings.borderWidth + 1);
+                        weight = 2.5;
                         strokeColor = currSettings.mapStyle === 'dark' ? '#fff' : '#111827';
                         opacity = 1;
                     } else if (currSettings.borderWidth === 0) {
-                        strokeColor = fillColor; weight = 1; opacity = fillOpacity;
-                    } else if (currViewMode !== 'districts' && district) {
-                        strokeColor = district.color;
-                        weight = Math.max(1.5, currSettings.borderWidth);
+                        strokeColor = fillColor; weight = 0; opacity = 0;
+                    } else {
+                        weight = currSettings.borderWidth;
+                        strokeColor = currSettings.mapStyle === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.08)';
+                        opacity = 0.8;
+                        if (currViewMode !== 'districts' && district) {
+                            strokeColor = district.color;
+                            weight = Math.max(1.5, currSettings.borderWidth);
+                        }
                     }
                 }
 
@@ -843,7 +848,7 @@
                 });
                 if (targetLayer) {
                     mapRef.current.fitBounds(targetLayer.getBounds(), { padding: [50, 50], maxZoom: 14 });
-                    targetLayer.setStyle({ color: '#fde047', weight: 5, opacity: 1 });
+                    targetLayer.setStyle({ color: '#fde047', weight: 2.5, opacity: 1 });
                     setTimeout(() => { targetLayer.setStyle(getFeatureStyle(targetLayer.feature)); }, 1500);
                 }
                 setSearchQuery("");
@@ -973,7 +978,7 @@
             /* ── Map initialization ── */
             useEffect(() => {
                 if (!mapRef.current) {
-                    const map = L.map('map-container', { zoomControl: false, attributionControl: false, doubleClickZoom: false, preferCanvas: true, renderer: L.canvas({ padding: 0.5, tolerance: 3 }) }).setView([39.0, 35.0], 6);
+                    const map = L.map('map-container', { zoomControl: false, attributionControl: false, doubleClickZoom: false, preferCanvas: false, renderer: L.svg({ padding: 2 }) }).setView([39.0, 35.0], 6);
                     L.control.zoom({ position: 'topright' }).addTo(map);
                     tileLayerRef.current = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { subdomains: 'abcd', maxZoom: 20 }).addTo(map);
                     window.addEventListener('mouseup', finishPaint);
@@ -1024,7 +1029,7 @@
                         layer.on('mouseover', () => {
                             setHoveredFeature({ name, districtId: assignmentsRef.current[uid], data: getDataRef(uid, name), normalizedName: normalizeName(name) });
                             if (!isPainting.current) {
-                                layer.setStyle({ weight: Math.max(3, settings.borderWidth + 2), opacity: 1, color: settings.mapStyle === 'dark' ? '#ffffff' : '#111827' });
+                                layer.setStyle({ weight: 1.5, opacity: 0.8, color: settings.mapStyle === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.4)' });
                                 layer.bringToFront();
                             } else applyAssignment(uid, layer);
                         });
@@ -1035,7 +1040,8 @@
                     };
 
                     const geoLayer = L.geoJSON(geoJsonData, {
-                        style: () => ({ fillColor: '#e5e7eb', weight: 0.4, color: 'rgba(0,0,0,0.08)', fillOpacity: 0.3 }),
+                        style: () => ({ fillColor: '#e5e7eb', weight: 0.3, color: 'rgba(0,0,0,0.06)', fillOpacity: 0.3, smoothFactor: 0 }),
+                        smoothFactor: 0,
                         onEachFeature,
                         pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 0, opacity: 0, fillOpacity: 0 }),
                     }).addTo(mapRef.current);
