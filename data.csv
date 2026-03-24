@@ -2877,3 +2877,1281 @@ relation_6747495,Yeni Batı Mahallesi,,Ankara,Yenimahalle,7007,18658
 relation_6789619,Karacakaya Mahallesi,,Ankara,Yenimahalle,680,939
 relation_13761238,Ostim Mahallesi,,Ankara,Yenimahalle,1883,1755
 relation_13761239,Susuz Mahallesi,,Ankara,Yenimahalle,1784,2236
+relation_1268825,Sasalı Merkez Mahallesi,,İzmir,,817,1787
+relation_5614754,Ataşehir Mahallesi,,İzmir,,4130,15913
+relation_9535041,Siteler Mahallesi,,İzmir,,2892,5483
+relation_9535042,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_9535120,Kazım Dirik Mahallesi,,İzmir,,1855,3706
+relation_9535377,Kurtuluş Mahallesi,,İzmir,,1928,3743
+relation_9535378,Yeni Mahalle,,İzmir,,2277,6327
+relation_9535379,Kültür Mahallesi,,İzmir,,1672,3989
+relation_9535407,Samurlu Mahallesi,,İzmir,,121,187
+relation_9535688,Yalı Mahallesi,,İzmir,,567,1824
+relation_9535689,Güzelhisar Mahallesi,,İzmir,,137,323
+relation_9627388,Yeni Mahalle Mahallesi,,İzmir,,2277,6327
+relation_9846127,Çınar Mahallesi,,İzmir,,67,44
+relation_10055652,Köyiçi Mahallesi,,İzmir,,1097,1694
+relation_10149904,Alpaslan Mahallesi,,İzmir,,2839,2724
+relation_10149905,Çiçek Mahallesi,,İzmir,,2762,3953
+relation_10149906,Fuat Edip Baksı Mahallesi,,İzmir,,2863,5053
+relation_10149907,Çay Mahallesi,,İzmir,,2328,3113
+relation_10149908,Tepekule Mahallesi,,İzmir,,3694,6694
+relation_10149909,Osmangazi Mahallesi,,İzmir,,5915,11792
+relation_10149910,Bayraklı Mahallesi,,İzmir,,1425,3168
+relation_10149911,Mansuroğlu Mahallesi,,İzmir,,2812,11949
+relation_10149912,Manavkuyu Mahallesi,,İzmir,,3900,14844
+relation_10149913,Adalet Mahallesi,,İzmir,,4996,7870
+relation_10150955,Muhittin Erener Mahallesi,,İzmir,,2786,2770
+relation_10150956,Cengizhan Mahallesi,,İzmir,,5158,3445
+relation_10150965,R.Şevket İnce Mahallesi,,İzmir,,4344,4013
+relation_10151025,Körfez Mahallesi,,İzmir,,581,3409
+relation_10151026,Onur Mahallesi,,İzmir,,2686,9250
+relation_10151027,Turan Mahallesi,,İzmir,,56,256
+relation_10151028,Org.Nafiz Gürman Mahallesi,,İzmir,,4226,4718
+relation_10151029,Yamanlar Mahallesi,,İzmir,,4308,7765
+relation_10151030,Doğançay Mahallesi,,İzmir,,343,1248
+relation_10151031,75. Yıl Mahallesi,,İzmir,,722,1610
+relation_10151046,Postacılar Mahallesi,,İzmir,,2661,5876
+relation_10151047,Soğukkuyu Mahallesi,,İzmir,,1880,6513
+relation_10151048,Emek Mahallesi,,İzmir,,3682,4856
+relation_10151049,Gümüşpala Mahallesi,,İzmir,,5131,5426
+relation_10153435,Celal Bayar Mahallesi,,İzmir,,66,452
+relation_10153442,Ilıca Mahallesi,,İzmir,,152,665
+relation_10153473,Ardıç Mahallesi,,İzmir,,88,309
+relation_10153479,Şifne Mahallesi,,İzmir,,154,558
+relation_10153504,Reisdere Mahallesi,,İzmir,,1306,1901
+relation_10153558,Yalı Mahallesi,,İzmir,,567,1824
+relation_10153664,Mavişehir Mahallesi,,İzmir,,863,9178
+relation_10153680,Yalı Mahallesi,,İzmir,,567,1824
+relation_10153696,Atakent Mahallesi,,İzmir,,434,4590
+relation_10153818,Çakabey Mahallesi,,İzmir,,36,111
+relation_10153911,Ovacık Mahallesi,,İzmir,,91,158
+relation_10153953,Musalla Mahallesi,,İzmir,,896,2711
+relation_10153969,Altınkum Mahallesi,,İzmir,,27,75
+relation_10153981,Çiftlik Mahallesi,,İzmir,,313,1204
+relation_10153990,Şehit Mehmet Mahallesi,,İzmir,,54,201
+relation_10154006,Altınyunus Mahallesi,,İzmir,,35,245
+relation_10154011,Boyalık Mahallesi,,İzmir,,56,248
+relation_10154143,Fahrettinpaşa Mahallesi,,İzmir,,72,246
+relation_10154144,İsmet İnönü Mahallesi,,İzmir,,923,2676
+relation_10154148,Sakarya Mahallesi,,İzmir,,150,616
+relation_10154159,Dalyan Mahallesi,,İzmir,,435,1191
+relation_10154184,Üniversite Mahallesi,,İzmir,,77,322
+relation_10154185,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_10154209,16 Eylül Mahallesi,,İzmir,,685,1786
+relation_10165784,Kazımdirik Mahallesi,,İzmir,,3581,19410
+relation_10165785,Barbaros Mahallesi,,İzmir,,164,191
+relation_10165786,Yıldırım Beyazıt Mahallesi,,İzmir,,1345,2983
+relation_10165808,Tuna Mahallesi,,İzmir,,1716,3561
+relation_10165809,Gazi Osman Paşa Mahallesi,,İzmir,,2849,6603
+relation_10165810,Rafet Paşa Mahallesi,,İzmir,,4286,8286
+relation_10166168,Goncalar Mahallesi,,İzmir,,1080,5907
+relation_10166169,Nergiz Mahallesi,,İzmir,,1074,5041
+relation_10166170,Bahriye Üçok Mahallesi,,İzmir,,931,847
+relation_10166171,Bahçelievler Mahallesi,,İzmir,,1130,2610
+relation_10166172,Bahariye Mahallesi,,İzmir,,1250,7646
+relation_10166173,Tersane Mahallesi,,İzmir,,672,4071
+relation_10166174,Alaybey Mahallesi,,İzmir,,772,4447
+relation_10166175,Tuna Mahallesi,,İzmir,,1716,3561
+relation_10166176,Donanmacı Mahallesi,,İzmir,,863,6424
+relation_10166177,Aksoy Mahallesi,,İzmir,,800,7831
+relation_10166178,Bostanlı Mahallesi,,İzmir,,2007,21490
+relation_10166182,Şemikler Mahallesi,,İzmir,,4284,16871
+relation_10166183,Fikri Altay Mahallesi,,İzmir,,1066,4783
+relation_10166184,Demirköprü Mahallesi,,İzmir,,738,4409
+relation_10166185,Dedebaşı Mahallesi,,İzmir,,2544,12425
+relation_10166284,Kaklıç Mahallesi,,İzmir,,324,713
+relation_10166288,Küçük Çiğli Mahallesi,,İzmir,,4587,9971
+relation_10186163,Süzbeyli Mahallesi,,İzmir,,5,27
+relation_10186171,75.Yıl Cumhuriyet Mahallesi,,İzmir,,115,255
+relation_10186178,Esentepe Mahallesi,,İzmir,,955,2991
+relation_10192312,Uğur Mumcu Mahallesi,,İzmir,,882,3007
+relation_10192313,Evka-5 Mahallesi,,İzmir,,3116,6034
+relation_10192314,Ahmet Efendi Mahallesi,,İzmir,,257,828
+relation_10192315,Balatçık Mahallesi,,İzmir,,3176,6624
+relation_10220109,Egekent Mahallesi,,İzmir,,1557,4521
+relation_10220110,Çağdaş Mahallesi,,İzmir,,519,1256
+relation_10220173,Güzeltepe Mahallesi,,İzmir,,1077,3470
+relation_10220174,Şirintepe Mahallesi,,İzmir,,1527,4432
+relation_10222876,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_10222877,Harmandalı Gazi Mustafa Kemal Atatürk Mahallesi,,İzmir,,664,1085
+relation_10222878,İnönü Mahallesi,,İzmir,,5614,12388
+relation_10222879,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_10222880,İzkent Mahallesi,,İzmir,,1072,2522
+relation_10222881,Yakakent Mahallesi,,İzmir,,1744,5313
+relation_10222882,Evka-6 Mahallesi,,İzmir,,378,1291
+relation_10222883,Evka-2 Mahallesi,,İzmir,,719,2405
+relation_10222884,Ahmet Taner Kışlalı Mahallesi,,İzmir,,921,4082
+relation_10222885,Aydınlıkevler Mahallesi,,İzmir,,569,2069
+relation_10222886,Maltepe Mahallesi,,İzmir,,2807,4574
+relation_10268459,Yenişehir Mahallesi,,İzmir,,147,137
+relation_10268460,Cengiz Topel Mahallesi,,İzmir,,617,904
+relation_10268461,Mersinli Mahallesi,,İzmir,,480,1075
+relation_10268462,Umurbey Mahallesi,,İzmir,,62,127
+relation_10268463,Halkapınar Mahallesi,,İzmir,,127,271
+relation_10268464,Çınarlı Mahallesi,,İzmir,,45,171
+relation_10322924,Mevlana Mahallesi,,İzmir,,6561,8806
+relation_10322930,Doğanlar Mahallesi,,İzmir,,6996,6391
+relation_10323004,Ümit Mahallesi,,İzmir,,1068,1621
+relation_10323348,Erzene Mahallesi,,İzmir,,3533,16654
+relation_10323355,Evka 3 Mahallesi,,İzmir,,3062,11336
+relation_10323396,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_10323425,İnönü Mahallesi,,İzmir,,5614,12388
+relation_10323444,Evka 4 Mahallesi,,İzmir,,2857,7628
+relation_10323518,Kızılay Mahallesi,,İzmir,,3859,7205
+relation_10323582,Yalı Mahallesi,,İzmir,,567,1824
+relation_10323666,Birlik Mahallesi,,İzmir,,1634,3005
+relation_10323692,Çamkule Mahallesi,,İzmir,,2100,1631
+relation_10324858,Yeşilova Mahallesi,,İzmir,,195,303
+relation_10324927,Kemalpaşa Mahallesi,,İzmir,,3040,3989
+relation_10325003,Ergene Mahallesi,,İzmir,,1713,6547
+relation_10325030,Merkez Mahallesi,,İzmir,,1613,2387
+relation_10325041,Meriç Mahallesi,,İzmir,,2231,3580
+relation_10325044,Serintepe Mahallesi,,İzmir,,2140,2396
+relation_10325062,Zafer Mahallesi,,İzmir,,964,1803
+relation_10325126,Koşukavak Mahallesi,,İzmir,,1830,3638
+relation_10325170,Karacaoğlan Mahallesi,,İzmir,,2271,3200
+relation_10325187,Yunus Emre Mahallesi,,İzmir,,931,685
+relation_10325217,Egemenlik Mahallesi,,İzmir,,613,928
+relation_10326373,Laka Mahallesi,,İzmir,,177,150
+relation_10326400,Çiçekli Mahallesi,,İzmir,,78,202
+relation_10326410,Eğridere Mahallesi,,İzmir,,147,258
+relation_10326422,Çamiçi Mahallesi,,İzmir,,85,120
+relation_10326423,Beşyol Mahallesi,,İzmir,,146,104
+relation_10326424,Gökdere Mahallesi,,İzmir,,44,275
+relation_10326438,Karaçam Mahallesi,,İzmir,,227,252
+relation_10326439,Kayadibi Mahallesi,,İzmir,,88,81
+relation_10326447,Kurudere Mahallesi,,İzmir,,123,217
+relation_10326472,Sarnıçköy Mahallesi,,İzmir,,41,34
+relation_10340018,Denizköy Mahallesi,,İzmir,,117,167
+relation_10340521,Mimar Sinan Mahallesi,,İzmir,,299,570
+relation_10340522,Alsancak Mahallesi,,İzmir,,483,3401
+relation_10340523,Murat Mahallesi,,İzmir,,1404,1868
+relation_10340524,Trakya Mahallesi,,İzmir,,374,721
+relation_10340525,Huzur Mahallesi,,İzmir,,599,912
+relation_10340526,Boğaziçi Mahallesi,,İzmir,,696,1407
+relation_10340527,Emir Sultan Mahallesi,,İzmir,,410,392
+relation_10340528,Güney Mahallesi,,İzmir,,1106,928
+relation_10340578,Küçükada Mahallesi,,İzmir,,483,652
+relation_10340579,Zeytinlik Mahallesi,,İzmir,,2147,2439
+relation_10340580,Yenidoğan Mahallesi,,İzmir,,499,663
+relation_10340581,Hilal Mahallesi,,İzmir,,973,307
+relation_10340582,Ege Mahallesi,,İzmir,,535,516
+relation_10340583,Kahramanlar Mahallesi,,İzmir,,563,2306
+relation_10340735,Ferahlı Mahallesi,,İzmir,,2143,2497
+relation_10340736,Levent Mahallesi,,İzmir,,916,1704
+relation_10340741,26 Ağustos Mahallesi,,İzmir,,591,1099
+relation_10340764,Ulubatlı Mahallesi,,İzmir,,2602,2747
+relation_10340765,Mehmet Akif Mahallesi,,İzmir,,899,973
+relation_10340766,Saygı Mahallesi,,İzmir,,1267,1685
+relation_10340767,Çınartepe Mahallesi,,İzmir,,720,2924
+relation_10340768,Atamer Mahallesi,,İzmir,,537,1684
+relation_10340769,Millet Mahallesi,,İzmir,,1235,2075
+relation_10340770,Anadolu Mahallesi,,İzmir,,360,898
+relation_10340771,Zeybek Mahallesi,,İzmir,,485,727
+relation_10340772,Yavuz Selim Mahallesi,,İzmir,,380,691
+relation_10340782,İsmet Kaptan Mahallesi,,İzmir,,59,199
+relation_10340783,Akdeniz Mahallesi,,İzmir,,39,136
+relation_10340784,Kültür Mahallesi,,İzmir,,1672,3989
+relation_10340785,İsmet Paşa Mahallesi,,İzmir,,1055,1702
+relation_10340820,Akarcalı Mahallesi,,İzmir,,1155,794
+relation_10340821,Kocakapı Mahallesi,,İzmir,,891,599
+relation_10340822,Oğuzlar Mahallesi,,İzmir,,33,45
+relation_10340823,Etiler Mahallesi,,İzmir,,483,275
+relation_10340880,Yeşildere Mahallesi,,İzmir,,210,38
+relation_10340881,Lale Mahallesi,,İzmir,,1373,1220
+relation_10340882,Mehtap Mahallesi,,İzmir,,953,1232
+relation_10340886,Ballıkuyu Mahallesi,,İzmir,,831,1062
+relation_10340915,Akıncı Mahallesi,,İzmir,,88,111
+relation_10340916,Hurşidiye Mahallesi,,İzmir,,20,27
+relation_10340917,Kestelli Mahallesi,,İzmir,,17,28
+relation_10340918,Güneş Mahallesi,,İzmir,,14,34
+relation_10340919,Güzelyurt Mahallesi,,İzmir,,9,10
+relation_10340920,Yenigün Mahallesi,,İzmir,,4990,9207
+relation_10340921,Konak Mahallesi,,İzmir,,18,38
+relation_10340927,Mirali Mahallesi,,İzmir,,265,172
+relation_10340928,Faik Paşa Mahallesi,,İzmir,,400,219
+relation_10340929,Altınordu Mahallesi,,İzmir,,268,159
+relation_10340930,Pazaryeri Mahallesi,,İzmir,,439,218
+relation_10340931,Kurtuluş Mahallesi,,İzmir,,1928,3743
+relation_10340936,Sakarya Mahallesi,,İzmir,,150,616
+relation_10340938,Vezirağa Mahallesi,,İzmir,,43,44
+relation_10340939,Kosova Mahallesi,,İzmir,,298,745
+relation_10340940,Kadifekale Mahallesi,,İzmir,,651,1003
+relation_10340941,Kubilay Mahallesi,,İzmir,,669,566
+relation_10344955,Altay Mahallesi,,İzmir,,117,225
+relation_10344956,Süvari Mahallesi,,İzmir,,404,500
+relation_10344957,Ali Reis Mahallesi,,İzmir,,373,415
+relation_10344958,Yeni Mahallesi,,İzmir,,5986,9203
+relation_10344959,Uğur Mahallesi,,İzmir,,10,33
+relation_10344960,Fevzi Paşa Mahallesi,,İzmir,,12,34
+relation_10344961,Yeşiltepe Mahallesi,,İzmir,,113,77
+relation_10345100,Odunkapı Mahallesi,,İzmir,,38,82
+relation_10345101,Sümer Mahallesi,,İzmir,,16,59
+relation_10345102,Yıldız Mahallesi,,İzmir,,5852,9587
+relation_10345103,Fatih Mahallesi,,İzmir,,581,838
+relation_10345104,Çahabey Mahallesi,,İzmir,,108,213
+relation_10345105,Mecidiye Mahallesi,,İzmir,,76,230
+relation_10345106,Güngör Mahallesi,,İzmir,,193,550
+relation_10345107,Atilla Mahallesi,,İzmir,,2200,5551
+relation_10345108,Altıntaş Mahallesi,,İzmir,,842,2963
+relation_10345109,Barbaros Mahallesi,,İzmir,,164,191
+relation_10345950,Tuzcu Mahallesi,,İzmir,,403,561
+relation_10345951,Türkyılmaz Mahallesi,,İzmir,,63,116
+relation_10345952,Kahraman Mescit Mahallesi,,İzmir,,35,50
+relation_10345953,Tan Mahallesi,,İzmir,,21,20
+relation_10345954,Ülkü Mahallesi,,İzmir,,271,411
+relation_10347758,Aziziye Mahallesi,,İzmir,,87,163
+relation_10347759,Dolaplıkuyu Mahallesi,,İzmir,,211,303
+relation_10347760,Dayıemir Mahallesi,,İzmir,,146,243
+relation_10347761,Tınaztepe Mahallesi,,İzmir,,405,723
+relation_10347762,Selçuk Mahallesi,,İzmir,,475,660
+relation_10347763,Şehit Nedim Tuğaltay Mahallesi,,İzmir,,38,64
+relation_10347764,Bozkurt Mahallesi,,İzmir,,39,61
+relation_10347765,Namık Kemal Mahallesi,,İzmir,,93,124
+relation_10347859,Kocatepe Mahallesi,,İzmir,,439,887
+relation_10347860,Zafertepe Mahallesi,,İzmir,,2597,5412
+relation_10347861,Güneşli Mahallesi,,İzmir,,88,98
+relation_10348639,19 Mayıs Mahallesi,,İzmir,,616,1085
+relation_10348640,Hasan Özdemir Mahallesi,,İzmir,,398,1275
+relation_10348641,2.Kadriye Mahallesi,,İzmir,,1607,2167
+relation_10348642,1.Kadriye Mahallesi,,İzmir,,892,3143
+relation_10348643,Duatepe Mahallesi,,İzmir,,494,980
+relation_10348644,Çimentepe Mahallesi,,İzmir,,572,1349
+relation_10348679,Mehmet Ali Akman Mahallesi,,İzmir,,538,4406
+relation_10348680,Güzelyalı Mahallesi,,İzmir,,1610,11274
+relation_10348681,Göztepe Mahallesi,,İzmir,,1345,10447
+relation_10348682,Çankaya Mahallesi,,İzmir,,1001,6602
+relation_10348683,Mithatpaşa Mahallesi,,İzmir,,176,299
+relation_10348684,Murat Reis Mahallesi,,İzmir,,1417,7060
+relation_10348685,Piri Reis Mahallesi,,İzmir,,550,2876
+relation_10348686,Kemal Reis Mahallesi,,İzmir,,506,1924
+relation_10348687,Akın Simav Mahallesi,,İzmir,,476,2336
+relation_10348688,Kılıç Reis Mahallesi,,İzmir,,1033,3923
+relation_10348689,Turgut Reis Mahallesi,,İzmir,,364,1687
+relation_10351865,Üçkuyular Mahallesi,,İzmir,,985,5981
+relation_10351866,Fahrettin Altay Mahallesi,,İzmir,,1064,6003
+relation_10353642,Örnekköy Mahallesi,,İzmir,,4608,11798
+relation_10353643,İnönü Mahallesi,,İzmir,,5614,12388
+relation_10353644,İmbatlı Mahallesi,,İzmir,,1344,4293
+relation_10353645,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_10356367,Gürpınar Mahallesi,,İzmir,,3435,3983
+relation_10356368,Yeşilçam Mahallesi,,İzmir,,1254,1090
+relation_10357363,Kavaklıdere Mahallesi,,İzmir,,1148,788
+relation_10357600,Naldöken Mahallesi,,İzmir,,2272,4054
+relation_10357613,Yakaköy Mahallesi,,İzmir,,360,647
+relation_10357702,Siteler Mahallesi,,İzmir,,2892,5483
+relation_10357703,Maltepe Mahallesi,,İzmir,,2807,4574
+relation_10359320,Teleferik Mahallesi,,İzmir,,1516,4904
+relation_10359321,Fevzi Çakmak Mahallesi,,İzmir,,1753,6075
+relation_10359322,Çetin Emeç Mahallesi,,İzmir,,1898,6175
+relation_10359323,Eğitim Mahallesi,,İzmir,,2480,7605
+relation_10359324,Onur Mahallesi,,İzmir,,2686,9250
+relation_10359325,Korutürk Mahallesi,,İzmir,,1372,7260
+relation_10359326,İnciraltı Mahallesi,,İzmir,,152,440
+relation_10359327,Bahçelerarası Mahallesi,,İzmir,,168,255
+relation_10364077,Yamanlar Mahallesi,,İzmir,,4308,7765
+relation_10364078,Sancaklı Mahallesi,,İzmir,,77,55
+relation_10364079,Latife Hanım Mahallesi,,İzmir,,614,855
+relation_10364080,Zübeyde Hanım Mahallesi,,İzmir,,3630,8001
+relation_10364081,Mustafa Kemal Mahallesi,,İzmir,,6275,5818
+relation_10364200,Huzur Mahallesi,,İzmir,,599,912
+relation_10364201,Limanreis Mahallesi,,İzmir,,385,1678
+relation_10364202,Çatalkaya Mahallesi,,İzmir,,565,4348
+relation_10364203,Narlı Mahallesi,,İzmir,,635,5044
+relation_10364204,2. İnönü Mahallesi,,İzmir,,1010,5175
+relation_10364205,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_10364206,Çamtepe Mahallesi,,İzmir,,623,3927
+relation_10364207,Yenikale Mahallesi,,İzmir,,499,3558
+relation_10364208,Ilıca Mahallesi,,İzmir,,152,665
+relation_10364209,Altıevler Mahallesi,,İzmir,,280,1200
+relation_10364210,Sahilevleri Mahallesi,,İzmir,,196,1121
+relation_10395414,Esentepe Mahallesi,,İzmir,,955,2991
+relation_10521603,Çelebi Mahallesi,,İzmir,,359,1433
+relation_10521604,Yaka Mahallesi,,İzmir,,51,363
+relation_10521605,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_10521606,Kahramandere Mahallesi,,İzmir,,381,3286
+relation_10521836,Hürriyet Mahallesi,,İzmir,,2867,7231
+relation_10521837,Çaldıran Mahallesi,,İzmir,,1285,1158
+relation_10521838,Güven Mahallesi,,İzmir,,1155,3588
+relation_10521839,Laleli Mahallesi,,İzmir,,1460,3402
+relation_10521840,Çamlık Mahallesi,,İzmir,,160,117
+relation_10521841,Yiğitler Mahallesi,,İzmir,,2617,7389
+relation_10521842,Dicle Mahallesi,,İzmir,,1705,2464
+relation_10521852,Barış Mahallesi,,İzmir,,2534,6842
+relation_10521853,Ufuk Mahallesi,,İzmir,,4447,6541
+relation_10521867,Yaylacık Mahallesi,,İzmir,,3778,7913
+relation_10521868,Menderes Mahallesi,,İzmir,,53,38
+relation_10521877,Şirinkapı Mahallesi,,İzmir,,951,1808
+relation_10521878,Aydoğdu Mahallesi,,İzmir,,2002,4123
+relation_10521886,Adatepe Mahallesi,,İzmir,,3145,8481
+relation_10521966,Murathan Mahallesi,,İzmir,,784,1910
+relation_10521967,İzkent Mahallesi,,İzmir,,1072,2522
+relation_10521968,Çağdaş Mahallesi,,İzmir,,519,1256
+relation_10521969,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_10521970,Karanfil Mahallesi,,İzmir,,917,1851
+relation_10521971,Gaziler Mahallesi,,İzmir,,31,8
+relation_10523791,İnkılap Mahallesi,,İzmir,,436,536
+relation_10547501,Dumlupınar Mahallesi,,İzmir,,639,2058
+relation_10547502,Vali Rahmi Bey Mahallesi,,İzmir,,1241,4699
+relation_10547503,Efeler Mahallesi,,İzmir,,3457,10331
+relation_10547504,Akıncılar Mahallesi,,İzmir,,2523,5392
+relation_10547505,Fırat Mahallesi,,İzmir,,5449,7838
+relation_10553872,Seyhan Mahallesi,,İzmir,,724,1035
+relation_10553873,Kozağaç Mahallesi,,İzmir,,4477,9846
+relation_10553874,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_10553875,Kuruçeşme Mahallesi,,İzmir,,2346,7696
+relation_10553876,Zafer Mahallesi,,İzmir,,964,1803
+relation_10553925,Yenigün Mahallesi,,İzmir,,4990,9207
+relation_10553926,Göksu Mahallesi,,İzmir,,9041,8440
+relation_10562903,Yıldız Mahallesi,,İzmir,,5852,9587
+relation_10562904,Buca Koop Mahallesi,,İzmir,,3469,9559
+relation_10562905,Çamlıkule Mahallesi,,İzmir,,5251,8450
+relation_10562906,Çamlıpınar Mahallesi,,İzmir,,2569,4703
+relation_10562907,Mustafa Kemal Mahallesi,,İzmir,,6275,5818
+relation_10562908,İnönü Mahallesi,,İzmir,,5614,12388
+relation_10562909,Yeşilbağlar Mahallesi,,İzmir,,5137,6338
+relation_10562971,29 Ekim Mahallesi,,İzmir,,413,500
+relation_10587691,Kaynaklar Merkez Mahallesi,,İzmir,,679,427
+relation_10587710,Yıldızlar Mahallesi,,İzmir,,323,56
+relation_10587731,Kırklar Mahallesi,,İzmir,,488,682
+relation_10587737,Doğancılar Mahallesi,,İzmir,,115,89
+relation_10587757,Belenbaşı Mahallesi,,İzmir,,480,588
+relation_10587758,Karacaağaç Mahallesi,,İzmir,,288,300
+relation_10627211,Poligon Mahallesi,,İzmir,,383,2647
+relation_10627212,Muammer Akar Mahallesi,,İzmir,,698,4782
+relation_10627213,General Kazım Özalp Mahallesi,,İzmir,,848,2710
+relation_10627219,Bahçelievler Mahallesi,,İzmir,,1130,2610
+relation_10627220,Arap Hasan Mahallesi,,İzmir,,1215,5739
+relation_10627221,Basın Sitesi Mahallesi,,İzmir,,1933,10022
+relation_10627222,Esenyalı Mahallesi,,İzmir,,703,4989
+relation_10627234,Şehitler Mahallesi,,İzmir,,847,1201
+relation_10627235,Metin Oktay Mahallesi,,İzmir,,1300,3379
+relation_10627236,Adnan Süvari Mahallesi,,İzmir,,687,2279
+relation_10627240,Esenlik Mahallesi,,İzmir,,1569,4104
+relation_10627241,Vatan Mahallesi,,İzmir,,5638,11294
+relation_10627242,Maliyeciler Mahallesi,,İzmir,,1213,2917
+relation_10627262,Osman Aksüner Mahallesi,,İzmir,,190,322
+relation_10627263,General Asım Gündüz Mahallesi,,İzmir,,381,706
+relation_10627264,Çalıkuşu Mahallesi,,İzmir,,3034,4269
+relation_10627265,Bahar Mahallesi,,İzmir,,2445,5096
+relation_10627266,Doğanay Mahallesi,,İzmir,,2001,5742
+relation_10627267,Reis Mahallesi,,İzmir,,1915,5301
+relation_10627268,Aşık Veysel Mahallesi,,İzmir,,488,684
+relation_10627475,Gülyaka Mahallesi,,İzmir,,3025,4591
+relation_10627476,Kazım Karabekir Mahallesi,,İzmir,,2868,5486
+relation_10627477,Refet Bele Mahallesi,,İzmir,,3427,4407
+relation_10627478,Tahsin Yazıcı Mahallesi,,İzmir,,1974,3852
+relation_10627479,Salih Omurtak Mahallesi,,İzmir,,1892,1760
+relation_10627494,Tırazlı Mahallesi,,İzmir,,74,32
+relation_10627495,Kavacık Mahallesi,,İzmir,,319,174
+relation_10627496,Cennetoğlu Mahallesi,,İzmir,,1088,1584
+relation_10627497,Sarıyer Mahallesi,,İzmir,,2506,3080
+relation_10627498,Bozyaka Mahallesi,,İzmir,,4917,5269
+relation_10627882,Yaşar Kemal Mahallesi,,İzmir,,2025,2992
+relation_10627883,Uzundere Mahallesi,,İzmir,,498,2199
+relation_10627899,Peker Mahallesi,,İzmir,,3765,2909
+relation_10627900,Yurdoğlu Mahallesi,,İzmir,,2360,4968
+relation_10627901,Cennetçeşme Mahallesi,,İzmir,,868,1043
+relation_10627915,Aydın Mahallesi,,İzmir,,2555,2857
+relation_10627918,Yunus Emre Mahallesi,,İzmir,,931,685
+relation_10627947,Günaltay Mahallesi,,İzmir,,6548,6057
+relation_10627948,Barış Mahallesi,,İzmir,,2534,6842
+relation_10627949,Sevgi Mahallesi,,İzmir,,1131,4488
+relation_10627950,Uğur Mumcu Mahallesi,,İzmir,,882,3007
+relation_10627951,Selvili Mahallesi,,İzmir,,2566,3212
+relation_10627952,Karabağlar Mahallesi,,İzmir,,2177,2814
+relation_10627981,Abdi İpekçi Mahallesi,,İzmir,,1802,2242
+relation_10627982,İhsan Alyanak Mahallesi,,İzmir,,2660,3284
+relation_10628120,Ali Fuat Erden Mahallesi,,İzmir,,418,941
+relation_10628121,Gazi Mahallesi,,İzmir,,3375,7407
+relation_10628122,Özgür Mahallesi,,İzmir,,2276,1247
+relation_10628123,Yüzbaşı Şerafettin Mahallesi,,İzmir,,1875,1875
+relation_10628124,Devrim Mahallesi,,İzmir,,2745,2376
+relation_10628298,Ali Fuat Cebesoy Mahallesi,,İzmir,,3399,4433
+relation_10628299,Kibar Mahallesi,,İzmir,,1890,1442
+relation_10628300,Umut Mahallesi,,İzmir,,2693,3565
+relation_10628301,Bahriye Üçok Mahallesi,,İzmir,,931,847
+relation_10628302,Limontepe Mahallesi,,İzmir,,1309,1743
+relation_10663746,Irmak Mahallesi,,İzmir,,3404,7109
+relation_10663747,Zafer Mahallesi,,İzmir,,964,1803
+relation_10663748,Aktepe Mahallesi,,İzmir,,113,237
+relation_10663749,Emrez Mahallesi,,İzmir,,1651,1949
+relation_10663750,Binbaşı Reşatbey Mahallesi,,İzmir,,591,1646
+relation_10663751,Gazi Mahallesi,,İzmir,,3375,7407
+relation_10663752,Atıfbey Mahallesi,,İzmir,,3168,8277
+relation_10663753,Yeşil Mahallesi,,İzmir,,1765,4609
+relation_10663754,Gazikent Mahallesi,,İzmir,,1152,4062
+relation_10663755,Sevgi Mahallesi,,İzmir,,1131,4488
+relation_10663756,Beyazevler Mahallesi,,İzmir,,1227,2941
+relation_10663757,Dokuz Eylül Mahallesi,,İzmir,,2367,4052
+relation_10663758,Menderes Mahallesi,,İzmir,,53,38
+relation_10663759,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_10663760,Fatih Mahallesi,,İzmir,,581,838
+relation_10663761,Hürriyet Mahallesi,,İzmir,,2867,7231
+relation_10663975,Payamlı Mahallesi,,İzmir,,84,144
+relation_10663976,Küçükkaya Mahallesi,,İzmir,,78,134
+relation_10663977,Mustafa Kemal Paşa Mahallesi,,İzmir,,501,1945
+relation_10663978,Yelki Mahallesi,,İzmir,,751,3362
+relation_10663979,Çamlı Mahallesi,,İzmir,,233,1146
+relation_10816692,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_10911859,Alaçatı Mahallesi,,İzmir,,1547,5698
+relation_10911860,Germiyan Mahallesi,,İzmir,,299,863
+relation_10911861,Karaköy Mahallesi,,İzmir,,140,30
+relation_10911862,Ildır Mahallesi,,İzmir,,107,475
+relation_11158062,Çaltılıdere Mahallesi,,İzmir,,179,349
+relation_11158063,Çakmaklı Mahallesi,,İzmir,,165,401
+relation_11158082,Horozgediği Mahallesi,,İzmir,,109,111
+relation_11158291,Mimar Sinan Mahallesi,,İzmir,,299,570
+relation_11158292,Fatih Mahallesi,,İzmir,,581,838
+relation_11158293,Bozköy Mahallesi,,İzmir,,265,157
+relation_11158462,Şehitkemal Mahallesi,,İzmir,,222,290
+relation_11158463,B.Hayrettin Paşa Mahallesi,,İzmir,,436,532
+relation_11158473,Yukarı Şehitkemal Mahallesi,,İzmir,,73,339
+relation_11158525,Karakuzu Mahallesi,,İzmir,,278,161
+relation_11158526,Uzunhasanlar Mahallesi,,İzmir,,73,132
+relation_11158527,Çıtak Mahallesi,,İzmir,,248,179
+relation_11158549,Çoraklar Mahallesi,,İzmir,,29,26
+relation_11158585,Karaköy Mahallesi,,İzmir,,140,30
+relation_11158751,Kalabak Mahallesi,,İzmir,,231,101
+relation_11158817,Hacıömerli Mahallesi,,İzmir,,330,329
+relation_11158833,Kapukaya Mahallesi,,İzmir,,110,24
+relation_11158837,Yüksekköy Mahallesi,,İzmir,,101,26
+relation_11158875,Aşağışakran Mahallesi,,İzmir,,87,107
+relation_11158876,Bahçedere Mahallesi,,İzmir,,871,1953
+relation_11160084,Dağıstan Mahallesi,,İzmir,,333,84
+relation_11160085,Seklik Mahallesi,,İzmir,,134,90
+relation_11160100,Rahmanlar Mahallesi,,İzmir,,80,21
+relation_11160317,Balıklıova Mahallesi,,İzmir,,202,699
+relation_11160327,Bademler Mahallesi,,İzmir,,91,1600
+relation_11160339,Yemişlik Mahallesi,,İzmir,,423,632
+relation_11160340,Tepeköy Mahallesi,,İzmir,,36,793
+relation_11160446,Bahçeli Mahallesi,,İzmir,,303,257
+relation_11160769,Tuzçullu Mahallesi,,İzmir,,52,140
+relation_11160811,29 Ekim Mahallesi,,İzmir,,413,500
+relation_11160812,9 Eylül Mahallesi,,İzmir,,1267,5014
+relation_11160965,İstiklal Mahallesi,,İzmir,,1060,1333
+relation_11160966,30 Ağustos Mahallesi,,İzmir,,2905,9447
+relation_11161040,Günerli Mahallesi,,İzmir,,41,87
+relation_11161045,Gazi Mahallesi,,İzmir,,3375,7407
+relation_11161046,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11161052,Villakent Mahallesi,,İzmir,,208,1542
+relation_11161054,Mustafa Kemal Atatürk Mahallesi,,İzmir,,1271,3433
+relation_11161056,İnönü Mahallesi,,İzmir,,5614,12388
+relation_11161057,Gazi Mustafa Kemal Mahallesi,,İzmir,,515,1124
+relation_11161063,85.Yıl Cumhuriyet Mahallesi,,İzmir,,146,380
+relation_11161138,Güney Mahallesi,,İzmir,,1106,928
+relation_11161168,Gökçealan Mahallesi,,İzmir,,204,514
+relation_11161245,Güvendik Mahallesi,,İzmir,,364,1973
+relation_11161312,İskele Mahallesi,,İzmir,,305,1195
+relation_11161417,Bozyerler Mahallesi,,İzmir,,141,57
+relation_11161458,Havuzbaşı Mahallesi,,İzmir,,21,241
+relation_11161505,Kesik Mahallesi,,İzmir,,240,284
+relation_11162794,Salihler Mahallesi,,İzmir,,523,2486
+relation_11163044,Kabakum Mahallesi,,İzmir,,317,1173
+relation_11163053,Mersin Alanı Mahallesi,,İzmir,,682,1474
+relation_11163080,Gümüldür Cumhuriyet Mahallesi,,İzmir,,245,387
+relation_11163689,Kıratlı Mahallesi,,İzmir,,194,292
+relation_11186102,Denizli Mahallesi,,İzmir,,425,2247
+relation_11269139,Yelaltı Mahallesi,,İzmir,,464,1814
+relation_11269140,Yenikent Mahallesi,,İzmir,,240,467
+relation_11269141,Şirinkent Mahallesi,,İzmir,,213,1150
+relation_11269142,Kalabak Mahallesi,,İzmir,,231,101
+relation_11269143,M.Fevzi Çakmak Mahallesi,,İzmir,,541,1767
+relation_11269144,Zeytinalanı Mahallesi,,İzmir,,454,1133
+relation_11269145,Çamlıçay Mahallesi,,İzmir,,348,1702
+relation_11269302,Hacı İsa Mahallesi,,İzmir,,214,937
+relation_11269303,Yenice Mahallesi,,İzmir,,40,49
+relation_11269304,Ovacık Mahallesi,,İzmir,,91,158
+relation_11271414,Camiatik Mahallesi,,İzmir,,185,400
+relation_11271415,Naipli Mahallesi,,İzmir,,71,160
+relation_11271416,Yeni Mahallesi,,İzmir,,5986,9203
+relation_11271597,Torbalı Mahallesi,,İzmir,,5432,8657
+relation_11271598,Alpkent Mahallesi,,İzmir,,2293,3706
+relation_11271599,Yedi Eylül Mahallesi,,İzmir,,932,1112
+relation_11271600,Ertuğrul Mahallesi,,İzmir,,566,1171
+relation_11271601,Karşıyaka Mahallesi,,İzmir,,513,914
+relation_11271602,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11271845,Mustafa Kemal Atatürk Mahallesi,,İzmir,,1271,3433
+relation_11271846,Çaybaşı Mahallesi,,İzmir,,341,633
+relation_11271847,Yeni Mahalle,,İzmir,,2277,6327
+relation_11271848,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11271849,Muratbey Mahallesi,,İzmir,,4004,9250
+relation_11271899,Kazım Dirik Mahallesi,,İzmir,,1855,3706
+relation_11271900,Yenibağarası Mahallesi,,İzmir,,640,1172
+relation_11274520,Hacıveli Mahallesi,,İzmir,,364,1122
+relation_11274541,Kemal Atatürk Mahallesi,,İzmir,,214,411
+relation_11274694,Kemal Atatürk Mahallesi,,İzmir,,214,411
+relation_11280971,Gölcük Mahallesi,,İzmir,,1232,2544
+relation_11280972,İncirli Pınar Mahallesi,,İzmir,,581,2308
+relation_11281274,Mareşal Fevzi Çakmak Mahallesi,,İzmir,,254,394
+relation_11281314,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11281315,Kozbeyli Mahallesi,,İzmir,,149,384
+relation_11281316,Ilıpınar Mahallesi,,İzmir,,191,399
+relation_11281323,Yeniköy Mahallesi,,İzmir,,63,147
+relation_11282362,Fevzi Çakmak Mahallesi,,İzmir,,1753,6075
+relation_11282363,Mustafa Kemal Atatürk Mahallesi,,İzmir,,1271,3433
+relation_11282364,Koca Mehmetler Mahallesi,,İzmir,,10,111
+relation_11282426,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11282427,Fevzipaşa Mahallesi,,İzmir,,659,927
+relation_11282428,İsmetpaşa Mahallesi,,İzmir,,2030,4850
+relation_11282429,Fatih Mahallesi,,İzmir,,581,838
+relation_11284528,Osmaniye Mahallesi,,İzmir,,922,1025
+relation_11284529,Poyracık Mahallesi,,İzmir,,1966,2055
+relation_11284531,Yeni Mahalle,,İzmir,,2277,6327
+relation_11284941,Türkcedit Mahallesi,,İzmir,,469,853
+relation_11284942,Fatih Mahallesi,,İzmir,,581,838
+relation_11285098,Dündarlı Mahallesi,,İzmir,,54,189
+relation_11285133,Işıklar Mahallesi,,İzmir,,576,936
+relation_11285134,Yayakent Mahallesi,,İzmir,,377,543
+relation_11285299,Cumalı Mahallesi,,İzmir,,63,90
+relation_11285665,Irmak Mahallesi,,İzmir,,3404,7109
+relation_11285666,Esatpaşa Mahallesi,,İzmir,,2180,4170
+relation_11285667,Ulus Mahallesi,,İzmir,,855,1241
+relation_11285668,Zeytinlik Mahallesi,,İzmir,,2147,2439
+relation_11358218,Hürriyet Mahallesi,,İzmir,,2867,7231
+relation_11358219,Ata Mahallesi,,İzmir,,341,984
+relation_11358220,Kısık Mahallesi,,İzmir,,144,172
+relation_11358315,Görece Cumhuriyet Mahallesi,,İzmir,,649,1075
+relation_11358367,Gazipaşa Mahallesi,,İzmir,,169,220
+relation_11358627,İsmet İnönü Mahallesi,,İzmir,,923,2676
+relation_11358628,Tülbentli Mahallesi,,İzmir,,454,766
+relation_11358630,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11358631,Seydinnasrullah Mahallesi,,İzmir,,260,137
+relation_11358632,Zafer Mahallesi,,İzmir,,964,1803
+relation_11358633,Kazımpaşa Mahallesi,,İzmir,,1020,493
+relation_11358634,Kasımpaşa Mahallesi,,İzmir,,1637,2711
+relation_11359457,Camiikebir Mahallesi,,İzmir,,382,527
+relation_11359458,Mermerli Mahallesi,,İzmir,,2026,3400
+relation_11359459,Ahıhıdır Mahallesi,,İzmir,,979,293
+relation_11359460,Gaybi Mahallesi,,İzmir,,178,215
+relation_11369066,Gökçeyurt Mahallesi,,İzmir,,29,17
+relation_11369067,Halilbeyli Mahallesi,,İzmir,,553,496
+relation_11479460,Anafartalar Mahallesi,,İzmir,,2118,3623
+relation_11479461,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11479512,Atmaca Mahallesi,,İzmir,,775,398
+relation_11479513,Gazipaşa Mahallesi,,İzmir,,169,220
+relation_11479514,Barbaros Mahallesi,,İzmir,,164,191
+relation_11480802,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11480803,Yeni Mahallesi,,İzmir,,5986,9203
+relation_11480804,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11480805,Hürriyet Mahallesi,,İzmir,,2867,7231
+relation_11480806,Fatih Mahallesi,,İzmir,,581,838
+relation_11482352,Merkez Mahallesi,,İzmir,,1613,2387
+relation_11505377,İskele Mahallesi,,İzmir,,305,1195
+relation_11505498,Bozköy Mahallesi,,İzmir,,265,157
+relation_11524864,Musabey Mahallesi,,İzmir,,109,118
+relation_11554911,Buruncuk Mahallesi,,İzmir,,117,218
+relation_11554912,Çavuş Mahallesi,,İzmir,,131,176
+relation_11556394,Fatih Mahallesi,,İzmir,,581,838
+relation_11556395,Yıldırım Mahallesi,,İzmir,,533,431
+relation_11556507,Anbarseki Mahallesi,,İzmir,,16,166
+relation_11556508,Saip Mahallesi,,İzmir,,49,258
+relation_11557114,Kösedere Mahallesi,,İzmir,,81,270
+relation_11557196,İnecik Mahallesi,,İzmir,,34,209
+relation_11557455,Mordoğan Mahallesi,,İzmir,,1108,2880
+relation_11557456,Eğlenhoca Mahallesi,,İzmir,,117,254
+relation_11557951,Küçükbahçe Mahallesi,,İzmir,,102,283
+relation_11558383,Sarpıncık Mahallesi,,İzmir,,47,58
+relation_11558384,Hasseki Mahallesi,,İzmir,,31,76
+relation_11558385,Tepeboz Mahallesi,,İzmir,,79,205
+relation_11558386,Yayla Mahallesi,,İzmir,,50,30
+relation_11558387,Parlak Mahallesi,,İzmir,,41,94
+relation_11558388,Salman Mahallesi,,İzmir,,40,71
+relation_11558740,Zeytindağ Mahallesi,,İzmir,,974,786
+relation_11558792,Gökçeağıl Mahallesi,,İzmir,,112,92
+relation_11558793,Örlemiş Mahallesi,,İzmir,,110,108
+relation_11560398,Çukuralanı Mahallesi,,İzmir,,50,34
+relation_11560399,Nebiler Mahallesi,,İzmir,,107,66
+relation_11560542,Yanıkköy Mahallesi,,İzmir,,355,196
+relation_11560543,Hatundere Mahallesi,,İzmir,,539,783
+relation_11560563,Doğa Mahallesi,,İzmir,,206,175
+relation_11561284,Mazılı Mahallesi,,İzmir,,44,71
+relation_11561744,Demircilik Mahallesi,,İzmir,,280,288
+relation_11561745,Sadıkpaşa Mahallesi,,İzmir,,1302,1857
+relation_11561746,Hatay Mahallesi,,İzmir,,127,226
+relation_11561747,Fatih Mahallesi,,İzmir,,581,838
+relation_11561748,Çınar Mahallesi,,İzmir,,67,44
+relation_11561749,Yeni Mahalle,,İzmir,,2277,6327
+relation_11561751,Camii Mahallesi,,İzmir,,220,205
+relation_11561752,Hacı İbrahim Mahallesi,,İzmir,,407,463
+relation_11561753,Yenice Mahallesi,,İzmir,,40,49
+relation_11561754,Kurt Mahallesi,,İzmir,,217,252
+relation_11561755,Mithatpaşa Mahallesi,,İzmir,,176,299
+relation_11561756,Bıyıklar Mahallesi,,İzmir,,187,200
+relation_11561757,Hacı Beşir Mahallesi,,İzmir,,209,248
+relation_11562152,Havutçulu Mahallesi,,İzmir,,104,101
+relation_11562153,Çamlık Mahallesi,,İzmir,,160,117
+relation_11562208,Acarlar Mahallesi,,İzmir,,112,176
+relation_11562209,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11562210,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11562211,Sultaniye Mahallesi,,İzmir,,15,23
+relation_11562217,Zeytinköy Mahallesi,,İzmir,,238,308
+relation_11562218,14 Mayıs Mahallesi,,İzmir,,1545,3080
+relation_11562225,Zafer Mahallesi,,İzmir,,964,1803
+relation_11562233,Şirince Mahallesi,,İzmir,,82,259
+relation_11562234,Barutçu Mahallesi,,İzmir,,68,83
+relation_11562235,Belevi Mahallesi,,İzmir,,616,767
+relation_11562236,İsa Bey Mahallesi,,İzmir,,578,1158
+relation_11564441,Uğur Mumcu Mahallesi,,İzmir,,882,3007
+relation_11564442,Çukurköy Mahallesi,,İzmir,,471,76
+relation_11569661,Sığacık Mahallesi,,İzmir,,499,2388
+relation_11569662,Camikebir Mahallesi,,İzmir,,1943,6223
+relation_11645405,Ahmetli Mahallesi,,İzmir,,262,520
+relation_11645429,Yeniköy Mahallesi,,İzmir,,63,147
+relation_11645430,Sağlık Mahallesi,,İzmir,,58,63
+relation_11645602,Özbey Mahallesi,,İzmir,,1026,851
+relation_11645657,Kuşçuburun Mahallesi,,İzmir,,494,777
+relation_11645658,Kaplancık Mahallesi,,İzmir,,79,125
+relation_11768800,Mithatpaşa Mahallesi,,İzmir,,176,299
+relation_11768801,Kemalpaşa Mahallesi,,İzmir,,3040,3989
+relation_11768848,Kasımpaşa Mahallesi,,İzmir,,1637,2711
+relation_11768849,Gölcükler Mahallesi,,İzmir,,1481,2152
+relation_11768895,Mehmet Akif Ersoy Mahallesi,,İzmir,,7591,5511
+relation_11769033,Yeşil Pınar Mahallesi,,İzmir,,1001,1309
+relation_11769264,Süleyman Demirel Mahallesi,,İzmir,,2346,3923
+relation_11769265,Zafer Mahallesi,,İzmir,,964,1803
+relation_11769266,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11769267,İnönü Mahallesi,,İzmir,,5614,12388
+relation_11769278,Hürriyet Mahallesi,,İzmir,,2867,7231
+relation_11769333,Umurbey Mahallesi,,İzmir,,62,127
+relation_11769334,Akıncılar Mahallesi,,İzmir,,2523,5392
+relation_11769335,Mimar Sinan Mahallesi,,İzmir,,299,570
+relation_11769336,Bengisu Mahallesi,,İzmir,,1668,1847
+relation_11769337,Kuvvetli Mahallesi,,İzmir,,698,476
+relation_11769358,Türkmen Mahallesi,,İzmir,,1816,1304
+relation_11769359,Meşrutiyet Mahallesi,,İzmir,,311,358
+relation_11769360,Üç Eylül Mahallesi,,İzmir,,1247,1599
+relation_11769361,Emmioğlu Mahallesi,,İzmir,,667,576
+relation_11769364,Ketenci Mahallesi,,İzmir,,464,451
+relation_11769409,İstiklal Mahallesi,,İzmir,,1060,1333
+relation_11769410,Paşa Mahallesi,,İzmir,,274,338
+relation_11769411,İpekçiler Mahallesi,,İzmir,,504,605
+relation_11769412,Dere Mahallesi,,İzmir,,497,531
+relation_11769413,Kurtuluş Mahallesi,,İzmir,,1928,3743
+relation_11769415,İbni Melek Mahallesi,,İzmir,,1149,1837
+relation_11769416,4 Eylül Mahallesi,,İzmir,,1019,1661
+relation_11769434,Toki Mahallesi,,İzmir,,784,868
+relation_11769435,Adnan Menderes Mahallesi,,İzmir,,1181,1819
+relation_11769436,İhsaniye Mahallesi,,İzmir,,16,72
+relation_11769445,Turan Mahallesi,,İzmir,,56,256
+relation_11769446,Bahariye Mahallesi,,İzmir,,1250,7646
+relation_11769447,Ertuğrul Mahallesi,,İzmir,,566,1171
+relation_11769448,Dumlupınar Mahallesi,,İzmir,,639,2058
+relation_11769573,İslamlar Mahallesi,,İzmir,,50,127
+relation_11769574,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11771534,Kızılçukur Mahallesi,,İzmir,,150,34
+relation_11773294,Kıroba Mahallesi,,İzmir,,23,28
+relation_11773411,İsmetpaşa Mahallesi,,İzmir,,2030,4850
+relation_11773444,Ertuğrul Mahallesi,,İzmir,,566,1171
+relation_11773573,Turabey Mahallesi,,İzmir,,1132,1089
+relation_11773574,İnkılap Mahallesi,,İzmir,,436,536
+relation_11773580,Zafer Mahallesi,,İzmir,,964,1803
+relation_11773653,İslamsaray Mahallesi,,İzmir,,451,347
+relation_11773666,Fevzipaşa Mahallesi,,İzmir,,659,927
+relation_11773667,Gaziosmanpaşa Mahallesi,,İzmir,,2315,3020
+relation_11773668,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11773669,Maltepe Mahallesi,,İzmir,,2807,4574
+relation_11773681,Fatih Mahallesi,,İzmir,,581,838
+relation_11773690,Bahçelievler Mahallesi,,İzmir,,1130,2610
+relation_11775903,Kurtuluş Mahallesi,,İzmir,,1928,3743
+relation_11775904,Selçuk Mahallesi,,İzmir,,475,660
+relation_11775906,Talatpaşa Mahallesi,,İzmir,,283,249
+relation_11776880,Turgutlar Mahallesi,,İzmir,,12,28
+relation_11777375,Çapak Mahallesi,,İzmir,,564,636
+relation_11777501,Yahşelli Mahallesi,,İzmir,,983,1618
+relation_11777518,Soğukpınar Mahallesi,,İzmir,,3696,2917
+relation_11784064,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11787862,Yaka Mahallesi,,İzmir,,51,363
+relation_11790538,Sıra Mahallesi,,İzmir,,673,1370
+relation_11790543,Altıntaş Mahallesi,,İzmir,,842,2963
+relation_11790608,Özbek Mahallesi,,İzmir,,198,1040
+relation_11790609,Torasan Mahallesi,,İzmir,,233,863
+relation_11790610,Rüstem Mahallesi,,İzmir,,198,652
+relation_11790618,İstiklal Mahallesi,,İzmir,,1060,1333
+relation_11790619,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11790641,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_11790642,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_11790778,Yenice Mahallesi,,İzmir,,40,49
+relation_11790779,Kocaoba Mahallesi,,İzmir,,58,60
+relation_11790783,Çağlan Mahallesi,,İzmir,,74,22
+relation_11790784,Samanlıkköy Mahallesi,,İzmir,,50,23
+relation_11794262,Salimbey Mahallesi,,İzmir,,961,3162
+relation_11794464,Gazipaşa Mahallesi,,İzmir,,169,220
+relation_11794476,Hıdırlık Mahallesi,,İzmir,,1390,3770
+relation_11794496,Turabiye Mahallesi,,İzmir,,1577,2844
+relation_11794509,Çolak İbrahim Bey Mahallesi,,İzmir,,863,2153
+relation_11875176,Yeni Mahalle,,İzmir,,2277,6327
+relation_11875182,Cüneytbey Mahallesi,,İzmir,,2156,3326
+relation_11875183,Barbaros Mahallesi,,İzmir,,164,191
+relation_11923069,Çandarlı Mahallesi,,İzmir,,1395,4631
+relation_11979934,Haykıran Mahallesi,,İzmir,,385,344
+relation_11979935,Belen Mahallesi,,İzmir,,71,105
+relation_11979936,Bozalan Mahallesi,,İzmir,,172,33
+relation_12010393,Pancar Mahallesi,,İzmir,,367,695
+relation_12010428,Yeşilköy Mahallesi,,İzmir,,68,57
+relation_12010429,Türkmenköy Mahallesi,,İzmir,,343,802
+relation_12010430,Kazım Karabekir Mahallesi,,İzmir,,2868,5486
+relation_12114457,İçmeler Mahallesi,,İzmir,,485,1701
+relation_12118725,Hasanlar Mahallesi,,İzmir,,73,137
+relation_12193234,Değirmendere Mahallesi,,İzmir,,264,878
+relation_12193235,Yayla Mahallesi,,İzmir,,50,30
+relation_12193404,Emiralem Merkez Mahallesi,,İzmir,,372,572
+relation_12193405,Telekler Mahallesi,,İzmir,,64,52
+relation_12193406,Süleymanlı Mahallesi,,İzmir,,20,95
+relation_12193407,Görece Mahallesi,,İzmir,,144,124
+relation_12193408,İğnedere Mahallesi,,İzmir,,62,31
+relation_12193561,Bağcılar Mahallesi,,İzmir,,67,76
+relation_12193562,Ayvacık Mahallesi,,İzmir,,125,146
+relation_12193563,Çaltı Mahallesi,,İzmir,,13,227
+relation_12193564,Karaorman Mahallesi,,İzmir,,51,32
+relation_12193565,Alaniçi Mahallesi,,İzmir,,184,96
+relation_12193566,Kır Mahallesi,,İzmir,,82,87
+relation_12193567,Göktepe Mahallesi,,İzmir,,272,253
+relation_12194047,Demirci Mahallesi,,İzmir,,119,224
+relation_12194066,Yoğurtçular Mahallesi,,İzmir,,176,138
+relation_12194255,Ayrancılar Mahallesi,,İzmir,,4833,5639
+relation_12194256,Fevzi Çakmak Mahallesi,,İzmir,,1753,6075
+relation_12194257,Bahçelievler Mahallesi,,İzmir,,1130,2610
+relation_12194258,İnönü Mahallesi,,İzmir,,5614,12388
+relation_12194263,İstiklal Mahallesi,,İzmir,,1060,1333
+relation_12194264,Yazıbaşı Mahallesi,,İzmir,,867,1145
+relation_12194321,Bozköy Mahallesi,,İzmir,,265,157
+relation_12194327,Çakırbeyli Mahallesi,,İzmir,,249,187
+relation_12194332,Saipler Mahallesi,,İzmir,,71,134
+relation_12195186,Ortaköy Mahallesi,,İzmir,,41,63
+relation_12195216,Karakuyu Mahallesi,,İzmir,,352,364
+relation_12195220,Dağkızılca Mahallesi,,İzmir,,235,377
+relation_12195230,Karaot Mahallesi,,İzmir,,71,179
+relation_12195325,Karakızlar Mahallesi,,İzmir,,155,228
+relation_12195653,Gazi Mustafa Kemal Mahallesi,,İzmir,,515,1124
+relation_12195768,Dirmil Mahallesi,,İzmir,,291,317
+relation_12195955,Ormanköy Mahallesi,,İzmir,,59,117
+relation_12195986,Çamlıca Mahallesi,,İzmir,,105,140
+relation_12196178,Dağteke Mahallesi,,İzmir,,83,43
+relation_12196179,Helvacı Mahallesi,,İzmir,,70,85
+relation_12196185,Düverlik Mahallesi,,İzmir,,81,40
+relation_12196251,Eğerci Mahallesi,,İzmir,,293,329
+relation_12196292,Taşkesik Mahallesi,,İzmir,,60,213
+relation_12196323,Arslanlar Mahallesi,,İzmir,,257,338
+relation_12196329,Şehitler Mahallesi,,İzmir,,847,1201
+relation_12196419,Pamukyazı Mahallesi,,İzmir,,482,845
+relation_12196484,19 Mayıs Mahallesi,,İzmir,,616,1085
+relation_12196595,Kırbaş Mahallesi,,İzmir,,75,103
+relation_12196694,Atalan Mahallesi,,İzmir,,111,218
+relation_12196736,Subaşı Mahallesi,,İzmir,,424,1017
+relation_12196870,Naime Mahallesi,,İzmir,,52,176
+relation_12197013,Bülbüldere Mahallesi,,İzmir,,43,78
+relation_12197014,Tulum Mahallesi,,İzmir,,62,237
+relation_12197015,Göllüce Mahallesi,,İzmir,,68,398
+relation_12197963,İhsaniye Mahallesi,,İzmir,,16,72
+relation_12198041,Turgut Mahallesi,,İzmir,,78,216
+relation_12198081,Düzce Mahallesi,,İzmir,,238,653
+relation_12198082,Ulamış Mahallesi,,İzmir,,391,1662
+relation_12198090,Tepecik Mahallesi,,İzmir,,704,1641
+relation_12198346,Bengiler Mahallesi,,İzmir,,610,1245
+relation_12198359,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_12198390,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_12198469,Payamlı Mahallesi,,İzmir,,84,144
+relation_12198597,Kavakdere Mahallesi,,İzmir,,77,140
+relation_12198819,Orhanlı Mahallesi,,İzmir,,358,608
+relation_12198846,Beyler Mahallesi,,İzmir,,115,183
+relation_12198868,Gölcük Mahallesi,,İzmir,,1232,2544
+relation_12199030,Gödence Mahallesi,,İzmir,,93,148
+relation_12199031,Çamtepe Mahallesi,,İzmir,,623,3927
+relation_12199068,Oğlananası Atatürk Mahallesi,,İzmir,,363,423
+relation_12199080,Bulgurca Mahallesi,,İzmir,,556,795
+relation_12199081,Oğlananası Cumhuriyet Mahallesi,,İzmir,,351,369
+relation_12199091,Gümüldür Atatürk Mahallesi,,İzmir,,337,708
+relation_12199126,Gümüldür Fevzi Çakmak Mahallesi,,İzmir,,1202,1770
+relation_12199177,Gümüldür İnönü Mahallesi,,İzmir,,156,504
+relation_12199191,Gölova Mahallesi,,İzmir,,127,80
+relation_12199278,Ahmetbeyli Mahallesi,,İzmir,,174,641
+relation_12199298,Özdere Cumhuriyet Mahallesi,,İzmir,,421,691
+relation_12199301,Orta Mahallesi,,İzmir,,79,87
+relation_12199302,Çukuraltı Mahallesi,,İzmir,,1173,2832
+relation_12199392,Çakaltepe Mahallesi,,İzmir,,194,273
+relation_12199408,Karakuyu Mahallesi,,İzmir,,352,364
+relation_12199436,Ataköy Mahallesi,,İzmir,,413,833
+relation_12199437,Çile Mahallesi,,İzmir,,117,335
+relation_12199686,Çamönü Mahallesi,,İzmir,,472,705
+relation_12199754,Altıntepe Mahallesi,,İzmir,,1364,937
+relation_12199773,Tekeli Fevzi Çakmak Mahallesi,,İzmir,,631,392
+relation_12199885,Akçaköy Mahallesi,,İzmir,,160,113
+relation_12199898,Tekeli Atatürk Mahallesi,,İzmir,,588,403
+relation_12199934,Çileme Mahallesi,,İzmir,,641,614
+relation_12199977,Keler Mahallesi,,İzmir,,62,49
+relation_12200004,Sancaklı Mahallesi,,İzmir,,77,55
+relation_12200005,Değirmendere Mahallesi,,İzmir,,264,878
+relation_12200042,Develi Mahallesi,,İzmir,,969,567
+relation_12200054,Şaşal Mahallesi,,İzmir,,288,76
+relation_12200055,Dereköy Mahallesi,,İzmir,,104,83
+relation_12200943,Kuyucak Mahallesi,,İzmir,,301,150
+relation_12200987,Küner Mahallesi,,İzmir,,1385,240
+relation_12200988,Yeniköy Mahallesi,,İzmir,,63,147
+relation_12200996,Çatalca Mahallesi,,İzmir,,209,251
+relation_12200997,Efemçukuru Mahallesi,,İzmir,,116,164
+relation_12202667,Aziziye Mahallesi,,İzmir,,87,163
+relation_12202726,Hamzahocalı Mahallesi,,İzmir,,103,84
+relation_12202891,Kocaköy Mahallesi,,İzmir,,22,5
+relation_12202911,Bekirler Mahallesi,,İzmir,,14,10
+relation_12202981,Yeniçiftlik Mahallesi,,İzmir,,101,254
+relation_12203062,Ayaklıkırı Mahallesi,,İzmir,,119,115
+relation_12203417,Yağcılar Mahallesi,,İzmir,,64,266
+relation_12203431,Yukarıtosunlar Mahallesi,,İzmir,,62,56
+relation_12211986,Kuşçular Mahallesi,,İzmir,,1010,1430
+relation_12212000,Demircili Mahallesi,,İzmir,,263,326
+relation_12212006,Yağcılar Mahallesi,,İzmir,,64,266
+relation_12212045,Bademli Mahallesi,,İzmir,,252,683
+relation_12212078,Yahşibey Mahallesi,,İzmir,,48,139
+relation_12212182,Merdivenli Mahallesi,,İzmir,,106,55
+relation_12212200,Katıralanı Mahallesi,,İzmir,,51,69
+relation_12212201,Yaylayurt Mahallesi,,İzmir,,19,272
+relation_12212206,Deliktaş Mahallesi,,İzmir,,19,1210
+relation_12212244,Demirtaş Mahallesi,,İzmir,,69,123
+relation_12212254,Uzunburun Mahallesi,,İzmir,,41,148
+relation_12212255,Esentepe Mahallesi,,İzmir,,955,2991
+relation_12212287,Vişneli Mahallesi,,İzmir,,154,315
+relation_12212301,Çınarköy Mahallesi,,İzmir,,236,594
+relation_12212323,Gülbahçe Mahallesi,,İzmir,,385,2050
+relation_12212354,Kadıovacık Mahallesi,,İzmir,,84,134
+relation_12212355,Barbaros Mahallesi,,İzmir,,164,191
+relation_12212469,Zeytinler Mahallesi,,İzmir,,105,189
+relation_12212474,Zeytineli Mahallesi,,İzmir,,177,134
+relation_12212487,Birgi Mahallesi,,İzmir,,638,683
+relation_12212488,Uzunkuyu Mahallesi,,İzmir,,71,264
+relation_12212489,Nohutalan Mahallesi,,İzmir,,44,79
+relation_12212571,Kızılüzüm Mahallesi,,İzmir,,330,184
+relation_12212582,Mustafa Kemal Atatürk Mahallesi,,İzmir,,1271,3433
+relation_12212586,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_12212595,İstiklal Mahallesi,,İzmir,,1060,1333
+relation_12215206,Örnekköy Mahallesi,,İzmir,,4608,11798
+relation_12215301,Sarıçalı Mahallesi,,İzmir,,14,256
+relation_12215465,Zeamet Mahallesi,,İzmir,,17,20
+relation_12215472,Hamzababa Mahallesi,,İzmir,,6,82
+relation_12215483,Çınardibi Mahallesi,,İzmir,,231,380
+relation_12215492,Tokatbaşı Mahallesi,,İzmir,,151,193
+relation_12215523,Karahalilli Mahallesi,,İzmir,,163,137
+relation_12215567,Fırınlı Mahallesi,,İzmir,,385,396
+relation_12215647,Damlacık Mahallesi,,İzmir,,560,251
+relation_12215714,Kuyucak Mahallesi,,İzmir,,301,150
+relation_12215741,Ansızca Mahallesi,,İzmir,,241,216
+relation_12215756,Beşpınar Mahallesi,,İzmir,,37,55
+relation_12215819,Yenmiş Mahallesi,,İzmir,,126,104
+relation_12215841,Aşağı Yenmiş Mahallesi,,İzmir,,236,145
+relation_12215886,Sütçüler Mahallesi,,İzmir,,1654,983
+relation_12215901,Çiniliköy Mahallesi,,İzmir,,76,167
+relation_12215932,Nazarköy Mahallesi,,İzmir,,99,168
+relation_12215970,Seyrekli Mahallesi,,İzmir,,225,198
+relation_12216005,Karakova Mahallesi,,İzmir,,46,34
+relation_12216006,Kazanlı Mahallesi,,İzmir,,167,180
+relation_12216127,Çayır Mahallesi,,İzmir,,383,27
+relation_12216140,Hamam Mahallesi,,İzmir,,358,62
+relation_12216146,Ahmetbeyler Mahallesi,,İzmir,,141,34
+relation_12216148,Atçılar Mahallesi,,İzmir,,32,17
+relation_12216158,Sucahlı Mahallesi,,İzmir,,103,52
+relation_12216159,Karatekeli Mahallesi,,İzmir,,33,43
+relation_12216161,Taştepe Mahallesi,,İzmir,,4,327
+relation_12216163,Çaltı Mahallesi,,İzmir,,13,227
+relation_12216169,Değirmencieli Mahallesi,,İzmir,,61,37
+relation_12216208,Adaküre Mahallesi,,İzmir,,130,191
+relation_12216214,Beyköy Mahallesi,,İzmir,,84,118
+relation_12216229,Halıköy Mahallesi,,İzmir,,71,234
+relation_12216230,Alakeçili Mahallesi,,İzmir,,33,49
+relation_12216345,Karateke Mahallesi,,İzmir,,152,205
+relation_12216388,Duatepe Mahallesi,,İzmir,,494,980
+relation_12216391,Hasköy Mahallesi,,İzmir,,191,347
+relation_12216412,Çırpı Cami Mahallesi,,İzmir,,197,463
+relation_12216502,Şemsiler Mahallesi,,İzmir,,209,235
+relation_12216567,Mahmudiye Mahallesi,,İzmir,,113,75
+relation_12216568,Çitköy Mahallesi,,İzmir,,91,66
+relation_12217041,Bıçakçı Mahallesi,,İzmir,,567,591
+relation_12217066,Emirli Mahallesi,,İzmir,,343,300
+relation_12219041,Akalan Mahallesi,,İzmir,,388,379
+relation_12219057,Çambel Mahallesi,,İzmir,,448,447
+relation_12219112,Yeşilköy Mahallesi,,İzmir,,68,57
+relation_12219640,İbrahimçavuş Mahallesi,,İzmir,,130,334
+relation_12219641,Necati Uza Mahallesi,,İzmir,,640,100
+relation_12220826,Yeşilyurt Mahallesi,,İzmir,,74,41
+relation_12294026,Kocahaliller Mahallesi,,İzmir,,13,6
+relation_12294065,Bayramcılar Mahallesi,,İzmir,,103,19
+relation_12294076,Kızıltepe Mahallesi,,İzmir,,74,12
+relation_12294126,Tavukçukuru Mahallesi,,İzmir,,130,64
+relation_12294142,Öksüzler Mahallesi,,İzmir,,72,44
+relation_12327054,İsmailli Mahallesi,,İzmir,,103,31
+relation_12327073,Maruflar Mahallesi,,İzmir,,25,26
+relation_12327480,Sindel Mahallesi,,İzmir,,61,70
+relation_12327665,Kaşıkçı Mahallesi,,İzmir,,86,41
+relation_12336543,Cumalı Mahallesi,,İzmir,,63,90
+relation_12336544,Mektep Mahallesi,,İzmir,,147,413
+relation_12336548,Arıkbaşı Mahallesi,,İzmir,,158,402
+relation_12336555,Çiftçigediği Mahallesi,,İzmir,,35,124
+relation_12336557,Kızılcaova Mahallesi,,İzmir,,340,302
+relation_12336561,Dernekli Mahallesi,,İzmir,,20,95
+relation_12336574,Hasançavuşlar Mahallesi,,İzmir,,28,63
+relation_12336583,Halkapınar Mahallesi,,İzmir,,127,271
+relation_12336639,Gaylan Mahallesi,,İzmir,,68,31
+relation_12336667,Armağanlar Mahallesi,,İzmir,,41,47
+relation_12336687,Karahıdırlı Mahallesi,,İzmir,,112,33
+relation_12336708,Yukarıkırıklar Mahallesi,,İzmir,,46,51
+relation_12336711,Hamzalısüleymaniye Mahallesi,,İzmir,,47,40
+relation_12336720,Avunduk Mahallesi,,İzmir,,14,14
+relation_12336725,Balaban Mahallesi,,İzmir,,13,14
+relation_12336754,Mehmetler Mahallesi,,İzmir,,41,129
+relation_12336766,Üzümler Mahallesi,,İzmir,,83,55
+relation_12336769,Küçükkale Mahallesi,,İzmir,,77,103
+relation_12336778,Büyükkale Mahallesi,,İzmir,,120,224
+relation_12409715,Gökyaka Mahallesi,,İzmir,,18,74
+relation_12409730,Dereköy Mahallesi,,İzmir,,104,83
+relation_12409829,Yukarıkızılca Merkez Mahallesi,,İzmir,,504,1215
+relation_12434447,Bayramlı Mahallesi,,İzmir,,58,69
+relation_12436439,Aşağıkızılca Mahallesi,,İzmir,,395,761
+relation_12541327,Koyuneli Mahallesi,,İzmir,,179,60
+relation_12541342,Tekkedere Mahallesi,,İzmir,,88,89
+relation_12541343,Çalıbahçe Mahallesi,,İzmir,,37,16
+relation_12541344,Cevaplı Mahallesi,,İzmir,,39,16
+relation_12541347,Eğrigöl Mahallesi,,İzmir,,49,64
+relation_12541370,Bozköy Mahallesi,,İzmir,,265,157
+relation_12541375,Sarıdere Mahallesi,,İzmir,,22,283
+relation_12542219,Ovacık Mahallesi,,İzmir,,91,158
+relation_12542348,Sinancılar Mahallesi,,İzmir,,190,262
+relation_12542511,Sarılar Mahallesi,,İzmir,,256,482
+relation_12542571,Kamberler Mahallesi,,İzmir,,67,69
+relation_12542775,Yenikurudere Mahallesi,,İzmir,,84,155
+relation_12542806,Bağyurdu 29 Ekim Mahallesi,,İzmir,,516,743
+relation_12542943,Hürriyet Mahallesi,,İzmir,,2867,7231
+relation_12543350,Yiğitler Mahallesi,,İzmir,,2617,7389
+relation_12543385,Kazımpaşa Mahallesi,,İzmir,,1020,493
+relation_12543386,Kemal Atatürk Mahallesi,,İzmir,,214,411
+relation_12543387,Yeni Mahalle,,İzmir,,2277,6327
+relation_12546060,Yenikent Mahallesi,,İzmir,,240,467
+relation_12546067,Kurfallı Mahallesi,,İzmir,,87,117
+relation_12547248,Aşağıkırıklar Mahallesi,,İzmir,,104,312
+relation_12547313,Süleymanlı Mahallesi,,İzmir,,20,95
+relation_12547397,Balaban Mahallesi,,İzmir,,13,14
+relation_12547457,Musacalı Mahallesi,,İzmir,,37,22
+relation_12547585,Arpaseki Mahallesi,,İzmir,,12,489
+relation_12553145,Arkacılar Mahallesi,,İzmir,,139,162
+relation_12561474,Balabanlı Mahallesi,,İzmir,,357,234
+relation_12561484,Çamlıca Mahallesi,,İzmir,,105,140
+relation_12563283,Atatürk Mahallesi,,İzmir,,2051,3663
+relation_12563284,Cumhuriyet Mahallesi,,İzmir,,214,301
+relation_12563285,Karaveliler Mahallesi,,İzmir,,231,240
+relation_12563927,Ceritler Mahallesi,,İzmir,,284,264
+relation_12563928,Kırköy Mahallesi,,İzmir,,254,228
+relation_12563929,Hisar Mahallesi,,İzmir,,146,193
+relation_12564060,Uzunköy Mahallesi,,İzmir,,181,57
+relation_12564061,Ovacık Mahallesi,,İzmir,,91,158
+relation_12564062,Pınarbaşı Mahallesi,,İzmir,,78,25
+relation_12564088,Gedik Mahallesi,,İzmir,,148,103
+relation_12567511,Doyranlı Mahallesi,,İzmir,,96,160
+relation_12567512,Derebaşı Mahallesi,,İzmir,,291,365
+relation_12567611,Kahrat Mahallesi,,İzmir,,194,686
+relation_12686498,Çiftlikköy Mahallesi,,İzmir,,70,63
+relation_12686505,İbrahimağa Mahallesi,,İzmir,,57,33
+relation_12686515,Bademalan Mahallesi,,İzmir,,162,55
+relation_12686518,Kodukburun Mahallesi,,İzmir,,7,22
+relation_12686542,Mıstıklar Mahallesi,,İzmir,,147,14
+relation_12686544,Bağalan Mahallesi,,İzmir,,26,296
+relation_12686565,Büyükoba Mahallesi,,İzmir,,8,180
+relation_12686583,Elmadere Mahallesi,,İzmir,,12,285
+relation_12694292,Örtülü Mahallesi,,İzmir,,394,74
+relation_12694302,Karadere Mahallesi,,İzmir,,105,34
+relation_12694303,Arpadere Mahallesi,,İzmir,,187,45
+relation_12694304,Çanköy Mahallesi,,İzmir,,142,52
+relation_12694305,Köseler Mahallesi,,İzmir,,218,20
+relation_12694318,Yaylaköy Mahallesi,,İzmir,,153,39
+relation_12694319,Kalemköy Mahallesi,,İzmir,,78,35
+relation_12694378,Ovacık Mahallesi,,İzmir,,91,158
+relation_12694379,Sağancı Mahallesi,,İzmir,,92,130
+relation_12694409,Bölcek Mahallesi,,İzmir,,280,477
+relation_12694464,Ilgıncaber Mahallesi,,İzmir,,30,25
+relation_12694465,Sarıcalar Mahallesi,,İzmir,,106,101
+relation_12694778,Bozcayaka Mahallesi,,İzmir,,178,145
+relation_12695597,Çiftlikköy Mahallesi,,İzmir,,70,63
+relation_12695598,Sarıkaya Mahallesi,,İzmir,,78,54
+relation_12695647,Kurudere Mahallesi,,İzmir,,123,217
+relation_12695897,Yukarıaktepe Mahallesi,,İzmir,,100,93
+relation_12695898,Aktepe Mahallesi,,İzmir,,113,237
+relation_12695899,Menderes Mahallesi,,İzmir,,53,38
+relation_12695900,Bakırköy Mahallesi,,İzmir,,78,109
+relation_12695901,Karaoba Mahallesi,,İzmir,,139,109
+relation_12697479,Yeşilova Mahallesi,,İzmir,,195,303
+relation_12697480,Yakapınar Mahallesi,,İzmir,,37,641
+relation_12697481,Söğütören Mahallesi,,İzmir,,351,159
+relation_12697482,Elifli Mahallesi,,İzmir,,65,157
+relation_12697933,Kadıköy Mahallesi,,İzmir,,81,276
+relation_12697942,Ayaskent Mahallesi,,İzmir,,251,261
+relation_12697958,Ferizler Mahallesi,,İzmir,,61,77
+relation_12699919,Alaşarlı Mahallesi,,İzmir,,132,150
+relation_12699949,Yeşilköy Mahallesi,,İzmir,,68,57
+relation_12699950,Kızılcaavlu Mahallesi,,İzmir,,188,148
+relation_12700003,Demirdere Mahallesi,,İzmir,,320,32
+relation_12700050,Küre Mahallesi,,İzmir,,264,40
+relation_12700051,Küçükören Mahallesi,,İzmir,,191,88
+relation_12701409,Eğridere Mahallesi,,İzmir,,147,258
+relation_12701410,Yeşiltepe Mahallesi,,İzmir,,113,77
+relation_12702732,Yağlar Mahallesi,,İzmir,,146,164
+relation_12900990,Çamlıbel Mahallesi,,İzmir,,119,81
+relation_12901213,Alankıyı Mahallesi,,İzmir,,121,104
+relation_12901214,Kızılcaağaç Mahallesi,,İzmir,,98,70
+relation_12901221,Osmanlar Mahallesi,,İzmir,,198,29
+relation_12901222,Balcılar Mahallesi,,İzmir,,128,110
+relation_12901336,Dereköy Mahallesi,,İzmir,,104,83
+relation_12901370,Hisarlık Mahallesi,,İzmir,,162,68
+relation_12901567,Turan Mahallesi,,İzmir,,56,256
+relation_12901677,Ergenli Mahallesi,,İzmir,,156,172
+relation_12901847,Yusuflu Mahallesi,,İzmir,,218,373
+relation_12901858,Yakacık Mahallesi,,İzmir,,187,222
+relation_12901877,Buruncuk Mahallesi,,İzmir,,117,218
+relation_12901972,Zeytinova Mahallesi,,İzmir,,410,539
+relation_12908940,Pınarlı Mahallesi,,İzmir,,391,513
+relation_12909014,Çenikler Mahallesi,,İzmir,,55,10
+relation_12909070,Kızıloba Mahallesi,,İzmir,,320,190
+relation_12912882,Karapınar Mahallesi,,İzmir,,30,25
+relation_12912905,Gaziler Mahallesi,,İzmir,,31,8
+relation_12912912,Alanköy Mahallesi,,İzmir,,101,30
+relation_12912925,Karahayıt Mahallesi,,İzmir,,20,10
+relation_12912933,Kabaağaç Mahallesi,,İzmir,,25,15
+relation_12912934,Sarıyurt Mahallesi,,İzmir,,209,56
+relation_12912936,Kızılkeçili Mahallesi,,İzmir,,263,48
+relation_12912937,Lütuflar Mahallesi,,İzmir,,274,50
+relation_13018293,İncecikler Mahallesi,,İzmir,,113,51
+relation_13018294,Gökçeyurt Mahallesi,,İzmir,,29,17
+relation_13018295,Kaleardı Mahallesi,,İzmir,,42,11
+relation_13018296,Avunduruk Mahallesi,,İzmir,,36,17
+relation_13025730,Kapukaya Mahallesi,,İzmir,,110,24
+relation_13025858,Yerlitahtacı Mahallesi,,İzmir,,12,124
+relation_13026144,Tiyelti Mahallesi,,İzmir,,79,47
+relation_13026206,Çakırlar Mahallesi,,İzmir,,53,8
+relation_13026240,Yalnızev Mahallesi,,İzmir,,29,481
+relation_13026249,Alacalar Mahallesi,,İzmir,,80,30
+relation_13026272,Tepeköy Mahallesi,,İzmir,,36,793
+relation_13026278,Çamköy Mahallesi,,İzmir,,46,84
+relation_13026281,Pınarköy Mahallesi,,İzmir,,41,606
+relation_13026282,Narlıca Mahallesi,,İzmir,,16,520
+relation_13026288,Zağnoz Mahallesi,,İzmir,,24,49
+relation_13026504,Palamutçuk Mahallesi,,İzmir,,70,116
+relation_13026513,Yeniyurt Mahallesi,,İzmir,,31,45
+relation_13026782,Mutaflar Mahallesi,,İzmir,,58,161
+relation_13026795,Tabaklar Mahallesi,,İzmir,,28,26
+relation_13026808,Erikli Mahallesi,,İzmir,,122,141
+relation_13026822,Çamlık Mahallesi,,İzmir,,160,117
+relation_13026823,Çomaklar Mahallesi,,İzmir,,75,184
+relation_13026850,Yeğenli Mahallesi,,İzmir,,166,172
+relation_13026851,Kızılcahavlu Mahallesi,,İzmir,,88,311
+relation_13026858,Kırtepe Mahallesi,,İzmir,,232,108
+relation_13029829,Saçlı Mahallesi,,İzmir,,175,55
+relation_13029830,Karabağ Mahallesi,,İzmir,,116,49
+relation_13029831,Yeşildere Mahallesi,,İzmir,,210,38
+relation_13029920,Çatak Mahallesi,,İzmir,,171,42
+relation_13029921,Dokuzlar Mahallesi,,İzmir,,281,30
+relation_13029922,Emenler Mahallesi,,İzmir,,166,54
+relation_13029923,Veliler Mahallesi,,İzmir,,165,131
+relation_13029953,Bozdağ Mahallesi,,İzmir,,146,276
+relation_13030102,İlkkurşun Mahallesi,,İzmir,,50,90
+relation_13030115,Kayaköy Mahallesi,,İzmir,,445,414
+relation_13078488,Akyurt Mahallesi,,İzmir,,102,214
+relation_13078662,Başköy Mahallesi,,İzmir,,133,245
+relation_13079467,Ortaköy Mahallesi,,İzmir,,41,63
+relation_13079527,Alaylı Mahallesi,,İzmir,,88,123
+relation_13168035,Işıklar Mahallesi,,İzmir,,576,936
+relation_13240318,Gökçen Mahallesi,,İzmir,,296,328
+relation_13332754,Eskioba Mahallesi,,İzmir,,88,269
+relation_13332842,Kurşak Mahallesi,,İzmir,,31,90
+relation_13332861,Yenioba Mahallesi,,İzmir,,97,92
+relation_13332862,Alacalı Mahallesi,,İzmir,,61,133
+relation_13332910,Mahmutlar Mahallesi,,İzmir,,53,129
+relation_13332911,Turgutlu Mahallesi,,İzmir,,21,80
+relation_13332912,Akkoyunlu Mahallesi,,İzmir,,62,225
+relation_13333205,Akçaşehir Mahallesi,,İzmir,,56,120
+relation_13333237,Çayırlı Mahallesi,,İzmir,,27,204
+relation_13333241,Yemişler Mahallesi,,İzmir,,54,20
+relation_13333690,Hisarlık Mahallesi,,İzmir,,162,68
+relation_13333871,Çukurköy Mahallesi,,İzmir,,471,76
+relation_13333890,Kaplan Mahallesi,,İzmir,,39,56
+relation_13334012,Bademli Mahallesi,,İzmir,,252,683
+relation_13334023,Kemenler Mahallesi,,İzmir,,128,111
+relation_13334024,Pirinççi Mahallesi,,İzmir,,199,131
+relation_13334042,Konaklı Mahallesi,,İzmir,,213,945
+relation_13334073,Ovakent Mahallesi,,İzmir,,409,1227
+relation_13334087,Karaman Mahallesi,,İzmir,,122,207
+relation_13334108,Sarısu Mahallesi,,İzmir,,193,69
+relation_13334198,Kocaaliler Mahallesi,,İzmir,,37,46
+relation_13334221,Cambazlı Mahallesi,,İzmir,,126,63
+relation_13334288,Sarılar Mahallesi,,İzmir,,256,482
+relation_13473603,Yenişehir Mahallesi,,İzmir,,147,137
+relation_13473610,Umurcalı Mahallesi,,İzmir,,235,132
+relation_13473617,Orhangazi Mahallesi,,İzmir,,128,82
+relation_13480357,Köfündere Mahallesi,,İzmir,,92,101
+relation_13480358,Bucak Mahallesi,,İzmir,,202,51
+relation_13480393,Karaca Ali Mahallesi,,İzmir,,123,82
+relation_13480441,Boynuyoğun Mahallesi,,İzmir,,131,112
+relation_13480657,Aşağıılgındere Mahallesi,,İzmir,,43,39
+relation_13480667,Aziziye Mahallesi,,İzmir,,87,163
+relation_13480676,Akçenger Mahallesi,,İzmir,,100,68
+relation_13480681,Alibeyli Mahallesi,,İzmir,,104,264
+relation_13480686,Göçbeyli Mahallesi,,İzmir,,544,553
+relation_13480687,Kozluca Mahallesi,,İzmir,,143,74
+relation_13480699,Doğancı Mahallesi,,İzmir,,48,34
+relation_13480704,Demircili Mahallesi,,İzmir,,263,326
+relation_13480712,Yeniköy Mahallesi,,İzmir,,63,147
+relation_13480717,Işık Mahallesi,,İzmir,,41,22
+relation_13480746,Şirinköy Mahallesi,,İzmir,,98,38
+relation_13490195,Çaylı Mahallesi,,İzmir,,495,547
+relation_13490229,Suludere Mahallesi,,İzmir,,506,526
+relation_13490239,Çanakçı Mahallesi,,İzmir,,154,40
+relation_13490249,Aydoğdu Mahallesi,,İzmir,,2002,4123
+relation_13490261,Başaran Mahallesi,,İzmir,,169,40
+relation_13763991,Sekiköy Mahallesi,,İzmir,,197,108
+relation_13844491,Umurlu Mahallesi,,İzmir,,415,208
+relation_13844492,Ahmetler Mahallesi,,İzmir,,90,16
+relation_13844687,Akpınar Mahallesi,,İzmir,,583,225
+relation_13846240,Yılanlı Mahallesi,,İzmir,,105,8
+relation_13846338,Cevizalan Mahallesi,,İzmir,,94,46
+relation_13846445,Kemer Mahallesi,,İzmir,,136,38
+relation_13847591,Işıklı Mahallesi,,İzmir,,255,149
+relation_13847948,Toparlar Mahallesi,,İzmir,,45,36
+relation_13848069,Dibekçi Mahallesi,,İzmir,,45,18
+relation_13848401,Peşrefli Mahallesi,,İzmir,,98,340
+relation_13848417,Kireli Mahallesi,,İzmir,,290,194
+relation_13848463,Saruhanlı Mahallesi,,İzmir,,110,55
+relation_13848498,Yenişehir Mahallesi,,İzmir,,147,137
+relation_13848752,Eğridere Mahallesi,,İzmir,,147,258
+relation_13848780,Çiniyeri Mahallesi,,İzmir,,152,200
+relation_13848791,Çobanköy Mahallesi,,İzmir,,100,102
+relation_13848800,Osmancık Mahallesi,,İzmir,,171,36
+relation_13848829,Armutlu Mahallesi,,İzmir,,28,11
+relation_13848881,Topalak Mahallesi,,İzmir,,48,100
+relation_13848891,Akmescit Mahallesi,,İzmir,,323,52
+relation_13848908,Musalar Mahallesi,,İzmir,,73,96
+relation_13848971,Dağdere Mahallesi,,İzmir,,110,127
+relation_13849027,Somak Mahallesi,,İzmir,,91,70
+relation_13849076,Dereli Mahallesi,,İzmir,,102,49
+relation_13849223,Yamandere Mahallesi,,İzmir,,114,31
+relation_13849827,Kürdüllü Mahallesi,,İzmir,,120,57
+relation_13849861,Dallık Mahallesi,,İzmir,,122,68
+relation_13849881,Çeriközü Mahallesi,,İzmir,,147,112
+relation_13849901,Küçükburun Mahallesi,,İzmir,,69,51
+relation_13849935,Dündarlı Mahallesi,,İzmir,,54,189
+relation_13849940,Küçükkömürcü Mahallesi,,İzmir,,42,35
+relation_13849947,Büyükkömürcü Mahallesi,,İzmir,,191,37
+relation_13849960,Küçükkemerdere Mahallesi,,İzmir,,261,93
+relation_13849961,Büyükkemerdere Mahallesi,,İzmir,,200,58
+relation_13850061,Artıcak Mahallesi,,İzmir,,60,15
+relation_13850073,Örenli Mahallesi,,İzmir,,232,82
+relation_13850231,Paşaköy Mahallesi,,İzmir,,39,57
+relation_13850284,Çeltikçi Mahallesi,,İzmir,,88,46
+relation_13852148,Altınoluk Mahallesi,,İzmir,,202,121
+relation_13852197,Çömlekçi Mahallesi,,İzmir,,282,270
+relation_13852257,Karaburç Mahallesi,,İzmir,,1311,414
+relation_13925252,Yusufdere Mahallesi,,İzmir,,188,93
+relation_13925263,Bülbüller Mahallesi,,İzmir,,54,35
+relation_13925277,Yeniceköy Mahallesi,,İzmir,,380,176
+relation_13925292,Ortaköy Mahallesi,,İzmir,,41,63
+relation_13925309,Veliler Mahallesi,,İzmir,,165,131
+relation_13925354,Bayırlı Mahallesi,,İzmir,,158,44
+relation_14055067,Kerpiçlik Mahallesi,,İzmir,,104,49
+relation_14055068,Karadoğan Mahallesi,,İzmir,,194,199
+relation_14055118,Kızılca Mahallesi,,İzmir,,86,31
+relation_14055996,Tumbullar Mahallesi,,İzmir,,119,49
+relation_14056244,Çayağzı Mahallesi,,İzmir,,798,592
+relation_14070674,Horzum Mahallesi,,İzmir,,346,87
+relation_14070675,Süleymanlar Mahallesi,,İzmir,,29,25
+relation_14070676,Tekke Mahallesi,,İzmir,,260,59
+relation_14070686,Çamyayla Mahallesi,,İzmir,,143,120
+relation_14070720,Köseler Mahallesi,,İzmir,,218,20
+relation_14070721,Çobanlar Mahallesi,,İzmir,,42,40
+relation_14070726,Mescitli Mahallesi,,İzmir,,174,320
+relation_14070738,Uzundere Mahallesi,,İzmir,,498,2199
+relation_14070753,Kaymakçı Mahallesi,,İzmir,,1186,1761
+relation_14070770,Tosunlar Mahallesi,,İzmir,,157,14
+relation_14070771,Suçıktı Mahallesi,,İzmir,,80,10
+relation_14070825,Üzümlü Mahallesi,,İzmir,,83,106
+relation_14099513,Kutlubeyler Mahallesi,,İzmir,,44,73
+relation_14099575,Ovacık Mahallesi,,İzmir,,91,158
+relation_14099825,Ocaklı Mahallesi,,İzmir,,114,175
+relation_14099868,Bebekler Mahallesi,,İzmir,,83,27
+relation_14099869,Dereuzunyer Mahallesi,,İzmir,,58,40
+relation_14099870,Günlüce Mahallesi,,İzmir,,636,235
+relation_14099904,Dolaylar Mahallesi,,İzmir,,121,84
+relation_14099905,Çağlayan Mahallesi,,İzmir,,66,34
+relation_14099906,Mursallı Mahallesi,,İzmir,,150,45
+relation_14099907,Gölcük Mahallesi,,İzmir,,1232,2544
+relation_14099938,Ertuğrul Mahallesi,,İzmir,,566,1171
+relation_14099939,Yolüstü Mahallesi,,İzmir,,407,481
+relation_14099944,Oğuzlar Mahallesi,,İzmir,,33,45
+relation_14099959,Hacıhasan Mahallesi,,İzmir,,125,43
+relation_14099960,Beyazıtlar Mahallesi,,İzmir,,86,71
+relation_14099989,Küçükavulcuk Mahallesi,,İzmir,,170,175
+relation_14099990,Büyükavulcuk Mahallesi,,İzmir,,88,117
+relation_14099991,Gereli Mahallesi,,İzmir,,252,396
+relation_14099992,Gerçekli Mahallesi,,İzmir,,152,231
+relation_14099993,Kışla Mahallesi,,İzmir,,53,47
+relation_14099994,Türkönü Mahallesi,,İzmir,,152,85
+relation_14099995,Kurucuova Mahallesi,,İzmir,,224,362
+relation_14099996,Üçkonak Mahallesi,,İzmir,,151,233
+relation_14099997,Birgi Mahallesi,,İzmir,,638,683
+relation_14100012,Ören Mahallesi,,İzmir,,252,147
+relation_14100013,Yeniköy Mahallesi,,İzmir,,63,147
+relation_14100034,Haliller Mahallesi,,İzmir,,307,530
+relation_14100035,Avunduruk Mahallesi,,İzmir,,36,17
+relation_14100036,Kaleköy Mahallesi,,İzmir,,147,150
+relation_14100042,Örencik Mahallesi,,İzmir,,336,174
+relation_14100077,Mavidere Mahallesi,,İzmir,,305,66
+relation_14100079,Karabulu Mahallesi,,İzmir,,116,182
+relation_14100080,Mersinlidere Mahallesi,,İzmir,,187,155
+relation_14100087,Bahçearası Mahallesi,,İzmir,,136,113
+relation_14207986,Işıklar Mahallesi,,İzmir,,576,936
+relation_14228343,Alhatlı Mahallesi,,İzmir,,111,89
+relation_14228659,Aşağıcuma Mahallesi,,İzmir,,240,162
+relation_14228660,Aşağıbey Mahallesi,,İzmir,,281,111
+relation_14229109,Okçular Mahallesi,,İzmir,,133,55
+relation_14229110,Ayvatlar Mahallesi,,İzmir,,131,65
+relation_14229111,Demircidere Mahallesi,,İzmir,,3,115
+relation_14245587,Çobanlar Mahallesi,,İzmir,,42,40
+relation_14245588,Tırmanlar Mahallesi,,İzmir,,264,119
+relation_14245796,Yalnızdam Mahallesi,,İzmir,,39,24
+relation_14245797,Muratlar Mahallesi,,İzmir,,37,32
+relation_14245798,Çaltıkoru Mahallesi,,İzmir,,31,16
+relation_14245799,Çamoba Mahallesi,,İzmir,,49,20
+relation_14245800,Durmuşlar Mahallesi,,İzmir,,152,144
+relation_14245801,Yukarıcuma Mahallesi,,İzmir,,92,72
+relation_14245802,Güneşli Mahallesi,,İzmir,,88,98
+relation_14245803,Üçtepe Mahallesi,,İzmir,,55,9
+relation_14245804,Yortanlı Mahallesi,,İzmir,,35,15
+relation_14245823,Terzihaliller Mahallesi,,İzmir,,115,93
+relation_14245824,Hacıhamzalar Mahallesi,,İzmir,,60,82
+relation_14245825,Hisarköy Mahallesi,,İzmir,,90,52
+relation_14245928,Çamavlu Mahallesi,,İzmir,,124,277
+relation_14245929,Çürükbağlar Mahallesi,,İzmir,,86,26
+relation_14245930,Kıranlı Mahallesi,,İzmir,,214,68
+relation_14245931,Karaveliler Mahallesi,,İzmir,,231,240
+relation_14245932,Yukarıbey Mahallesi,,İzmir,,351,408
+relation_14245933,Göbeller Mahallesi,,İzmir,,102,142
+relation_14245967,Topallar Mahallesi,,İzmir,,104,66
+relation_14245968,Yukarıada Mahallesi,,İzmir,,131,118
+relation_14245969,Ürkütler Mahallesi,,İzmir,,115,24
+relation_14245970,İneşir Mahallesi,,İzmir,,81,25
+relation_14245971,Sarıcaoğlu Mahallesi,,İzmir,,69,19
+relation_14245973,Yeniler Mahallesi,,İzmir,,72,24
+relation_14245974,Dereköy Mahallesi,,İzmir,,104,83
+relation_14245975,Eğiller Mahallesi,,İzmir,,84,44
+relation_14246041,Gültepe Mahallesi,,İzmir,,12,15
+relation_14246042,Katrancı Mahallesi,,İzmir,,80,27
+relation_14246043,Karalar Mahallesi,,İzmir,,129,78
+relation_14246044,Kırcalar Mahallesi,,İzmir,,58,46
+relation_14246045,Halilağalar Mahallesi,,İzmir,,26,27
+relation_14246046,İkizler Mahallesi,,İzmir,,74,33
+relation_14246047,Oruşlar Mahallesi,,İzmir,,154,134
+relation_14246079,Doğancılar Mahallesi,,İzmir,,115,89
+relation_14246080,Cevizli Mahallesi,,İzmir,,427,382
+relation_14246081,Kibar Mahallesi,,İzmir,,1890,1442
+relation_14246082,Taşlıyatak Mahallesi,,İzmir,,140,125
+relation_14246083,Olgunlar Mahallesi,,İzmir,,331,467
+relation_14246084,İğdeli Mahallesi,,İzmir,,645,238
+relation_14246085,Sırımlı Mahallesi,,İzmir,,144,203
+relation_14246086,Solaklar Mahallesi,,İzmir,,297,214
+relation_14246087,Sarıkaya Mahallesi,,İzmir,,78,54
+relation_14246088,Tekbıçaklar Mahallesi,,İzmir,,70,255
+relation_17255181,Şakran Hasbi Efendi Mahallesi,,İzmir,,1639,2403
