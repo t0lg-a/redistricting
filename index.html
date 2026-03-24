@@ -104,6 +104,12 @@
 
         #map-container { height: 100%; width: 100%; z-index: 0; }
         .leaflet-container { background: var(--bg-page); }
+        /* Force maximum SVG path quality */
+        .leaflet-overlay-pane svg { shape-rendering: geometricPrecision; }
+        .leaflet-overlay-pane path {
+            shape-rendering: geometricPrecision;
+            vector-effect: non-scaling-stroke;
+        }
 
         /* Cursor Styles */
         .cursor-pointer-tool { cursor: grab; }
@@ -1040,11 +1046,17 @@
                     };
 
                     const geoLayer = L.geoJSON(geoJsonData, {
-                        style: () => ({ fillColor: '#e5e7eb', weight: 0.3, color: 'rgba(0,0,0,0.06)', fillOpacity: 0.3, smoothFactor: 0 }),
+                        style: () => ({ fillColor: '#e5e7eb', weight: 0.3, color: 'rgba(0,0,0,0.06)', fillOpacity: 0.3 }),
                         smoothFactor: 0,
                         onEachFeature,
                         pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 0, opacity: 0, fillOpacity: 0 }),
                     }).addTo(mapRef.current);
+
+                    /* Force full-resolution paths on every polygon */
+                    geoLayer.eachLayer(layer => {
+                        if (layer.options) layer.options.smoothFactor = 0;
+                        if (layer._path) layer._path.setAttribute('shape-rendering', 'geometricPrecision');
+                    });
                     geoJsonLayerRef.current = geoLayer;
                     if (geoLayer.getLayers().length > 0) try { mapRef.current.fitBounds(geoLayer.getBounds()); } catch(e) {}
                 }
