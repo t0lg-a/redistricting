@@ -2303,3 +2303,577 @@ relation_9682646,Büyük Kılıçlı Mahallesi,,İstanbul,Silivri,373,526
 relation_9682647,Seymen Mahallesi,,İstanbul,Silivri,235,599
 relation_9682747,Çanta Sancaktepe Mahallesi,,İstanbul,Silivri,1757,2053
 relation_9682749,Kurfallı Mahallesi,,İstanbul,Silivri,180,245
+relation_6648277,Atatürk Mahallesi,,İstanbul,Ümraniye,9553,7343
+relation_9308675,Şerifali Mahallesi,,İstanbul,Ümraniye,2118,3967
+relation_9308676,Yukarı Dudullu Mahallesi,,İstanbul,Ümraniye,8835,4413
+relation_9424886,Kâzım Karabekir Mahallesi,,İstanbul,Ümraniye,7945,2835
+relation_9462467,Esenşehir Mahallesi,,İstanbul,Ümraniye,5858,6213
+relation_9462497,Madenler Mahallesi,,İstanbul,Ümraniye,4726,5493
+relation_9462498,Esenkent Mahallesi,,İstanbul,Ümraniye,7556,5025
+relation_9462526,Necip Fazıl Mahallesi,,İstanbul,Ümraniye,9451,8465
+relation_9462528,Aşağı Dudullu Mahallesi,,İstanbul,Ümraniye,5229,3955
+relation_9462535,Huzur Mahallesi,,İstanbul,Ümraniye,5031,2740
+relation_9462548,Adem Yavuz Mahallesi,,İstanbul,Ümraniye,7254,3457
+relation_9462585,Parseller Mahallesi,,İstanbul,Ümraniye,5265,4999
+relation_9462597,Hekimbaşı Mahallesi,,İstanbul,Ümraniye,3508,1349
+relation_9462625,Topağacı Mahallesi,,İstanbul,Ümraniye,6329,2844
+relation_9462638,Kazım Karabekir Mahallesi,,İstanbul,Ümraniye,7945,2835
+relation_9462650,İnkılap Mahallesi,,İstanbul,Ümraniye,11942,6043
+relation_9462671,Dumlupınar Mahallesi,,İstanbul,Ümraniye,5174,2988
+relation_9462686,Elmalıkent Mahallesi,,İstanbul,Ümraniye,7336,6847
+relation_9462693,Tantavi Mahallesi,,İstanbul,Ümraniye,4154,3630
+relation_9462770,Atatürk Mahallesi,,İstanbul,Ümraniye,9553,7343
+relation_9462798,Yamanevler Mahallesi,,İstanbul,Ümraniye,5627,4415
+relation_9462821,Namık Kemal Mahallesi,,İstanbul,Ümraniye,11271,8206
+relation_9462835,Fatih Sultan Mehmet Mahallesi,,İstanbul,Ümraniye,1716,1253
+relation_9462845,Esenevler Mahallesi,,İstanbul,Ümraniye,8893,8522
+relation_9462868,İstiklal Mahallesi,,İstanbul,Ümraniye,17964,14479
+relation_9462888,Atakent Mahallesi,,İstanbul,Ümraniye,5866,7969
+relation_9462890,Finanskent Mahallesi,,İstanbul,Ümraniye,272,746
+relation_9462897,Armağanevler Mahallesi,,İstanbul,Ümraniye,12954,13436
+relation_9462905,Site Mahallesi,,İstanbul,Ümraniye,4368,10035
+relation_9462915,Çamlık Mahallesi,,İstanbul,Ümraniye,7516,8353
+relation_9462938,Tatlısu Mahallesi,,İstanbul,Ümraniye,4309,10867
+relation_9462941,Çakmak Mahallesi,,İstanbul,Ümraniye,13955,11053
+relation_9462967,Tepeüstü Mahallesi,,İstanbul,Ümraniye,5442,3483
+relation_9462968,Ihlamurkuyu Mahallesi,,İstanbul,Ümraniye,5994,4180
+relation_9462977,Mehmet Akif Mahallesi,,İstanbul,Ümraniye,7222,9665
+relation_9462981,Altınşehir Mahallesi,,İstanbul,Ümraniye,11730,7159
+relation_9462984,Cemil Meriç Mahallesi,,İstanbul,Ümraniye,8471,5699
+relation_6745047,Atakent Mahallesi,,Ankara,Etimesgut,4469,7315
+relation_6745048,Topçu Mahallesi,,Ankara,Etimesgut,10574,9408
+relation_6745049,Oğuzlar Mahallesi,,Ankara,Etimesgut,4645,6042
+relation_6745064,Ayyıldız Mahallesi,,Ankara,Etimesgut,4891,6078
+relation_6745097,Ahi Mesut Mahallesi,,Ankara,Etimesgut,10819,10216
+relation_6745117,Elvan Mahallesi,,Ankara,Etimesgut,9911,5706
+relation_6745118,Piyade Mahallesi,,Ankara,Etimesgut,13297,7090
+relation_6745141,Süvari Mahallesi,,Ankara,Etimesgut,14159,7546
+relation_6745142,Kazım Karabekir Mahallesi,,Ankara,Etimesgut,7099,4231
+relation_6745143,İstasyon Mahallesi,,Ankara,Etimesgut,9296,6773
+relation_6745165,Alsancak Mahallesi,,Ankara,Etimesgut,10774,6416
+relation_6745185,Bağlıca Mahallesi,,Ankara,Etimesgut,3881,10138
+relation_6747513,Şeker Mahallesi,,Ankara,Etimesgut,2655,4083
+relation_6747514,Şehit Osman Avcı Mahallesi,,Ankara,Etimesgut,4450,12678
+relation_6747515,Altay Mahallesi,,Ankara,Etimesgut,2745,7008
+relation_6747547,Göksu Mahallesi,,Ankara,Etimesgut,6706,15387
+relation_6747548,Şeyh Şamil Mahallesi,,Ankara,Etimesgut,3705,9478
+relation_6747568,Tunahan Mahallesi,,Ankara,Etimesgut,3722,12444
+relation_6747569,Güzelkent Mahallesi,,Ankara,Etimesgut,3206,7812
+relation_6747593,Eryaman Mahallesi,,Ankara,Etimesgut,6015,14992
+relation_6747594,Yavuz Selim Mahallesi,,Ankara,Etimesgut,2377,5259
+relation_6747595,Yeşilova Mahallesi,,Ankara,Etimesgut,3349,3535
+relation_6747635,Etiler Mahallesi,,Ankara,Etimesgut,2937,3082
+relation_6747684,Erler Mahallesi,,Ankara,Etimesgut,1230,3296
+relation_6747744,30 Ağustos Mahallesi,,Ankara,Etimesgut,9781,5183
+relation_6748082,Bahçekapı Mahallesi,,Ankara,Etimesgut,763,1232
+relation_6789375,Fatih Sultan Mahallesi,,Ankara,Etimesgut,572,2016
+relation_12946871,Yeni Bağlıca Mahallesi,,Ankara,Etimesgut,4360,11638
+relation_12946872,Devlet Mahallesi,,Ankara,Etimesgut,3780,6971
+relation_15054434,Yapracık Mahallesi,,Ankara,Etimesgut,1517,3461
+relation_15062620,Orhun Mahallesi,,Ankara,Etimesgut,75,248
+relation_15062621,Yukarıyurtçu Mahallesi,,Ankara,Etimesgut,334,837
+relation_15062622,Aşağıyurtçu Mahallesi,,Ankara,Etimesgut,243,353
+relation_15062623,Atayurt Mahallesi,,Ankara,Etimesgut,4520,6843
+relation_15062688,Turkuaz Mahallesi,,Ankara,Etimesgut,2167,5074
+relation_15063735,Balıkuyumcu Mahallesi,,Ankara,Etimesgut,302,100
+relation_15063736,Şehitali Mahallesi,,Ankara,Etimesgut,235,278
+relation_15063737,Fevziye Mahallesi,,Ankara,Etimesgut,208,95
+relation_6753443,Erzurum Mahallesi,,Ankara,Çankaya,440,1091
+relation_6753459,Cebeci Mahallesi,,Ankara,Çankaya,763,2445
+relation_6770649,Ertuğrulgazi Mahallesi,,Ankara,Çankaya,1221,3127
+relation_6770650,Fakülteler Mahallesi,,Ankara,Çankaya,707,2698
+relation_6770656,Çamlıtepe Mahallesi,,Ankara,Çankaya,1020,3174
+relation_6770696,İleri Mahallesi,,Ankara,Çankaya,889,1808
+relation_6770914,Ön Cebeci Mahallesi,,Ankara,Çankaya,647,2562
+relation_6770915,İncesu Mahallesi,,Ankara,Çankaya,560,1583
+relation_6770961,Topraklık Mahallesi,,Ankara,Çankaya,296,598
+relation_6770962,Dilekler Mahallesi,,Ankara,Çankaya,61,87
+relation_6770976,Fidanlık Mahallesi,,Ankara,Çankaya,123,671
+relation_6770977,Sağlık Mahallesi,,Ankara,Çankaya,102,254
+relation_6771251,Zafertepe Mahallesi,,Ankara,Çankaya,601,907
+relation_6771252,Göktürk Mahallesi,,Ankara,Çankaya,901,1817
+relation_6771326,Mimar Sinan Mahallesi,,Ankara,Çankaya,859,1419
+relation_6771327,Metin Oktay Mahallesi,,Ankara,Çankaya,1113,2400
+relation_6771385,Aşıkpaşa Mahallesi,,Ankara,Çankaya,2144,3608
+relation_6771397,Bayraktar Mahallesi,,Ankara,Çankaya,699,2356
+relation_6771418,Büyükesat Mahallesi,,Ankara,Çankaya,769,4788
+relation_6771450,Kazım Özalp Mahallesi,,Ankara,Çankaya,463,2673
+relation_6774560,Umut Mahallesi,,Ankara,Çankaya,1485,3645
+relation_6774561,Murat Mahallesi,,Ankara,Çankaya,647,1647
+relation_6774604,Küçükesat Mahallesi,,Ankara,Çankaya,271,1656
+relation_6774605,Doğuş Mahallesi,,Ankara,Çankaya,324,1612
+relation_6774715,Esatoğlu Mahallesi,,Ankara,Çankaya,313,2200
+relation_6774716,Muhsin Ertuğrul Mahallesi,,Ankara,Çankaya,389,1821
+relation_6774717,Kavaklıdere Mahallesi,,Ankara,Çankaya,558,3575
+relation_6774795,Tınaztepe Mahallesi,,Ankara,Çankaya,529,3350
+relation_6774796,Seyranbağları Mahallesi,,Ankara,Çankaya,1111,3644
+relation_6774812,Barbaros Mahallesi,,Ankara,Çankaya,384,3581
+relation_6774813,Gaziosmanpaşa Mahallesi,,Ankara,Çankaya,275,2264
+relation_6774849,Birlik Mahallesi,,Ankara,Çankaya,4354,16777
+relation_6774990,Kırkkonaklar Mahallesi,,Ankara,Çankaya,3332,9430
+relation_6774991,Bağcılar Mahallesi,,Ankara,Çankaya,425,1677
+relation_6774999,Bademlidere Mahallesi,,Ankara,Çankaya,421,1048
+relation_6776399,Boztepe Mahallesi,,Ankara,Çankaya,404,263
+relation_6776400,Güvenevler Mahallesi,,Ankara,Çankaya,677,5972
+relation_6776427,Aziziye Mahallesi,,Ankara,Çankaya,1042,6790
+relation_6776519,Güzeltepe Mahallesi,,Ankara,Çankaya,536,3746
+relation_6776520,Yıldızevler Mahallesi,,Ankara,Çankaya,1473,7234
+relation_6776562,Hilal Mahallesi,,Ankara,Çankaya,1014,3427
+relation_6776563,İlkbahar Mahallesi,,Ankara,Çankaya,2000,8251
+relation_6776797,Sancak Mahallesi,,Ankara,Çankaya,1762,5714
+relation_6776826,Çankaya Mahallesi,,Ankara,Çankaya,871,3851
+relation_6776870,Orta İmrahor Mahallesi,,Ankara,Çankaya,139,70
+relation_6776871,Remzi Oğuz Arık Mahallesi,,Ankara,Çankaya,435,3194
+relation_6776895,Ayrancı Mahallesi,,Ankara,Çankaya,1701,10567
+relation_6776913,Kültür Mahallesi,,Ankara,Çankaya,401,2049
+relation_6777018,Kocatepe Mahallesi,,Ankara,Çankaya,103,362
+relation_6777019,Meşrutiyet Mahallesi,,Ankara,Çankaya,84,230
+relation_6777209,Cumhuriyet Mahallesi,,Ankara,Çankaya,18,58
+relation_6777210,Kızılay Mahallesi,,Ankara,Çankaya,179,482
+relation_6777211,Korkutreis Mahallesi,,Ankara,Çankaya,197,410
+relation_6777212,Eti Mahallesi,,Ankara,Çankaya,152,436
+relation_6777213,Maltepe Mahallesi,,Ankara,Çankaya,1080,5044
+relation_6779435,Yücetepe Mahallesi,,Ankara,Çankaya,585,2840
+relation_6779557,Anıttepe Mahallesi,,Ankara,Çankaya,546,2651
+relation_6779579,Mebusevleri Mahallesi,,Ankara,Çankaya,421,2419
+relation_6779580,Bahçelievler Mahallesi,,Ankara,Çankaya,1012,6676
+relation_6779619,Yukarı Bahçelievler Mahallesi,,Ankara,Çankaya,1563,9170
+relation_6779678,Emek Mahallesi,,Ankara,Çankaya,2775,13089
+relation_6779679,Balgat Mahallesi,,Ankara,Çankaya,763,1427
+relation_6779680,Nasuh Akar Mahallesi,,Ankara,Çankaya,818,1814
+relation_6779698,Devlet Mahallesi,,Ankara,Çankaya,211,696
+relation_6783096,Oğuzlar Mahallesi,,Ankara,Çankaya,1744,3084
+relation_6783097,Ehlibeyt Mahallesi,,Ankara,Çankaya,499,1702
+relation_6783098,Yukarı Öveçler Mahallesi,,Ankara,Çankaya,652,2079
+relation_6783132,Cevizlidere Mahallesi,,Ankara,Çankaya,3149,5821
+relation_6783133,Huzur Mahallesi,,Ankara,Çankaya,3672,8316
+relation_6783217,Gökkuşağı Mahallesi,,Ankara,Çankaya,2181,3558
+relation_6783218,Akpınar Mahallesi,,Ankara,Çankaya,2571,6077
+relation_6783285,Karapınar Mahallesi,,Ankara,Çankaya,1846,4606
+relation_6786489,Ata Mahallesi,,Ankara,Çankaya,2164,6040
+relation_6786490,Şehit Cengiz Karaca Mahallesi,,Ankara,Çankaya,1659,3823
+relation_6786491,Aydınlar Mahallesi,,Ankara,Çankaya,1178,2942
+relation_6786507,Şehit Cevdet Özdemir Mahallesi,,Ankara,Çankaya,1777,4246
+relation_6786508,Öveçler Mahallesi,,Ankara,Çankaya,1940,4295
+relation_6786509,Sokullu Mehmet Paşa Mahallesi,,Ankara,Çankaya,1789,4174
+relation_6786510,Harbiye Mahallesi,,Ankara,Çankaya,3394,10527
+relation_6786604,Aşağı Öveçler Mahallesi,,Ankara,Çankaya,1654,4064
+relation_6786647,İlkadım Mahallesi,,Ankara,Çankaya,2302,6981
+relation_6786697,Naci Çakır Mahallesi,,Ankara,Çankaya,1668,4724
+relation_6786698,Osman Temiz Mahallesi,,Ankara,Çankaya,1458,5357
+relation_6786699,Malazgirt Mahallesi,,Ankara,Çankaya,1470,2973
+relation_6786722,Keklik Pınarı Mahallesi,,Ankara,Çankaya,2923,7142
+relation_6786723,Mürsel Uluç Mahallesi,,Ankara,Çankaya,3549,9333
+relation_6787175,Metin Akkuş Mahallesi,,Ankara,Çankaya,426,1664
+relation_6787176,İlker Mahallesi,,Ankara,Çankaya,432,1747
+relation_6787222,Kızılırmak Mahallesi,,Ankara,Çankaya,1225,3084
+relation_6787293,Çukurambar Mahallesi,,Ankara,Çankaya,2500,6570
+relation_6787479,Söğütözü Mahallesi,,Ankara,Çankaya,725,1799
+relation_6789062,İşçi Blokları Mahallesi,,Ankara,Çankaya,2418,10730
+relation_6789063,Çiğdem Mahallesi,,Ankara,Çankaya,1468,8091
+relation_6789069,Üniversiteler Mahallesi,,Ankara,Çankaya,928,8956
+relation_6789073,Mustafa Kemal Mahallesi,,Ankara,Çankaya,1103,3931
+relation_6789092,Mutlukent Mahallesi,,Ankara,Çankaya,2006,11889
+relation_6789093,Ümit Mahallesi,,Ankara,Çankaya,1451,9087
+relation_6789110,Çayyolu Mahallesi,,Ankara,Çankaya,765,4172
+relation_6789120,Koru Mahallesi,,Ankara,Çankaya,1149,9515
+relation_6789121,Konutkent Mahallesi,,Ankara,Çankaya,828,6125
+relation_6789274,Yaşamkent Mahallesi,,Ankara,Çankaya,2341,14181
+relation_6789284,Alacaatlı Mahallesi,,Ankara,Çankaya,5126,24384
+relation_6789345,Dodurga Mahallesi,,Ankara,Çankaya,1595,6788
+relation_6789346,Prof. Dr. Ahmet Taner Kışlalı Mahallesi,,Ankara,Çankaya,1765,12735
+relation_6789376,Beytepe Mahallesi,,Ankara,Çankaya,2623,8306
+relation_6792629,Ahlatlıbel Mahallesi,,Ankara,Çankaya,2797,3937
+relation_8732916,Dumlupınar Mahallesi,,Ankara,Çankaya,1383,5192
+relation_13764530,Aşağı İmrahor Mahallesi,,Ankara,Çankaya,70,55
+relation_16326514,Yeşilkent Mahallesi,,Ankara,Çankaya,310,110
+relation_17057548,Tohumlar Mahallesi,,Ankara,Çankaya,137,26
+relation_17057549,Karataş Mahallesi,,Ankara,Çankaya,289,198
+relation_17564652,Kömürcü Mahallesi,,Ankara,Çankaya,72,16
+relation_17564653,Yakupabdal Mahallesi,,Ankara,Çankaya,1783,743
+relation_17565392,Yayla Mahallesi,,Ankara,Çankaya,155,19
+relation_17565393,Çavuşlu Mahallesi,,Ankara,Çankaya,145,52
+relation_17565394,Karahasanlı Mahallesi,,Ankara,Çankaya,130,66
+relation_17565395,Akarlar Mahallesi,,Ankara,Çankaya,50,10
+relation_17565396,Evciler Mahallesi,,Ankara,Çankaya,97,22
+relation_3914752,Aşağıemirler Mahallesi,,Ankara,Çubuk,5,127
+relation_5419868,Cumhuriyet Mahallesi,,Ankara,Çubuk,8573,3264
+relation_5621167,Yıldırım Beyazıt Mahallesi,,Ankara,Çubuk,9528,2652
+relation_8451033,Muhsin Yazıcıoğlu Mahallesi,,Ankara,Çubuk,656,225
+relation_10104958,Ovacık Mahallesi,,Ankara,Çubuk,2,110
+relation_10115265,Eğriekin Mahallesi,,Ankara,Çubuk,58,6
+relation_10217709,Güldarpı Mahallesi,,Ankara,Çubuk,391,81
+relation_11354387,Kuruçay Mahallesi,,Ankara,Çubuk,191,7
+relation_11356128,Kışlacık Mahallesi,,Ankara,Çubuk,135,12
+relation_13156854,Fatih Mahallesi,,Ankara,Çubuk,295,96
+relation_13200843,Yazır Mahallesi,,Ankara,Çubuk,198,13
+relation_14510600,Taşpınar Mahallesi,,Ankara,Çubuk,174,89
+relation_14510601,Sünlü Mahallesi,,Ankara,Çubuk,281,78
+relation_14581699,Ağılcık Mahallesi,,Ankara,Çubuk,271,28
+relation_14585335,Atatürk Mahallesi,,Ankara,Çubuk,5031,942
+relation_14585497,Barbaros Mahallesi,,Ankara,Çubuk,3898,785
+relation_16355834,Yiğitli Mahallesi,,Ankara,Çubuk,59,8
+relation_16355835,Kavaklı Mahallesi,,Ankara,Çubuk,54,2
+relation_16365796,Durhasan mahallesi,,Ankara,Çubuk,103,4
+relation_16366655,Yaylak mahallesi,,Ankara,Çubuk,29,5
+relation_16376856,Yıldırımevci mahallesi,,Ankara,Çubuk,40,8
+relation_16537826,İkipınar Mahallesi,,Ankara,Çubuk,142,7
+relation_16538741,Melikşah Mahallesi,,Ankara,Çubuk,318,64
+relation_16538742,Kızılca Mahallesi,,Ankara,Çubuk,291,26
+relation_16686516,Dumlupınar Mahallesi,,Ankara,Çubuk,843,168
+relation_16686570,Yenice Mahallesi,,Ankara,Çubuk,538,123
+relation_16811141,Uluağaç Mahallesi,,Ankara,Çubuk,49,5
+relation_16826728,Ömercik Mahallesi,,Ankara,Çubuk,24,49
+relation_16826863,Akkuzulu Mahallesi,,Ankara,Çubuk,1504,240
+relation_16827018,Kargın Mahallesi,,Ankara,Çubuk,4,155
+relation_16827495,Kapaklı Mahallesi,,Ankara,Çubuk,84,16
+relation_16827496,Mutlu Mahallesi,,Ankara,Çubuk,55,25
+relation_16827497,Kızılöz Mahallesi,,Ankara,Çubuk,36,6
+relation_17147248,Karaçam Mahallesi,,Ankara,Çubuk,26,4
+relation_17147353,Yeşilkent Mahallesi,,Ankara,Çubuk,68,2
+relation_17147431,Çatokçular Mahallesi,,Ankara,Çubuk,89,6
+relation_17149096,Nusratlar Mahallesi,,Ankara,Çubuk,53,8
+relation_17154548,Kızılören Mahallesi,,Ankara,Çubuk,46,1
+relation_17155019,Hacılar Mahallesi,,Ankara,Çubuk,60,14
+relation_17160555,Yukarı Çavundur Mahallesi,,Ankara,Çubuk,377,27
+relation_17164822,Kösrelik Mahallesi,,Ankara,Çubuk,6,137
+relation_17164904,Sarısu Mahallesi,,Ankara,Çubuk,9,121
+relation_17164949,Meşeli Mahallesi,,Ankara,Çubuk,4,124
+relation_17164950,Dalyasan Mahallesi,,Ankara,Çubuk,4,44
+relation_17165141,Demirci Mahallesi,,Ankara,Çubuk,5,109
+relation_17174777,Camili Mahallesi,,Ankara,Çubuk,131,4
+relation_17174908,Kuyumcu Mahallesi,,Ankara,Çubuk,4,54
+relation_17191633,Küçükali Mahallesi,,Ankara,Çubuk,48,3
+relation_17192009,Eskiçöte Mahallesi,,Ankara,Çubuk,57,18
+relation_17203655,Akbayır Mahallesi,,Ankara,Çubuk,63,5
+relation_17208083,Karadana Mahallesi,,Ankara,Çubuk,99,5
+relation_17214445,Dedeler Mahallesi,,Ankara,Çubuk,43,8
+relation_17215006,Susuz Mahallesi,,Ankara,Çubuk,26,120
+relation_17225769,Okçular Mahallesi,,Ankara,Çubuk,40,8
+relation_17225865,Mahmutoğlan Mahallesi,,Ankara,Çubuk,3,113
+relation_17225883,Çitköy Mahallesi,,Ankara,Çubuk,7,57
+relation_17225939,Saraycık Mahallesi,,Ankara,Çubuk,32,8
+relation_17226043,Sarıkoz Mahallesi,,Ankara,Çubuk,6,34
+relation_17226091,Sele Mahallesi,,Ankara,Çubuk,5,16
+relation_17226109,Yazlıca Mahallesi,,Ankara,Çubuk,12,3
+relation_17227243,Karaman Mahallesi,,Ankara,Çubuk,26,3
+relation_17227298,Karaağaç Mahallesi,,Ankara,Çubuk,7,22
+relation_17227305,Tahtayazı Mahallesi,,Ankara,Çubuk,176,27
+relation_17227388,Gökçedere Mahallesi,,Ankara,Çubuk,126,26
+relation_17227466,Sığırlıhacı Mahallesi,,Ankara,Çubuk,80,17
+relation_17228131,Kutuören Mahallesi,,Ankara,Çubuk,117,10
+relation_17228132,Tuğla Mahallesi,,Ankara,Çubuk,28,12
+relation_17229122,Gümüşyayla Mahallesi,,Ankara,Çubuk,70,23
+relation_17229378,Yakuphasan Mahallesi,,Ankara,Çubuk,77,14
+relation_17229626,Karataş Mahallesi,,Ankara,Çubuk,55,3
+relation_17229765,Özlüce Mahallesi,,Ankara,Çubuk,51,6
+relation_17566258,Avcıova Mahallesi,,Ankara,Çubuk,30,6
+relation_1810971,Gökler Mahallesi,,Ankara,Ayaş,135,63
+relation_13753686,Gençali Mahallesi,,Ankara,Ayaş,230,133
+relation_14507855,Akkaya Mahallesi,,Ankara,Ayaş,158,43
+relation_17807626,Oltan Mahallesi,,Ankara,Ayaş,731,211
+relation_20247227,Tekke Mahallesi,,Ankara,Ayaş,162,97
+relation_20247228,Dervişimam Mahallesi,,Ankara,Ayaş,41,64
+relation_20247229,Camiatik Mahallesi,,Ankara,Ayaş,24,58
+relation_20247230,Ferahfaki Mahallesi,,Ankara,Ayaş,280,291
+relation_20247231,Hacımemi Mahallesi,,Ankara,Ayaş,87,176
+relation_20247232,Hacıveli Mahallesi,,Ankara,Ayaş,126,203
+relation_20247233,Hacırecep Mahallesi,,Ankara,Ayaş,289,351
+relation_20247234,Emine Tevfika Ayaşlı Mahallesi,,Ankara,Ayaş,319,335
+relation_20247236,Uğurçayırı Mahallesi,,Ankara,Ayaş,37,31
+relation_20247238,Ilıca Mahallesi,,Ankara,Ayaş,361,107
+relation_20247341,Bayram Mahallesi,,Ankara,Ayaş,86,91
+relation_20247342,İlhanköy Mahallesi,,Ankara,Ayaş,181,34
+relation_20247343,Şeyhmuhittin Mahallesi,,Ankara,Ayaş,67,123
+relation_20247344,Başayaş Mahallesi,,Ankara,Ayaş,120,35
+relation_20247345,Başbereket Mahallesi,,Ankara,Ayaş,80,39
+relation_20247346,Gökçebağ Mahallesi,,Ankara,Ayaş,33,64
+relation_20247347,Ulupınar Mahallesi,,Ankara,Ayaş,24,36
+relation_20249608,Pınaryaka Mahallesi,,Ankara,Ayaş,137,49
+relation_20249609,Evci Mahallesi,,Ankara,Ayaş,67,25
+relation_20249610,Feruz Mahallesi,,Ankara,Ayaş,159,28
+relation_20249611,Bayat Mahallesi,,Ankara,Ayaş,90,57
+relation_20249612,Ömeroğlu Mahallesi,,Ankara,Ayaş,86,148
+relation_20249615,Yağmurdede Mahallesi,,Ankara,Ayaş,106,81
+relation_20249616,Ortabereket Mahallesi,,Ankara,Ayaş,151,115
+relation_6652689,Malazgirt Mahallesi,,Ankara,Sincan,16004,5023
+relation_6652734,Tandoğan Mahallesi,,Ankara,Sincan,14100,4942
+relation_6725996,Atatürk Mahallesi,,Ankara,Sincan,9204,4929
+relation_6726010,Maraşal Çakmak Mahallesi,,Ankara,Sincan,14834,7247
+relation_6726011,Andiçen Mahallesi,,Ankara,Sincan,8746,4107
+relation_6726055,Osmanlı Mahallesi,,Ankara,Sincan,8635,5245
+relation_6726111,Pınarbaşı Mahallesi,,Ankara,Sincan,20399,7018
+relation_6726112,Ertuğrulgazi Mahallesi,,Ankara,Sincan,5548,5048
+relation_6726163,Selçuklu Mahallesi,,Ankara,Sincan,12878,6875
+relation_6726164,Plevne Mahallesi,,Ankara,Sincan,12459,6478
+relation_6726193,Akşemsettin Mahallesi,,Ankara,Sincan,9483,5060
+relation_6726260,İstasyon Mahallesi,,Ankara,Sincan,5333,2937
+relation_6726365,Ahi Evran Mahallesi,,Ankara,Sincan,4944,2344
+relation_6726470,Yunus Emre Mahallesi,,Ankara,Sincan,3119,2617
+relation_6726508,Ulubatlı Hasan Mahallesi,,Ankara,Sincan,5329,4326
+relation_6726590,Fatih Mahallesi,,Ankara,Sincan,4843,3599
+relation_6728445,Gökçek Mahallesi,,Ankara,Sincan,5492,4049
+relation_6728446,Gazi Osmanpaşa Mahallesi,,Ankara,Sincan,6674,4922
+relation_6728461,Mevlana Mahallesi,,Ankara,Sincan,2296,1429
+relation_6728462,Törekent Mahallesi,,Ankara,Sincan,5245,3276
+relation_6728843,Mustafa Kemal Mahallesi,,Ankara,Sincan,15038,7681
+relation_6728890,Menderes Mahallesi,,Ankara,Sincan,8452,4455
+relation_6729026,29 Ekim Mahallesi,,Ankara,Sincan,7968,5245
+relation_6729027,Fevzi Çakmak Mahallesi,,Ankara,Sincan,7689,3804
+relation_6729173,Çoğlu Mahallesi,,Ankara,Sincan,911,584
+relation_6792223,Yeniçimşit Mahallesi,,Ankara,Sincan,457,146
+relation_6792224,Saraycık Mahallesi,,Ankara,Sincan,7589,4186
+relation_6792299,Osmaniye Mahallesi,,Ankara,Sincan,277,191
+relation_6793006,Adalet Mahallesi,,Ankara,Sincan,1473,2911
+relation_20058428,Akçaören Mahallesi,,Ankara,Sincan,87,34
+relation_20058429,İlyakut Mahallesi,,Ankara,Sincan,130,69
+relation_20058430,İncirlik Mahallesi,,Ankara,Sincan,36,16
+relation_20058431,Mülk Mahallesi,,Ankara,Sincan,142,31
+relation_20058473,Erkeksu Mahallesi,,Ankara,Sincan,46,31
+relation_20058474,Yenikayı Mahallesi,,Ankara,Sincan,125,60
+relation_20058516,Tatlar Mahallesi,,Ankara,Sincan,95,16
+relation_20058517,Polatlar Mahallesi,,Ankara,Sincan,87,32
+relation_20058518,Çiçektepe Mahallesi,,Ankara,Sincan,114,21
+relation_20058519,Yenipeçenek Mahallesi,,Ankara,Sincan,171,50
+relation_20058520,Kesiktaş Mahallesi,,Ankara,Sincan,3,51
+relation_20058632,Alagöz Mahallesi,,Ankara,Sincan,72,50
+relation_20058634,Alcı Mahallesi,,Ankara,Sincan,502,424
+relation_20058635,Türkobası Mahallesi,,Ankara,Sincan,261,138
+relation_20058636,Anayurt Mahallesi,,Ankara,Sincan,142,41
+relation_20058637,Esenler Mahallesi,,Ankara,Sincan,57,46
+relation_20058667,Hisarlıkaya Mahallesi,,Ankara,Sincan,228,66
+relation_20058925,Yenihisar Mahallesi,,Ankara,Sincan,97,112
+relation_20058926,Ücret Mahallesi,,Ankara,Sincan,177,145
+relation_20058927,Çokören Mahallesi,,Ankara,Sincan,169,272
+relation_20058928,Beyobası Mahallesi,,Ankara,Sincan,293,176
+relation_20058929,Hürriyet Mahallesi,,Ankara,Sincan,723,561
+relation_20058930,Malıköy Mahallesi,,Ankara,Sincan,217,283
+relation_20058934,İstiklal Mahallesi,,Ankara,Sincan,308,276
+relation_20058935,Cumhuriyet Mahallesi,,Ankara,Sincan,608,385
+relation_20058936,Gazi Mahallesi,,Ankara,Sincan,402,433
+relation_20058937,Bacı Mahallesi,,Ankara,Sincan,97,57
+relation_20058938,Girmeç Mahallesi,,Ankara,Sincan,67,38
+relation_1809666,Akçaali Mahallesi,,Ankara,Elmadağ,136,44
+relation_1809670,Kayadibi Mahallesi,,Ankara,Elmadağ,225,83
+relation_1809671,Süleymanlı Mahallesi,,Ankara,Elmadağ,88,45
+relation_1809672,Tekke Mahallesi,,Ankara,Elmadağ,73,14
+relation_8827101,Hasanoğlan Bahçelievler Mahallesi,,Ankara,Elmadağ,3133,2651
+relation_8827102,Hasanoğlan Havuzbaşı Mahallesi,,Ankara,Elmadağ,479,550
+relation_8827103,Muzaffer Ekşi Mahallesi,,Ankara,Elmadağ,427,527
+relation_8827104,Hasanoğlan Fatih Mahallesi,,Ankara,Elmadağ,383,507
+relation_8827105,İstasyon Mahallesi,,Ankara,Elmadağ,171,280
+relation_8827106,Şehitlik Mahallesi,,Ankara,Elmadağ,240,242
+relation_13757557,Yeşildere Fatih Mahallesi,,Ankara,Elmadağ,510,233
+relation_13757558,Seyitcemali Mahallesi,,Ankara,Elmadağ,425,187
+relation_16490058,Yenice Mahallesi,,Ankara,Elmadağ,459,705
+relation_16490059,İsmetpaşa Mahallesi,,Ankara,Elmadağ,1648,1821
+relation_16490060,Gümüşpala Mahallesi,,Ankara,Elmadağ,899,1022
+relation_20130226,Kemalpaşa Mahallesi,,Ankara,Elmadağ,1061,1561
+relation_20130227,Üçevler Mahallesi,,Ankara,Elmadağ,171,216
+relation_20130228,Yenipınar Mahallesi,,Ankara,Elmadağ,463,510
+relation_20130229,Yenidoğan Mahallesi,,Ankara,Elmadağ,147,300
+relation_20130230,Kurtuluş Mahallesi,,Ankara,Elmadağ,1533,1189
+relation_20130231,Ediğe Mahallesi,,Ankara,Elmadağ,39,49
+relation_20130232,Karacahasan Mahallesi,,Ankara,Elmadağ,184,46
+relation_20132577,Tatlıca Mahallesi,,Ankara,Elmadağ,1415,1455
+relation_20132578,Taburlar Mahallesi,,Ankara,Elmadağ,86,24
+relation_20132579,Yenimahalle,,Ankara,Elmadağ,211,256
+relation_20132581,Aşağıkamışlı Mahallesi,,Ankara,Elmadağ,96,44
+relation_20132582,Yukarıkamışlı Mahallesi,,Ankara,Elmadağ,43,8
+relation_20132583,Kuşçuali Mahallesi,,Ankara,Elmadağ,105,21
+relation_20132584,Deliler Mahallesi,,Ankara,Elmadağ,117,55
+relation_3113766,Aydıncık Mahallesi,,Ankara,Altındağ,31,114
+relation_3113767,Baraj Mahallesi,,Ankara,Altındağ,7439,4465
+relation_3113768,Beşikkaya Mahallesi,,Ankara,Altındağ,15492,7531
+relation_3113769,Feridun Çelik Mahallesi,,Ankara,Altındağ,4592,2896
+relation_3113771,Karacaören Mahallesi,,Ankara,Altındağ,4524,1374
+relation_3113772,Karapürçek Mahallesi,,Ankara,Altındağ,39844,11753
+relation_3113773,Kavaklı Mahallesi,,Ankara,Altındağ,488,114
+relation_3113774,Peçenek Mahallesi,,Ankara,Altındağ,388,27
+relation_3113775,Tatlar Mahallesi,,Ankara,Altındağ,184,34
+relation_3114196,Hacettepe Mahallesi,,Ankara,Altındağ,1799,2477
+relation_3114197,Hacı Bayram Mahallesi,,Ankara,Altındağ,512,595
+relation_3114198,Kale Mahallesi,,Ankara,Altındağ,1383,729
+relation_3114202,Zübeyde Hanım Mahallesi,,Ankara,Altındağ,4383,4367
+relation_6745855,Örnek Mahallesi,,Ankara,Altındağ,4013,6485
+relation_6748455,Başpınar Mahallesi,,Ankara,Altındağ,8772,3833
+relation_6748456,Doğantepe Mahallesi,,Ankara,Altındağ,5777,2533
+relation_6748492,Solfasol Mahallesi,,Ankara,Altındağ,705,206
+relation_6750636,Yıldıztepe Mahallesi,,Ankara,Altındağ,12702,6702
+relation_6750668,Güneşevler Mahallesi,,Ankara,Altındağ,14033,10410
+relation_6750709,Aydınlıkevler Mahallesi,,Ankara,Altındağ,5452,11679
+relation_6750750,Ulubey Mahallesi,,Ankara,Altındağ,2102,872
+relation_6750778,Önder Mahallesi,,Ankara,Altındağ,821,281
+relation_6750779,Gültepe Mahallesi,,Ankara,Altındağ,6074,6103
+relation_6750842,Atıfbey Mahallesi,,Ankara,Altındağ,525,563
+relation_13763127,Battalgazi Mahallesi,,Ankara,Altındağ,16296,6092
+relation_6521565,Şirintepe Mahallesi,,Ankara,Mamak,830,5582
+relation_6521760,Misket Mahallesi,,Ankara,Mamak,5031,2643
+relation_6752749,Bostancık Mahallesi,,Ankara,Mamak,1397,945
+relation_6752807,Ekin Mahallesi,,Ankara,Mamak,5478,3271
+relation_6752808,Başak Mahallesi,,Ankara,Mamak,15386,6240
+relation_6752845,Karaağaç Mahallesi,,Ankara,Mamak,2943,1528
+relation_6752846,Altıağaç Mahallesi,,Ankara,Mamak,3607,2009
+relation_6752847,Bahçeleriçi Mahallesi,,Ankara,Mamak,3296,1966
+relation_6753031,Hüseyingazi Mahallesi,,Ankara,Mamak,2310,1372
+relation_6753032,Harman Mahallesi,,Ankara,Mamak,3157,2187
+relation_6753085,Çiğiltepe Mahallesi,,Ankara,Mamak,651,1051
+relation_6753088,Altınevler Mahallesi,,Ankara,Mamak,1791,1749
+relation_6753147,Gülveren Mahallesi,,Ankara,Mamak,3815,2142
+relation_6753148,Bahçelerüstü Mahallesi,,Ankara,Mamak,4256,3091
+relation_6753495,Abidinpaşa Mahallesi,,Ankara,Mamak,3384,4329
+relation_6753496,Balkiraz Mahallesi,,Ankara,Mamak,2368,3898
+relation_6753530,Hürel Mahallesi,,Ankara,Mamak,3419,2842
+relation_6753531,Şafaktepe Mahallesi,,Ankara,Mamak,2749,3750
+relation_6753541,Demirlibahçe Mahallesi,,Ankara,Mamak,2287,4410
+relation_6753704,Mehtap Mahallesi,,Ankara,Mamak,2172,2366
+relation_6753705,Saimekadın Mahallesi,,Ankara,Mamak,2351,3233
+relation_6753706,Kartaltepe Mahallesi,,Ankara,Mamak,1700,2830
+relation_6755828,Çağlayan Mahallesi,,Ankara,Mamak,1883,3523
+relation_6755862,Tuzluçayır Mahallesi,,Ankara,Mamak,1017,8045
+relation_6755884,Aşık Veysel Mahallesi,,Ankara,Mamak,3961,5171
+relation_6755902,Peyami Safa Mahallesi,,Ankara,Mamak,6890,4929
+relation_6755930,General Zeki Doğan Mahallesi,,Ankara,Mamak,6792,14932
+relation_6755935,Şahintepe Mahallesi,,Ankara,Mamak,4069,15178
+relation_6755950,Mutlu Mahallesi,,Ankara,Mamak,8657,8855
+relation_6755987,Kutlu Mahallesi,,Ankara,Mamak,9055,5523
+relation_6755988,Kazım Orbay Mahallesi,,Ankara,Mamak,4372,2715
+relation_6756066,Türközü Mahallesi,,Ankara,Mamak,5055,3567
+relation_6759086,Akdere Mahallesi,,Ankara,Mamak,4109,2713
+relation_6767479,Şehit Cengiz Topel Mahallesi,,Ankara,Mamak,783,658
+relation_6767480,Fahri Korutürk Mahallesi,,Ankara,Mamak,3013,7973
+relation_6767589,Durali Alıç Mahallesi,,Ankara,Mamak,9919,15190
+relation_6767590,Boğaziçi Mahallesi,,Ankara,Mamak,2429,1403
+relation_6767686,Akşemsettin Mahallesi,,Ankara,Mamak,3619,7332
+relation_6767687,Cengizhan Mahallesi,,Ankara,Mamak,4402,13634
+relation_6767752,Dutluk Mahallesi,,Ankara,Mamak,415,232
+relation_6767753,Derbent Mahallesi,,Ankara,Mamak,1593,958
+relation_6767764,Araplar Mahallesi,,Ankara,Mamak,1838,1069
+relation_6767825,Dostlar Mahallesi,,Ankara,Mamak,148,375
+relation_6767826,Köstence Mahallesi,,Ankara,Mamak,92,62
+relation_6767836,Üreğil Mahallesi,,Ankara,Mamak,2713,1965
+relation_6767865,Tepecik Mahallesi,,Ankara,Mamak,175,248
+relation_6767866,Kayaş Mahallesi,,Ankara,Mamak,2672,1685
+relation_6768082,Şahap Gürler Mahallesi,,Ankara,Mamak,4568,1574
+relation_6768083,Yeşilbayır Mahallesi,,Ankara,Mamak,13293,3958
+relation_6768248,Küçük Kayaş Mahallesi,,Ankara,Mamak,9235,2579
+relation_6792771,Ege Mahallesi,,Ankara,Mamak,1709,7840
+relation_6792836,Kızılca Mahallesi,,Ankara,Mamak,367,174
+relation_13436475,Kusunlar Mahallesi,,Ankara,Mamak,258,65
+relation_13436476,Zirvekent Mahallesi,,Ankara,Mamak,2423,1821
+relation_13438735,Kıbrısköy Mahallesi,,Ankara,Mamak,4356,1447
+relation_13441406,Lalahan Mahallesi,,Ankara,Mamak,1009,783
+relation_13513085,Bayındır Mahallesi,,Ankara,Mamak,228,47
+relation_13513086,Ortaköy Mahallesi,,Ankara,Mamak,394,125
+relation_13513087,Kutludüğün Mahallesi,,Ankara,Mamak,2218,880
+relation_13513088,Yeni Bayındır Mahallesi,,Ankara,Mamak,6934,2033
+relation_13513089,Gökçeyurt Mahallesi,,Ankara,Mamak,521,189
+relation_13513090,Karşıyaka Mahallesi,,Ankara,Mamak,1134,524
+relation_13513162,Yukarı İmrohor Mahallesi,,Ankara,Mamak,79,66
+relation_13513210,Diriliş Mahallesi,,Ankara,Mamak,3472,2780
+relation_5525500,Gümüşdere Mahallesi,,Ankara,Keçiören,705,762
+relation_5525645,Kavacık Subayevleri Mahallesi,,Ankara,Keçiören,4423,7157
+relation_5525677,Hasköy Mahallesi,,Ankara,Keçiören,1749,1210
+relation_5525679,Şefkat Mahallesi,,Ankara,Keçiören,5511,4711
+relation_5525754,Kalaba Mahallesi,,Ankara,Keçiören,3520,3877
+relation_5525799,Güçlükaya Mahallesi,,Ankara,Keçiören,6257,5885
+relation_5525820,Bağlarbaşı Mahallesi,,Ankara,Keçiören,12032,9229
+relation_5525821,Yakacık Mahallesi,,Ankara,Keçiören,4190,4634
+relation_5525831,Tepebaşı Mahallesi,,Ankara,Keçiören,6988,7463
+relation_5525888,Çiçekli Mahallesi,,Ankara,Keçiören,3189,4100
+relation_5525921,Karargahtepe Mahallesi,,Ankara,Keçiören,3918,4444
+relation_5525940,Basınevleri Mahallesi,,Ankara,Keçiören,4835,6088
+relation_5525974,Emrah Mahallesi,,Ankara,Keçiören,2401,4076
+relation_5526123,Aşağı Eğlence Mahallesi,,Ankara,Keçiören,6983,9828
+relation_5526130,İncirli Mahallesi,,Ankara,Keçiören,7168,14454
+relation_5526161,19 Mayıs Mahallesi,,Ankara,Keçiören,7011,10669
+relation_5526587,Kuşcağız Mahallesi,,Ankara,Keçiören,16303,12611
+relation_5526951,Pınarbaşı Mahallesi,,Ankara,Keçiören,10565,9028
+relation_5527199,Şenlik Mahallesi,,Ankara,Keçiören,7634,8158
+relation_5527457,Atapark Mahallesi,,Ankara,Keçiören,19699,12395
+relation_5527717,Ufuktepe Mahallesi,,Ankara,Keçiören,6993,3843
+relation_5527723,Osmangazi Mahallesi,,Ankara,Keçiören,9771,4025
+relation_5527733,Kamil Ocak Mahallesi,,Ankara,Keçiören,5642,3605
+relation_5527798,Çaldıran Mahallesi,,Ankara,Keçiören,5765,3561
+relation_5527866,Yeşiltepe Mahallesi,,Ankara,Keçiören,5766,3329
+relation_5527904,Yeşilöz Mahallesi,,Ankara,Keçiören,908,319
+relation_5527921,Aktepe Mahallesi,,Ankara,Keçiören,3923,2831
+relation_5536418,Adnan Menderes Mahallesi,,Ankara,Keçiören,4876,4626
+relation_5536424,Güzelyurt Mahallesi,,Ankara,Keçiören,1557,1174
+relation_5536438,Şenyuva Mahallesi,,Ankara,Keçiören,3055,1939
+relation_5536530,23 Nisan Mahallesi,,Ankara,Keçiören,3584,1968
+relation_5536545,Köşk Mahallesi,,Ankara,Keçiören,4031,2688
+relation_5536616,Uyanış Mahallesi,,Ankara,Keçiören,6858,4646
+relation_5536650,Bademlik Mahallesi,,Ankara,Keçiören,10306,4559
+relation_5536676,Kanuni Mahallesi,,Ankara,Keçiören,12743,6028
+relation_5536806,Karşıyaka Mahallesi,,Ankara,Keçiören,3220,1483
+relation_5536815,Karakaya Mahallesi,,Ankara,Keçiören,8189,3816
+relation_5536830,Kafkas Mahallesi,,Ankara,Keçiören,5438,2580
+relation_5536841,Hisar Mahallesi,,Ankara,Keçiören,4971,2242
+relation_5536912,Ovacık Mahallesi,,Ankara,Keçiören,1770,1741
+relation_5536946,Yükseltepe Mahallesi,,Ankara,Keçiören,10423,6206
+relation_5536970,Esertepe Mahallesi,,Ankara,Keçiören,12017,10341
+relation_5537036,Etlik Mahallesi,,Ankara,Keçiören,10897,10785
+relation_5537040,Ayvalı Mahallesi,,Ankara,Keçiören,14505,11481
+relation_5537126,Yayla Mahallesi,,Ankara,Keçiören,17526,11574
+relation_5537167,Sancaktepe Mahallesi,,Ankara,Keçiören,7882,4855
+relation_5537178,Şehit Kubilay Mahallesi,,Ankara,Keçiören,14060,6684
+relation_5537300,Kösrelik Mahallesi,,Ankara,Keçiören,146,13
+relation_5537364,Sarıbeyler Mahallesi,,Ankara,Keçiören,61,16
+relation_5537367,Çalseki Mahallesi,,Ankara,Keçiören,42,6
+relation_5537405,Bağlum Güzelyurt Mahallesi,,Ankara,Keçiören,139,18
+relation_3680866,Beştepe Mahallesi,,Ankara,Yenimahalle,1749,3523
+relation_3680867,Ata Mahallesi,,Ankara,Yenimahalle,6947,11951
+relation_5540962,Emniyet Mahallesi,,Ankara,Yenimahalle,1015,2537
+relation_5541250,Gazi Mahallesi,,Ankara,Yenimahalle,1075,2962
+relation_5541275,Macun Mahallesi,,Ankara,Yenimahalle,851,734
+relation_5546023,25 Mart Mahallesi,,Ankara,Yenimahalle,1330,3126
+relation_5546025,Çamlıca Mahallesi,,Ankara,Yenimahalle,2205,2383
+relation_5546215,Gayret Mahallesi,,Ankara,Yenimahalle,2126,4466
+relation_5546301,Demetgül Mahallesi,,Ankara,Yenimahalle,6197,7884
+relation_5554811,Varlık Mahallesi,,Ankara,Yenimahalle,1297,2424
+relation_5554853,Işınlar Mahallesi,,Ankara,Yenimahalle,1919,4444
+relation_5554884,Demetlale Mahallesi,,Ankara,Yenimahalle,4713,5040
+relation_5554887,Barış Mahallesi,,Ankara,Yenimahalle,556,1434
+relation_5596459,Ragıp Tüzün Mahallesi,,Ankara,Yenimahalle,775,1748
+relation_5596477,Yeniçağ Mahallesi,,Ankara,Yenimahalle,843,2179
+relation_5596484,Yunus Emre Mahallesi,,Ankara,Yenimahalle,2104,4117
+relation_5596514,Çarşı Mahallesi,,Ankara,Yenimahalle,915,1934
+relation_5596556,Tepealtı Mahallesi,,Ankara,Yenimahalle,1213,2708
+relation_5596580,Esentepe Mahallesi,,Ankara,Yenimahalle,1737,3569
+relation_5596689,Ergenekon Mahallesi,,Ankara,Yenimahalle,4734,5064
+relation_5608962,Anadolu Mahallesi,,Ankara,Yenimahalle,2089,1409
+relation_5608971,Karşıyaka Mahallesi,,Ankara,Yenimahalle,3649,2625
+relation_5608995,Demetevler Mahallesi,,Ankara,Yenimahalle,9783,8318
+relation_5609003,Mehmet Akif Ersoy Mahallesi,,Ankara,Yenimahalle,4924,7063
+relation_5609011,Özevler Mahallesi,,Ankara,Yenimahalle,4824,2731
+relation_5609015,Yeşilevler Mahallesi,,Ankara,Yenimahalle,6486,4112
+relation_5609028,Güzelyaka Mahallesi,,Ankara,Yenimahalle,3022,1955
+relation_5609034,Pamuklar Mahallesi,,Ankara,Yenimahalle,6782,5102
+relation_5609052,Güventepe Mahallesi,,Ankara,Yenimahalle,4675,3112
+relation_5609054,Burç Mahallesi,,Ankara,Yenimahalle,4579,1816
+relation_5609065,Barıştepe Mahallesi,,Ankara,Yenimahalle,5226,2642
+relation_5609083,Kayalar Mahallesi,,Ankara,Yenimahalle,3720,2180
+relation_5611743,Çiğdemtepe Mahallesi,,Ankara,Yenimahalle,7592,3386
+relation_5623458,Aşağı Yahyalar Mahallesi,,Ankara,Yenimahalle,3101,2002
+relation_5623480,Yukarı Yahyalar Mahallesi,,Ankara,Yenimahalle,1870,905
+relation_5623513,Kaletepe Mahallesi,,Ankara,Yenimahalle,4197,2556
+relation_5623518,Avcılar Mahallesi,,Ankara,Yenimahalle,4075,2091
+relation_5623621,İvedikköy Mahallesi,,Ankara,Yenimahalle,270,178
+relation_5623684,Serhat Mahallesi,,Ankara,Yenimahalle,8856,6801
+relation_5623780,Uğur Mumcu Mahallesi,,Ankara,Yenimahalle,3727,10534
+relation_5623804,İlkyerleşim Mahallesi,,Ankara,Yenimahalle,3373,10432
+relation_5623959,Yuvaköy Mahallesi,,Ankara,Yenimahalle,1171,859
+relation_5623969,Yakacık Mahallesi,,Ankara,Yenimahalle,3736,1906
+relation_5623991,Kuzey Yıldızı Mahallesi,,Ankara,Yenimahalle,3552,1629
+relation_5624447,Memlik Mahallesi,,Ankara,Yenimahalle,509,162
+relation_5635764,Turgut Özal Mahallesi,,Ankara,Yenimahalle,12604,25776
+relation_5635799,Kardelen Mahallesi,,Ankara,Yenimahalle,6838,19898
+relation_5635841,İnönü Mahallesi,,Ankara,Yenimahalle,3109,9365
+relation_5635858,Kentkoop Mahallesi,,Ankara,Yenimahalle,5109,16328
+relation_6747493,Ergazi Mahallesi,,Ankara,Yenimahalle,3681,8901
+relation_6747494,Batı Sitesi Mahallesi,,Ankara,Yenimahalle,2595,6552
+relation_6747495,Yeni Batı Mahallesi,,Ankara,Yenimahalle,7007,18658
+relation_6789619,Karacakaya Mahallesi,,Ankara,Yenimahalle,680,939
+relation_13761238,Ostim Mahallesi,,Ankara,Yenimahalle,1883,1755
+relation_13761239,Susuz Mahallesi,,Ankara,Yenimahalle,1784,2236
