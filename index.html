@@ -471,7 +471,7 @@
         function App() {
             const [theme, setTheme] = useState('light');
             const [settings, setSettings] = useState({
-                borderWidth: 1, borderColor: '#94a3b8', marginMultiplier: 1,
+                borderWidth: 0.4, borderColor: 'rgba(255,255,255,0.5)', marginMultiplier: 1,
                 voteSwing: 0, labelMode: 'none', labelSize: 10, opacity: 0.7, mapStyle: 'light'
             });
             const [showSettings, setShowSettings] = useState(false);
@@ -763,7 +763,7 @@
 
                 let fillColor = '#e5e7eb';
                 let fillOpacity = 0.3;
-                let strokeColor = currSettings.borderColor || '#94a3b8';
+                let strokeColor = currSettings.mapStyle === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.08)';
                 let weight = currSettings.borderWidth;
                 let opacity = 0.8;
                 const isUnmatched = showFixModal && !data;
@@ -1035,7 +1035,7 @@
                     };
 
                     const geoLayer = L.geoJSON(geoJsonData, {
-                        style: () => ({ fillColor: '#e5e7eb', weight: 1, color: '#94a3b8', fillOpacity: 0.3 }),
+                        style: () => ({ fillColor: '#e5e7eb', weight: 0.4, color: 'rgba(0,0,0,0.08)', fillOpacity: 0.3 }),
                         onEachFeature,
                         pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 0, opacity: 0, fillOpacity: 0 }),
                     }).addTo(mapRef.current);
