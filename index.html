@@ -973,7 +973,7 @@
             /* ── Map initialization ── */
             useEffect(() => {
                 if (!mapRef.current) {
-                    const map = L.map('map-container', { zoomControl: false, attributionControl: false, doubleClickZoom: false }).setView([39.0, 35.0], 6);
+                    const map = L.map('map-container', { zoomControl: false, attributionControl: false, doubleClickZoom: false, preferCanvas: true, renderer: L.canvas({ padding: 0.5, tolerance: 3 }) }).setView([39.0, 35.0], 6);
                     L.control.zoom({ position: 'topright' }).addTo(map);
                     tileLayerRef.current = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { subdomains: 'abcd', maxZoom: 20 }).addTo(map);
                     window.addEventListener('mouseup', finishPaint);
